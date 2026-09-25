@@ -50,6 +50,14 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 2. Select the `game/project.godot` file in this repository.
 3. Open `main.tscn` and press **F6** (or **F5** to run the project).
 
+Or, from a terminal in the repository root:
+
+```bash
+./play.sh
+```
+
+The script imports assets before launching. Godot's import cache (`game/.godot/`) isn't committed, so running a fresh clone with `godot --path game` directly shows no sprites. Set `GODOT=/path/to/godot` if Godot isn't on your `PATH`.
+
 ### Controls
 
 | Action | Input |
