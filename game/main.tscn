@@ -18,7 +18,7 @@ script = ExtResource("2_player")
 texture_filter = 1
 
 [node name="Camera" type="Camera2D" parent="Wizard"]
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.5, 0.5)
 limit_left = 0
 limit_top = 0
 limit_right = 1600
