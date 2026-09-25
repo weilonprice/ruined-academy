@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "050f2bdc-0f71-4530-ba3e-c2a35ca00d6f",
+  "status": "completed",
+  "created_at": "2026-09-25T15:04:44.495314+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "19e2198d-6979-4310-8fcc-79d4c217028f",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/19e2198d-6979-4310-8fcc-79d4c217028f/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "NPC-01 Academy caretaker",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Academy caretaker, elderly human in faded brown and teal robes, ring of keys at belt, kind weary face, walking cane. Full body standing, centered, visible feet, transparent background, no scenery."
+  }
+}

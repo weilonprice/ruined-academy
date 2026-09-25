@@ -1,0 +1,6 @@
+.godot/
+.DS_Store
+*.log
+__pycache__/
+.env
+.env.*

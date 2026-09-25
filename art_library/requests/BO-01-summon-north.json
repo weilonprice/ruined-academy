@@ -1,0 +1,11 @@
+{
+  "animation_name": "summon",
+  "action_description": "Lift staff high and spread free hand in a dramatic summoning gesture, then recover.",
+  "mode": "v3",
+  "frame_count": 4,
+  "keep_first_frame": false,
+  "directions": [
+    "north"
+  ],
+  "character_id": "4fa562e4-4294-4b0e-81d2-d57723903834"
+}

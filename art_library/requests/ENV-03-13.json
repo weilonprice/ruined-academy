@@ -1,0 +1,11 @@
+{
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular ruined workshop facade overlay made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+  "image_size": {
+    "width": 128,
+    "height": 128
+  },
+  "no_background": true,
+  "view": "low top-down",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

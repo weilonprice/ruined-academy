@@ -1,0 +1,37 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 3.0
+  },
+  "id": "1e6396e9-db1a-4552-8dc4-5cfcc9464ad8",
+  "status": "completed",
+  "created_at": "2026-09-25T15:29:21.607225+00:00",
+  "last_response": {
+    "seed": 1748671751,
+    "type": "done",
+    "usage": {
+      "seconds": 28.044864892959595
+    },
+    "action": "tiles",
+    "status": "completed",
+    "progress": 1.3694444444444445,
+    "tileset_id": "1cb60787-3b56-4b81-b2d1-74d42fe8844b",
+    "frame_index": 0,
+    "request_type": "tileset",
+    "tileset_name": "Original dark fantasy pixel art for a ruined \u2197 Original dark fantasy pixel art for a ruined",
+    "billing_usage": {
+      "usd": 0.0,
+      "type": "generations",
+      "generations": 3
+    },
+    "generation_id": "e2c6c2b5-bfeb-4dc3-bfe0-8dcddbc7dbb6",
+    "queue_position": 0,
+    "billing_charged": true,
+    "saved_to_database": true,
+    "tileset_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. weathered gray academy flagstone \u2192 Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark violet corrupted flagstone",
+    "generation_started_at": "2026-09-25T15:29:21.753982+00:00",
+    "estimated_wait_seconds": 0,
+    "original_image_n_colors": 123,
+    "quantized_image_n_colors": 45
+  }
+}

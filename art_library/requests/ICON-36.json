@@ -1,0 +1,11 @@
+{
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting restorative draught, bold readable shape, centered, no border, no lettering.",
+  "image_size": {
+    "width": 32,
+    "height": 32
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

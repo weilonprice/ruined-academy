@@ -1,0 +1,11 @@
+{
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. pale cyan circular ward energy ring, isolated effect only, no character, no terrain, transparent background.",
+  "image_size": {
+    "width": 96,
+    "height": 96
+  },
+  "no_background": true,
+  "view": "low top-down",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

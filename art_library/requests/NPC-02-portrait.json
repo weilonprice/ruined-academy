@@ -1,0 +1,11 @@
+{
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Head and shoulders portrait of practical short-haired adult artificer wearing a leather apron, centered.",
+  "image_size": {
+    "width": 96,
+    "height": 96
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

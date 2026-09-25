@@ -1,0 +1,11 @@
+{
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small violet hostile spell impact spark, isolated on transparent background.",
+  "image_size": {
+    "width": 64,
+    "height": 64
+  },
+  "no_background": true,
+  "view": "low top-down",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

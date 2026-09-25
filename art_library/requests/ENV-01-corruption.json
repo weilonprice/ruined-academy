@@ -1,0 +1,14 @@
+{
+  "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. weathered gray academy flagstone",
+  "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark violet corrupted flagstone",
+  "transition_description": "creeping dark violet fissures",
+  "tile_size": {
+    "width": 32,
+    "height": 32
+  },
+  "transition_size": 0,
+  "view": "low top-down",
+  "mode": "standard",
+  "detail": "medium detail",
+  "shading": "medium shading"
+}

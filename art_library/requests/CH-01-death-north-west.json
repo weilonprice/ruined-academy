@@ -1,0 +1,11 @@
+{
+  "animation_name": "death",
+  "action_description": "Collapse to the ground and remain motionless at the end.",
+  "mode": "v3",
+  "frame_count": 4,
+  "keep_first_frame": false,
+  "directions": [
+    "north-west"
+  ],
+  "character_id": "65a7329b-8e3d-48e7-a9b6-2438769ac7e3"
+}

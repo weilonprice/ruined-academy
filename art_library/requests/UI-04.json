@@ -1,0 +1,11 @@
+{
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: item tooltip dark panel with bronze border and small rarity accent swatches. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+  "image_size": {
+    "width": 256,
+    "height": 256
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

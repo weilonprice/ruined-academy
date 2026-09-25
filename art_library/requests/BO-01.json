@@ -1,0 +1,12 @@
+{
+  "name": "BO-01 Corrupted Warden",
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Corrupted Warden, imposing former wizard headmaster, tall dark robes with bronze ward armor, split ceremonial crown and corrupted violet crystal staff, readable regal silhouette. Full body standing, centered, visible feet, transparent background, no scenery.",
+  "image_size": {
+    "width": 96,
+    "height": 96
+  },
+  "view": "low top-down",
+  "no_background": true,
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

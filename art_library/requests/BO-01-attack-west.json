@@ -1,0 +1,11 @@
+{
+  "animation_name": "attack",
+  "action_description": "Readable windup followed by one forward strike and recovery.",
+  "mode": "v3",
+  "frame_count": 4,
+  "keep_first_frame": false,
+  "directions": [
+    "west"
+  ],
+  "character_id": "4fa562e4-4294-4b0e-81d2-d57723903834"
+}

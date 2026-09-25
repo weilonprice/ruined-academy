@@ -1,0 +1,12 @@
+{
+  "name": "Academy \u2014 Former Student",
+  "description": "Original dark fantasy pixel art wizard, former academy student, young adult, small readable heroic proportions, weathered midnight blue hood and short robe, muted teal lining, worn brown belt and boots, bronze clasp, simple wooden staff with a small pale cyan crystal. Face visible beneath hood, resolute expression. Full body standing, centered with generous margin, elevated top-down RPG view, crisp pixel clusters, limited palette, thin dark outline, upper-left light, transparent background. No floor, no scenery, no text, no glow cloud.",
+  "image_size": {
+    "width": 64,
+    "height": 64
+  },
+  "view": "low top-down",
+  "no_background": true,
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

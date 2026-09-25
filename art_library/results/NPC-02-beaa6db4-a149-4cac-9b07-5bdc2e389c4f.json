@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "beaa6db4-a149-4cac-9b07-5bdc2e389c4f",
+  "status": "completed",
+  "created_at": "2026-09-25T15:05:14.679826+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "5e116a8e-97c5-4618-90ec-455969b82e8e",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/5e116a8e-97c5-4618-90ec-455969b82e8e/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "NPC-02 Rescued artificer",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Rescued artificer, adult human artisan, leather apron over moss gray clothes, small brass tools on belt, practical short hair. Full body standing, centered, visible feet, transparent background, no scenery."
+  }
+}

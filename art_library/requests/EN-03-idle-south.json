@@ -1,0 +1,11 @@
+{
+  "animation_name": "idle",
+  "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+  "mode": "v3",
+  "frame_count": 4,
+  "keep_first_frame": false,
+  "directions": [
+    "south"
+  ],
+  "character_id": "8a125690-ff92-4352-b0d5-a3b6ba056866"
+}

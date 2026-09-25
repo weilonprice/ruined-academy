@@ -1,0 +1,37 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 3.0
+  },
+  "id": "77d2c09d-62cc-413d-9db5-54c64212b6db",
+  "status": "completed",
+  "created_at": "2026-09-25T15:29:27.644701+00:00",
+  "last_response": {
+    "seed": 4124074532,
+    "type": "done",
+    "usage": {
+      "seconds": 21.44937491416931
+    },
+    "action": "tiles",
+    "status": "completed",
+    "progress": 1.3694444444444445,
+    "tileset_id": "8b1f28ca-9984-41df-bbd3-4a3a73cbb294",
+    "frame_index": 0,
+    "request_type": "tileset",
+    "tileset_name": "Original dark fantasy pixel art for a ruined \u2197 Original dark fantasy pixel art for a ruined",
+    "billing_usage": {
+      "usd": 0.0,
+      "type": "generations",
+      "generations": 3
+    },
+    "generation_id": "b8f8c3b8-6fba-4fc6-982d-2860fd1c6e20",
+    "queue_position": 0,
+    "billing_charged": true,
+    "saved_to_database": true,
+    "tileset_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. intact blue gray academy interior floor \u2192 Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. damaged blue gray academy floor",
+    "generation_started_at": "2026-09-25T15:29:27.802985+00:00",
+    "estimated_wait_seconds": 0,
+    "original_image_n_colors": 62,
+    "quantized_image_n_colors": 20
+  }
+}

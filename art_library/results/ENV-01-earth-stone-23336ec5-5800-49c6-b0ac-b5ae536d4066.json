@@ -1,0 +1,37 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 3.0
+  },
+  "id": "23336ec5-5800-49c6-b0ac-b5ae536d4066",
+  "status": "completed",
+  "created_at": "2026-09-25T15:27:59.492215+00:00",
+  "last_response": {
+    "seed": 4264074139,
+    "type": "done",
+    "usage": {
+      "seconds": 22.83294987678528
+    },
+    "action": "tiles",
+    "status": "completed",
+    "progress": 1.3694444444444445,
+    "tileset_id": "6a65b762-3a4e-4bf6-a488-029226213a9c",
+    "frame_index": 0,
+    "request_type": "tileset",
+    "tileset_name": "Original dark fantasy pixel art for a ruined \u2197 Original dark fantasy pixel art for a ruined",
+    "billing_usage": {
+      "usd": 0.0,
+      "type": "generations",
+      "generations": 3
+    },
+    "generation_id": "1dc9c297-09a5-45c9-972e-607fe7cb9004",
+    "queue_position": 0,
+    "billing_charged": true,
+    "saved_to_database": true,
+    "tileset_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark compact earth \u2192 Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. weathered gray academy flagstone",
+    "generation_started_at": "2026-09-25T15:27:59.797008+00:00",
+    "estimated_wait_seconds": 0,
+    "original_image_n_colors": 87,
+    "quantized_image_n_colors": 27
+  }
+}

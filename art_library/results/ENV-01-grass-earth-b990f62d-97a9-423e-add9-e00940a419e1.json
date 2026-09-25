@@ -1,0 +1,37 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 3.0
+  },
+  "id": "b990f62d-97a9-423e-add9-e00940a419e1",
+  "status": "completed",
+  "created_at": "2026-09-25T15:27:49.331122+00:00",
+  "last_response": {
+    "seed": 2643900180,
+    "type": "done",
+    "usage": {
+      "seconds": 27.37273144721985
+    },
+    "action": "tiles",
+    "status": "completed",
+    "progress": 1.3694444444444445,
+    "tileset_id": "4651e4e4-944a-438c-bea0-9adfdd5b94ec",
+    "frame_index": 0,
+    "request_type": "tileset",
+    "tileset_name": "Original dark fantasy pixel art for a ruined \u2197 Original dark fantasy pixel art for a ruined",
+    "billing_usage": {
+      "usd": 0.0,
+      "type": "generations",
+      "generations": 3
+    },
+    "generation_id": "403ac5a3-7c92-4e33-903d-d00dae22cba3",
+    "queue_position": 0,
+    "billing_charged": true,
+    "saved_to_database": true,
+    "tileset_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dead desaturated grass \u2192 Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark compact earth",
+    "generation_started_at": "2026-09-25T15:27:49.493578+00:00",
+    "estimated_wait_seconds": 0,
+    "original_image_n_colors": 27,
+    "quantized_image_n_colors": 16
+  }
+}

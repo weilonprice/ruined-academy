@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "aa7d9403-4f20-4028-bc16-89bedd7d30dc",
+  "status": "completed",
+  "created_at": "2026-09-25T13:49:53.773554+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "65a7329b-8e3d-48e7-a9b6-2438769ac7e3",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/65a7329b-8e3d-48e7-a9b6-2438769ac7e3/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "Academy \u2014 Former Student",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Original dark fantasy pixel art wizard, former academy student, young adult, small readable heroic proportions, weathered midnight blue hood and short robe, muted teal lining, worn brown belt and boots, bronze clasp, simple wooden staff with a small pale cyan crystal. Face visible beneath hood, resolute expression. Full body standing, centered with generous margin, elevated top-down RPG view, crisp pixel clusters, limited palette, thin dark outline, upper-left light, transparent background. No floor, no scenery, no text, no glow cloud."
+  }
+}

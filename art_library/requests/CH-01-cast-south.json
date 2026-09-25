@@ -1,0 +1,11 @@
+{
+  "animation_name": "cast",
+  "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+  "mode": "v3",
+  "frame_count": 4,
+  "keep_first_frame": false,
+  "directions": [
+    "south"
+  ],
+  "character_id": "65a7329b-8e3d-48e7-a9b6-2438769ac7e3"
+}

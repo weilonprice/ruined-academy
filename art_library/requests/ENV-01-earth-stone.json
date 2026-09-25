@@ -1,0 +1,14 @@
+{
+  "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark compact earth",
+  "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. weathered gray academy flagstone",
+  "transition_description": "worn stone edges at dirt",
+  "tile_size": {
+    "width": 32,
+    "height": 32
+  },
+  "transition_size": 0,
+  "view": "low top-down",
+  "mode": "standard",
+  "detail": "medium detail",
+  "shading": "medium shading"
+}

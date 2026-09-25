@@ -1,0 +1,12 @@
+{
+  "name": "EN-02 Ashbound Scholar",
+  "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Ashbound Scholar, undead academy scholar in ragged gray violet robes and cracked ceremonial mask, holding a dim ember focus. Full body standing, centered, visible feet, transparent background, no scenery.",
+  "image_size": {
+    "width": 64,
+    "height": 64
+  },
+  "view": "low top-down",
+  "no_background": true,
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

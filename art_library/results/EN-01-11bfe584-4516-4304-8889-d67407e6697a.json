@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "11bfe584-4516-4304-8889-d67407e6697a",
+  "status": "completed",
+  "created_at": "2026-09-25T13:52:24.558856+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "ae7d7f54-f507-4cdd-b3a6-846381734243",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/ae7d7f54-f507-4cdd-b3a6-846381734243/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "EN-01 Ruin Skitter",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Ruin Skitter, an unsettling small hunched bipedal arcane vermin with long claws and a ragged silhouette, dusty charcoal skin, small amber eyes. Full body standing, centered, visible feet, transparent background, no scenery."
+  }
+}

@@ -1,0 +1,5165 @@
+[
+  {
+    "id": "CH-01",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "Academy \u2014 Former Student",
+      "description": "Original dark fantasy pixel art wizard, former academy student, young adult, small readable heroic proportions, weathered midnight blue hood and short robe, muted teal lining, worn brown belt and boots, bronze clasp, simple wooden staff with a small pale cyan crystal. Face visible beneath hood, resolute expression. Full body standing, centered with generous margin, elevated top-down RPG view, crisp pixel clusters, limited palette, thin dark outline, upper-left light, transparent background. No floor, no scenery, no text, no glow cloud.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "CH-01-move-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-move-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-idle-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-cast-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-channel-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "channel",
+      "action_description": "Hold staff forward and sustain a spell, subtle looping robe motion, planted feet, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-dodge-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge",
+      "action_description": "Quick evasive side step with low crouch, return to standing, no camera motion.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-hurt-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "CH-01-death-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01",
+    "depends": [
+      "CH-01"
+    ]
+  },
+  {
+    "id": "EN-01",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "EN-01 Ruin Skitter",
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Ruin Skitter, an unsettling small hunched bipedal arcane vermin with long claws and a ragged silhouette, dusty charcoal skin, small amber eyes. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "EN-01-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-move-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-move-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-move-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-move-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-attack-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-attack-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-attack-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-attack-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-hurt-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-hurt-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-hurt-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-hurt-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-death-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-death-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-death-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-01-death-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-01",
+    "depends": [
+      "EN-01"
+    ]
+  },
+  {
+    "id": "EN-02",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "EN-02 Ashbound Scholar",
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Ashbound Scholar, undead academy scholar in ragged gray violet robes and cracked ceremonial mask, holding a dim ember focus. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "EN-02-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-move-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-move-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-move-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-move-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-cast-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-cast-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-cast-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-cast-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-hurt-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-hurt-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-hurt-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-hurt-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-death-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-death-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-death-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-02-death-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-02",
+    "depends": [
+      "EN-02"
+    ]
+  },
+  {
+    "id": "EN-03",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "EN-03 Broken Sentinel",
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Broken Sentinel, bulky animated empty stone and bronze academy armor, broad shoulders, fractured chest rune, heavy fists. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "EN-03-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-move-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-move-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-move-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-move-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-attack-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-attack-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-attack-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-attack-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-hurt-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-hurt-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-hurt-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-hurt-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "hurt",
+      "action_description": "Brief recoil from being hit, then recover to original pose.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-death-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-death-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-death-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "EN-03-death-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "EN-03",
+    "depends": [
+      "EN-03"
+    ]
+  },
+  {
+    "id": "BO-01",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "BO-01 Corrupted Warden",
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Corrupted Warden, imposing former wizard headmaster, tall dark robes with bronze ward armor, split ceremonial crown and corrupted violet crystal staff, readable regal silhouette. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "BO-01-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-move-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-move-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-move-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-move-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move",
+      "action_description": "Seamless walking cycle in place, feet alternately stepping, natural robe sway, staff held consistently, fixed camera, no translation, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-attack-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-attack-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-attack-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-attack-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "attack",
+      "action_description": "Readable windup followed by one forward strike and recovery.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-cast-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-cast-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-cast-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-cast-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast",
+      "action_description": "Raise staff and extend free hand to cast a spell, readable anticipation and recovery, no added spell effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-summon-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "summon",
+      "action_description": "Lift staff high and spread free hand in a dramatic summoning gesture, then recover.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-summon-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "summon",
+      "action_description": "Lift staff high and spread free hand in a dramatic summoning gesture, then recover.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-summon-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "summon",
+      "action_description": "Lift staff high and spread free hand in a dramatic summoning gesture, then recover.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-summon-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "summon",
+      "action_description": "Lift staff high and spread free hand in a dramatic summoning gesture, then recover.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-stagger-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "stagger",
+      "action_description": "Lose balance and stagger backward, then regain posture.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-stagger-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "stagger",
+      "action_description": "Lose balance and stagger backward, then regain posture.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-stagger-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "stagger",
+      "action_description": "Lose balance and stagger backward, then regain posture.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-stagger-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "stagger",
+      "action_description": "Lose balance and stagger backward, then regain posture.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-death-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-death-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-death-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "BO-01-death-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "death",
+      "action_description": "Collapse to the ground and remain motionless at the end.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "BO-01",
+    "depends": [
+      "BO-01"
+    ]
+  },
+  {
+    "id": "NPC-01",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "NPC-01 Academy caretaker",
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Academy caretaker, elderly human in faded brown and teal robes, ring of keys at belt, kind weary face, walking cane. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "NPC-01-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "NPC-01",
+    "depends": [
+      "NPC-01"
+    ]
+  },
+  {
+    "id": "NPC-01-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "NPC-01",
+    "depends": [
+      "NPC-01"
+    ]
+  },
+  {
+    "id": "NPC-01-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "NPC-01",
+    "depends": [
+      "NPC-01"
+    ]
+  },
+  {
+    "id": "NPC-01-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "NPC-01",
+    "depends": [
+      "NPC-01"
+    ]
+  },
+  {
+    "id": "NPC-02",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "NPC-02 Rescued artificer",
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Rescued artificer, adult human artisan, leather apron over moss gray clothes, small brass tools on belt, practical short hair. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "NPC-02-idle-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "NPC-02",
+    "depends": [
+      "NPC-02"
+    ]
+  },
+  {
+    "id": "NPC-02-idle-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "NPC-02",
+    "depends": [
+      "NPC-02"
+    ]
+  },
+  {
+    "id": "NPC-02-idle-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "NPC-02",
+    "depends": [
+      "NPC-02"
+    ]
+  },
+  {
+    "id": "NPC-02-idle-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "idle",
+      "action_description": "Subtle seamless breathing idle loop in place, preserve pose and staff, no effects.",
+      "mode": "v3",
+      "frame_count": 4,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "NPC-02",
+    "depends": [
+      "NPC-02"
+    ]
+  },
+  {
+    "id": "CH-01-portrait",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Head and shoulders portrait of young former student wizard with midnight blue hood, teal lining, bronze clasp, resolute face, centered.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "NPC-01-portrait",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Head and shoulders portrait of elderly academy caretaker in brown and teal, kind weary face, centered.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "NPC-02-portrait",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Head and shoulders portrait of practical short-haired adult artificer wearing a leather apron, centered.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-01-grass-earth",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dead desaturated grass",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark compact earth",
+      "transition_description": "sparse dry grass meeting bare earth",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-01-earth-stone",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark compact earth",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. weathered gray academy flagstone",
+      "transition_description": "worn stone edges at dirt",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-01-cracked-stone",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. intact gray academy flagstone",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. cracked gray academy flagstone",
+      "transition_description": "subtle cracked stone boundary",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-01-corruption",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. weathered gray academy flagstone",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. dark violet corrupted flagstone",
+      "transition_description": "creeping dark violet fissures",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-02-floor",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. intact blue gray academy interior floor",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. damaged blue gray academy floor",
+      "transition_description": "subtle chipped edges",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-02-ritual",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. blue gray academy floor",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. faint circular arcane ritual floor motifs, no lettering",
+      "transition_description": "subtle inlaid bronze patterns",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-02-pit",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. pitch dark empty pit",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. blue gray academy stone floor",
+      "transition_description": "clear stone ledge",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-02-corruption",
+    "endpoint": "/create-tileset",
+    "payload": {
+      "lower_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. blue gray academy interior floor",
+      "upper_description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. violet corrupted interior floor",
+      "transition_description": "thin spreading violet cracks",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "low top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    },
+    "reserve": 20
+  },
+  {
+    "id": "ENV-03-01",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular straight horizontal wall made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-02",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular straight vertical wall made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-03",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular inner wall corner made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-04",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular outer wall corner made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-05",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular wall end cap made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-06",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular front facing wall face made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-07",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular archway made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-08",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular open doorway threshold made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-09",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular short stairs ascending north made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-10",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular short stairs ascending east made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-11",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular intact stone pillar made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-12",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular ruined wall segment made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-13",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular ruined workshop facade overlay made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ENV-03-14",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Single modular restored workshop facade overlay made of weathered academy blue gray stone and bronze, orthogonal floor grid, isolated transparent background.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-01",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One small rubble, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-02",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One large rubble, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-03",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One broken column, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-04",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One fallen statue, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-05",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One dead tree, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-06",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One root cluster, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-07",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One torn academy banner, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-08",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One broken desk, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-09",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One bookshelf, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-10",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One book pile, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-11",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One lectern, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-12",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One desk, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-13",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One chair, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-14",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One chalkboard without writing, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-15",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One alchemy table, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-16",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One ritual pedestal, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-17",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One closed chest, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-18",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One closed door, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-19",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One closed academy gate, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-20",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One dormant ward beacon, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-21",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One ruined workbench, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-22",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One stash trunk, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-23",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One available withered herb gathering node, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-24",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One available aether crystal gathering node, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-25",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One candle stand, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-26",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One brazier, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-27",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One bench, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-28",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One rug, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-29",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One planter, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-30",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One crate, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-31",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One freestanding banner, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-32",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One stone ornament, isolated game prop, centered with transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-17-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One open chest, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-18-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One open door, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-19-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One open academy gate, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-20-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One active ward beacon, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-21-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One restored workbench, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-23-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One depleted herb gathering node, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-24-state",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One depleted crystal gathering node, weathered stone wood and bronze academy prop, centered transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PROP-25-ambient",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Small candle flame flickering gently, all solid parts stationary.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "PROP-25",
+    "depends": [
+      "PROP-25"
+    ]
+  },
+  {
+    "id": "PROP-26-ambient",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Brazier embers and flame flickering, fixed metal body.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "PROP-26",
+    "depends": [
+      "PROP-26"
+    ]
+  },
+  {
+    "id": "PROP-20-state-ambient",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Soft cyan ward light pulsing, stone body stationary.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "PROP-20-state",
+    "depends": [
+      "PROP-20-state"
+    ]
+  },
+  {
+    "id": "FX-01",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. compact orange fireball pointing east with a short flame tail, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-01-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Flame tail flickers in a seamless loop, projectile stays centered.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-01",
+    "depends": [
+      "FX-01"
+    ]
+  },
+  {
+    "id": "FX-02",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small orange starburst magical fire impact, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-02-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Burst expands and dissipates to transparency.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-02",
+    "depends": [
+      "FX-02"
+    ]
+  },
+  {
+    "id": "FX-03",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small vertical orange flame status effect, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-03-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Looping flickering small flames.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-03",
+    "depends": [
+      "FX-03"
+    ]
+  },
+  {
+    "id": "FX-04",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. cyan ice nova ring viewed from an elevated top-down camera, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-04-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Ring expands outward with sharp ice shards and fades.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-04",
+    "depends": [
+      "FX-04"
+    ]
+  },
+  {
+    "id": "FX-05",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small pale blue frost crystal cluster around an empty center, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-05-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Subtle ice shimmer loop.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-05",
+    "depends": [
+      "FX-05"
+    ]
+  },
+  {
+    "id": "FX-06",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. short horizontal crimson violet magical energy tether segment, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-06-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Energy travels along the tether, seamless loop.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-06",
+    "depends": [
+      "FX-06"
+    ]
+  },
+  {
+    "id": "FX-07",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. compact dark red magical pulse with an empty center, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-07-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Brief inward pulse then fade.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-07",
+    "depends": [
+      "FX-07"
+    ]
+  },
+  {
+    "id": "FX-08",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small crimson and pale cyan life energy motes, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-08-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Particles move inward to the center and vanish.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-08",
+    "depends": [
+      "FX-08"
+    ]
+  },
+  {
+    "id": "FX-09",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small gray dust puff trail, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-09-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Dust expands briefly and fades.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-09",
+    "depends": [
+      "FX-09"
+    ]
+  },
+  {
+    "id": "FX-10",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small pale gold impact spark with stone debris, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-10-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Quick spark burst and fade.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-10",
+    "depends": [
+      "FX-10"
+    ]
+  },
+  {
+    "id": "FX-11",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small hostile violet projectile with short tail, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-11-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Violet flame trail loops.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-11",
+    "depends": [
+      "FX-11"
+    ]
+  },
+  {
+    "id": "FX-12",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. compact violet arcane ground eruption, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-12-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Ground energy erupts upward and dissipates.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-12",
+    "depends": [
+      "FX-12"
+    ]
+  },
+  {
+    "id": "FX-13",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. violet circular summoning ring without lettering, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-13-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Ring pulses and wisps rise then fade.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-13",
+    "depends": [
+      "FX-13"
+    ]
+  },
+  {
+    "id": "FX-14",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small warm gold four pointed glint, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-14-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Bright brief sparkle then fade.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-14",
+    "depends": [
+      "FX-14"
+    ]
+  },
+  {
+    "id": "FX-15",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small pale gold and cyan celebratory ring, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-15-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Ring expands upward with a few light motes then fades.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-15",
+    "depends": [
+      "FX-15"
+    ]
+  },
+  {
+    "id": "FX-16",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. pale cyan circular ward energy ring, isolated effect only, no character, no terrain, transparent background.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-16-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Gentle outward energy pulse then fade.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FX-16",
+    "depends": [
+      "FX-16"
+    ]
+  },
+  {
+    "id": "FX-06-contact",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small crimson violet energy contact spark, isolated on transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-06-contact-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Brief magical impact burst that expands and fades.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FX-06-contact",
+    "depends": [
+      "FX-06-contact"
+    ]
+  },
+  {
+    "id": "FX-11-impact",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. small violet hostile spell impact spark, isolated on transparent background.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FX-11-impact-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "Brief magical impact burst that expands and fades.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FX-11-impact",
+    "depends": [
+      "FX-11-impact"
+    ]
+  },
+  {
+    "id": "ICON-01",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting apprentice staff, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-02",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting ember staff, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-03",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting rime staff, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-04",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting bloodwood staff, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-05",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting student robe, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-06",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting warded robe, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-07",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting ashweave robe, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-08",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting ritual vestment, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-09",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting copper focus ring, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-10",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting quartz seal ring, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-11",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting frost band ring, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-12",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting sanguine loop ring, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-13",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting Firebolt spell, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-14",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting Frost Nova spell, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-15",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting Soul Drain spell, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-16",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting split projectile modifier, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-17",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting piercing projectile modifier, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-18",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting wider nova modifier, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-19",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting lingering frost modifier, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-20",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting longer drain modifier, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-21",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting empowered drain modifier, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-22",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting fire passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-23",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting frost passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-24",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting lightning passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-25",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting blood passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-26",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting curse passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-27",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting necromancy passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-28",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting spell power passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-29",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting critical chance passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-30",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting cast speed passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-31",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting health passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-32",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting mana passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-33",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting defense passive, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-34",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting withered herb, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-35",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting aether crystal, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-36",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting restorative draught, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-37",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting refined aether focus, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-38",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting academy seal quest item, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-39",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting recovered journal quest item, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICON-40",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. One inventory or skill icon depicting warden fragment quest item, bold readable shape, centered, no border, no lettering.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-01",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: health and mana bar frame with separate red and blue fill strips. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-02",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: square skill slot frame with selected and neutral variants. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-03",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: square inventory equipment slot frame with neutral hover and equipped variants. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-04",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: item tooltip dark panel with bronze border and small rarity accent swatches. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-05",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: dialogue dark panel with portrait frame. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-06",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: small quest tracker backing panel and interaction prompt backing. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-07",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: round passive node frames in ordinary notable locked available and allocated variants. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-08",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: thin passive tree connecting line segments and a selection ring. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-09",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: crafting panel border with recipe row separator. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-10",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: green and red translucent rectangular placement footprint indicators. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-11",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: button plates in normal hover pressed disabled states and general panel corners. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "UI-12",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "Original dark fantasy pixel art for a ruined magical academy RPG. Crisp pixel clusters, limited desaturated blue gray stone and weathered bronze palette, upper-left lighting, thin dark outline, readable at native resolution. No text, no letters, no watermark. Game UI decorative component sheet: small mouse pointer and crosshair reticle plus boss bar frame and restrained pause screen border accents. Each piece isolated with spacing, simple rectangular geometry, no words or numbers.",
+      "image_size": {
+        "width": 256,
+        "height": 256
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  }
+]
