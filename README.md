@@ -74,6 +74,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Wizard idle, walk, and cast animations
+godot --headless --path game -s res://tests/animation_test.gd
+
 # Movement & boundary verification
 godot --headless --path game -s res://tests/movement_test.gd
 
