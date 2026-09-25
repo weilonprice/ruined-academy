@@ -23,7 +23,10 @@ func _ready() -> void:
 			frames.set_animation_speed(animation, 10.0 if action == "move" else 5.0)
 			var folder := "res://assets/wizard/%s/%s" % [action, direction]
 			if DirAccess.dir_exists_absolute(folder):
-				for file: String in DirAccess.get_files_at(folder):
+				# ResourceLoader also lists imported PNGs in exported builds, where the raw files are absent.
+				var files := Array(ResourceLoader.list_directory(folder))
+				files.sort()
+				for file: String in files:
 					if file.ends_with(".png"):
 						frames.add_frame(animation, load(folder.path_join(file)))
 			if frames.get_frame_count(animation) == 0:

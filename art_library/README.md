@@ -12,6 +12,6 @@ Generation is asynchronous and limited by Pixel Lab's concurrent-job allowance. 
 
 The worker is `../tools/pixellab_batch.py`. It reads the API key from standard input and keeps it in memory. It never purchases credits. Accepted submissions are saved before polling, allowing completed or pending remote jobs to be resumed without submitting them again. Requests marked `needs_review` are not automatically retried because their submission status may be uncertain.
 
-All generated artwork is a first production pass, pending review. Only the wizard's directional sprites are currently copied into `../game`; generating another asset does not add it to the game.
+All generated artwork is a first production pass, pending review. Only the wizard's directional sprites, idle, and walk frames (via `../tools/copy_character_frames.py`) and three enemy sprites are currently copied into `../game`; generating another asset does not add it to the game.
 
 The game is independently playable while this queue runs. The worker needs the computer to stay running and online. If the worker is interrupted, it can resume with the same queue and a key supplied again on stdin.
