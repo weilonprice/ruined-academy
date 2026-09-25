@@ -57,6 +57,7 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 | Move Up / Left / Down / Right | **W** / **A** / **S** / **D** |
 | Aim | **Mouse Cursor** |
 | Cast Magic Missile | **Left Mouse Button** |
+| Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---
 
