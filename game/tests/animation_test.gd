@@ -100,7 +100,23 @@ func run() -> void:
 		if not is_instance_valid(enemy):
 			break
 	assert(not is_instance_valid(enemy), "Dead enemy must despawn")
-	print("PASS: wizard idle/walk/cast/dodge in 8 directions, cast faces aim and overrides walk, dodge cancels cast; enemy idle/hurt/death in 4 directions, enemies face wizard, hurt returns to idle, death then despawn")
+	# NPCs breathe in 8 facings and watch the wizard; candles flicker.
+	for kind in ["Caretaker", "Artificer"]:
+		var npc = scene.get_node(kind)
+		var npc_sprite: AnimatedSprite2D = npc.get_node("Sprite")
+		for direction in player.DIRECTIONS:
+			assert(npc_sprite.sprite_frames.get_frame_count("idle_" + direction) == 2, kind + " breathing idle")
+		player.position = npc.position + Vector2(0, -150)
+		await process_step()
+		assert(npc_sprite.animation == &"idle_north" and npc_sprite.is_playing())
+		player.position = npc.position + Vector2(150, 150)
+		await process_step()
+		assert(npc_sprite.animation == &"idle_south-east")
+	for index in range(1, 5):
+		var candle: AnimatedSprite2D = scene.get_node("Candle%d" % index)
+		assert(candle.sprite_frames.get_frame_count("default") == 5 and candle.is_playing(), "Candles flicker")
+	assert(scene.y_sort_enabled, "Characters and props overlap by depth")
+	print("PASS: wizard idle/walk/cast/dodge in 8 directions, cast faces aim and overrides walk, dodge cancels cast; enemy idle/hurt/death in 4 directions, enemies face wizard, hurt returns to idle, death then despawn; NPC idles watch the wizard; candles flicker")
 	scene.queue_free()
 	quit()
 

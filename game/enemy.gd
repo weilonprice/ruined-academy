@@ -72,7 +72,7 @@ func _face_player() -> void:
 		return
 	var offset := player.global_position - global_position
 	if not offset.is_zero_approx():
-		facing = DIRECTIONS[posmod(roundi(offset.angle() / (PI / 2.0)), 4)]
+		facing = ANIMATIONS.facing_toward(offset, DIRECTIONS)
 
 
 func _play(action: String) -> void:

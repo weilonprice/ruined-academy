@@ -25,6 +25,8 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── enemy.gd / enemy.tscn# Enemy entity with damage, facing, hurt/death animations, health bar
 │   ├── animation_library.gd # Builds directional animations from asset folders
+│   ├── npc.gd / npc.tscn    # Idle NPC that turns to watch the wizard
+│   ├── prop.gd              # Looping animated prop (candles)
 │   ├── map.gd               # Map layout (stone courtyard, paths, grass)
 │   └── tests/               # Headless automated test suite (combat, movement, preview)
 ├── art_library/             # 300+ generated visual assets from Pixel Lab
