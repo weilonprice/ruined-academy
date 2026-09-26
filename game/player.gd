@@ -4,6 +4,11 @@ const SPEED := 110.0
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
 const WORLD := preload("res://world.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
+# Where the staff's orb sits in each facing, relative to the sprite centre; bolts launch from it.
+const STAFF_TIPS := {
+	"east": Vector2(7, -18), "south-east": Vector2(-9, -17), "south": Vector2(-21, -20), "south-west": Vector2(-19, -22),
+	"west": Vector2(-9, -24), "north-west": Vector2(8, -24), "north": Vector2(20, -22), "north-east": Vector2(20, -19),
+}
 const ANIMATION_SPEEDS := {"idle": 1.1, "move": 16.0, "cast": 14.0}
 
 var facing := "south"
@@ -64,12 +69,17 @@ func shoot_at(target: Vector2) -> Node2D:
 	var aim := target - global_position
 	if aim.is_zero_approx():
 		return null
+	facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
+	var tip: Vector2 = global_position + STAFF_TIPS[facing]
+	# Aim from the tip so the bolt still flies through the clicked point.
+	var flight := target - tip
 	var projectile := Node2D.new()
 	projectile.set_script(PROJECTILE_SCRIPT)
-	projectile.direction = aim.normalized()
+	projectile.direction = flight.normalized() if not flight.is_zero_approx() else aim.normalized()
 	get_parent().add_child(projectile)
-	projectile.global_position = global_position
-	facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
+	projectile.global_position = tip
+	# The first hit check sweeps from the body, so an enemy between the wizard and the tip is still hit.
+	projectile.sweep_from = global_position
 	casting = true
 	_play("cast")
 	sprite.set_frame_and_progress(0, 0.0)

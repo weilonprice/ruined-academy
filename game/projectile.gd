@@ -7,6 +7,8 @@ const WORLD := preload("res://world.gd")
 
 var direction := Vector2.RIGHT
 var lifetime := 2.0
+# Start of the next hit sweep; the launcher may set it behind the spawn point.
+var sweep_from: Variant = null
 
 
 func _ready() -> void:
@@ -20,9 +22,11 @@ func _physics_process(delta: float) -> void:
 		return
 	var next_position := global_position + direction * SPEED * delta
 	var space := get_world_2d().direct_space_state
+	var start: Vector2 = sweep_from if sweep_from != null else global_position
+	sweep_from = null
 	# Point overlap handles firing while standing inside an enemy.
 	var overlap := PhysicsPointQueryParameters2D.new()
-	overlap.position = global_position
+	overlap.position = start
 	overlap.collision_mask = ENEMY_LAYER
 	overlap.collide_with_areas = true
 	overlap.collide_with_bodies = false
@@ -30,7 +34,7 @@ func _physics_process(delta: float) -> void:
 	var hit: Dictionary = overlapping[0] if not overlapping.is_empty() else {}
 	if hit.is_empty():
 		# Sweep the complete step so fast shots cannot skip through a target.
-		var query := PhysicsRayQueryParameters2D.create(global_position, next_position, ENEMY_LAYER)
+		var query := PhysicsRayQueryParameters2D.create(start, next_position, ENEMY_LAYER)
 		query.collide_with_areas = true
 		query.collide_with_bodies = false
 		hit = space.intersect_ray(query)

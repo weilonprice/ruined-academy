@@ -39,7 +39,8 @@ func run() -> void:
 	for target in enemies:
 		for hit in range(3):
 			var shot: Node2D = player.shoot_at(target.global_position)
-			assert(shot.direction.is_equal_approx(player.global_position.direction_to(target.global_position)))
+			assert(shot.global_position.is_equal_approx(player.global_position + player.STAFF_TIPS[player.facing]), "Shots launch from the staff tip")
+			assert(shot.direction.is_equal_approx(shot.global_position.direction_to(target.global_position)), "Shots fly through the clicked point")
 			# Use actual physics updates to exercise collision, damage, and cleanup together.
 			for frame in range(120):
 				await physics_frame
@@ -83,6 +84,6 @@ func run() -> void:
 	missed_shot._physics_process(1.0)
 	await process_frame
 	assert(not is_instance_valid(missed_shot), "Missed shots must be removed outside the map")
-	print("PASS: 3 stationary enemies; left click only; mouse-target aim; damage once per shot; zero-health despawn; swept nearest hit; overlap hit; missed-shot cleanup")
+	print("PASS: 3 stationary enemies; left click only; staff-tip launch; mouse-target aim; damage once per shot; zero-health despawn; swept nearest hit; overlap hit; missed-shot cleanup")
 	scene.queue_free()
 	quit()
