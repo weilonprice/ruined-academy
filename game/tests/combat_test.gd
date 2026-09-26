@@ -7,6 +7,9 @@ func run() -> void:
 	var scene: Node = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	var player = scene.get_node("Wizard")
+	# These checks are about the wizard; keep enemies from joining in.
+	for enemy in get_nodes_in_group("enemies"):
+		enemy.ai_enabled = false
 	player.set_physics_process(false)
 	await physics_frame
 	await physics_frame
@@ -39,7 +42,8 @@ func run() -> void:
 	for target in enemies:
 		for hit in range(3):
 			var shot: Node2D = player.shoot_at(target.global_position)
-			assert(shot.direction.is_equal_approx(player.global_position.direction_to(target.global_position)))
+			assert(shot.global_position.is_equal_approx(player.global_position + player.STAFF_TIPS[player.facing]), "Shots launch from the staff tip")
+			assert(shot.direction.is_equal_approx(shot.global_position.direction_to(target.global_position)), "Shots fly through the clicked point")
 			# Use actual physics updates to exercise collision, damage, and cleanup together.
 			for frame in range(120):
 				await physics_frame
@@ -50,13 +54,21 @@ func run() -> void:
 				assert(is_instance_valid(target), "Nonlethal damage must preserve the enemy")
 				assert(target.health == 2 - hit, "A projectile must damage only once")
 			else:
-				assert(not is_instance_valid(target), "Enemy must despawn at zero health")
+				assert(target.dying and target.collision_layer == 0 and not target.is_in_group("enemies"), "A killed enemy stops being a target at once")
 	assert(get_nodes_in_group("enemies").is_empty())
+	# Bodies stay for the death animation and fade, then despawn.
+	for frame in range(300):
+		await process_frame
+		if not enemies.any(func(e) -> bool: return is_instance_valid(e)):
+			break
+	assert(not enemies.any(func(e) -> bool: return is_instance_valid(e)), "Enemy must despawn after its death animation")
 
 	# A large frame step must hit the nearest target instead of tunneling through it.
 	var enemy_scene: PackedScene = load("res://enemy.tscn")
 	var near_target = enemy_scene.instantiate()
 	var far_target = enemy_scene.instantiate()
+	near_target.ai_enabled = false
+	far_target.ai_enabled = false
 	scene.add_child(near_target)
 	scene.add_child(far_target)
 	near_target.position = Vector2(880, 480)
@@ -83,6 +95,6 @@ func run() -> void:
 	missed_shot._physics_process(1.0)
 	await process_frame
 	assert(not is_instance_valid(missed_shot), "Missed shots must be removed outside the map")
-	print("PASS: 3 stationary enemies; left click only; mouse-target aim; damage once per shot; zero-health despawn; swept nearest hit; overlap hit; missed-shot cleanup")
+	print("PASS: 3 stationary enemies; left click only; staff-tip launch; mouse-target aim; damage once per shot; zero-health death animation then despawn; swept nearest hit; overlap hit; missed-shot cleanup")
 	scene.queue_free()
 	quit()
