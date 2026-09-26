@@ -23,7 +23,9 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── main.tscn            # Primary playable combat scene
 │   ├── player.gd            # Wizard movement, 8-way facing, and projectile firing
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
-│   ├── enemy.gd / enemy.tscn# Enemy entity with damage, facing, hurt/death animations, health bar
+│   ├── enemy.gd / enemy.tscn# Enemy AI (chase, melee/ranged attacks), damage, animations, health bar
+│   ├── enemy_projectile.gd  # The Scholar's hostile bolt
+│   ├── hud.gd               # Wizard health bar and fallen prompt
 │   ├── animation_library.gd # Builds directional animations from asset folders
 │   ├── npc.gd / npc.tscn    # Idle NPC that turns to watch the wizard
 │   ├── prop.gd              # Looping animated prop (candles)
@@ -69,6 +71,7 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Aim | **Mouse Cursor** |
 | Cast Magic Missile | **Left Mouse Button** |
 | Dodge | **Space** |
+| Restart after falling | **R** |
 | Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---
@@ -78,6 +81,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Enemy AI, wizard health, death, and restart prompt
+godot --headless --path game -s res://tests/ai_test.gd
+
 # Wizard idle, walk, and cast animations
 godot --headless --path game -s res://tests/animation_test.gd
 

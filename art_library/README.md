@@ -14,8 +14,8 @@ The worker is `../tools/pixellab_batch.py`. It reads the API key from standard i
 
 All generated artwork is a first production pass, pending review. Generating an asset does not add it to the game. These are currently copied into `../game`:
 
-- Wizard: still rotations; walk, cast, and dodge clips (`../tools/copy_character_frames.py`). Walk and dodge are pinned to the ground line (`../tools/ground_lock_frames.py`). Dodge west is mirrored from east, and dodge north reuses its first two frames because the staff vanishes later.
-- Three enemies: still rotations and hurt/death clips, ground-locked. The Skitter's west death is mirrored from east.
+- Wizard: still rotations; walk, cast, dodge, hurt, and death clips (`../tools/copy_character_frames.py`). Walk, dodge, hurt, and death are pinned to the ground line (`../tools/ground_lock_frames.py`). Dodge west is mirrored from east, and dodge north reuses its first two frames because the staff vanishes later.
+- Three enemies: still rotations and walk, attack (the Scholar's cast), hurt, and death clips, ground-locked. The Skitter's west death is mirrored from east.
 - Two NPCs: still rotations.
 - Candle flicker (`../tools/copy_prop_frames.py`), with the stand pinned so only the flame moves.
 

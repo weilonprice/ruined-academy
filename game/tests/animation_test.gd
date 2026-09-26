@@ -7,6 +7,9 @@ func run() -> void:
 	var scene: Node = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	var player = scene.get_node("Wizard")
+	# These checks are about the wizard; keep enemies from joining in.
+	for enemy in get_nodes_in_group("enemies"):
+		enemy.ai_enabled = false
 	var sprite: AnimatedSprite2D = player.get_node("Sprite")
 	var frames := sprite.sprite_frames
 	for direction in player.DIRECTIONS:
@@ -71,6 +74,7 @@ func run() -> void:
 	# A fresh enemy, clear of the bolts fired above.
 	var enemy = load("res://enemy.tscn").instantiate()
 	enemy.kind = "scholar"
+	enemy.ai_enabled = false
 	enemy.position = Vector2(300, 800)
 	scene.add_child(enemy)
 	var enemy_sprite: AnimatedSprite2D = enemy.get_node("Sprite")

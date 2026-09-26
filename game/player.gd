@@ -1,6 +1,10 @@
 extends Node2D
 
+signal health_changed(health: int, max_health: int)
+signal died
+
 const SPEED := 110.0
+const MAX_HEALTH := 12
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
 const WORLD := preload("res://world.gd")
 const ANIMATIONS := preload("res://animation_library.gd")
@@ -10,7 +14,7 @@ const STAFF_TIPS := {
 	"east": Vector2(7, -18), "south-east": Vector2(-9, -17), "south": Vector2(-21, -20), "south-west": Vector2(-19, -22),
 	"west": Vector2(-9, -24), "north-west": Vector2(8, -24), "north": Vector2(20, -22), "north-east": Vector2(20, -19),
 }
-const ANIMATION_SPEEDS := {"idle": 1.1, "move": 16.0, "cast": 14.0, "dodge": 20.0}
+const ANIMATION_SPEEDS := {"idle": 1.1, "move": 16.0, "cast": 14.0, "dodge": 20.0, "hurt": 12.0, "death": 8.0}
 const DODGE_SPEED := 340.0
 const DODGE_TIME := 0.2
 const DODGE_COOLDOWN := 0.5
@@ -19,6 +23,9 @@ const AFTERIMAGE_FADE := 0.25
 
 var facing := "south"
 var casting := false
+var hurting := false
+var health := MAX_HEALTH
+var dead := false
 var dodge_direction := Vector2.ZERO
 var dodge_time_left := 0.0
 var dodge_cooldown_left := 0.0
@@ -28,12 +35,14 @@ var afterimage_time_left := 0.0
 
 func _ready() -> void:
 	add_to_group("player")
-	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast", "dodge"])
-	sprite.animation_finished.connect(func() -> void: casting = false)
+	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast", "dodge", "hurt", "death"])
+	sprite.animation_finished.connect(_on_animation_finished)
 	_play("idle")
 
 
 func _physics_process(delta: float) -> void:
+	if dead:
+		return
 	dodge_cooldown_left = maxf(0.0, dodge_cooldown_left - delta)
 	if is_dodging():
 		_dodge_step(delta)
@@ -41,8 +50,8 @@ func _physics_process(delta: float) -> void:
 	var movement := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	position += movement * SPEED * delta
 	position = position.clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
-	# A cast finishes facing its aim; movement continues underneath it.
-	if casting:
+	# A cast or a flinch finishes before walking resumes; movement continues underneath.
+	if casting or hurting:
 		return
 	if movement != Vector2.ZERO:
 		var direction_index := posmod(roundi(movement.angle() / (PI / 4.0)), 8)
@@ -53,6 +62,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if dead:
+		if event.is_action_pressed("restart", false, true):
+			# Mark handled first: once reloading, this node has no viewport.
+			get_viewport().set_input_as_handled()
+			get_tree().reload_current_scene()
+		return
 	if event.is_action_pressed("dodge", false, true):
 		dodge()
 		get_viewport().set_input_as_handled()
@@ -63,7 +78,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func shoot_at(target: Vector2) -> Node2D:
 	var aim := target - global_position
-	if aim.is_zero_approx():
+	if dead or aim.is_zero_approx():
 		return null
 	facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	var tip: Vector2 = global_position + STAFF_TIPS[facing]
@@ -77,9 +92,37 @@ func shoot_at(target: Vector2) -> Node2D:
 	# The first hit check sweeps from the body, so an enemy between the wizard and the tip is still hit.
 	projectile.sweep_from = global_position
 	casting = true
+	hurting = false
 	_play("cast")
 	sprite.set_frame_and_progress(0, 0.0)
 	return projectile
+
+
+func take_damage(amount: int) -> void:
+	if dead or amount <= 0:
+		return
+	health = maxi(0, health - amount)
+	health_changed.emit(health, MAX_HEALTH)
+	casting = false
+	if health == 0:
+		dead = true
+		hurting = false
+		dodge_time_left = 0.0
+		_play("death")
+		died.emit()
+		return
+	# A dash keeps its own animation; the hit still counts.
+	if is_dodging():
+		return
+	hurting = true
+	_play("hurt")
+	sprite.set_frame_and_progress(0, 0.0)
+
+
+func _on_animation_finished() -> void:
+	if not dead:
+		casting = false
+		hurting = false
 
 
 func is_dodging() -> bool:
@@ -88,7 +131,7 @@ func is_dodging() -> bool:
 
 # Dashes toward the held movement keys, or the facing when standing still.
 func dodge() -> bool:
-	if is_dodging() or dodge_cooldown_left > 0.0:
+	if dead or is_dodging() or dodge_cooldown_left > 0.0:
 		return false
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if direction.is_zero_approx():
@@ -99,6 +142,7 @@ func dodge() -> bool:
 	dodge_cooldown_left = DODGE_TIME + DODGE_COOLDOWN
 	afterimage_time_left = 0.0
 	casting = false
+	hurting = false
 	_play("dodge")
 	sprite.set_frame_and_progress(0, 0.0)
 	return true

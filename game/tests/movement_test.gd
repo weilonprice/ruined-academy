@@ -7,6 +7,9 @@ func run() -> void:
 	var scene: Node = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	var player = scene.get_node("Wizard")
+	# These checks are about the wizard; keep enemies from joining in.
+	for enemy in get_nodes_in_group("enemies"):
+		enemy.ai_enabled = false
 	player.set_physics_process(false)
 	var origin := Vector2(800, 480)
 	for entry in [["move_up", KEY_W, Vector2.UP], ["move_left", KEY_A, Vector2.LEFT], ["move_down", KEY_S, Vector2.DOWN], ["move_right", KEY_D, Vector2.RIGHT]]:

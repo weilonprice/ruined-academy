@@ -7,6 +7,9 @@ func run() -> void:
 	var scene: Node = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	var player = scene.get_node("Wizard")
+	# These checks are about the wizard; keep enemies from joining in.
+	for enemy in get_nodes_in_group("enemies"):
+		enemy.ai_enabled = false
 	player.set_physics_process(false)
 	await physics_frame
 	await physics_frame
@@ -64,6 +67,8 @@ func run() -> void:
 	var enemy_scene: PackedScene = load("res://enemy.tscn")
 	var near_target = enemy_scene.instantiate()
 	var far_target = enemy_scene.instantiate()
+	near_target.ai_enabled = false
+	far_target.ai_enabled = false
 	scene.add_child(near_target)
 	scene.add_child(far_target)
 	near_target.position = Vector2(880, 480)
