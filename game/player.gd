@@ -4,7 +4,7 @@ const SPEED := 110.0
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
 const WORLD := preload("res://world.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
-const ANIMATION_SPEEDS := {"idle": 5.0, "move": 10.0, "cast": 14.0}
+const ANIMATION_SPEEDS := {"idle": 1.1, "move": 10.0, "cast": 14.0}
 
 var facing := "south"
 var casting := false

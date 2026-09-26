@@ -10,7 +10,7 @@ func run() -> void:
 	var sprite: AnimatedSprite2D = player.get_node("Sprite")
 	var frames := sprite.sprite_frames
 	for direction in player.DIRECTIONS:
-		assert(frames.get_frame_count("idle_" + direction) == 4, "Idle uses the generated 4-frame clip")
+		assert(frames.get_frame_count("idle_" + direction) == 2, "Idle uses the 2-frame breathing loop")
 		assert(frames.get_frame_count("move_" + direction) == 8, "Walk uses the generated 8-frame clip")
 		assert(frames.get_frame_count("cast_" + direction) == 4, "Cast uses the generated 4-frame clip")
 		assert(frames.get_animation_loop("move_" + direction) and not frames.get_animation_loop("cast_" + direction))

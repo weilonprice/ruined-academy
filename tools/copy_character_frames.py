@@ -21,7 +21,7 @@ for action in actions:
         frames = sorted(source.glob('image_storage_urls_frames_*.png'))
         target = ROOT / 'game/assets' / name / action / direction
         target.mkdir(parents=True, exist_ok=True)
-        for old in target.glob('frame_*.png'):
+        for old in target.glob('frame_*'):
             old.unlink()
         for index, frame in enumerate(frames):
             shutil.copyfile(frame, target / f'frame_{index:02d}.png')
