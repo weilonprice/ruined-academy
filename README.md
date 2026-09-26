@@ -23,7 +23,8 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── main.tscn            # Primary playable combat scene
 │   ├── player.gd            # Wizard movement, 8-way facing, and projectile firing
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
-│   ├── enemy.gd / enemy.tscn# Enemy entity with damage handling and health bar
+│   ├── enemy.gd / enemy.tscn# Enemy entity with damage, facing, hurt/death animations, health bar
+│   ├── animation_library.gd # Builds directional animations from asset folders
 │   ├── map.gd               # Map layout (stone courtyard, paths, grass)
 │   └── tests/               # Headless automated test suite (combat, movement, preview)
 ├── art_library/             # 300+ generated visual assets from Pixel Lab

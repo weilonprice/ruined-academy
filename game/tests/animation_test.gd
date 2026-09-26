@@ -44,12 +44,59 @@ func run() -> void:
 	assert(sprite.animation == &"cast_west" and sprite.frame == 0)
 	for projectile in get_nodes_in_group("projectiles"):
 		projectile.queue_free()
-	print("PASS: idle/walk/cast clips in 8 directions; cast faces aim, overrides walk, restarts per shot, returns to walk/idle")
+
+	# Each enemy kind has breathing idle, hurt, and death clips in four facings.
+	for kind in ["Skitter", "Scholar", "Sentinel"]:
+		var enemy_frames: SpriteFrames = scene.get_node(kind + "/Sprite").sprite_frames
+		for direction in ["south", "east", "north", "west"]:
+			assert(enemy_frames.get_frame_count("idle_" + direction) == 2, kind + " breathing idle")
+			assert(enemy_frames.get_frame_count("hurt_" + direction) == 4, kind + " hurt clip")
+			assert(enemy_frames.get_frame_count("death_" + direction) == 4, kind + " death clip")
+			assert(not enemy_frames.get_animation_loop("death_" + direction))
+	# Enemies turn to face the wizard.
+	# A fresh enemy, clear of the bolts fired above.
+	var enemy = load("res://enemy.tscn").instantiate()
+	enemy.kind = "scholar"
+	enemy.position = Vector2(300, 800)
+	scene.add_child(enemy)
+	var enemy_sprite: AnimatedSprite2D = enemy.get_node("Sprite")
+	player.position = enemy.position + Vector2(0, 200)
+	await process_step()
+	assert(enemy_sprite.animation == &"idle_south")
+	player.position = enemy.position + Vector2(-200, 0)
+	await process_step()
+	assert(enemy_sprite.animation == &"idle_west")
+	# A hit plays hurt once, holding the facing, then returns to idle.
+	enemy.take_damage(1)
+	assert(enemy.hurting and enemy_sprite.animation == &"hurt_west")
+	player.position = enemy.position + Vector2(200, 0)
+	await process_step()
+	assert(enemy_sprite.animation == &"hurt_west", "Hurt must not be interrupted by turning")
+	for frame in range(120):
+		await process_frame
+		if not enemy.hurting:
+			break
+	await process_frame
+	assert(not enemy.hurting and enemy_sprite.animation == &"idle_east")
+	# The killing hit plays death, then the body fades and despawns.
+	enemy.take_damage(2)
+	assert(enemy.dying and enemy_sprite.animation == &"death_east")
+	for frame in range(300):
+		await process_frame
+		if not is_instance_valid(enemy):
+			break
+	assert(not is_instance_valid(enemy), "Dead enemy must despawn")
+	print("PASS: wizard idle/walk/cast in 8 directions, cast faces aim and overrides walk; enemy idle/hurt/death in 4 directions, enemies face wizard, hurt returns to idle, death then despawn")
 	scene.queue_free()
 	quit()
 
 
-# physics_frame fires before nodes process, so wait two to observe one update.
+# physics_frame and process_frame fire before nodes process, so wait two to observe one update.
+func process_step() -> void:
+	await process_frame
+	await process_frame
+
+
 func physics_step() -> void:
 	await physics_frame
 	await physics_frame

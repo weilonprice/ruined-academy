@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxflu3o2wocro"
-path="res://.godot/imported/en-01.png-63a592ba88d6a0dd8f724259ca86758b.ctex"
+uid="uid://dc01jbtq04va2"
+path="res://.godot/imported/frame_01.png-9316e50eabdf1fc6ded2cde7ea6d8376.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/en-01.png"
-dest_files=["res://.godot/imported/en-01.png-63a592ba88d6a0dd8f724259ca86758b.ctex"]
+source_file="res://assets/enemies/skitter/idle/north/frame_01.png"
+dest_files=["res://.godot/imported/frame_01.png-9316e50eabdf1fc6ded2cde7ea6d8376.ctex"]
 
 [params]
 

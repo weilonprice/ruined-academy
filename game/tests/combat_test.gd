@@ -51,8 +51,14 @@ func run() -> void:
 				assert(is_instance_valid(target), "Nonlethal damage must preserve the enemy")
 				assert(target.health == 2 - hit, "A projectile must damage only once")
 			else:
-				assert(not is_instance_valid(target), "Enemy must despawn at zero health")
+				assert(target.dying and target.collision_layer == 0 and not target.is_in_group("enemies"), "A killed enemy stops being a target at once")
 	assert(get_nodes_in_group("enemies").is_empty())
+	# Bodies stay for the death animation and fade, then despawn.
+	for frame in range(300):
+		await process_frame
+		if not enemies.any(func(e) -> bool: return is_instance_valid(e)):
+			break
+	assert(not enemies.any(func(e) -> bool: return is_instance_valid(e)), "Enemy must despawn after its death animation")
 
 	# A large frame step must hit the nearest target instead of tunneling through it.
 	var enemy_scene: PackedScene = load("res://enemy.tscn")
@@ -84,6 +90,6 @@ func run() -> void:
 	missed_shot._physics_process(1.0)
 	await process_frame
 	assert(not is_instance_valid(missed_shot), "Missed shots must be removed outside the map")
-	print("PASS: 3 stationary enemies; left click only; staff-tip launch; mouse-target aim; damage once per shot; zero-health despawn; swept nearest hit; overlap hit; missed-shot cleanup")
+	print("PASS: 3 stationary enemies; left click only; staff-tip launch; mouse-target aim; damage once per shot; zero-health death animation then despawn; swept nearest hit; overlap hit; missed-shot cleanup")
 	scene.queue_free()
 	quit()

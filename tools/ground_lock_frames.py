@@ -3,8 +3,9 @@
 Usage: python3 tools/ground_lock_frames.py wizard move
 Generated walk clips drift up and down by a few pixels, which reads as the
 character floating. Each frame is shifted vertically so its lowest pixel sits
-where the still rotation's feet are, and padded to 84x84 so every clip shares
-one canvas. Edits game/assets/<name>/<action>/<direction>/ in place.
+where the still rotation's feet are, and padded to at least 84x84 so clips
+share a canvas (frames stay centred, so larger clips remain aligned).
+Edits game/assets/<name>/<action>/<direction>/ in place.
 """
 import sys
 from pathlib import Path
@@ -22,9 +23,10 @@ for folder in sorted((character / action).iterdir()):
     shifts = []
     for path in sorted(folder.glob('frame_*.png')):
         frame = Image.open(path).convert('RGBA')
-        pad = (CANVAS - frame.width) // 2
-        shift = baseline - (frame.getchannel('A').getbbox()[3] + pad)
-        locked = Image.new('RGBA', (CANVAS, CANVAS))
+        canvas = max(CANVAS, frame.width)
+        pad = (canvas - frame.width) // 2
+        shift = baseline + (canvas - CANVAS) // 2 - (frame.getchannel('A').getbbox()[3] + pad)
+        locked = Image.new('RGBA', (canvas, canvas))
         locked.paste(frame, (pad, pad + shift))
         locked.save(path)
         shifts.append(shift)

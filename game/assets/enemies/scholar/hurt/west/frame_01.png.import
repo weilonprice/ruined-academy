@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci7g2kb7pnoht"
-path="res://.godot/imported/en-03.png-0a6861fd6a41490d7947fe218c468c85.ctex"
+uid="uid://kf2pjbu3ev17"
+path="res://.godot/imported/frame_01.png-9b58b123ab2d4824c38379e81de5c017.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/en-03.png"
-dest_files=["res://.godot/imported/en-03.png-0a6861fd6a41490d7947fe218c468c85.ctex"]
+source_file="res://assets/enemies/scholar/hurt/west/frame_01.png"
+dest_files=["res://.godot/imported/frame_01.png-9b58b123ab2d4824c38379e81de5c017.ctex"]
 
 [params]
 

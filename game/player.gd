@@ -3,6 +3,7 @@ extends Node2D
 const SPEED := 110.0
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
 const WORLD := preload("res://world.gd")
+const ANIMATIONS := preload("res://animation_library.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
 # Where the staff's orb sits in each facing, relative to the sprite centre; bolts launch from it.
 const STAFF_TIPS := {
@@ -17,29 +18,8 @@ var casting := false
 
 
 func _ready() -> void:
-	var frames := SpriteFrames.new()
-	frames.remove_animation("default")
-	for direction: String in DIRECTIONS:
-		var rotation_path := "res://assets/wizard/rotations/%s.png" % direction
-		if not ResourceLoader.exists(rotation_path):
-			continue
-		var rotation := load(rotation_path) as Texture2D
-		for action: String in ANIMATION_SPEEDS:
-			var animation := "%s_%s" % [action, direction]
-			frames.add_animation(animation)
-			frames.set_animation_speed(animation, ANIMATION_SPEEDS[action])
-			frames.set_animation_loop(animation, action != "cast")
-			var folder := "res://assets/wizard/%s/%s" % [action, direction]
-			if DirAccess.dir_exists_absolute(folder):
-				# ResourceLoader also lists imported PNGs in exported builds, where the raw files are absent.
-				var files := Array(ResourceLoader.list_directory(folder))
-				files.sort()
-				for file: String in files:
-					if file.ends_with(".png"):
-						frames.add_frame(animation, load(folder.path_join(file)))
-			if frames.get_frame_count(animation) == 0:
-				frames.add_frame(animation, rotation)
-	sprite.sprite_frames = frames
+	add_to_group("player")
+	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast"])
 	sprite.animation_finished.connect(func() -> void: casting = false)
 	_play("idle")
 

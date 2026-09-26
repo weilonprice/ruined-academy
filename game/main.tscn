@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
 [ext_resource type="PackedScene" path="res://enemy.tscn" id="3_enemy"]
-[ext_resource type="Texture2D" path="res://assets/enemies/en-01.png" id="4_skitter"]
-[ext_resource type="Texture2D" path="res://assets/enemies/en-02.png" id="5_scholar"]
-[ext_resource type="Texture2D" path="res://assets/enemies/en-03.png" id="6_sentinel"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_map")
@@ -27,22 +24,12 @@ position_smoothing_enabled = false
 
 [node name="Skitter" parent="." instance=ExtResource("3_enemy")]
 position = Vector2(640, 392)
-
-[node name="Sprite" parent="Skitter" index="0"]
-texture = ExtResource("4_skitter")
+kind = "skitter"
 
 [node name="Scholar" parent="." instance=ExtResource("3_enemy")]
 position = Vector2(800, 392)
-
-[node name="Sprite" parent="Scholar" index="0"]
-texture = ExtResource("5_scholar")
+kind = "scholar"
 
 [node name="Sentinel" parent="." instance=ExtResource("3_enemy")]
 position = Vector2(960, 392)
-
-[node name="Sprite" parent="Sentinel" index="0"]
-texture = ExtResource("6_sentinel")
-
-[editable path="Skitter"]
-[editable path="Scholar"]
-[editable path="Sentinel"]
+kind = "sentinel"

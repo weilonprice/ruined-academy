@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu4rxvsu0en8a"
-path="res://.godot/imported/en-02.png-671a4c3ea7d1cfa750fda16ca866ad7c.ctex"
+uid="uid://cwynn8uylql0m"
+path="res://.godot/imported/frame_03.png-2fa8e0fb881b7c8c26c1e02d177fe1a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/en-02.png"
-dest_files=["res://.godot/imported/en-02.png-671a4c3ea7d1cfa750fda16ca866ad7c.ctex"]
+source_file="res://assets/enemies/sentinel/death/south/frame_03.png"
+dest_files=["res://.godot/imported/frame_03.png-2fa8e0fb881b7c8c26c1e02d177fe1a6.ctex"]
 
 [params]
 
