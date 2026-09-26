@@ -12,7 +12,15 @@ Generation is asynchronous and limited by Pixel Lab's concurrent-job allowance. 
 
 The worker is `../tools/pixellab_batch.py`. It reads the API key from standard input and keeps it in memory. It never purchases credits. Accepted submissions are saved before polling, allowing completed or pending remote jobs to be resumed without submitting them again. Requests marked `needs_review` are not automatically retried because their submission status may be uncertain.
 
-All generated artwork is a first production pass, pending review. Only the wizard's directional sprites, walk, cast, and dodge frames (dodge west mirrored from east; north reuses its first two frames, as the staff vanishes later) (via `../tools/copy_character_frames.py`), a breathing idle built from the stills (`../tools/make_breathing_idle.py`; the generated idle clips were too exaggerated), with walk frames pinned to the ground line by `../tools/ground_lock_frames.py`, and the three enemies' stills, breathing idles, and hurt/death clips (the Skitter's west death is mirrored from east) , plus the two NPCs (breathing idles from their stills) and the candle flicker (`../tools/copy_prop_frames.py`, stand pinned so only the flame moves),
-are currently copied into `../game`; generating another asset does not add it to the game.
+All generated artwork is a first production pass, pending review. Generating an asset does not add it to the game. These are currently copied into `../game`:
+
+- Wizard: still rotations; walk, cast, and dodge clips (`../tools/copy_character_frames.py`). Walk and dodge are pinned to the ground line (`../tools/ground_lock_frames.py`). Dodge west is mirrored from east, and dodge north reuses its first two frames because the staff vanishes later.
+- Three enemies: still rotations and hurt/death clips, ground-locked. The Skitter's west death is mirrored from east.
+- Two NPCs: still rotations.
+- Candle flicker (`../tools/copy_prop_frames.py`), with the stand pinned so only the flame moves.
+
+Every idle (wizard, enemies, NPCs) is a subtle breathing loop built from the stills (`../tools/make_breathing_idle.py`), because the generated idle clips shimmer and exaggerate the motion.
+
+The spell effects (FX-01 to FX-16) are unusable: each came out as an academy building. The brazier (PROP-26) and ward beacon (PROP-20) ambient clips have the same problem.
 
 The game is independently playable while this queue runs. The worker needs the computer to stay running and online. If the worker is interrupted, it can resume with the same queue and a key supplied again on stdin.
