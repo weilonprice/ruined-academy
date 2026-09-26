@@ -66,6 +66,7 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Move Up / Left / Down / Right | **W** / **A** / **S** / **D** |
 | Aim | **Mouse Cursor** |
 | Cast Magic Missile | **Left Mouse Button** |
+| Dodge | **Space** |
 | Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---

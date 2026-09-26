@@ -13,6 +13,7 @@ func run() -> void:
 		assert(frames.get_frame_count("idle_" + direction) == 2, "Idle uses the 2-frame breathing loop")
 		assert(frames.get_frame_count("move_" + direction) == 8, "Walk uses the generated 8-frame clip")
 		assert(frames.get_frame_count("cast_" + direction) == 4, "Cast uses the generated 4-frame clip")
+		assert(frames.get_frame_count("dodge_" + direction) == 4 and not frames.get_animation_loop("dodge_" + direction), "Dodge plays a 4-frame clip once")
 		assert(frames.get_animation_loop("move_" + direction) and not frames.get_animation_loop("cast_" + direction))
 	await process_frame
 	assert(sprite.animation == &"idle_south")
@@ -35,6 +36,19 @@ func run() -> void:
 	Input.action_release("move_right")
 	await physics_step()
 	assert(sprite.animation == &"idle_east")
+
+	# A dodge cancels a cast and plays the dodge clip toward the dash.
+	player.shoot_at(player.global_position + Vector2(100, 0))
+	player.facing = "north"
+	assert(player.dodge())
+	assert(not player.casting and sprite.animation == &"dodge_north" and sprite.frame == 0)
+	for frame in range(60):
+		await physics_frame
+		if not player.is_dodging():
+			break
+	await physics_step()
+	assert(sprite.animation == &"idle_north")
+	player.dodge_cooldown_left = 0.0
 
 	# A new shot restarts the cast from its first frame.
 	player.shoot_at(player.global_position + Vector2(100, 0))
@@ -86,7 +100,7 @@ func run() -> void:
 		if not is_instance_valid(enemy):
 			break
 	assert(not is_instance_valid(enemy), "Dead enemy must despawn")
-	print("PASS: wizard idle/walk/cast in 8 directions, cast faces aim and overrides walk; enemy idle/hurt/death in 4 directions, enemies face wizard, hurt returns to idle, death then despawn")
+	print("PASS: wizard idle/walk/cast/dodge in 8 directions, cast faces aim and overrides walk, dodge cancels cast; enemy idle/hurt/death in 4 directions, enemies face wizard, hurt returns to idle, death then despawn")
 	scene.queue_free()
 	quit()
 
