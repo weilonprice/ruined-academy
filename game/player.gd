@@ -3,6 +3,7 @@ extends Node2D
 signal health_changed(health: float, max_health: float)
 signal mana_changed(mana: float, max_mana: float)
 signal died
+signal flasks_changed
 
 const SPEED := 110.0
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
@@ -33,6 +34,12 @@ const AFTERIMAGE_INTERVAL := 0.04
 const AFTERIMAGE_FADE := 0.25
 # How close the wizard must be to pick an item up; clicking one farther away walks over first.
 const PICKUP_RANGE := 40.0
+# Flasks, on keys 1 and 2: each recovers its amount over its duration, costs
+# charges per drink, and refills from kills. One can't be drunk again while it runs.
+const FLASKS := [
+	{"name": "Life Flask", "restores": "life", "amount": 50.0, "duration": 2.0, "max_charges": 30, "per_use": 10},
+	{"name": "Mana Flask", "restores": "mana", "amount": 40.0, "duration": 1.5, "max_charges": 20, "per_use": 5},
+]
 const LOOT := preload("res://loot.gd")
 
 var facing := "south"
@@ -52,6 +59,9 @@ var dodge_cooldown_left := 0.0
 var afterimage_time_left := 0.0
 # A ground item being walked to; movement keys or a dodge cancel the walk.
 var pickup_target: Node2D = null
+var flask_charges: Array = FLASKS.map(func(flask: Dictionary) -> int: return flask.max_charges)
+# Seconds of recovery left for each flask; 0 when not running.
+var flask_time_left: Array = FLASKS.map(func(_flask: Dictionary) -> float: return 0.0)
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 
@@ -113,6 +123,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("dodge", false, true):
 		dodge()
+		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("flask_1", false, true) or event.is_action_pressed("flask_2", false, true):
+		drink_flask(0 if event.is_action_pressed("flask_1") else 1)
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of casting.
@@ -216,12 +229,48 @@ func _on_animation_finished() -> void:
 
 
 func _regenerate(delta: float) -> void:
-	if health < max_health and stats.life_regen > 0.0:
-		health = minf(max_health, health + stats.life_regen * delta)
+	var life_rate: float = stats.life_regen
+	var mana_rate: float = stats.mana_regen
+	for index in range(FLASKS.size()):
+		if flask_time_left[index] <= 0.0:
+			continue
+		# Recover for the part of this step the flask is still running, at its steady rate.
+		var active := minf(delta, flask_time_left[index])
+		var recovered: float = FLASKS[index].amount / FLASKS[index].duration * active
+		if FLASKS[index].restores == "life":
+			health = minf(max_health, health + recovered)
+			health_changed.emit(health, max_health)
+		else:
+			mana = minf(max_mana, mana + recovered)
+			mana_changed.emit(mana, max_mana)
+		flask_time_left[index] = maxf(0.0, flask_time_left[index] - delta)
+		if is_zero_approx(flask_time_left[index]):
+			flask_time_left[index] = 0.0
+			flasks_changed.emit()
+	if health < max_health and life_rate > 0.0:
+		health = minf(max_health, health + life_rate * delta)
 		health_changed.emit(health, max_health)
 	if mana < max_mana:
-		mana = minf(max_mana, mana + stats.mana_regen * delta)
+		mana = minf(max_mana, mana + mana_rate * delta)
 		mana_changed.emit(mana, max_mana)
+
+
+# Drinks a flask if it has the charges and isn't already running.
+func drink_flask(index: int) -> bool:
+	var flask: Dictionary = FLASKS[index]
+	if dead or flask_time_left[index] > 0.0 or flask_charges[index] < flask.per_use:
+		return false
+	flask_charges[index] -= flask.per_use
+	flask_time_left[index] = flask.duration
+	flasks_changed.emit()
+	return true
+
+
+# Kills refill every flask, up to its maximum.
+func gain_flask_charges(amount: int) -> void:
+	for index in range(FLASKS.size()):
+		flask_charges[index] = mini(FLASKS[index].max_charges, flask_charges[index] + amount)
+	flasks_changed.emit()
 
 
 # Picks the item up now if it is in reach; otherwise walks to it first.

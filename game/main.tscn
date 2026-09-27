@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=14 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" path="res://inventory_panel.gd" id="9_inventory"]
 [ext_resource type="Script" path="res://item_tooltip.gd" id="10_tooltip"]
 [ext_resource type="Script" path="res://skill_bar.gd" id="11_skills"]
+[ext_resource type="Script" path="res://flask_bar.gd" id="12_flasks"]
+[ext_resource type="Script" path="res://pause_menu.gd" id="13_pause"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -131,6 +133,21 @@ grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("11_skills")
 
+[node name="FlaskBar" type="Control" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -38.0
+offset_right = -40.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("12_flasks")
+
 [node name="InventoryPanel" type="Control" parent="HUD"]
 anchors_preset = 11
 anchor_left = 1.0
@@ -151,6 +168,55 @@ script = ExtResource("10_tooltip")
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 1
+
+[node name="PauseMenu" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_pause")
+
+[node name="Dim" type="ColorRect" parent="HUD/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.02, 0.04, 0.7)
+
+[node name="Center" type="CenterContainer" parent="HUD/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Box" type="VBoxContainer" parent="HUD/PauseMenu/Center"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="HUD/PauseMenu/Center/Box"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.93, 0.85, 0.8, 1)
+theme_override_font_sizes/font_size = 16
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="HUD/PauseMenu/Center/Box"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Resume"
+
+[node name="Quit" type="Button" parent="HUD/PauseMenu/Center/Box"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Quit"
 
 [node name="Debug" type="Node" parent="."]
 script = ExtResource("8_debug")

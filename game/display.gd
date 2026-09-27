@@ -3,6 +3,11 @@ extends Node
 # Global window controls, active in every scene.
 
 
+func _ready() -> void:
+	# Fullscreen still toggles while the game is paused.
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_fullscreen", false, true):
 		toggle_fullscreen()

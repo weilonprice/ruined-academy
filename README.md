@@ -25,6 +25,8 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── frost_nova.gd        # Frost Nova: cold burst around the wizard that chills
 │   ├── skill_bar.gd         # Skill bar (LMB bolt, RMB nova)
+│   ├── flask_bar.gd         # Life and mana flask vials
+│   ├── pause_menu.gd        # Esc pause menu: Resume / Quit
 │   ├── enemy.gd / enemy.tscn# Enemy AI (chase, melee/ranged attacks), damage, animations, health bar
 │   ├── enemy_projectile.gd  # The Scholar's hostile bolt
 │   ├── hud.gd               # Life and mana bars, messages, fallen prompt
@@ -83,6 +85,8 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Cast Magic Missile | **Left Mouse Button** |
 | Cast Frost Nova (short-range burst around you) | **Right Mouse Button** |
 | Dodge | **Space** |
+| Drink Life / Mana Flask | **1** / **2** |
+| Pause menu (Resume / Quit) | **Esc** |
 | Restart after falling | **R** |
 | Inventory (click to move, Shift+click to equip/unequip) | **I** (Esc closes) |
 | Pick up loot (walks over if far) | **Left-click** its label |
@@ -98,6 +102,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Flasks and the pause menu
+godot --headless --path game -s res://tests/flasks_pause_test.gd
+
 # Frost Nova: area hits, chill, costs, gear scaling, skill bar
 godot --headless --path game -s res://tests/skills_test.gd
 

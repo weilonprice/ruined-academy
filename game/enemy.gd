@@ -17,15 +17,15 @@ const SPACING := 30.0
 # Chilled enemies move, animate, and recover from attacks at this fraction of their speed.
 const CHILL_SLOW := 0.7
 const CHILL_TINT := Color(0.72, 0.9, 1.35)
-# Per kind: movement, attack clip, the frame the blow lands on, and cooldown after an attack.
+# Per kind: movement, attack clip, the frame the blow lands on, cooldown after an attack, and flask charges its death gives.
 # A ranged kind holds around its reach and fires a bolt instead of striking.
 const KINDS := {
 	"skitter": {"speed": 85.0, "reach": 30.0, "damage": 8.0, "damage_type": "physical", "cooldown": 1.2, "ranged": false,
-		"attack": "attack", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 12.0, "attack": 10.0}},
+		"attack": "attack", "hit_frame": 2, "flask_charges": 5, "speeds": {"idle": 1.1, "move": 12.0, "attack": 10.0}},
 	"scholar": {"speed": 45.0, "reach": 170.0, "damage": 10.0, "damage_type": "fire", "cooldown": 2.5, "ranged": true,
-		"attack": "cast", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 8.0, "cast": 8.0}},
+		"attack": "cast", "hit_frame": 2, "flask_charges": 5, "speeds": {"idle": 1.1, "move": 8.0, "cast": 8.0}},
 	"sentinel": {"speed": 38.0, "reach": 38.0, "damage": 16.0, "damage_type": "physical", "cooldown": 2.0, "ranged": false,
-		"attack": "attack", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 7.0, "attack": 6.0}},
+		"attack": "attack", "hit_frame": 2, "flask_charges": 10, "speeds": {"idle": 1.1, "move": 7.0, "attack": 6.0}},
 }
 
 # Folder under res://assets/enemies holding this enemy's frames, and its KINDS entry.
@@ -112,6 +112,9 @@ func take_damage(amount: float, critical := false, chill := 0.0) -> void:
 		_play("death")
 		# Deferred: this can run inside the bolt's physics query.
 		LOOT.drop_for.call_deferred(kind, global_position, get_parent())
+		var player = _player()
+		if player != null:
+			player.gain_flask_charges(stats.flask_charges)
 		return
 	hurting = true
 	_play("hurt")
