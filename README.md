@@ -25,7 +25,11 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── enemy.gd / enemy.tscn# Enemy AI (chase, melee/ranged attacks), damage, animations, health bar
 │   ├── enemy_projectile.gd  # The Scholar's hostile bolt
-│   ├── hud.gd               # Wizard health bar and fallen prompt
+│   ├── hud.gd               # Life and mana bars, messages, fallen prompt
+│   ├── stats.gd             # Character stats from gear; armour and resistance maths
+│   ├── inventory.gd         # Autoload: equipped gear, 10x5 backpack grid, save file
+│   ├── items/               # Item bases, affixes, uniques, and the random item generator
+│   ├── character_panel.gd   # Character sheet (C)
 │   ├── animation_library.gd # Builds directional animations from asset folders
 │   ├── npc.gd / npc.tscn    # Idle NPC that turns to watch the wizard
 │   ├── prop.gd              # Looping animated prop (candles)
@@ -72,6 +76,8 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Cast Magic Missile | **Left Mouse Button** |
 | Dodge | **Space** |
 | Restart after falling | **R** |
+| Character sheet (gear and stats) | **C** |
+| Debug: roll and equip a random item / clear gear | **F3** / **F4** |
 | Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---
@@ -81,6 +87,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Items, affixes, stats, inventory, and saving
+godot --headless --path game -s res://tests/items_test.gd
+
 # Enemy AI, wizard health, death, and restart prompt
 godot --headless --path game -s res://tests/ai_test.gd
 

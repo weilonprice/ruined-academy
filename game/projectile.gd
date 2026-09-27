@@ -1,11 +1,14 @@
 extends Node2D
 
 const SPEED := 300.0
-const DAMAGE := 1
 const ENEMY_LAYER := 2
 const WORLD := preload("res://world.gd")
 
 var direction := Vector2.RIGHT
+# Set by the caster from its stats.
+var speed := SPEED
+var damage := 10.0
+var critical := false
 var lifetime := 2.0
 # Start of the next hit sweep; the launcher may set it behind the spawn point.
 var sweep_from: Variant = null
@@ -20,7 +23,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if is_queued_for_deletion():
 		return
-	var next_position := global_position + direction * SPEED * delta
+	var next_position := global_position + direction * speed * delta
 	var space := get_world_2d().direct_space_state
 	var start: Vector2 = sweep_from if sweep_from != null else global_position
 	sweep_from = null
@@ -39,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		query.collide_with_bodies = false
 		hit = space.intersect_ray(query)
 	if not hit.is_empty():
-		hit.collider.take_damage(DAMAGE)
+		hit.collider.take_damage(damage, critical)
 		queue_free()
 		return
 	global_position = next_position
@@ -49,6 +52,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _draw() -> void:
-	# A small pixel-shaped magic bolt, with its tip pointing along travel.
-	draw_colored_polygon(PackedVector2Array([Vector2(-10, -2), Vector2(1, -2), Vector2(5, 0), Vector2(1, 2), Vector2(-10, 2)]), Color("e78a3b"))
-	draw_rect(Rect2(-3, -1, 6, 2), Color("fff0ae"))
+	# A small pixel-shaped magic bolt, with its tip pointing along travel; crits burn larger and whiter.
+	var scale := 1.5 if critical else 1.0
+	var body := PackedVector2Array([Vector2(-10, -2), Vector2(1, -2), Vector2(5, 0), Vector2(1, 2), Vector2(-10, 2)])
+	for index in range(body.size()):
+		body[index] *= scale
+	draw_colored_polygon(body, Color("ffd27a") if critical else Color("e78a3b"))
+	draw_rect(Rect2(Vector2(-3, -1) * scale, Vector2(6, 2) * scale), Color("ffffff") if critical else Color("fff0ae"))

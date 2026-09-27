@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" path="res://npc.tscn" id="4_npc"]
 [ext_resource type="Script" path="res://prop.gd" id="5_prop"]
 [ext_resource type="Script" path="res://hud.gd" id="6_hud"]
+[ext_resource type="Script" path="res://character_panel.gd" id="7_character"]
+[ext_resource type="Script" path="res://debug_tools.gd" id="8_debug"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -84,3 +86,32 @@ text = "You have fallen
 Press R to try again"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Message" type="Label" parent="HUD"]
+offset_left = 8.0
+offset_top = 30.0
+offset_right = 320.0
+offset_bottom = 42.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0.06, 0.05, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 8
+
+[node name="CharacterPanel" type="PanelContainer" parent="HUD"]
+offset_left = 8.0
+offset_top = 44.0
+offset_right = 176.0
+offset_bottom = 230.0
+mouse_filter = 2
+script = ExtResource("7_character")
+
+[node name="Text" type="RichTextLabel" parent="HUD/CharacterPanel"]
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 8
+
+[node name="Debug" type="Node" parent="."]
+script = ExtResource("8_debug")

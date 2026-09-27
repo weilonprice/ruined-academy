@@ -7,6 +7,10 @@ func run() -> void:
 	var scene: Node = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	var player = scene.get_node("Wizard")
+	# A private save file, so the tests never touch the player's own gear.
+	var inventory = root.get_node("Inventory")
+	inventory.use_save_path("user://test_inventory.json")
+	inventory.clear()
 	# These checks are about the wizard; keep enemies from joining in.
 	for enemy in get_nodes_in_group("enemies"):
 		enemy.ai_enabled = false
@@ -76,4 +80,11 @@ func run() -> void:
 	assert(player.position.x >= 32, "Dodges stay inside the map")
 	print("PASS: WASD bindings, four directions, equal diagonal speed, release stops, map bounds; Space dodge dash, facing fallback, cooldown, afterimages, bounds")
 	scene.queue_free()
+	DirAccess.remove_absolute("user://test_inventory.json")
 	quit()
+
+
+# Skips the cast cooldown and refills mana, so each check fires on demand.
+func ready_cast(player) -> void:
+	player.cast_ready_in = 0.0
+	player.mana = player.max_mana

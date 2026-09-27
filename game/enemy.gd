@@ -1,6 +1,6 @@
 extends Area2D
 
-const MAX_HEALTH := 3
+const MAX_HEALTH := 30.0
 const ANIMATIONS := preload("res://animation_library.gd")
 const WORLD := preload("res://world.gd")
 const HOSTILE_BOLT_SCRIPT := preload("res://enemy_projectile.gd")
@@ -16,11 +16,11 @@ const SPACING := 30.0
 # Per kind: movement, attack clip, the frame the blow lands on, and cooldown after an attack.
 # A ranged kind holds around its reach and fires a bolt instead of striking.
 const KINDS := {
-	"skitter": {"speed": 85.0, "reach": 30.0, "damage": 1, "cooldown": 1.2, "ranged": false,
+	"skitter": {"speed": 85.0, "reach": 30.0, "damage": 8.0, "damage_type": "physical", "cooldown": 1.2, "ranged": false,
 		"attack": "attack", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 12.0, "attack": 10.0}},
-	"scholar": {"speed": 45.0, "reach": 170.0, "damage": 1, "cooldown": 2.5, "ranged": true,
+	"scholar": {"speed": 45.0, "reach": 170.0, "damage": 10.0, "damage_type": "fire", "cooldown": 2.5, "ranged": true,
 		"attack": "cast", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 8.0, "cast": 8.0}},
-	"sentinel": {"speed": 38.0, "reach": 38.0, "damage": 2, "cooldown": 2.0, "ranged": false,
+	"sentinel": {"speed": 38.0, "reach": 38.0, "damage": 16.0, "damage_type": "physical", "cooldown": 2.0, "ranged": false,
 		"attack": "attack", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 7.0, "attack": 6.0}},
 }
 
@@ -83,15 +83,15 @@ func _physics_process(delta: float) -> void:
 	_play("move" if not velocity.is_zero_approx() else "idle")
 
 
-func take_damage(amount: int) -> void:
-	if health <= 0 or amount <= 0:
+func take_damage(amount: float, critical := false) -> void:
+	if health <= 0.0 or amount <= 0.0:
 		return
-	health = maxi(0, health - amount)
+	health = maxf(0.0, health - amount)
 	aggro = true
 	# A hit interrupts an attack before its blow lands.
 	attacking = false
 	queue_redraw()
-	if health == 0:
+	if health <= 0.0:
 		# Stop being a target at once; the body stays for the death animation.
 		dying = true
 		collision_layer = 0
@@ -103,7 +103,8 @@ func take_damage(amount: int) -> void:
 	sprite.set_frame_and_progress(0, 0.0)
 	if hit_flash:
 		hit_flash.kill()
-	sprite.self_modulate = Color(1.8, 1.3, 1.3)
+	# Critical hits flash white-hot.
+	sprite.self_modulate = Color(2.4, 2.2, 2.0) if critical else Color(1.8, 1.3, 1.3)
 	hit_flash = create_tween()
 	hit_flash.tween_property(sprite, "self_modulate", Color.WHITE, 0.12)
 
@@ -127,11 +128,12 @@ func _on_frame_changed() -> void:
 		var bolt := Node2D.new()
 		bolt.set_script(HOSTILE_BOLT_SCRIPT)
 		bolt.damage = stats.damage
+		bolt.damage_type = stats.damage_type
 		get_parent().add_child(bolt)
 		bolt.global_position = global_position + Vector2(0, -12)
 		bolt.direction = bolt.global_position.direction_to(player.global_position)
 	elif global_position.distance_to(player.global_position) <= stats.reach + REACH_SLACK:
-		player.take_damage(stats.damage)
+		player.take_damage(stats.damage, stats.damage_type)
 
 
 func _on_animation_finished() -> void:
@@ -177,6 +179,6 @@ func _play(action: String) -> void:
 
 
 func _draw() -> void:
-	if 0 < health and health < MAX_HEALTH:
+	if 0.0 < health and health < MAX_HEALTH:
 		draw_rect(Rect2(-16, -35, 32, 4), Color("181c24"))
 		draw_rect(Rect2(-15, -34, 30.0 * health / MAX_HEALTH, 2), Color("d66765"))
