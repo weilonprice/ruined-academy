@@ -1,15 +1,78 @@
 # Ruined Academy — combat prototype
 
-Open `project.godot` in Godot 4.7 and press **F6** with `main.tscn` open, or **F5** to run the project.
+Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which imports assets first.
 
-Move with **W A S D**. **Left-click** to fire one projectile toward the mouse. Press **Space** to dodge: a quick dash toward the keys you hold, or the way you face. Press **F11** or **Alt + Enter** to toggle fullscreen. The three enemies wait at the north edge until the wizard comes within about 220 pixels or shoots them, then attack. The **Skitter** rushes in and claws (1 damage), the **Sentinel** lumbers in and punches (2), and the **Scholar** keeps its distance and throws violet bolts (1). Melee blows land partway through the swing, so stepping or dodging away during the windup avoids them, and bolts can be sidestepped. Shooting an enemy mid-windup cancels its attack. Each enemy has 3 health, flinches when hit, and plays a death animation after 3 hits.
+## Controls
 
-The wizard has 100 life and 60 mana, shown top-left. Each bolt costs 5 mana, deals 8–12 damage (5% base chance to crit for 1.5×), and the next cast waits 0.25 s. Mana regenerates at 6 per second. **Right-click** casts **Frost Nova**: a burst of cold around the wizard (about 90 pixels) that hits every enemy in reach for 12–18 cold damage and chills them for 2 seconds, slowing their movement and attacks to 70%. It costs 12 mana and takes 0.45 s before the next cast; spell damage, crit chance, and cast speed from gear apply. The skill bar at the bottom shows both spells and dims one while there isn't enough mana for it. **1** drinks the Life Flask (50 life over 2 s, 10 of its 30 charges) and **2** the Mana Flask (40 mana over 1.5 s, 5 of 20 charges). A flask can't be drunk again while it's recovering, and kills refill both: 5 charges for a Skitter or Scholar, 10 for a Sentinel. Flasks start full each run; their vials sit beside the skill bar. **Esc** pauses the game with a Resume / Quit menu (with the inventory open, Esc closes it first). Hits play a flinch; at zero the wizard falls, and **R** restarts. There is no invincibility, including while dodging. Enemies have 30 health; the Skitter's claw (8) and Sentinel's punch (16) are physical and reduced by armour, and the Scholar's bolt (10) is fire and reduced by fire resistance.
+| Action | Input |
+|---|---|
+| Move | **W A S D** |
+| Magic bolt (aimed at the cursor) | **Left-click** |
+| Frost Nova (burst around you) | **Right-click** |
+| Dodge | **Space** |
+| Life / Mana Flask | **1** / **2** |
+| Inventory | **I** (Esc closes) |
+| Character sheet | **C** |
+| Show every item label | hold **Alt** |
+| Pause menu (Resume / Quit) | **Esc** |
+| Restart after falling | **R** |
+| Fullscreen | **F11** or **Alt + Enter** |
+| Debug: roll and equip an item / clear gear / respawn enemies | **F3** / **F4** / **F5** |
 
-Gear sets the wizard's stats: life, life regeneration, armour, mana, mana regeneration, spell damage, cast speed, projectile speed, critical strike chance, and fire, cold, and lightning resistance (capped at 75%). Items have a base type, a rarity (normal, magic, rare, unique), random affixes whose tiers depend on item level, and are saved to `user://inventory.json`, so gear survives death and restarts. **I** opens the inventory on the right half of the screen: equipment slots above a 10×5 backpack grid where items take their shape (a staff is 2×4, a ring 1×1). Click an item to carry it on the cursor and click again to place it; dropping onto exactly one item swaps them. Click a slot to equip the carried item (whatever was there is carried instead), and Shift+click to equip or unequip directly. Hovering shows a tooltip with the item's mods and, for backpack items, how equipping it would change each stat. Casting is paused while an item is on the cursor, and closing the screen puts it back in the backpack. **C** shows the character sheet. In debug builds, **F3** rolls a random item and equips it (a replaced item goes to the backpack), and **F4** clears all gear. Enemies drop loot when they die: the Skitter and Scholar drop 0–2 items, and the Sentinel always drops at least one with better odds of rares. Drops pop out and land nearby at item level 15 (20 from the Sentinel), with a label in their rarity colour; rares and uniques also get a beam of light. Normal items show their label only while **Alt** is held. Click a label (or the item) to pick it up: in reach it goes straight into the backpack, otherwise the wizard walks over first, and pressing a movement key cancels the walk. A full backpack leaves the item on the ground. Clicking the world with an item on the cursor drops it at the wizard's feet. Opening the inventory shifts the camera so the wizard stays in view. Ground items aren't saved. In debug builds, **F5** respawns the three enemies to farm drops. A projectile deals 1 damage and disappears on impact or when it leaves the map.
+## The wizard
 
-The caretaker and the artificer stand in the courtyard and turn to watch the wizard (they can't be talked to yet), and candle stands flicker at its corners. Characters and props overlap by depth.
+The wizard has 100 life and 60 mana, regenerating 6 mana per second. Life and mana bars are top-left; flask vials and the skill bar are bottom-centre.
 
-The map is 1600 × 960 pixels with grass, earth paths, and a stone courtyard. The camera follows the wizard and stops at the map edges.
+- **Magic bolt:** 5 mana, 8–12 damage, then 0.25 s before the next cast. It launches from the staff's orb and flies through the clicked point.
+- **Frost Nova:** 12 mana, then 0.45 s. It hits every enemy within about 90 pixels once for 12–18 cold damage and chills them for 2 s, so they move, animate, and attack at 70% speed.
+- **Crits:** both spells have a 5% base chance to crit for 1.5× damage; a crit bolt looks larger and whiter.
+- **Dodge:** a 68-pixel dash over 0.2 s toward the keys you hold (or the way you face), leaving afterimages; 0.5 s cooldown. There is no invincibility.
+- **Flasks:** the Life Flask recovers 50 life over 2 s (10 of 30 charges); the Mana Flask 40 mana over 1.5 s (5 of 20). A flask can't be drunk again while it's recovering. Kills refill charges, and flasks start full each run.
+- **Falling:** at zero life the wizard falls, enemies stand down, and **R** restarts. Gear is kept.
 
-The larger Pixel Lab art batch is stored separately in `../art_library`. Only the wizard's and three enemies' sprites and animations are used by this scene.
+## Enemies
+
+Three enemies wait at the north edge until the wizard comes within about 220 pixels or shoots them, then attack. Each has 30 health, flinches when hit, and plays a death animation. Hitting one mid-windup cancels its attack, and melee blows land partway through the swing, so stepping or dodging away avoids them.
+
+| Enemy | Behaviour | Damage | Flask charges on kill |
+|---|---|---|---|
+| Skitter | Rushes in and claws | 8 physical | 5 |
+| Sentinel | Lumbers in and punches | 16 physical | 10 |
+| Scholar | Keeps its distance and throws ember-red bolts you can sidestep | 10 fire | 5 |
+
+Armour reduces physical hits (big hits get through more); fire resistance reduces the Scholar's bolts.
+
+## Items and stats
+
+Gear sets the wizard's stats: life, life regeneration, armour, mana, mana regeneration, spell damage, cast speed, projectile speed, critical strike chance, and fire, cold, and lightning resistance (capped at 75%).
+
+Items have a base type (22 across weapon, off-hand, helmet, body, gloves, boots, belt, amulet, and two rings), a rarity, and random affixes whose tiers depend on item level:
+
+- **Normal** (white): no affixes.
+- **Magic** (blue): a prefix and/or a suffix.
+- **Rare** (yellow): 3–6 affixes and a two-word name.
+- **Unique** (orange): fixed stats, such as *The Headmaster's Mantle* and *Emberlink*.
+
+Equipped gear and the backpack are saved to `user://inventory.json`, so they survive death, restarts, and quitting.
+
+## Inventory
+
+**I** opens the inventory on the right half of the screen (the camera shifts so the wizard stays in view): equipment slots above a 10×5 grid where items keep their shape (a staff is 2×4, a ring 1×1).
+
+- Click an item to carry it; click again to place it. Dropping onto exactly one item swaps them.
+- Click an equipment slot to equip the carried item; what was there is carried instead.
+- **Shift+click** equips from the backpack or unequips to it.
+- Hover for a tooltip; backpack items also show how equipping them would change each stat.
+- Clicking the world while carrying an item drops it at the wizard's feet. Casting is paused while carrying.
+
+## Loot
+
+Enemies drop items when they die: the Skitter and Scholar drop 0–2 at item level 15, and the Sentinel always drops at least one, with better odds of rares, at item level 20. Drops pop out and land nearby with a label in their rarity colour; rares and uniques also get a beam of light. Normal items show their label only while **Alt** is held.
+
+Click a label (or the item) to pick it up. In reach it goes straight into the backpack; otherwise the wizard walks over first, and a movement key cancels the walk. A full backpack leaves the item on the ground. Items on the ground aren't saved.
+
+## The courtyard
+
+The map is 1600 × 960 pixels with grass, earth paths, and a stone courtyard; the camera follows the wizard and stops at the edges. The caretaker and the artificer stand in the courtyard and turn to watch the wizard (they can't be talked to yet), and candle stands flicker at its corners. Characters and props overlap by depth.
+
+The full Pixel Lab art batch lives in `../art_library`; see its README for which assets the game uses.

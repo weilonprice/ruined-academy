@@ -9,9 +9,13 @@ A solo-first, dark-fantasy pixel-art Action RPG built in **Godot 4.7** for deskt
 You play as a former student wizard returning to a ruined magical academy. Master elemental and forbidden magic, customize spells, allocate points into a branching passive tree, battle corrupted monstrosities, and restore the academy's forgotten workshops and ward beacons.
 
 - **Perspective**: Elevated top-down view with clear pixel readability and silhouettes.
-- **Controls**: Fluid 8-directional WASD movement and responsive mouse-aimed casting.
-- **Combat**: Fast magic projectiles with raycast sweep collision, point-blank overlap handling, enemy hit flashes, and dynamic overhead health bars.
+- **Controls**: Fluid 8-directional WASD movement, mouse-aimed casting, and a dodge dash.
+- **Combat**: A magic bolt and Frost Nova, crits, mana, life and mana flasks, and enemies that chase, swing, and cast, with attack windups you can step out of.
+- **Loot**: Path of Exile-style items with random affixes, rarities, and uniques; enemies drop loot with labels you click to pick up.
+- **Inventory**: A shaped-item grid backpack, ten equipment slots, and tooltips that compare stats; gear is saved between sessions.
 - **Visuals**: Cohesive dark-fantasy palette (desaturated stone, weathered bronze, ink-blue shadows, and vibrant elemental magic) generated with Pixel Lab.
+
+See [`game/README.md`](game/README.md) for how the prototype plays.
 
 ---
 
@@ -21,7 +25,7 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 ├── game/                    # Godot 4.7 project
 │   ├── project.godot        # Engine configuration (640x400 native viewport, GL Compatibility)
 │   ├── main.tscn            # Primary playable combat scene
-│   ├── player.gd            # Wizard movement, 8-way facing, and projectile firing
+│   ├── player.gd            # Wizard: movement, casting, dodge, flasks, life and mana
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── frost_nova.gd        # Frost Nova: cold burst around the wizard that chills
 │   ├── skill_bar.gd         # Skill bar (LMB bolt, RMB nova)
@@ -42,15 +46,23 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── npc.gd / npc.tscn    # Idle NPC that turns to watch the wizard
 │   ├── prop.gd              # Looping animated prop (candles)
 │   ├── map.gd               # Map layout (stone courtyard, paths, grass)
-│   └── tests/               # Headless automated test suite (combat, movement, preview)
+│   ├── display.gd           # Autoload: fullscreen toggle
+│   ├── debug_tools.gd       # Debug keys F3-F5
+│   ├── world.gd             # Map bounds and area level
+│   └── tests/               # Headless test suites (see below) and the preview renderer
 ├── art_library/             # 300+ generated visual assets from Pixel Lab
 │   ├── assets/              # Sprites, directional animation sheets, props, tiles, UI, icons
 │   ├── queue.json           # Declarative generation queue
 │   └── status.json          # Production pipeline tracking
-├── tools/                   # Generation automation scripts
+├── tools/                   # Asset generation and import scripts
 │   ├── build_asset_queue.py # Translates ASSET_MANIFEST into API tasks
-│   ├── make_item_icons.py   # Builds game/assets/icons (generated, recoloured, placeholder)
-│   └── pixellab_batch.py    # Multi-worker generation processor
+│   ├── pixellab_batch.py    # Multi-worker generation processor
+│   ├── copy_character_frames.py # Copies generated animation clips into the game
+│   ├── ground_lock_frames.py    # Pins animation frames to the character's ground line
+│   ├── make_breathing_idle.py   # Builds the subtle 2-frame idle from still poses
+│   ├── copy_prop_frames.py      # Copies a prop animation, keeping solid parts still
+│   └── make_item_icons.py   # Builds game/assets/icons (generated, recoloured, placeholder)
+├── play.sh                  # Imports assets, then runs the game
 └── ASSET_MANIFEST.md        # Comprehensive art specification and production roadmap
 ```
 

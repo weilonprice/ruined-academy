@@ -1,7 +1,7 @@
 # Ruined Academy — First Playable Asset Manifest
 
-Status: visual generation authorized and started on 2026-09-25. The separate movement prototype contains only an empty map, the generated wizard, and WASD movement.
-Updated: 2026-09-25.
+Status: the first generation batch finished on 2026-09-25 (313 of 314 requests; the ENV-02 floor tileset failed). The playable prototype uses the wizard's and three enemies' animations, the NPCs, the candle, and a subset of item icons; see `art_library/README.md` for exactly which assets and the fixes applied. Every spell effect (FX-01 to FX-16), the brazier, and the ward beacon came out as academy buildings and need regenerating; several icons are also wrong.
+Updated: 2026-09-28.
 
 ## Project direction
 
