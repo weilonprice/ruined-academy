@@ -137,6 +137,15 @@ func quick_unequip(slot: String) -> bool:
 	return true
 
 
+# Lets go of the carried item (to drop it on the ground) and returns it.
+func take_held():
+	var item = held
+	held = null
+	if item != null:
+		_changed()
+	return item
+
+
 # Puts the carried item back in the backpack, if there is room (the screen does this on close).
 func stow_held() -> bool:
 	if held == null:

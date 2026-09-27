@@ -19,7 +19,7 @@ func run() -> void:
 	check_inventory(inventory)
 	await check_player(inventory)
 	DirAccess.remove_absolute(SAVE)
-	finish("rarity rules, affix counts, tiers by item level, base levels, no duplicate affixes, names, uniques, JSON round trip; stat totals, caps, armour and resistance; grid placement, equip slots, save and reload; wizard life/mana from gear, mana cost, cast speed, projectile speed, spell damage, crits, mitigation, regen; F3 debug roll; gear survives a restart")
+	finish("rarity rules, affix counts, tiers by item level, base levels, no duplicate affixes, names, uniques, JSON round trip; stat totals, caps, armour and resistance; grid placement, equip slots, save and reload; wizard life/mana from gear, mana cost, cast speed, projectile speed, spell damage, crits, mitigation, regen; F3 debug roll (replaced item to backpack, or ground when full); gear survives a restart")
 
 
 func check_generator() -> void:
@@ -188,16 +188,29 @@ func check_player(inventory) -> void:
 
 	# F3 rolls a random item and equips it; what it replaces goes to the backpack.
 	inventory.clear()
-	var rolled = scene.get_node("Debug").roll_and_equip()
-	var slot: String = inventory.slot_for(rolled)
+	var debug = scene.get_node("Debug")
+	debug.rng.seed = 12
+	var rolled = debug.roll_and_equip()
 	check(inventory.equipment.values().has(rolled))
 	var first = rolled
-	for attempt in range(40):
-		rolled = scene.get_node("Debug").roll_and_equip()
+	var replaced := false
+	for attempt in range(60):
+		# Only items from other slots are in the backpack here; clear them so it never fills.
+		inventory.backpack.clear()
+		rolled = debug.roll_and_equip()
 		if rolled.base().slot == first.base().slot and first.base().slot != "ring":
+			replaced = true
 			break
-	if rolled.base().slot == first.base().slot and first.base().slot != "ring":
-		check(inventory.backpack.any(func(entry: Dictionary) -> bool: return entry.item == first), "The replaced item goes to the backpack")
+	check(replaced, "The seeded rolls reach the same slot again")
+	check(inventory.backpack.any(func(entry: Dictionary) -> bool: return entry.item == first), "The replaced item goes to the backpack")
+	# With a full backpack, the replaced item lands on the ground instead of vanishing.
+	while inventory.add_item(ITEM.from_dict(first.to_dict())):
+		pass
+	var ground_before := get_nodes_in_group("ground_items").size()
+	var equipped_before: Array = inventory.equipment.values()
+	var newest = debug.roll_and_equip()
+	if newest.base().slot != "ring" and equipped_before.any(func(item) -> bool: return item.base().slot == newest.base().slot):
+		check(get_nodes_in_group("ground_items").size() == ground_before + 1, "A full backpack sends the replaced item to the ground")
 	check(scene.get_node("HUD/Message").visible)
 
 	# Gear lives outside the scene, so it survives a restart.

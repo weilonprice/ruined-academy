@@ -25,6 +25,9 @@ const DODGE_TIME := 0.2
 const DODGE_COOLDOWN := 0.5
 const AFTERIMAGE_INTERVAL := 0.04
 const AFTERIMAGE_FADE := 0.25
+# How close the wizard must be to pick an item up; clicking one farther away walks over first.
+const PICKUP_RANGE := 40.0
+const LOOT := preload("res://loot.gd")
 
 var facing := "south"
 var casting := false
@@ -41,6 +44,8 @@ var dodge_direction := Vector2.ZERO
 var dodge_time_left := 0.0
 var dodge_cooldown_left := 0.0
 var afterimage_time_left := 0.0
+# A ground item being walked to; movement keys or a dodge cancel the walk.
+var pickup_target: Node2D = null
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 
@@ -76,6 +81,10 @@ func _physics_process(delta: float) -> void:
 		_dodge_step(delta)
 		return
 	var movement := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if movement != Vector2.ZERO or not is_instance_valid(pickup_target):
+		pickup_target = null
+	else:
+		movement = _walk_to_pickup()
 	position += movement * SPEED * delta
 	position = position.clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
 	# A cast or a flinch finishes before walking resumes; movement continues underneath.
@@ -99,9 +108,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("dodge", false, true):
 		dodge()
 		get_viewport().set_input_as_handled()
-	# No casting while an item is on the cursor.
-	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not is_dodging() and Inventory.held == null:
-		shoot_at(get_global_mouse_position())
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of casting.
+		if Inventory.held != null:
+			drop_held_item()
+		elif not is_dodging():
+			shoot_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
 
 
@@ -176,6 +188,32 @@ func _regenerate(delta: float) -> void:
 		mana_changed.emit(mana, max_mana)
 
 
+# Picks the item up now if it is in reach; otherwise walks to it first.
+func walk_to_pick_up(ground_item: Node2D) -> void:
+	if dead:
+		return
+	if global_position.distance_to(ground_item.global_position) <= PICKUP_RANGE:
+		pickup_target = null
+		ground_item.pick_up()
+	else:
+		pickup_target = ground_item
+
+
+# The movement toward the item being walked to, picking it up on arrival.
+func _walk_to_pickup() -> Vector2:
+	var offset := pickup_target.global_position - global_position
+	if offset.length() <= PICKUP_RANGE:
+		var target := pickup_target
+		pickup_target = null
+		target.pick_up()
+		return Vector2.ZERO
+	return offset.normalized()
+
+
+func drop_held_item() -> void:
+	LOOT.spawn(Inventory.take_held(), global_position, get_parent())
+
+
 func is_dodging() -> bool:
 	return dodge_time_left > 0.0
 
@@ -192,6 +230,7 @@ func dodge() -> bool:
 	dodge_time_left = DODGE_TIME
 	dodge_cooldown_left = DODGE_TIME + DODGE_COOLDOWN
 	afterimage_time_left = 0.0
+	pickup_target = null
 	casting = false
 	hurting = false
 	_play("dodge")

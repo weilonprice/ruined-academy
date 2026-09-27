@@ -32,6 +32,8 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── character_panel.gd   # Character sheet (C)
 │   ├── inventory_panel.gd   # Inventory screen (I): equipment slots and backpack grid
 │   ├── item_tooltip.gd      # Item tooltip with stat comparison
+│   ├── loot.gd              # Enemy drop tables and spawning items on the ground
+│   ├── ground_item.gd       # An item on the ground: icon, label, beam, pickup
 │   ├── animation_library.gd # Builds directional animations from asset folders
 │   ├── npc.gd / npc.tscn    # Idle NPC that turns to watch the wizard
 │   ├── prop.gd              # Looping animated prop (candles)
@@ -80,8 +82,10 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Dodge | **Space** |
 | Restart after falling | **R** |
 | Inventory (click to move, Shift+click to equip/unequip) | **I** (Esc closes) |
+| Pick up loot (walks over if far) | **Left-click** its label |
+| Show every item label | hold **Alt** |
 | Character sheet (gear and stats) | **C** |
-| Debug: roll and equip a random item / clear gear | **F3** / **F4** |
+| Debug: roll and equip a random item / clear gear / respawn enemies | **F3** / **F4** / **F5** |
 | Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---
@@ -91,6 +95,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Loot: drops, labels, pickup, dropping items
+godot --headless --path game -s res://tests/loot_test.gd
+
 # Inventory screen: cursor, swaps, equipping, tooltips
 godot --headless --path game -s res://tests/inventory_ui_test.gd
 

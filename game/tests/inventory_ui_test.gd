@@ -19,7 +19,7 @@ func run() -> void:
 	for base_id in DB.BASES:
 		check(ResourceLoader.exists("res://assets/icons/%s.png" % DB.BASES[base_id].icon), "Every base has an icon: " + base_id)
 	DirAccess.remove_absolute(SAVE)
-	finish("pick up, drop, swap onto one item, blocked by two, equip swaps, quick equip/unequip, stow, carried item saved; screen toggles with I and Esc, clicks map to slots and cells, drops centre on the cursor, Shift+click quick moves, no casting while carrying, closing stows or stays open when full; tooltip and stat comparison; an icon for every base")
+	finish("pick up, drop, swap onto one item, blocked by two, equip swaps, quick equip/unequip, stow, carried item saved; screen toggles with I and Esc, clicks map to slots and cells, drops centre on the cursor, Shift+click quick moves, no casting while carrying (a world click drops the item), closing stows or stays open when full; tooltip and stat comparison; an icon for every base")
 
 
 func check_cursor_actions() -> void:
@@ -93,6 +93,9 @@ func check_screen() -> void:
 	press("inventory")
 	check(panel.visible, "I opens the inventory")
 	check(panel.size.x == panel.WIDTH and panel.get_global_rect().end.x == root.get_visible_rect().size.x, "The screen sits on the right edge")
+	var camera: Camera2D = player.get_node("Camera")
+	await create_timer(panel.CAMERA_SHIFT_TIME + 0.1).timeout
+	check(camera.offset.x == panel.WIDTH / 2.0 / camera.zoom.x, "The camera shifts so the wizard stays in view")
 
 	# Clicks land on slots and cells.
 	var staff = make_item("apprentice_staff", [["spell_damage", 20]])
@@ -124,10 +127,18 @@ func check_screen() -> void:
 	click.pressed = true
 	player._unhandled_input(click)
 	check(get_nodes_in_group("projectiles").is_empty(), "No casting while carrying an item")
+	# The world click dropped the ring at the wizard's feet; take it back up and carry it again.
+	var on_ground := get_nodes_in_group("ground_items").filter(func(node: Node) -> bool: return node.item == ring)
+	check(inventory.held == null and on_ground.size() == 1, "A world click drops the carried item")
+	if not on_ground.is_empty():
+		on_ground[0].pick_up()
+	inventory.pick_up(ring)
 
 	# Closing stows the carried item; with a full backpack the screen stays open.
 	press("ui_cancel")
 	check(not panel.visible and inventory.held == null and inventory.backpack.any(func(entry: Dictionary) -> bool: return entry.item == ring))
+	await create_timer(panel.CAMERA_SHIFT_TIME + 0.1).timeout
+	check(camera.offset == Vector2.ZERO, "Closing recentres the camera")
 	press("inventory")
 	inventory.pick_up(ring)
 	while inventory.add_item(make_item("copper_ring")):

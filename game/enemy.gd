@@ -4,6 +4,7 @@ const MAX_HEALTH := 30.0
 const ANIMATIONS := preload("res://animation_library.gd")
 const WORLD := preload("res://world.gd")
 const HOSTILE_BOLT_SCRIPT := preload("res://enemy_projectile.gd")
+const LOOT := preload("res://loot.gd")
 # Enemies have four facings; the index follows the angle, clockwise from east.
 const DIRECTIONS := ["east", "south", "west", "north"]
 const DEATH_FADE := 0.6
@@ -97,6 +98,8 @@ func take_damage(amount: float, critical := false) -> void:
 		collision_layer = 0
 		remove_from_group("enemies")
 		_play("death")
+		# Deferred: this can run inside the bolt's physics query.
+		LOOT.drop_for.call_deferred(kind, global_position, get_parent())
 		return
 	hurting = true
 	_play("hurt")

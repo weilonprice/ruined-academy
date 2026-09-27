@@ -23,8 +23,11 @@ const FITS := Color(0.3, 0.8, 0.35, 0.3)
 const SWAPS := Color(0.9, 0.7, 0.2, 0.3)
 const BLOCKED := Color(0.9, 0.25, 0.2, 0.3)
 const ICON_ROOT := "res://assets/icons/%s.png"
+# The camera glides this long to keep the wizard in view beside the open screen.
+const CAMERA_SHIFT_TIME := 0.15
 
 var icons := {}
+var camera_tween: Tween
 @onready var tooltip: PanelContainer = get_parent().get_node("Tooltip")
 
 
@@ -46,6 +49,7 @@ func toggle() -> void:
 		close()
 	else:
 		show()
+		_shift_camera(true)
 		queue_redraw()
 
 
@@ -56,7 +60,20 @@ func close() -> bool:
 		return false
 	hide()
 	tooltip.hide_tooltip()
+	_shift_camera(false)
 	return true
+
+
+# Centres the wizard in the uncovered left part of the screen while the inventory is open, as PoE does.
+func _shift_camera(open: bool) -> void:
+	var camera := get_viewport().get_camera_2d()
+	if camera == null:
+		return
+	var target := Vector2(WIDTH / 2.0 / camera.zoom.x, 0.0) if open else Vector2.ZERO
+	if camera_tween:
+		camera_tween.kill()
+	camera_tween = create_tween()
+	camera_tween.tween_property(camera, "offset", target, CAMERA_SHIFT_TIME)
 
 
 func _process(_delta: float) -> void:
