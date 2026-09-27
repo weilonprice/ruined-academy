@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://hud.gd" id="6_hud"]
 [ext_resource type="Script" path="res://character_panel.gd" id="7_character"]
 [ext_resource type="Script" path="res://debug_tools.gd" id="8_debug"]
+[ext_resource type="Script" path="res://inventory_panel.gd" id="9_inventory"]
+[ext_resource type="Script" path="res://item_tooltip.gd" id="10_tooltip"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -112,6 +114,27 @@ bbcode_enabled = true
 fit_content = true
 theme_override_font_sizes/normal_font_size = 8
 theme_override_font_sizes/bold_font_size = 8
+
+[node name="InventoryPanel" type="Control" parent="HUD"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("9_inventory")
+
+[node name="Tooltip" type="PanelContainer" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("10_tooltip")
+
+[node name="Lines" type="VBoxContainer" parent="HUD/Tooltip"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 1
 
 [node name="Debug" type="Node" parent="."]
 script = ExtResource("8_debug")

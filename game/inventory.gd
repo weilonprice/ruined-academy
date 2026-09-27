@@ -17,6 +17,10 @@ var save_path := DEFAULT_SAVE_PATH
 var equipment := {}
 # Each entry is {"item": item, "cell": Vector2i}, the item's top-left cell.
 var backpack: Array[Dictionary] = []
+# The item carried on the cursor, if any. Saved too, so quitting never loses it.
+var held = null
+# Where _take last removed an item from.
+var _cell_of_removed := Vector2i(-1, -1)
 
 
 func _ready() -> void:
@@ -47,6 +51,103 @@ func unequip(slot: String):
 	if item != null:
 		_changed()
 	return item
+
+
+# Cursor actions, as the inventory screen uses them. Each saves once.
+
+func pick_up(item) -> bool:
+	if held != null or not _take(item):
+		return false
+	held = item
+	_changed()
+	return true
+
+
+# Drops the carried item with its top-left at the cell. Landing on exactly one
+# item swaps: that item is carried instead. More than one blocks the drop.
+func drop_held(cell: Vector2i) -> bool:
+	if held == null:
+		return false
+	var area := Rect2i(cell, held.size())
+	if area.position.x < 0 or area.position.y < 0 or area.end.x > COLUMNS or area.end.y > ROWS:
+		return false
+	var under := backpack.filter(func(entry: Dictionary) -> bool: return area.intersects(Rect2i(entry.cell, entry.item.size())))
+	if under.size() > 1:
+		return false
+	var swapped = under[0].item if not under.is_empty() else null
+	if swapped != null:
+		_take(swapped)
+	backpack.append({"item": held, "cell": cell})
+	held = swapped
+	_changed()
+	return true
+
+
+func pick_up_equipped(slot: String) -> bool:
+	if held != null or not equipment.has(slot):
+		return false
+	held = equipment[slot]
+	equipment.erase(slot)
+	_changed()
+	return true
+
+
+# Equips the carried item; whatever was in the slot is carried instead.
+func drop_held_in_slot(slot: String) -> bool:
+	if held == null or not held.fits_slot(slot):
+		return false
+	var previous = equipment.get(slot)
+	equipment[slot] = held
+	held = previous
+	_changed()
+	return true
+
+
+# Shift+click in the backpack: equip the item. The replaced item takes its
+# place if it fits there, else any free space, else it is carried.
+func quick_equip(item) -> bool:
+	var slot := slot_for(item)
+	if held != null or slot == "" or not _take(item):
+		return false
+	var cell: Vector2i = _cell_of_removed
+	var previous = equipment.get(slot)
+	equipment[slot] = item
+	if previous != null:
+		if can_place(previous, cell):
+			backpack.append({"item": previous, "cell": cell})
+		elif find_space(previous).x >= 0:
+			backpack.append({"item": previous, "cell": find_space(previous)})
+		else:
+			held = previous
+	_changed()
+	return true
+
+
+# Shift+click on equipment: move it to the backpack if there is room.
+func quick_unequip(slot: String) -> bool:
+	var item = equipment.get(slot)
+	if item == null:
+		return false
+	var cell := find_space(item)
+	if cell.x < 0:
+		return false
+	equipment.erase(slot)
+	backpack.append({"item": item, "cell": cell})
+	_changed()
+	return true
+
+
+# Puts the carried item back in the backpack, if there is room (the screen does this on close).
+func stow_held() -> bool:
+	if held == null:
+		return true
+	var cell := find_space(held)
+	if cell.x < 0:
+		return false
+	backpack.append({"item": held, "cell": cell})
+	held = null
+	_changed()
+	return true
 
 
 # The first slot an item fits, preferring an empty one (for rings).
@@ -91,10 +192,25 @@ func add_item(item) -> bool:
 
 
 func remove(item) -> bool:
+	if not _take(item):
+		return false
+	_changed()
+	return true
+
+
+func cell_of(item) -> Vector2i:
+	for entry in backpack:
+		if entry.item == item:
+			return entry.cell
+	return Vector2i(-1, -1)
+
+
+# Removes an item from the backpack without saving; remembers where it was.
+func _take(item) -> bool:
 	for index in range(backpack.size()):
 		if backpack[index].item == item:
+			_cell_of_removed = backpack[index].cell
 			backpack.remove_at(index)
-			_changed()
 			return true
 	return false
 
@@ -109,6 +225,7 @@ func item_at(cell: Vector2i):
 func clear() -> void:
 	equipment.clear()
 	backpack.clear()
+	held = null
 	_changed()
 
 
@@ -118,6 +235,8 @@ func save() -> void:
 		data.equipment[slot] = equipment[slot].to_dict()
 	for entry in backpack:
 		data.backpack.append({"item": entry.item.to_dict(), "cell": [entry.cell.x, entry.cell.y]})
+	if held != null:
+		data.held = held.to_dict()
 	var file := FileAccess.open(save_path, FileAccess.WRITE)
 	if file == null:
 		push_error("Could not save inventory to %s" % save_path)
@@ -128,6 +247,7 @@ func save() -> void:
 func load_save() -> void:
 	equipment.clear()
 	backpack.clear()
+	held = null
 	if FileAccess.file_exists(save_path):
 		var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
 		if data is Dictionary and int(data.get("version", 0)) == SAVE_VERSION:
@@ -135,6 +255,8 @@ func load_save() -> void:
 				equipment[slot] = ITEM.from_dict(data.equipment[slot])
 			for entry in data.backpack:
 				backpack.append({"item": ITEM.from_dict(entry.item), "cell": Vector2i(int(entry.cell[0]), int(entry.cell[1]))})
+			if data.has("held"):
+				held = ITEM.from_dict(data.held)
 		else:
 			push_warning("Ignoring unreadable inventory save at %s" % save_path)
 	changed.emit()

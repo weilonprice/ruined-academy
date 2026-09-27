@@ -99,7 +99,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("dodge", false, true):
 		dodge()
 		get_viewport().set_input_as_handled()
-	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not is_dodging():
+	# No casting while an item is on the cursor.
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not is_dodging() and Inventory.held == null:
 		shoot_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
 
