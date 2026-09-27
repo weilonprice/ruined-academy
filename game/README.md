@@ -17,7 +17,7 @@ Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which i
 | Pause menu (Resume / Quit) | **Esc** |
 | Restart after falling | **R** |
 | Fullscreen | **F11** or **Alt + Enter** |
-| Debug: roll and equip an item / clear gear / respawn enemies | **F3** / **F4** / **F5** |
+| Debug: roll and equip an item / clear gear / respawn enemies / gain a level | **F3** / **F4** / **F5** / **F6** |
 
 ## The wizard
 
@@ -28,17 +28,21 @@ The wizard has 100 life and 60 mana, regenerating 6 mana per second. Life and ma
 - **Crits:** both spells have a 5% base chance to crit for 1.5× damage; a crit bolt looks larger and whiter.
 - **Dodge:** a 68-pixel dash over 0.2 s toward the keys you hold (or the way you face), leaving afterimages; 0.5 s cooldown. There is no invincibility.
 - **Flasks:** the Life Flask recovers 50 life over 2 s (10 of 30 charges); the Mana Flask 40 mana over 1.5 s (5 of 20). A flask can't be drunk again while it's recovering. Kills refill charges, and flasks start full each run.
-- **Falling:** at zero life the wizard falls, enemies stand down, and **R** restarts. Gear is kept.
+- **Falling:** at zero life the wizard falls, enemies stand down, and **R** restarts. Gear, level, and experience are kept.
+
+## Levels
+
+Kills give experience: 12 for a Skitter, 15 for a Scholar, 30 for a Sentinel. Each level needs more than the last (40 to reach level 2, 121 for level 3, 232 for level 4), up to level 50. Every level past the first adds **+8 maximum life, +4 maximum mana, and +2% spell damage**, and a level-up refills life and mana with a burst of gold rings and a message. The level shows beside the life bar, a thin gold bar under the skill bar tracks progress, and the character sheet (**C**) shows the exact experience. Level and experience are saved to `user://character.json`; falling costs no experience.
 
 ## Enemies
 
 Three enemies wait at the north edge until the wizard comes within about 220 pixels or shoots them, then attack. Each has 30 health, flinches when hit, and plays a death animation. Hitting one mid-windup cancels its attack, and melee blows land partway through the swing, so stepping or dodging away avoids them.
 
-| Enemy | Behaviour | Damage | Flask charges on kill |
-|---|---|---|---|
-| Skitter | Rushes in and claws | 8 physical | 5 |
-| Sentinel | Lumbers in and punches | 16 physical | 10 |
-| Scholar | Keeps its distance and throws ember-red bolts you can sidestep | 10 fire | 5 |
+| Enemy | Behaviour | Damage | Flask charges on kill | Experience |
+|---|---|---|---|---|
+| Skitter | Rushes in and claws | 8 physical | 5 | 12 |
+| Sentinel | Lumbers in and punches | 16 physical | 10 | 30 |
+| Scholar | Keeps its distance and throws ember-red bolts you can sidestep | 10 fire | 5 | 15 |
 
 Armour reduces physical hits (big hits get through more); fire resistance reduces the Scholar's bolts.
 

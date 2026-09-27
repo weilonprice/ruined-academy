@@ -9,12 +9,15 @@ const FRAME_COLOR := Color("181c24")
 # A notch every this many points keeps the bars readable at a glance.
 const NOTCH := 10.0
 const MESSAGE_TIME := 2.5
+const LEVEL_COLOR := Color("f2c14e")
+const LEVEL_POSITION := Vector2(116, 17)
 
 var health := 1.0
 var max_health := 1.0
 var mana := 1.0
 var max_mana := 1.0
 var message_tween: Tween
+var font := ThemeDB.fallback_font
 @onready var bar: Control = $Bar
 @onready var fallen: Label = $Fallen
 @onready var message: Label = $Message
@@ -22,6 +25,7 @@ var message_tween: Tween
 
 func _ready() -> void:
 	bar.draw.connect(_draw_bars)
+	Character.changed.connect(bar.queue_redraw)
 	fallen.hide()
 	message.hide()
 	var player = get_tree().get_first_node_in_group("player")
@@ -61,6 +65,8 @@ func _on_mana_changed(new_mana: float, new_max: float) -> void:
 func _draw_bars() -> void:
 	_draw_bar(LIFE_BAR, health, max_health, LIFE_COLOR)
 	_draw_bar(MANA_BAR, mana, max_mana, MANA_COLOR)
+	bar.draw_string_outline(font, LEVEL_POSITION, "Lv %d" % Character.level, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, 3, FRAME_COLOR)
+	bar.draw_string(font, LEVEL_POSITION, "Lv %d" % Character.level, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, LEVEL_COLOR)
 
 
 func _draw_bar(frame: Rect2, value: float, maximum: float, color: Color) -> void:

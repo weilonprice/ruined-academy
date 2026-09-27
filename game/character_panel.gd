@@ -13,6 +13,7 @@ const MUTED := "7f7f7f"
 func _ready() -> void:
 	hide()
 	Inventory.changed.connect(refresh)
+	Character.changed.connect(refresh)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -35,6 +36,10 @@ func refresh() -> void:
 		var stats: Dictionary = player.stats
 		lines.append("")
 		lines.append("[b]Character[/b]")
+		if Character.level >= Character.MAX_LEVEL:
+			lines.append("[color=#f2c14e]Level %d[/color] (max)" % Character.level)
+		else:
+			lines.append("[color=#f2c14e]Level %d[/color]   XP %d / %d" % [Character.level, Character.experience, Character.experience_to_next(Character.level)])
 		lines.append("Life: %d   Regen: %d/s" % [stats.max_life, stats.life_regen])
 		lines.append("Mana: %d   Regen: %.1f/s" % [stats.max_mana, stats.mana_regen])
 		lines.append("Armour: %d" % stats.armour)

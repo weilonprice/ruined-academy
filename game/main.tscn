@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://skill_bar.gd" id="11_skills"]
 [ext_resource type="Script" path="res://flask_bar.gd" id="12_flasks"]
 [ext_resource type="Script" path="res://pause_menu.gd" id="13_pause"]
+[ext_resource type="Script" path="res://experience_bar.gd" id="14_experience"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -147,6 +148,21 @@ grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("12_flasks")
+
+[node name="ExperienceBar" type="Control" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -3.0
+offset_right = 104.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("14_experience")
 
 [node name="InventoryPanel" type="Control" parent="HUD"]
 anchors_preset = 11

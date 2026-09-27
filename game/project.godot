@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 
 Display="*res://display.gd"
 Inventory="*res://inventory.gd"
+Character="*res://character.gd"
 
 [display]
 

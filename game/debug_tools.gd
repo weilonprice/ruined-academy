@@ -2,7 +2,7 @@ extends Node
 
 # Debug keys, only in debug builds: F3 rolls a random item and equips it (the replaced item goes
 # to the backpack, or the ground if full), F4 clears all gear,
-# F5 brings back the three enemies at their starting spots to farm drops.
+# F5 brings back the three enemies at their starting spots to farm drops, F6 grants a level.
 
 const GENERATOR := preload("res://items/item_generator.gd")
 const LOOT := preload("res://loot.gd")
@@ -27,6 +27,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.physical_keycode == KEY_F5:
 		respawn_enemies()
 		get_viewport().set_input_as_handled()
+	elif event.physical_keycode == KEY_F6:
+		grant_level()
+		get_viewport().set_input_as_handled()
+
+
+# Adds exactly the experience left to reach the next level.
+func grant_level() -> void:
+	var character := get_node("/root/Character")
+	character.add_experience(character.experience_to_next(character.level) - character.experience)
 
 
 func respawn_enemies() -> void:

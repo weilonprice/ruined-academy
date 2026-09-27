@@ -13,6 +13,7 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 - **Combat**: A magic bolt and Frost Nova, crits, mana, life and mana flasks, and enemies that chase, swing, and cast, with attack windups you can step out of.
 - **Loot**: Path of Exile-style items with random affixes, rarities, and uniques; enemies drop loot with labels you click to pick up.
 - **Inventory**: A shaped-item grid backpack, ten equipment slots, and tooltips that compare stats; gear is saved between sessions.
+- **Progression**: Kills give experience; each level grows life, mana, and spell damage, and is saved.
 - **Visuals**: Cohesive dark-fantasy palette (desaturated stone, weathered bronze, ink-blue shadows, and vibrant elemental magic) generated with Pixel Lab.
 
 See [`game/README.md`](game/README.md) for how the prototype plays.
@@ -34,7 +35,10 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 │   ├── enemy.gd / enemy.tscn# Enemy AI (chase, melee/ranged attacks), damage, animations, health bar
 │   ├── enemy_projectile.gd  # The Scholar's hostile bolt
 │   ├── hud.gd               # Life and mana bars, messages, fallen prompt
-│   ├── stats.gd             # Character stats from gear; armour and resistance maths
+│   ├── stats.gd             # Character stats from level and gear; armour and resistance maths
+│   ├── character.gd         # Autoload: level and experience, saved
+│   ├── experience_bar.gd    # Experience bar under the skill bar
+│   ├── level_up_effect.gd   # Gold rings on a level-up
 │   ├── inventory.gd         # Autoload: equipped gear, 10x5 backpack grid, save file
 │   ├── items/               # Item bases, affixes, uniques, and the random item generator
 │   ├── character_panel.gd   # Character sheet (C)
@@ -104,7 +108,7 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Pick up loot (walks over if far) | **Left-click** its label |
 | Show every item label | hold **Alt** |
 | Character sheet (gear and stats) | **C** |
-| Debug: roll and equip a random item / clear gear / respawn enemies | **F3** / **F4** / **F5** |
+| Debug: roll and equip a random item / clear gear / respawn enemies / gain a level | **F3** / **F4** / **F5** / **F6** |
 | Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---
@@ -114,6 +118,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Experience, levels, and level-up growth
+godot --headless --path game -s res://tests/character_test.gd
+
 # Flasks and the pause menu
 godot --headless --path game -s res://tests/flasks_pause_test.gd
 
