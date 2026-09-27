@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://debug_tools.gd" id="8_debug"]
 [ext_resource type="Script" path="res://inventory_panel.gd" id="9_inventory"]
 [ext_resource type="Script" path="res://item_tooltip.gd" id="10_tooltip"]
+[ext_resource type="Script" path="res://skill_bar.gd" id="11_skills"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -114,6 +115,21 @@ bbcode_enabled = true
 fit_content = true
 theme_override_font_sizes/normal_font_size = 8
 theme_override_font_sizes/bold_font_size = 8
+
+[node name="SkillBar" type="Control" parent="HUD"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -38.0
+offset_right = 40.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("11_skills")
 
 [node name="InventoryPanel" type="Control" parent="HUD"]
 anchors_preset = 11

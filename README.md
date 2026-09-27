@@ -23,6 +23,8 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── main.tscn            # Primary playable combat scene
 │   ├── player.gd            # Wizard movement, 8-way facing, and projectile firing
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
+│   ├── frost_nova.gd        # Frost Nova: cold burst around the wizard that chills
+│   ├── skill_bar.gd         # Skill bar (LMB bolt, RMB nova)
 │   ├── enemy.gd / enemy.tscn# Enemy AI (chase, melee/ranged attacks), damage, animations, health bar
 │   ├── enemy_projectile.gd  # The Scholar's hostile bolt
 │   ├── hud.gd               # Life and mana bars, messages, fallen prompt
@@ -79,6 +81,7 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Move Up / Left / Down / Right | **W** / **A** / **S** / **D** |
 | Aim | **Mouse Cursor** |
 | Cast Magic Missile | **Left Mouse Button** |
+| Cast Frost Nova (short-range burst around you) | **Right Mouse Button** |
 | Dodge | **Space** |
 | Restart after falling | **R** |
 | Inventory (click to move, Shift+click to equip/unequip) | **I** (Esc closes) |
@@ -95,6 +98,9 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Frost Nova: area hits, chill, costs, gear scaling, skill bar
+godot --headless --path game -s res://tests/skills_test.gd
+
 # Loot: drops, labels, pickup, dropping items
 godot --headless --path game -s res://tests/loot_test.gd
 

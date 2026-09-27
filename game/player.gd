@@ -11,6 +11,12 @@ const STATS := preload("res://stats.gd")
 const BOLT_MANA_COST := 5.0
 const BOLT_DAMAGE := Vector2(8.0, 12.0)
 const BASE_CAST_TIME := 0.25
+const FROST_NOVA_SCRIPT := preload("res://frost_nova.gd")
+# Frost Nova: a short-range burst of cold around the wizard that chills what it hits.
+const NOVA_MANA_COST := 12.0
+const NOVA_DAMAGE := Vector2(12.0, 18.0)
+const NOVA_CAST_TIME := 0.45
+const NOVA_CHILL_TIME := 2.0
 const WORLD := preload("res://world.gd")
 const ANIMATIONS := preload("res://animation_library.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
@@ -115,18 +121,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif not is_dodging():
 			shoot_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+		if Inventory.held == null and not is_dodging():
+			cast_nova(get_global_mouse_position())
+		get_viewport().set_input_as_handled()
 
 
 # Casts a bolt toward the target, if the last cast has finished and there is mana for it.
 func shoot_at(target: Vector2) -> Node2D:
 	var aim := target - global_position
-	if dead or aim.is_zero_approx() or cast_ready_in > 0.0 or mana < BOLT_MANA_COST:
+	if aim.is_zero_approx() or not _begin_cast(BOLT_MANA_COST, BASE_CAST_TIME, aim):
 		return null
-	mana -= BOLT_MANA_COST
-	mana_changed.emit(mana, max_mana)
-	var cast_rate: float = 1.0 + stats.cast_speed / 100.0
-	cast_ready_in = BASE_CAST_TIME / cast_rate
-	facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	var tip: Vector2 = global_position + STAFF_TIPS[facing]
 	# Aim from the tip so the bolt still flies through the clicked point.
 	var flight := target - tip
@@ -142,13 +147,44 @@ func shoot_at(target: Vector2) -> Node2D:
 	projectile.global_position = tip
 	# The first hit check sweeps from the body, so an enemy between the wizard and the tip is still hit.
 	projectile.sweep_from = global_position
+	return projectile
+
+
+# Casts Frost Nova around the wizard, turning toward the cursor for the cast.
+func cast_nova(toward: Vector2) -> Node2D:
+	if not _begin_cast(NOVA_MANA_COST, NOVA_CAST_TIME, toward - global_position):
+		return null
+	var nova := Node2D.new()
+	nova.set_script(FROST_NOVA_SCRIPT)
+	nova.damage_range = NOVA_DAMAGE
+	nova.damage_scale = 1.0 + stats.spell_damage / 100.0
+	nova.crit_chance = stats.crit_chance
+	nova.crit_multiplier = STATS.CRIT_MULTIPLIER
+	nova.chill_time = NOVA_CHILL_TIME
+	nova.rng = rng
+	nova.position = position
+	get_parent().add_child(nova)
+	return nova
+
+
+# Starts a spell if the last cast has finished and there is mana: spends it,
+# sets the wait before the next cast (shortened by cast speed), and plays the cast.
+func _begin_cast(mana_cost: float, cast_time: float, aim: Vector2) -> bool:
+	if dead or cast_ready_in > 0.0 or mana < mana_cost:
+		return false
+	mana -= mana_cost
+	mana_changed.emit(mana, max_mana)
+	var cast_rate: float = 1.0 + stats.cast_speed / 100.0
+	cast_ready_in = cast_time / cast_rate
+	if not aim.is_zero_approx():
+		facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	casting = true
 	hurting = false
 	_play("cast")
 	# Faster casting plays the cast animation faster too.
 	sprite.speed_scale = cast_rate
 	sprite.set_frame_and_progress(0, 0.0)
-	return projectile
+	return true
 
 
 # Takes a hit of a damage type; armour reduces physical hits, resistances the elements.
