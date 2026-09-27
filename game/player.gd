@@ -3,6 +3,7 @@ extends Node2D
 signal health_changed(health: float, max_health: float)
 signal mana_changed(mana: float, max_mana: float)
 signal died
+signal flasks_changed
 
 const SPEED := 110.0
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
@@ -11,6 +12,12 @@ const STATS := preload("res://stats.gd")
 const BOLT_MANA_COST := 5.0
 const BOLT_DAMAGE := Vector2(8.0, 12.0)
 const BASE_CAST_TIME := 0.25
+const FROST_NOVA_SCRIPT := preload("res://frost_nova.gd")
+# Frost Nova: a short-range burst of cold around the wizard that chills what it hits.
+const NOVA_MANA_COST := 12.0
+const NOVA_DAMAGE := Vector2(12.0, 18.0)
+const NOVA_CAST_TIME := 0.45
+const NOVA_CHILL_TIME := 2.0
 const WORLD := preload("res://world.gd")
 const ANIMATIONS := preload("res://animation_library.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
@@ -27,6 +34,12 @@ const AFTERIMAGE_INTERVAL := 0.04
 const AFTERIMAGE_FADE := 0.25
 # How close the wizard must be to pick an item up; clicking one farther away walks over first.
 const PICKUP_RANGE := 40.0
+# Flasks, on keys 1 and 2: each recovers its amount over its duration, costs
+# charges per drink, and refills from kills. One can't be drunk again while it runs.
+const FLASKS := [
+	{"name": "Life Flask", "restores": "life", "amount": 50.0, "duration": 2.0, "max_charges": 30, "per_use": 10},
+	{"name": "Mana Flask", "restores": "mana", "amount": 40.0, "duration": 1.5, "max_charges": 20, "per_use": 5},
+]
 const LOOT := preload("res://loot.gd")
 
 var facing := "south"
@@ -46,6 +59,9 @@ var dodge_cooldown_left := 0.0
 var afterimage_time_left := 0.0
 # A ground item being walked to; movement keys or a dodge cancel the walk.
 var pickup_target: Node2D = null
+var flask_charges: Array = FLASKS.map(func(flask: Dictionary) -> int: return flask.max_charges)
+# Seconds of recovery left for each flask; 0 when not running.
+var flask_time_left: Array = FLASKS.map(func(_flask: Dictionary) -> float: return 0.0)
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 
@@ -108,6 +124,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("dodge", false, true):
 		dodge()
 		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("flask_1", false, true) or event.is_action_pressed("flask_2", false, true):
+		drink_flask(0 if event.is_action_pressed("flask_1") else 1)
+		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of casting.
 		if Inventory.held != null:
@@ -115,18 +134,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif not is_dodging():
 			shoot_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+		if Inventory.held == null and not is_dodging():
+			cast_nova(get_global_mouse_position())
+		get_viewport().set_input_as_handled()
 
 
 # Casts a bolt toward the target, if the last cast has finished and there is mana for it.
 func shoot_at(target: Vector2) -> Node2D:
 	var aim := target - global_position
-	if dead or aim.is_zero_approx() or cast_ready_in > 0.0 or mana < BOLT_MANA_COST:
+	if aim.is_zero_approx() or not _begin_cast(BOLT_MANA_COST, BASE_CAST_TIME, aim):
 		return null
-	mana -= BOLT_MANA_COST
-	mana_changed.emit(mana, max_mana)
-	var cast_rate: float = 1.0 + stats.cast_speed / 100.0
-	cast_ready_in = BASE_CAST_TIME / cast_rate
-	facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	var tip: Vector2 = global_position + STAFF_TIPS[facing]
 	# Aim from the tip so the bolt still flies through the clicked point.
 	var flight := target - tip
@@ -142,13 +160,44 @@ func shoot_at(target: Vector2) -> Node2D:
 	projectile.global_position = tip
 	# The first hit check sweeps from the body, so an enemy between the wizard and the tip is still hit.
 	projectile.sweep_from = global_position
+	return projectile
+
+
+# Casts Frost Nova around the wizard, turning toward the cursor for the cast.
+func cast_nova(toward: Vector2) -> Node2D:
+	if not _begin_cast(NOVA_MANA_COST, NOVA_CAST_TIME, toward - global_position):
+		return null
+	var nova := Node2D.new()
+	nova.set_script(FROST_NOVA_SCRIPT)
+	nova.damage_range = NOVA_DAMAGE
+	nova.damage_scale = 1.0 + stats.spell_damage / 100.0
+	nova.crit_chance = stats.crit_chance
+	nova.crit_multiplier = STATS.CRIT_MULTIPLIER
+	nova.chill_time = NOVA_CHILL_TIME
+	nova.rng = rng
+	nova.position = position
+	get_parent().add_child(nova)
+	return nova
+
+
+# Starts a spell if the last cast has finished and there is mana: spends it,
+# sets the wait before the next cast (shortened by cast speed), and plays the cast.
+func _begin_cast(mana_cost: float, cast_time: float, aim: Vector2) -> bool:
+	if dead or cast_ready_in > 0.0 or mana < mana_cost:
+		return false
+	mana -= mana_cost
+	mana_changed.emit(mana, max_mana)
+	var cast_rate: float = 1.0 + stats.cast_speed / 100.0
+	cast_ready_in = cast_time / cast_rate
+	if not aim.is_zero_approx():
+		facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	casting = true
 	hurting = false
 	_play("cast")
 	# Faster casting plays the cast animation faster too.
 	sprite.speed_scale = cast_rate
 	sprite.set_frame_and_progress(0, 0.0)
-	return projectile
+	return true
 
 
 # Takes a hit of a damage type; armour reduces physical hits, resistances the elements.
@@ -180,12 +229,48 @@ func _on_animation_finished() -> void:
 
 
 func _regenerate(delta: float) -> void:
-	if health < max_health and stats.life_regen > 0.0:
-		health = minf(max_health, health + stats.life_regen * delta)
+	var life_rate: float = stats.life_regen
+	var mana_rate: float = stats.mana_regen
+	for index in range(FLASKS.size()):
+		if flask_time_left[index] <= 0.0:
+			continue
+		# Recover for the part of this step the flask is still running, at its steady rate.
+		var active := minf(delta, flask_time_left[index])
+		var recovered: float = FLASKS[index].amount / FLASKS[index].duration * active
+		if FLASKS[index].restores == "life":
+			health = minf(max_health, health + recovered)
+			health_changed.emit(health, max_health)
+		else:
+			mana = minf(max_mana, mana + recovered)
+			mana_changed.emit(mana, max_mana)
+		flask_time_left[index] = maxf(0.0, flask_time_left[index] - delta)
+		if is_zero_approx(flask_time_left[index]):
+			flask_time_left[index] = 0.0
+			flasks_changed.emit()
+	if health < max_health and life_rate > 0.0:
+		health = minf(max_health, health + life_rate * delta)
 		health_changed.emit(health, max_health)
 	if mana < max_mana:
-		mana = minf(max_mana, mana + stats.mana_regen * delta)
+		mana = minf(max_mana, mana + mana_rate * delta)
 		mana_changed.emit(mana, max_mana)
+
+
+# Drinks a flask if it has the charges and isn't already running.
+func drink_flask(index: int) -> bool:
+	var flask: Dictionary = FLASKS[index]
+	if dead or flask_time_left[index] > 0.0 or flask_charges[index] < flask.per_use:
+		return false
+	flask_charges[index] -= flask.per_use
+	flask_time_left[index] = flask.duration
+	flasks_changed.emit()
+	return true
+
+
+# Kills refill every flask, up to its maximum.
+func gain_flask_charges(amount: int) -> void:
+	for index in range(FLASKS.size()):
+		flask_charges[index] = mini(FLASKS[index].max_charges, flask_charges[index] + amount)
+	flasks_changed.emit()
 
 
 # Picks the item up now if it is in reach; otherwise walks to it first.

@@ -14,15 +14,18 @@ const AGGRO_RADIUS := 220.0
 const REACH_SLACK := 12.0
 # Enemies closer than this push apart so they don't stack.
 const SPACING := 30.0
-# Per kind: movement, attack clip, the frame the blow lands on, and cooldown after an attack.
+# Chilled enemies move, animate, and recover from attacks at this fraction of their speed.
+const CHILL_SLOW := 0.7
+const CHILL_TINT := Color(0.72, 0.9, 1.35)
+# Per kind: movement, attack clip, the frame the blow lands on, cooldown after an attack, and flask charges its death gives.
 # A ranged kind holds around its reach and fires a bolt instead of striking.
 const KINDS := {
 	"skitter": {"speed": 85.0, "reach": 30.0, "damage": 8.0, "damage_type": "physical", "cooldown": 1.2, "ranged": false,
-		"attack": "attack", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 12.0, "attack": 10.0}},
+		"attack": "attack", "hit_frame": 2, "flask_charges": 5, "speeds": {"idle": 1.1, "move": 12.0, "attack": 10.0}},
 	"scholar": {"speed": 45.0, "reach": 170.0, "damage": 10.0, "damage_type": "fire", "cooldown": 2.5, "ranged": true,
-		"attack": "cast", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 8.0, "cast": 8.0}},
+		"attack": "cast", "hit_frame": 2, "flask_charges": 5, "speeds": {"idle": 1.1, "move": 8.0, "cast": 8.0}},
 	"sentinel": {"speed": 38.0, "reach": 38.0, "damage": 16.0, "damage_type": "physical", "cooldown": 2.0, "ranged": false,
-		"attack": "attack", "hit_frame": 2, "speeds": {"idle": 1.1, "move": 7.0, "attack": 6.0}},
+		"attack": "attack", "hit_frame": 2, "flask_charges": 10, "speeds": {"idle": 1.1, "move": 7.0, "attack": 6.0}},
 }
 
 # Folder under res://assets/enemies holding this enemy's frames, and its KINDS entry.
@@ -38,6 +41,7 @@ var cooldown_left := 0.0
 var hurting := false
 var dying := false
 var hit_flash: Tween
+var chilled_left := 0.0
 var stats: Dictionary
 @onready var sprite: AnimatedSprite2D = $Sprite
 
@@ -55,9 +59,13 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if dying or hurting or attacking:
+	if dying:
 		return
-	cooldown_left = maxf(0.0, cooldown_left - delta)
+	_update_chill(delta)
+	if hurting or attacking:
+		return
+	var pace := speed_factor()
+	cooldown_left = maxf(0.0, cooldown_left - delta * pace)
 	var player = _player()
 	_face(player)
 	if player == null or player.dead or not ai_enabled:
@@ -79,14 +87,18 @@ func _physics_process(delta: float) -> void:
 		_start_attack()
 		return
 	velocity += _separation() * stats.speed
-	position += velocity * delta
+	position += velocity * pace * delta
 	position = position.clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
 	_play("move" if not velocity.is_zero_approx() else "idle")
 
 
-func take_damage(amount: float, critical := false) -> void:
+# Takes a hit; a chill (in seconds) slows the enemy, and a longer chill replaces a shorter one.
+func take_damage(amount: float, critical := false, chill := 0.0) -> void:
 	if health <= 0.0 or amount <= 0.0:
 		return
+	if chill > 0.0:
+		chilled_left = maxf(chilled_left, chill)
+		_update_chill(0.0)
 	health = maxf(0.0, health - amount)
 	aggro = true
 	# A hit interrupts an attack before its blow lands.
@@ -100,6 +112,9 @@ func take_damage(amount: float, critical := false) -> void:
 		_play("death")
 		# Deferred: this can run inside the bolt's physics query.
 		LOOT.drop_for.call_deferred(kind, global_position, get_parent())
+		var player = _player()
+		if player != null:
+			player.gain_flask_charges(stats.flask_charges)
 		return
 	hurting = true
 	_play("hurt")
@@ -110,6 +125,23 @@ func take_damage(amount: float, critical := false) -> void:
 	sprite.self_modulate = Color(2.4, 2.2, 2.0) if critical else Color(1.8, 1.3, 1.3)
 	hit_flash = create_tween()
 	hit_flash.tween_property(sprite, "self_modulate", Color.WHITE, 0.12)
+
+
+func is_chilled() -> bool:
+	return chilled_left > 0.0
+
+
+func speed_factor() -> float:
+	return CHILL_SLOW if is_chilled() else 1.0
+
+
+func _update_chill(delta: float) -> void:
+	if chilled_left > 0.0:
+		chilled_left = maxf(0.0, chilled_left - delta)
+	sprite.speed_scale = speed_factor()
+	var tint := CHILL_TINT if is_chilled() else Color.WHITE
+	# Keep the current alpha: the death fade animates it.
+	modulate = Color(tint, modulate.a)
 
 
 func _start_attack() -> void:
