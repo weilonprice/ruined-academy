@@ -12,22 +12,27 @@ const MAX_ARMOUR_REDUCTION := 0.9
 # Armour's reduction shrinks as hits grow: armour / (armour + ARMOUR_SCALE * damage).
 const ARMOUR_SCALE := 10.0
 const DAMAGE_TYPES := ["physical", "fire", "cold", "lightning"]
+# Each level past the first adds this much.
+const LIFE_PER_LEVEL := 8.0
+const MANA_PER_LEVEL := 4.0
+const SPELL_DAMAGE_PER_LEVEL := 2.0
 
 
-# Final stats from a list of equipped items.
-static func compute(items: Array) -> Dictionary:
+# Final stats from the wizard's level and a list of equipped items.
+static func compute(items: Array, level := 1) -> Dictionary:
+	var growth := level - 1
 	var sums := {}
 	for item in items:
 		var item_stats: Dictionary = item.stats()
 		for stat in item_stats:
 			sums[stat] = sums.get(stat, 0) + item_stats[stat]
 	return {
-		"max_life": BASE_LIFE + sums.get("life", 0),
+		"max_life": BASE_LIFE + LIFE_PER_LEVEL * growth + sums.get("life", 0),
 		"life_regen": float(sums.get("life_regen", 0)),
 		"armour": float(sums.get("armour", 0)),
-		"max_mana": BASE_MANA + sums.get("mana", 0),
+		"max_mana": BASE_MANA + MANA_PER_LEVEL * growth + sums.get("mana", 0),
 		"mana_regen": BASE_MANA_REGEN * (1.0 + sums.get("mana_regen", 0) / 100.0),
-		"spell_damage": float(sums.get("spell_damage", 0)),
+		"spell_damage": SPELL_DAMAGE_PER_LEVEL * growth + sums.get("spell_damage", 0),
 		"cast_speed": float(sums.get("cast_speed", 0)),
 		"projectile_speed": float(sums.get("projectile_speed", 0)),
 		"crit_chance": BASE_CRIT_CHANCE * (1.0 + sums.get("crit_chance", 0) / 100.0),

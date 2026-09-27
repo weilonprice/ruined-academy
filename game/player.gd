@@ -41,6 +41,7 @@ const FLASKS := [
 	{"name": "Mana Flask", "restores": "mana", "amount": 40.0, "duration": 1.5, "max_charges": 20, "per_use": 5},
 ]
 const LOOT := preload("res://loot.gd")
+const LEVEL_UP_SCRIPT := preload("res://level_up_effect.gd")
 
 var facing := "south"
 var casting := false
@@ -70,6 +71,8 @@ func _ready() -> void:
 	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast", "dodge", "hurt", "death"])
 	sprite.animation_finished.connect(_on_animation_finished)
 	Inventory.changed.connect(refresh_stats)
+	Character.changed.connect(refresh_stats)
+	Character.leveled_up.connect(_on_leveled_up)
 	refresh_stats()
 	health = max_health
 	mana = max_mana
@@ -78,7 +81,7 @@ func _ready() -> void:
 
 # Re-reads equipped gear. Current life and mana keep their values, capped to the new maximums.
 func refresh_stats() -> void:
-	stats = STATS.compute(Inventory.equipped_items())
+	stats = STATS.compute(Inventory.equipped_items(), Character.level)
 	max_health = stats.max_life
 	max_mana = stats.max_mana
 	health = minf(health, max_health)
@@ -256,6 +259,23 @@ func _regenerate(delta: float) -> void:
 
 
 # Drinks a flask if it has the charges and isn't already running.
+# A new level: stats have already grown; refill life and mana and mark the moment.
+func _on_leveled_up(new_level: int) -> void:
+	if dead:
+		return
+	health = max_health
+	mana = max_mana
+	health_changed.emit(health, max_health)
+	mana_changed.emit(mana, max_mana)
+	var burst := Node2D.new()
+	burst.set_script(LEVEL_UP_SCRIPT)
+	burst.position = position
+	get_parent().add_child(burst)
+	var hud = get_parent().get_node_or_null("HUD")
+	if hud != null:
+		hud.show_message("Level %d" % new_level, LEVEL_UP_SCRIPT.GOLD)
+
+
 func drink_flask(index: int) -> bool:
 	var flask: Dictionary = FLASKS[index]
 	if dead or flask_time_left[index] > 0.0 or flask_charges[index] < flask.per_use:
