@@ -7,6 +7,10 @@ func run() -> void:
 	var scene: Node = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	var player = scene.get_node("Wizard")
+	# A private save file, so the tests never touch the player's own gear.
+	var inventory = root.get_node("Inventory")
+	inventory.use_save_path("user://test_inventory.json")
+	inventory.clear()
 	# These checks are about the wizard; keep enemies from joining in.
 	for enemy in get_nodes_in_group("enemies"):
 		enemy.ai_enabled = false
@@ -25,6 +29,7 @@ func run() -> void:
 	Input.action_press("move_right")
 	await physics_step()
 	assert(sprite.animation == &"move_east")
+	ready_cast(player)
 	player.shoot_at(player.global_position + Vector2(0, -100))
 	assert(player.casting and sprite.animation == &"cast_north" and sprite.frame == 0)
 	await physics_step()
@@ -41,6 +46,7 @@ func run() -> void:
 	assert(sprite.animation == &"idle_east")
 
 	# A dodge cancels a cast and plays the dodge clip toward the dash.
+	ready_cast(player)
 	player.shoot_at(player.global_position + Vector2(100, 0))
 	player.facing = "north"
 	assert(player.dodge())
@@ -54,9 +60,11 @@ func run() -> void:
 	player.dodge_cooldown_left = 0.0
 
 	# A new shot restarts the cast from its first frame.
+	ready_cast(player)
 	player.shoot_at(player.global_position + Vector2(100, 0))
 	await process_frame
 	await process_frame
+	ready_cast(player)
 	player.shoot_at(player.global_position + Vector2(-100, 0))
 	assert(sprite.animation == &"cast_west" and sprite.frame == 0)
 	for projectile in get_nodes_in_group("projectiles"):
@@ -85,7 +93,7 @@ func run() -> void:
 	await process_step()
 	assert(enemy_sprite.animation == &"idle_west")
 	# A hit plays hurt once, holding the facing, then returns to idle.
-	enemy.take_damage(1)
+	enemy.take_damage(5.0)
 	assert(enemy.hurting and enemy_sprite.animation == &"hurt_west")
 	player.position = enemy.position + Vector2(200, 0)
 	await process_step()
@@ -97,7 +105,7 @@ func run() -> void:
 	await process_frame
 	assert(not enemy.hurting and enemy_sprite.animation == &"idle_east")
 	# The killing hit plays death, then the body fades and despawns.
-	enemy.take_damage(2)
+	enemy.take_damage(enemy.MAX_HEALTH)
 	assert(enemy.dying and enemy_sprite.animation == &"death_east")
 	for frame in range(300):
 		await process_frame
@@ -122,6 +130,7 @@ func run() -> void:
 	assert(scene.y_sort_enabled, "Characters and props overlap by depth")
 	print("PASS: wizard idle/walk/cast/dodge in 8 directions, cast faces aim and overrides walk, dodge cancels cast; enemy idle/hurt/death in 4 directions, enemies face wizard, hurt returns to idle, death then despawn; NPC idles watch the wizard; candles flicker")
 	scene.queue_free()
+	DirAccess.remove_absolute("user://test_inventory.json")
 	quit()
 
 
@@ -134,3 +143,9 @@ func process_step() -> void:
 func physics_step() -> void:
 	await physics_frame
 	await physics_frame
+
+
+# Skips the cast cooldown and refills mana, so each check fires on demand.
+func ready_cast(player) -> void:
+	player.cast_ready_in = 0.0
+	player.mana = player.max_mana

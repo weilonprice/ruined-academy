@@ -25,7 +25,15 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── enemy.gd / enemy.tscn# Enemy AI (chase, melee/ranged attacks), damage, animations, health bar
 │   ├── enemy_projectile.gd  # The Scholar's hostile bolt
-│   ├── hud.gd               # Wizard health bar and fallen prompt
+│   ├── hud.gd               # Life and mana bars, messages, fallen prompt
+│   ├── stats.gd             # Character stats from gear; armour and resistance maths
+│   ├── inventory.gd         # Autoload: equipped gear, 10x5 backpack grid, save file
+│   ├── items/               # Item bases, affixes, uniques, and the random item generator
+│   ├── character_panel.gd   # Character sheet (C)
+│   ├── inventory_panel.gd   # Inventory screen (I): equipment slots and backpack grid
+│   ├── item_tooltip.gd      # Item tooltip with stat comparison
+│   ├── loot.gd              # Enemy drop tables and spawning items on the ground
+│   ├── ground_item.gd       # An item on the ground: icon, label, beam, pickup
 │   ├── animation_library.gd # Builds directional animations from asset folders
 │   ├── npc.gd / npc.tscn    # Idle NPC that turns to watch the wizard
 │   ├── prop.gd              # Looping animated prop (candles)
@@ -37,6 +45,7 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 │   └── status.json          # Production pipeline tracking
 ├── tools/                   # Generation automation scripts
 │   ├── build_asset_queue.py # Translates ASSET_MANIFEST into API tasks
+│   ├── make_item_icons.py   # Builds game/assets/icons (generated, recoloured, placeholder)
 │   └── pixellab_batch.py    # Multi-worker generation processor
 └── ASSET_MANIFEST.md        # Comprehensive art specification and production roadmap
 ```
@@ -72,6 +81,11 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Cast Magic Missile | **Left Mouse Button** |
 | Dodge | **Space** |
 | Restart after falling | **R** |
+| Inventory (click to move, Shift+click to equip/unequip) | **I** (Esc closes) |
+| Pick up loot (walks over if far) | **Left-click** its label |
+| Show every item label | hold **Alt** |
+| Character sheet (gear and stats) | **C** |
+| Debug: roll and equip a random item / clear gear / respawn enemies | **F3** / **F4** / **F5** |
 | Toggle Fullscreen | **F11** or **Alt + Enter** |
 
 ---
@@ -81,6 +95,15 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 The project includes headless automated integration tests:
 
 ```bash
+# Loot: drops, labels, pickup, dropping items
+godot --headless --path game -s res://tests/loot_test.gd
+
+# Inventory screen: cursor, swaps, equipping, tooltips
+godot --headless --path game -s res://tests/inventory_ui_test.gd
+
+# Items, affixes, stats, inventory, and saving
+godot --headless --path game -s res://tests/items_test.gd
+
 # Enemy AI, wizard health, death, and restart prompt
 godot --headless --path game -s res://tests/ai_test.gd
 

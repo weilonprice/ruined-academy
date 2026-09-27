@@ -1,11 +1,16 @@
 extends Node2D
 
-signal health_changed(health: int, max_health: int)
+signal health_changed(health: float, max_health: float)
+signal mana_changed(mana: float, max_mana: float)
 signal died
 
 const SPEED := 110.0
-const MAX_HEALTH := 12
 const PROJECTILE_SCRIPT := preload("res://projectile.gd")
+const STATS := preload("res://stats.gd")
+# The bolt: mana per cast, damage range before modifiers, and the time between casts before cast speed.
+const BOLT_MANA_COST := 5.0
+const BOLT_DAMAGE := Vector2(8.0, 12.0)
+const BASE_CAST_TIME := 0.25
 const WORLD := preload("res://world.gd")
 const ANIMATIONS := preload("res://animation_library.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
@@ -20,16 +25,27 @@ const DODGE_TIME := 0.2
 const DODGE_COOLDOWN := 0.5
 const AFTERIMAGE_INTERVAL := 0.04
 const AFTERIMAGE_FADE := 0.25
+# How close the wizard must be to pick an item up; clicking one farther away walks over first.
+const PICKUP_RANGE := 40.0
+const LOOT := preload("res://loot.gd")
 
 var facing := "south"
 var casting := false
 var hurting := false
-var health := MAX_HEALTH
+var stats := STATS.compute([])
+var max_health: float = stats.max_life
+var health: float = max_health
+var max_mana: float = stats.max_mana
+var mana: float = max_mana
+var cast_ready_in := 0.0
 var dead := false
+var rng := RandomNumberGenerator.new()
 var dodge_direction := Vector2.ZERO
 var dodge_time_left := 0.0
 var dodge_cooldown_left := 0.0
 var afterimage_time_left := 0.0
+# A ground item being walked to; movement keys or a dodge cancel the walk.
+var pickup_target: Node2D = null
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 
@@ -37,17 +53,38 @@ func _ready() -> void:
 	add_to_group("player")
 	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast", "dodge", "hurt", "death"])
 	sprite.animation_finished.connect(_on_animation_finished)
+	Inventory.changed.connect(refresh_stats)
+	refresh_stats()
+	health = max_health
+	mana = max_mana
 	_play("idle")
+
+
+# Re-reads equipped gear. Current life and mana keep their values, capped to the new maximums.
+func refresh_stats() -> void:
+	stats = STATS.compute(Inventory.equipped_items())
+	max_health = stats.max_life
+	max_mana = stats.max_mana
+	health = minf(health, max_health)
+	mana = minf(mana, max_mana)
+	health_changed.emit(health, max_health)
+	mana_changed.emit(mana, max_mana)
 
 
 func _physics_process(delta: float) -> void:
 	if dead:
 		return
+	_regenerate(delta)
+	cast_ready_in = maxf(0.0, cast_ready_in - delta)
 	dodge_cooldown_left = maxf(0.0, dodge_cooldown_left - delta)
 	if is_dodging():
 		_dodge_step(delta)
 		return
 	var movement := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if movement != Vector2.ZERO or not is_instance_valid(pickup_target):
+		pickup_target = null
+	else:
+		movement = _walk_to_pickup()
 	position += movement * SPEED * delta
 	position = position.clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
 	# A cast or a flinch finishes before walking resumes; movement continues underneath.
@@ -71,15 +108,24 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("dodge", false, true):
 		dodge()
 		get_viewport().set_input_as_handled()
-	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and not is_dodging():
-		shoot_at(get_global_mouse_position())
+	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of casting.
+		if Inventory.held != null:
+			drop_held_item()
+		elif not is_dodging():
+			shoot_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
 
 
+# Casts a bolt toward the target, if the last cast has finished and there is mana for it.
 func shoot_at(target: Vector2) -> Node2D:
 	var aim := target - global_position
-	if dead or aim.is_zero_approx():
+	if dead or aim.is_zero_approx() or cast_ready_in > 0.0 or mana < BOLT_MANA_COST:
 		return null
+	mana -= BOLT_MANA_COST
+	mana_changed.emit(mana, max_mana)
+	var cast_rate: float = 1.0 + stats.cast_speed / 100.0
+	cast_ready_in = BASE_CAST_TIME / cast_rate
 	facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	var tip: Vector2 = global_position + STAFF_TIPS[facing]
 	# Aim from the tip so the bolt still flies through the clicked point.
@@ -87,6 +133,11 @@ func shoot_at(target: Vector2) -> Node2D:
 	var projectile := Node2D.new()
 	projectile.set_script(PROJECTILE_SCRIPT)
 	projectile.direction = flight.normalized() if not flight.is_zero_approx() else aim.normalized()
+	projectile.speed = projectile.SPEED * (1.0 + stats.projectile_speed / 100.0)
+	projectile.damage = rng.randf_range(BOLT_DAMAGE.x, BOLT_DAMAGE.y) * (1.0 + stats.spell_damage / 100.0)
+	projectile.critical = rng.randf() * 100.0 < stats.crit_chance
+	if projectile.critical:
+		projectile.damage *= STATS.CRIT_MULTIPLIER
 	get_parent().add_child(projectile)
 	projectile.global_position = tip
 	# The first hit check sweeps from the body, so an enemy between the wizard and the tip is still hit.
@@ -94,17 +145,20 @@ func shoot_at(target: Vector2) -> Node2D:
 	casting = true
 	hurting = false
 	_play("cast")
+	# Faster casting plays the cast animation faster too.
+	sprite.speed_scale = cast_rate
 	sprite.set_frame_and_progress(0, 0.0)
 	return projectile
 
 
-func take_damage(amount: int) -> void:
-	if dead or amount <= 0:
+# Takes a hit of a damage type; armour reduces physical hits, resistances the elements.
+func take_damage(amount: float, damage_type := "physical") -> void:
+	if dead or amount <= 0.0:
 		return
-	health = maxi(0, health - amount)
-	health_changed.emit(health, MAX_HEALTH)
+	health = maxf(0.0, health - STATS.mitigate(amount, damage_type, stats))
+	health_changed.emit(health, max_health)
 	casting = false
-	if health == 0:
+	if health <= 0.0:
 		dead = true
 		hurting = false
 		dodge_time_left = 0.0
@@ -125,6 +179,41 @@ func _on_animation_finished() -> void:
 		hurting = false
 
 
+func _regenerate(delta: float) -> void:
+	if health < max_health and stats.life_regen > 0.0:
+		health = minf(max_health, health + stats.life_regen * delta)
+		health_changed.emit(health, max_health)
+	if mana < max_mana:
+		mana = minf(max_mana, mana + stats.mana_regen * delta)
+		mana_changed.emit(mana, max_mana)
+
+
+# Picks the item up now if it is in reach; otherwise walks to it first.
+func walk_to_pick_up(ground_item: Node2D) -> void:
+	if dead:
+		return
+	if global_position.distance_to(ground_item.global_position) <= PICKUP_RANGE:
+		pickup_target = null
+		ground_item.pick_up()
+	else:
+		pickup_target = ground_item
+
+
+# The movement toward the item being walked to, picking it up on arrival.
+func _walk_to_pickup() -> Vector2:
+	var offset := pickup_target.global_position - global_position
+	if offset.length() <= PICKUP_RANGE:
+		var target := pickup_target
+		pickup_target = null
+		target.pick_up()
+		return Vector2.ZERO
+	return offset.normalized()
+
+
+func drop_held_item() -> void:
+	LOOT.spawn(Inventory.take_held(), global_position, get_parent())
+
+
 func is_dodging() -> bool:
 	return dodge_time_left > 0.0
 
@@ -141,6 +230,7 @@ func dodge() -> bool:
 	dodge_time_left = DODGE_TIME
 	dodge_cooldown_left = DODGE_TIME + DODGE_COOLDOWN
 	afterimage_time_left = 0.0
+	pickup_target = null
 	casting = false
 	hurting = false
 	_play("dodge")
@@ -179,4 +269,6 @@ func _spawn_afterimage() -> void:
 func _play(action: String) -> void:
 	var animation := "%s_%s" % [action, facing]
 	if sprite.sprite_frames.has_animation(animation):
+		if action != "cast":
+			sprite.speed_scale = 1.0
 		sprite.play(animation)

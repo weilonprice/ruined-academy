@@ -13,10 +13,14 @@ func run() -> void:
 	scene = load("res://main.tscn").instantiate()
 	root.add_child(scene)
 	player = scene.get_node("Wizard")
+	# A private save file, so the tests never touch the player's own gear.
+	var inventory = root.get_node("Inventory")
+	inventory.use_save_path("user://test_inventory.json")
+	inventory.clear()
 	# The wizard stands still unless a check moves it.
 	player.set_physics_process(false)
 	var hud = scene.get_node("HUD")
-	assert(player.health == player.MAX_HEALTH and hud.health == player.MAX_HEALTH)
+	assert(player.health == player.max_health and hud.health == player.max_health)
 
 	# Enemies wait at the north edge until the wizard comes near.
 	var starts := {}
@@ -41,7 +45,7 @@ func run() -> void:
 	assert(skitter.attacking and skitter.sprite.animation == &"attack_west")
 	assert(player.global_position.distance_to(skitter.global_position) <= skitter.stats.reach + skitter.REACH_SLACK)
 	await wait_until(func() -> bool: return skitter.attack_landed)
-	assert(player.health == player.MAX_HEALTH - 1, "A landed claw deals 1")
+	assert(is_equal_approx(player.health, player.max_health - 8.0), "A landed claw deals 8 (no armour yet)")
 	assert(hud.health == player.health, "The health bar follows")
 	assert(player.hurting and player.sprite.animation == &"hurt_south", "The wizard flinches")
 	await wait_until(func() -> bool: return not player.hurting)
@@ -49,14 +53,14 @@ func run() -> void:
 
 	# Stepping out of reach during the windup makes the blow miss.
 	await wait_until(func() -> bool: return skitter.attacking)
-	var before: int = player.health
+	var before: float = player.health
 	player.position += Vector2(-120, 0)
 	await wait_until(func() -> bool: return not skitter.attacking)
 	assert(player.health == before, "A blow misses a wizard who left its reach")
 
 	# Hitting an enemy mid-windup cancels its attack.
 	await wait_until(func() -> bool: return skitter.attacking)
-	skitter.take_damage(1)
+	skitter.take_damage(5.0)
 	assert(not skitter.attacking and skitter.hurting)
 	skitter.queue_free()
 	await process_frame
@@ -66,7 +70,7 @@ func run() -> void:
 	var sentinel = spawn("sentinel", Vector2(0, 40))
 	before = player.health
 	await wait_until(func() -> bool: return sentinel.attack_landed, 600)
-	assert(player.health == before - 2, "A sentinel punch deals 2")
+	assert(is_equal_approx(player.health, before - 16.0), "A sentinel punch deals 16")
 	sentinel.queue_free()
 	await process_frame
 
@@ -77,7 +81,7 @@ func run() -> void:
 	assert(scholar.sprite.animation == &"cast_south")
 	assert(get_nodes_in_group("hostile_projectiles").size() == 1, "The cast throws a bolt")
 	await wait_until(func() -> bool: return get_nodes_in_group("hostile_projectiles").is_empty())
-	assert(player.health == before - 1, "The bolt hits for 1")
+	assert(is_equal_approx(player.health, before - 10.0), "The fire bolt hits for 10 (no resistance yet)")
 	# A bolt can be sidestepped.
 	await wait_until(func() -> bool: return scholar.attack_landed and scholar.attacking, 600)
 	before = player.health
@@ -100,7 +104,7 @@ func run() -> void:
 	var far = spawn("skitter", Vector2(-400, 0))
 	await physics_step()
 	assert(not far.aggro)
-	far.take_damage(1)
+	far.take_damage(5.0)
 	assert(far.aggro)
 	await wait_until(func() -> bool: return not far.hurting)
 	var gap: float = player.global_position.distance_to(far.global_position)
@@ -112,9 +116,10 @@ func run() -> void:
 	player.take_damage(player.health)
 	assert(player.dead and player.health == 0 and player.sprite.animation == &"death_" + player.facing)
 	assert(hud.fallen.visible and hud.health == 0)
+	ready_cast(player)
 	assert(not player.dodge() and player.shoot_at(player.global_position + Vector2(50, 0)) == null)
-	player.take_damage(1)
-	assert(player.health == 0)
+	player.take_damage(1.0)
+	assert(player.health == 0.0)
 	await wait_until(func() -> bool: return not far.attacking and not far.hurting)
 	var resting: Vector2 = far.position
 	for frame in range(90):
@@ -122,8 +127,9 @@ func run() -> void:
 	assert(not far.attacking and far.position == resting, "Enemies stand down once the wizard falls")
 	assert(InputMap.action_get_events("restart")[0].physical_keycode == KEY_R)
 	assert(not timed_out, "Every wait must finish in time")
-	print("PASS: enemies idle until near; chase; melee lands on the hit frame and misses if you step away; hits cancel attacks; sentinel deals 2; scholar casts dodgeable bolts and backs off; shots wake enemies; wizard hurt, health bar, death, restart prompt")
+	print("PASS: enemies idle until near; chase; melee lands on the hit frame and misses if you step away; hits cancel attacks; sentinel deals 16; scholar casts dodgeable bolts and backs off; shots wake enemies; wizard hurt, health bar, death, restart prompt")
 	scene.queue_free()
+	DirAccess.remove_absolute("user://test_inventory.json")
 	quit()
 
 
@@ -147,3 +153,9 @@ func wait_until(condition: Callable, max_frames := 300) -> void:
 func physics_step() -> void:
 	await physics_frame
 	await physics_frame
+
+
+# Skips the cast cooldown and refills mana, so each check fires on demand.
+func ready_cast(player) -> void:
+	player.cast_ready_in = 0.0
+	player.mana = player.max_mana
