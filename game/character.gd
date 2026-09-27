@@ -7,6 +7,7 @@ signal changed
 signal leveled_up(level: int)
 
 const MAX_LEVEL := 50
+const PASSIVES := preload("res://passives.gd")
 const SAVE_VERSION := 1
 const DEFAULT_SAVE_PATH := "user://character.json"
 # Test scripts run as their own main loop; they get a throwaway file so they never touch a real save.
@@ -16,6 +17,8 @@ var save_path := DEFAULT_SAVE_PATH
 var level := 1
 # Experience earned toward the next level.
 var experience := 0
+# Allocated passive nodes; each level past the first gives one point.
+var passives: Array[String] = []
 
 
 func _ready() -> void:
@@ -56,9 +59,46 @@ func add_experience(amount: int) -> int:
 	return gained
 
 
+func points_available() -> int:
+	return level - 1 - passives.size()
+
+
+func can_allocate(id: String) -> bool:
+	if id in passives or not PASSIVES.NODES.has(id) or points_available() <= 0:
+		return false
+	return PASSIVES.neighbours(id).any(func(next: String) -> bool: return next == PASSIVES.START or next in passives)
+
+
+func allocate(id: String) -> bool:
+	if not can_allocate(id):
+		return false
+	passives.append(id)
+	save()
+	changed.emit()
+	return true
+
+
+# A node can be refunded if everything else still links back to the start without it.
+func can_refund(id: String) -> bool:
+	if id not in passives:
+		return false
+	var rest := passives.filter(func(other: String) -> bool: return other != id)
+	return PASSIVES.connected(rest)
+
+
+func refund(id: String) -> bool:
+	if not can_refund(id):
+		return false
+	passives.erase(id)
+	save()
+	changed.emit()
+	return true
+
+
 func reset() -> void:
 	level = 1
 	experience = 0
+	passives.clear()
 	save()
 	changed.emit()
 
@@ -73,17 +113,24 @@ func save() -> void:
 	if file == null:
 		push_error("Could not save character to %s" % save_path)
 		return
-	file.store_string(JSON.stringify({"version": SAVE_VERSION, "level": level, "experience": experience}, "\t"))
+	file.store_string(JSON.stringify({"version": SAVE_VERSION, "level": level, "experience": experience, "passives": passives}, "\t"))
 
 
 func load_save() -> void:
 	level = 1
 	experience = 0
+	passives.clear()
 	if FileAccess.file_exists(save_path):
 		var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
 		if data is Dictionary and int(data.get("version", 0)) == SAVE_VERSION:
 			level = clampi(int(data.get("level", 1)), 1, MAX_LEVEL)
 			experience = maxi(0, int(data.get("experience", 0)))
+			# Keep only known nodes, within the points the level allows, still linked to the start.
+			for id in data.get("passives", []):
+				if PASSIVES.NODES.has(id) and id not in passives and passives.size() < level - 1:
+					passives.append(id)
+			if not PASSIVES.connected(passives):
+				passives.clear()
 		else:
 			push_warning("Ignoring unreadable character save at %s" % save_path)
 	changed.emit()

@@ -3,6 +3,7 @@ extends Node2D
 # Frost Nova: a ring of cold bursting out from the caster. Every enemy within
 # the radius takes one cold hit and is chilled; the ring is the visual.
 
+# Base radius; passives can widen it.
 const RADIUS := 90.0
 # Enemies whose edge the ring reaches count as inside.
 const ENEMY_REACH := 12.0
@@ -18,6 +19,7 @@ var damage_scale := 1.0
 var crit_chance := 5.0
 var crit_multiplier := 1.5
 var chill_time := 2.0
+var radius := RADIUS
 var rng: RandomNumberGenerator
 var hits: Array = []
 var progress := 0.0
@@ -41,7 +43,7 @@ func _process(_delta: float) -> void:
 func strike() -> Array:
 	var struck := []
 	for enemy: Node2D in get_tree().get_nodes_in_group("enemies"):
-		if enemy.global_position.distance_to(global_position) > RADIUS + ENEMY_REACH:
+		if enemy.global_position.distance_to(global_position) > radius + ENEMY_REACH:
 			continue
 		var critical := rng.randf() * 100.0 < crit_chance
 		var damage := rng.randf_range(damage_range.x, damage_range.y) * damage_scale
@@ -53,21 +55,21 @@ func strike() -> Array:
 
 
 func _draw() -> void:
-	var radius := lerpf(10.0, RADIUS, progress)
+	var ring_radius := lerpf(10.0, radius, progress)
 	var ring := RING_COLOR
 	ring.a = 0.9 * fade
 	var core := CORE_COLOR
 	core.a = 0.8 * fade
 	var haze := RING_COLOR
 	haze.a = 0.12 * fade
-	draw_circle(Vector2.ZERO, radius, haze)
-	draw_arc(Vector2.ZERO, radius, 0.0, TAU, 48, ring, 3.0)
-	draw_arc(Vector2.ZERO, radius - 3.0, 0.0, TAU, 48, core, 1.0)
+	draw_circle(Vector2.ZERO, ring_radius, haze)
+	draw_arc(Vector2.ZERO, ring_radius, 0.0, TAU, 48, ring, 3.0)
+	draw_arc(Vector2.ZERO, ring_radius - 3.0, 0.0, TAU, 48, core, 1.0)
 	# Ice shards riding the ring's edge, pointing outward.
 	for index in range(SHARDS):
 		var angle := TAU * index / SHARDS + progress * 0.4
 		var out := Vector2.from_angle(angle)
 		var side := out.orthogonal() * 2.0
-		var tip := out * (radius + 5.0)
-		var base := out * (radius - 3.0)
+		var tip := out * (ring_radius + 5.0)
+		var base := out * (ring_radius - 3.0)
 		draw_colored_polygon(PackedVector2Array([(base + side).round(), tip.round(), (base - side).round()]), core)

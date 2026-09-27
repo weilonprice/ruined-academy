@@ -13,6 +13,7 @@ Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which i
 | Life / Mana Flask | **1** / **2** |
 | Inventory | **I** (Esc closes) |
 | Character sheet | **C** |
+| Passive tree | **P** |
 | Show every item label | hold **Alt** |
 | Pause menu (Resume / Quit) | **Esc** |
 | Restart after falling | **R** |
@@ -33,6 +34,20 @@ The wizard has 100 life and 60 mana, regenerating 6 mana per second. Life and ma
 ## Levels
 
 Kills give experience: 12 for a Skitter, 15 for a Scholar, 30 for a Sentinel. Each level needs more than the last (40 to reach level 2, 121 for level 3, 232 for level 4), up to level 50. Every level past the first adds **+8 maximum life, +4 maximum mana, and +2% spell damage**, and a level-up refills life and mana with a burst of gold rings and a message. The level shows beside the life bar, a thin gold bar under the skill bar tracks progress, and the character sheet (**C**) shows the exact experience. Level and experience are saved to `user://character.json`; falling costs no experience.
+
+## Passive tree
+
+Each level past the first gives one passive point; unspent points show as **+N (P)** beside the level. **P** opens the tree. Click a node to allocate it, as long as it links to the start or to a node you already have; right-click refunds it for free, unless other passives depend on it. Hover a node for its effect.
+
+| Passive | Grants | Links from |
+|---|---|---|
+| Vitality | +20 maximum life, 1 life regenerated per second | Start |
+| Deep Reserves | +20 maximum mana, 20% increased mana regeneration | Start |
+| Spell Mastery | 15% increased spell damage | Vitality or Deep Reserves |
+| Frostweaving | Frost Nova: 30% larger radius, chill lasts 1 s longer | Spell Mastery |
+| Keen Mind | 50% increased critical strike chance, 8% increased cast speed | Spell Mastery |
+
+Allocated passives are saved with the level.
 
 ## Enemies
 

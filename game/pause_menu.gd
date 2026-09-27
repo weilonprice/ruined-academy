@@ -1,7 +1,7 @@
 extends Control
 
 # Esc pauses the game and offers Resume or Quit; Esc again resumes.
-# While the inventory is open, Esc closes it instead.
+# While the inventory or passive tree is open, Esc closes it instead.
 
 @onready var resume_button: Button = $Center/Box/Resume
 @onready var quit_button: Button = $Center/Box/Quit
@@ -18,9 +18,11 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not event.is_action_pressed("pause", false, true):
 		return
-	var inventory := get_parent().get_node_or_null("InventoryPanel")
-	if not visible and inventory != null and inventory.visible:
-		return
+	# Esc closes an open screen first; only then does it pause.
+	for screen in ["InventoryPanel", "PassiveTree"]:
+		var node := get_parent().get_node_or_null(screen)
+		if not visible and node != null and node.visible:
+			return
 	get_viewport().set_input_as_handled()
 	if visible:
 		resume()

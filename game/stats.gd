@@ -16,12 +16,13 @@ const DAMAGE_TYPES := ["physical", "fire", "cold", "lightning"]
 const LIFE_PER_LEVEL := 8.0
 const MANA_PER_LEVEL := 4.0
 const SPELL_DAMAGE_PER_LEVEL := 2.0
+const PASSIVES := preload("res://passives.gd")
 
 
-# Final stats from the wizard's level and a list of equipped items.
-static func compute(items: Array, level := 1) -> Dictionary:
+# Final stats from the wizard's level, equipped items, and allocated passives.
+static func compute(items: Array, level := 1, passives := []) -> Dictionary:
 	var growth := level - 1
-	var sums := {}
+	var sums: Dictionary = PASSIVES.stats(passives)
 	for item in items:
 		var item_stats: Dictionary = item.stats()
 		for stat in item_stats:
@@ -39,6 +40,8 @@ static func compute(items: Array, level := 1) -> Dictionary:
 		"fire_res": minf(MAX_RESISTANCE, sums.get("fire_res", 0)),
 		"cold_res": minf(MAX_RESISTANCE, sums.get("cold_res", 0)),
 		"lightning_res": minf(MAX_RESISTANCE, sums.get("lightning_res", 0)),
+		"nova_area": float(sums.get("nova_area", 0)),
+		"nova_chill": float(sums.get("nova_chill", 0)),
 	}
 
 

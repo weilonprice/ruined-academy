@@ -67,6 +67,12 @@ func _draw_bars() -> void:
 	_draw_bar(MANA_BAR, mana, max_mana, MANA_COLOR)
 	bar.draw_string_outline(font, LEVEL_POSITION, "Lv %d" % Character.level, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, 3, FRAME_COLOR)
 	bar.draw_string(font, LEVEL_POSITION, "Lv %d" % Character.level, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, LEVEL_COLOR)
+	# Unspent passive points, as a reminder to open the tree.
+	var points: int = Character.points_available()
+	if points > 0:
+		var spot := LEVEL_POSITION + Vector2(font.get_string_size("Lv %d" % Character.level, HORIZONTAL_ALIGNMENT_LEFT, -1, 10).x + 4.0, 0.0)
+		bar.draw_string_outline(font, spot, "+%d (P)" % points, HORIZONTAL_ALIGNMENT_LEFT, -1, 8, 3, FRAME_COLOR)
+		bar.draw_string(font, spot, "+%d (P)" % points, HORIZONTAL_ALIGNMENT_LEFT, -1, 8, LEVEL_COLOR)
 
 
 func _draw_bar(frame: Rect2, value: float, maximum: float, color: Color) -> void:

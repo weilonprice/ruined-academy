@@ -81,7 +81,7 @@ func _ready() -> void:
 
 # Re-reads equipped gear. Current life and mana keep their values, capped to the new maximums.
 func refresh_stats() -> void:
-	stats = STATS.compute(Inventory.equipped_items(), Character.level)
+	stats = STATS.compute(Inventory.equipped_items(), Character.level, Character.passives)
 	max_health = stats.max_life
 	max_mana = stats.max_mana
 	health = minf(health, max_health)
@@ -176,7 +176,8 @@ func cast_nova(toward: Vector2) -> Node2D:
 	nova.damage_scale = 1.0 + stats.spell_damage / 100.0
 	nova.crit_chance = stats.crit_chance
 	nova.crit_multiplier = STATS.CRIT_MULTIPLIER
-	nova.chill_time = NOVA_CHILL_TIME
+	nova.chill_time = NOVA_CHILL_TIME + stats.nova_chill
+	nova.radius = nova.RADIUS * (1.0 + stats.nova_area / 100.0)
 	nova.rng = rng
 	nova.position = position
 	get_parent().add_child(nova)
