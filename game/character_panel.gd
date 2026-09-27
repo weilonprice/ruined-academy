@@ -40,6 +40,7 @@ func refresh() -> void:
 			lines.append("[color=#f2c14e]Level %d[/color] (max)" % Character.level)
 		else:
 			lines.append("[color=#f2c14e]Level %d[/color]   XP %d / %d" % [Character.level, Character.experience, Character.experience_to_next(Character.level)])
+		lines.append("Passives: %d allocated, %d to spend (P)" % [Character.passives.size(), Character.points_available()])
 		lines.append("Life: %d   Regen: %d/s" % [stats.max_life, stats.life_regen])
 		lines.append("Mana: %d   Regen: %.1f/s" % [stats.max_mana, stats.mana_regen])
 		lines.append("Armour: %d" % stats.armour)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
 [ext_resource type="Script" path="res://player.gd" id="2_player"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://flask_bar.gd" id="12_flasks"]
 [ext_resource type="Script" path="res://pause_menu.gd" id="13_pause"]
 [ext_resource type="Script" path="res://experience_bar.gd" id="14_experience"]
+[ext_resource type="Script" path="res://passive_tree_panel.gd" id="15_passives"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -184,6 +185,16 @@ script = ExtResource("10_tooltip")
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 1
+
+[node name="PassiveTree" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("15_passives")
 
 [node name="PauseMenu" type="Control" parent="HUD"]
 layout_mode = 3
