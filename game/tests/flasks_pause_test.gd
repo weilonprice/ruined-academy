@@ -23,15 +23,15 @@ func run() -> void:
 	var life: Dictionary = player.FLASKS[0]
 	var mana: Dictionary = player.FLASKS[1]
 
-	# Flasks start full; keys 1 and 2 drink them.
+	# Flasks start full; Q and E drink them.
 	check(player.flask_charges == [life.max_charges, mana.max_charges], "Flasks start full")
-	check(InputMap.action_get_events("flask_1")[0].physical_keycode == KEY_1 and InputMap.action_get_events("flask_2")[0].physical_keycode == KEY_2)
+	check(InputMap.action_get_events("flask_1")[0].physical_keycode == KEY_Q and InputMap.action_get_events("flask_2")[0].physical_keycode == KEY_E)
 	player.take_damage(70.0)
 	var key := InputEventKey.new()
-	key.physical_keycode = KEY_1
+	key.physical_keycode = KEY_Q
 	key.pressed = true
 	player._unhandled_input(key)
-	check(player.flask_charges[0] == life.max_charges - life.per_use and player.flask_time_left[0] == life.duration, "1 drinks the life flask")
+	check(player.flask_charges[0] == life.max_charges - life.per_use and player.flask_time_left[0] == life.duration, "Q drinks the life flask")
 
 	# Recovery runs over the flask's duration, then stops.
 	player._physics_process(life.duration / 2.0)
@@ -48,13 +48,13 @@ func run() -> void:
 	player._physics_process(life.duration)
 	check(player.health == player.max_health)
 
-	# The mana flask restores mana on 2.
+	# The mana flask restores mana on E.
 	player.mana = 0.0
-	key.physical_keycode = KEY_2
+	key.physical_keycode = KEY_E
 	player._unhandled_input(key)
 	player._physics_process(mana.duration)
 	var regen: float = player.stats.mana_regen * mana.duration
-	check(is_equal_approx(player.mana, mana.amount + regen), "2 drinks the mana flask (%.1f)" % player.mana)
+	check(is_equal_approx(player.mana, mana.amount + regen), "E drinks the mana flask (%.1f)" % player.mana)
 
 	# Out of charges: no drink. Kills refill every flask, capped at the maximum.
 	player.flask_charges[0] = life.per_use - 1
@@ -109,7 +109,7 @@ func run() -> void:
 	scene.queue_free()
 	inventory.clear()
 	DirAccess.remove_absolute(SAVE)
-	finish("flasks start full, 1 and 2 drink them, recovery runs over time and stops at the full amount and the maximum, no redrink while running, charges gate drinks, kills refill charges capped at the maximum; Esc pauses with Resume focused, nothing runs while paused, Resume and Esc resume, fullscreen still works, Quit wired, Esc closes the inventory first; no flasks once fallen")
+	finish("flasks start full, Q and E drink them, recovery runs over time and stops at the full amount and the maximum, no redrink while running, charges gate drinks, kills refill charges capped at the maximum; Esc pauses with Resume focused, nothing runs while paused, Resume and Esc resume, fullscreen still works, Quit wired, Esc closes the inventory first; no flasks once fallen")
 
 
 # Sends an action press through the viewport, as a key press would.

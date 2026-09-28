@@ -25,17 +25,18 @@ func run() -> void:
 		enemy.queue_free()
 	await process_frame
 
-	# Right-click casts Frost Nova: mana, cast time, and the cast animation facing the cursor.
+	# Key 1 casts Frost Nova: mana, cast time, and the cast animation facing the cursor.
 	var near_east = spawn(scene, player.position + Vector2(60, 0))
 	var near_south = spawn(scene, player.position + Vector2(0, NOVA.RADIUS + NOVA.ENEMY_REACH - 1.0))
 	var outside = spawn(scene, player.position + Vector2(-(NOVA.RADIUS + NOVA.ENEMY_REACH + 10.0), 0))
 	await process_frame
-	var right_click := InputEventMouseButton.new()
-	right_click.button_index = MOUSE_BUTTON_RIGHT
-	right_click.pressed = true
-	player._unhandled_input(right_click)
+	check(InputMap.action_get_events("skill_1")[0].physical_keycode == KEY_1, "Frost Nova is on 1")
+	var key_1 := InputEventKey.new()
+	key_1.physical_keycode = KEY_1
+	key_1.pressed = true
+	player._unhandled_input(key_1)
 	var novas := scene.get_children().filter(func(node: Node) -> bool: return node.get_script() == NOVA)
-	check(novas.size() == 1, "Right-click casts Frost Nova")
+	check(novas.size() == 1, "1 casts Frost Nova")
 	check(player.mana == player.max_mana - player.NOVA_MANA_COST, "It costs its mana")
 	check(is_equal_approx(player.cast_ready_in, player.NOVA_CAST_TIME), "It takes its cast time")
 	check(player.casting and String(player.sprite.animation).begins_with("cast_"))
@@ -98,19 +99,19 @@ func run() -> void:
 	check(damage >= player.NOVA_DAMAGE.x * 2.0 * 1.5 - 0.01 and damage <= player.NOVA_DAMAGE.y * 2.0 * 1.5 + 0.01, "Spell damage and crits scale it (%.1f)" % damage)
 	check(target.dying, "A lethal nova kills")
 
-	# The ring fades and frees itself; the skill bar shows both skills and dims what can't be cast.
+	# The ring fades and frees itself; the skill bar shows every slot and dims what can't be cast.
 	await create_timer(NOVA.EXPAND_TIME + NOVA.FADE_TIME + 0.1).timeout
 	check(scene.get_children().filter(func(node: Node) -> bool: return node.get_script() == NOVA).is_empty(), "The nova effect cleans up")
 	var bar = scene.get_node("HUD/SkillBar")
-	check(bar.skills().map(func(skill: Array) -> String: return skill[0]) == ["LMB", "RMB", "SPACE"])
+	check(bar.skills().map(func(skill: Array) -> String: return skill[0]) == ["LMB", "RMB", "1", "2", "3", "4", "SPACE"])
 	player.mana = player.NOVA_MANA_COST - 1.0
 	check(bar.usable(player.BOLT_MANA_COST) and not bar.usable(player.NOVA_MANA_COST), "Dims a skill without enough mana")
-	check(bar.skills()[1][2] == 1.0 and bar.skills()[0][2] == 0.0, "The slot the mana can't pay for is dimmed")
-	check(bar.skills()[2][2] == 0.0, "The dash is ready")
+	check(bar.skills()[2][2] == 1.0 and bar.skills()[1][2] == 0.0 and bar.skills()[0][2] == 0.0, "The slot the mana can't pay for is dimmed; the free slash never is")
+	check(bar.skills()[6][2] == 0.0, "The dash is ready")
 	check(player.dodge())
-	check(is_equal_approx(bar.skills()[2][2], 1.0), "A fresh dash shades its whole slot")
+	check(is_equal_approx(bar.skills()[6][2], 1.0), "A fresh dash shades its whole slot")
 	player.dodge_cooldown_left = (player.DODGE_TIME + player.DODGE_COOLDOWN) / 2.0
-	check(is_equal_approx(bar.skills()[2][2], 0.5), "The shade shrinks as the dash recharges")
+	check(is_equal_approx(bar.skills()[6][2], 0.5), "The shade shrinks as the dash recharges")
 	player.dodge_time_left = 0.0
 	player.dodge_cooldown_left = 0.0
 
@@ -121,7 +122,7 @@ func run() -> void:
 	carried.base_id = "copper_ring"
 	inventory.add_item(carried)
 	inventory.pick_up(carried)
-	player._unhandled_input(right_click)
+	player._unhandled_input(key_1)
 	check(player.mana == player.max_mana, "No nova while carrying an item")
 	inventory.stow_held()
 	player.take_damage(9999.0)
@@ -130,7 +131,7 @@ func run() -> void:
 	scene.queue_free()
 	inventory.clear()
 	DirAccess.remove_absolute(SAVE)
-	finish("right-click casts Frost Nova for its mana and cast time; hits each enemy in reach once and chills it, misses those outside; waits for the cast and needs mana; chill slows movement to 70% and wears off; spell damage, crits, and cast speed apply; the effect cleans up; skill bar shows LMB/RMB and dims unaffordable skills; no nova while carrying or fallen")
+	finish("1 casts Frost Nova for its mana and cast time; hits each enemy in reach once and chills it, misses those outside; waits for the cast and needs mana; chill slows movement to 70% and wears off; spell damage, crits, and cast speed apply; the effect cleans up; skill bar shows LMB/RMB/1-4/SPACE and dims unaffordable skills; no nova while carrying or fallen")
 
 
 func spawn(scene: Node, at: Vector2):

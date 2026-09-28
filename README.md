@@ -9,8 +9,8 @@ A solo-first, dark-fantasy pixel-art Action RPG built in **Godot 4.7** for deskt
 You play as a former student wizard returning to a ruined magical academy. Master elemental and forbidden magic, customize spells, allocate points into a branching passive tree, battle corrupted monstrosities, and restore the academy's forgotten workshops and ward beacons.
 
 - **Perspective**: Elevated top-down view with clear pixel readability and silhouettes.
-- **Controls**: Fluid 8-directional WASD movement, mouse-aimed casting, and a dodge dash.
-- **Combat**: A magic bolt and Frost Nova, crits, mana, life and mana flasks, and enemies that chase, swing, and cast, with attack windups you can step out of.
+- **Controls**: Fluid 8-directional WASD movement, mouse-aimed melee and casting, number-key skills, and a dodge dash.
+- **Combat**: A Wind Slash sword swing, a magic bolt and Frost Nova, crits, mana, life and mana flasks, and enemies that chase, swing, and cast, with attack windups you can step out of.
 - **Loot**: Path of Exile-style items with random affixes, rarities, and uniques; enemies drop loot with labels you click to pick up.
 - **Inventory**: A shaped-item grid backpack, ten equipment slots, and tooltips that compare stats; gear is saved between sessions.
 - **Progression**: Kills give experience; each level grows life, mana, and spell damage and grants a point for a small passive tree.
@@ -123,10 +123,11 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 |---|---|
 | Move Up / Left / Down / Right | **W** / **A** / **S** / **D** |
 | Aim | **Mouse Cursor** |
-| Cast Magic Missile | **Left Mouse Button** |
-| Cast Frost Nova (short-range burst around you) | **Right Mouse Button** |
+| Wind Slash (sword swing that throws magic wind) | **Left Mouse Button** |
+| Cast Magic Missile | **Right Mouse Button** |
+| Cast Frost Nova (short-range burst around you) | **1** (2–4 are free skill slots) |
 | Dodge | **Space** |
-| Drink Life / Mana Flask | **1** / **2** |
+| Drink Life / Mana Flask | **Q** / **E** |
 | Pause menu (Resume / Quit) | **Esc** |
 | Restart after falling | **R** |
 | Inventory (click to move, Shift+click to equip/unequip) | **I** (Esc closes) |

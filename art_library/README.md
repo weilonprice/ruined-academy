@@ -94,3 +94,7 @@ The reference's interface (resource counters, quest panel, task tracker, day and
 The village set is now in the game (`../game/village.tscn`), built into `../game/assets/village/` and `../game/assets/npcs/` by `../tools/make_village_art.py`. It keeps only the tavern's largest shape (a vent and a door floated below it) and fills the forge floor's see-through stone joints. The soil terrain set is not used: the garden is carrot plots on grass.
 
 The villagers were regenerated at 64 px (`VIL-C-<name>-64`, 12 generations): at 48 px they stood a head shorter than the wizard, the enemies and the academy NPCs, which are all 64 px. The dash icon is HUD-skill-dash-b (a wind swoosh); take a, an orb with speed lines, read as a spell projectile.
+
+## Wind Slash (2026-09-28)
+
+`../tools/build_melee_queue.py` (`queue-melee.json`), about 20 generations. The slash is a 6-frame clip in 8 directions in `../game/assets/wizard/slash/`. The first takes (CH-01-slash-*, `/animate-character`) drifted in colour and mostly swung the staff. The second (CH-01-slash-b-*, `/animate-with-text-v3` from each still with `drift_threshold` 0) hold his colours and show a sword. East is the west clip mirrored (its own sword smeared into a grey blob), and north-west is north-east mirrored (its staff vanished). The wind crescent is FXM-wind-slash-b (frames 0–4); the first effect filled its middle with a dark disc. The skill icon is HUD-skill-wind-slash-b.

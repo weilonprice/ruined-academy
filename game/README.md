@@ -7,10 +7,11 @@ Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which i
 | Action | Input |
 |---|---|
 | Move | **W A S D** |
-| Magic bolt (aimed at the cursor) | **Left-click** |
-| Frost Nova (burst around you) | **Right-click** |
+| Wind Slash (sword swing toward the cursor) | **Left-click** |
+| Magic bolt (aimed at the cursor) | **Right-click** |
+| Frost Nova (burst around you) | **1** (2–4 are free skill slots) |
 | Dodge | **Space** |
-| Life / Mana Flask | **1** / **2** |
+| Life / Mana Flask | **Q** / **E** |
 | Inventory | **I** (Esc closes) |
 | Character sheet | **C** |
 | Passive tree | **P** |
@@ -24,9 +25,10 @@ Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which i
 
 The wizard has 100 life and 60 mana, regenerating 6 mana per second. Life and mana bars are top-left; flask vials and the skill bar are bottom-centre.
 
+- **Wind Slash:** the melee attack. He draws a sword and swings it toward the cursor, throwing a crescent of magic wind: every enemy within about 70 pixels and inside a 120° arc takes 10–14 damage. It costs no mana and takes 0.35 s. It deals spell damage, so spell damage, crits and cast speed all raise it.
 - **Magic bolt:** 5 mana, 8–12 damage, then 0.25 s before the next cast. It launches from the staff's orb and flies through the clicked point.
 - **Frost Nova:** 12 mana, then 0.45 s. It hits every enemy within about 90 pixels once for 12–18 cold damage and chills them for 2 s, so they move, animate, and attack at 70% speed.
-- **Crits:** both spells have a 5% base chance to crit for 1.5× damage; a crit bolt looks larger and whiter.
+- **Crits:** every attack has a 5% base chance to crit for 1.5× damage; a crit bolt looks larger and whiter.
 - **Dodge:** a 68-pixel dash over 0.2 s toward the keys you hold (or the way you face), leaving afterimages; 0.5 s cooldown, shown by the SPACE slot on the skill bar, which is shaded until the dash is ready again. There is no invincibility.
 - **Flasks:** the Life Flask recovers 50 life over 2 s (10 of 30 charges); the Mana Flask 40 mana over 1.5 s (5 of 20). A flask can't be drunk again while it's recovering. Kills refill charges, and flasks start full each run.
 - **Falling:** at zero life the wizard falls, enemies stand down, and **R** restarts. Gear, level, and experience are kept.

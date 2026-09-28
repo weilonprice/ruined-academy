@@ -27,15 +27,16 @@ func run() -> void:
 	for i in range(3):
 		assert(enemies[i].position == starts[i], "Enemies must stay stationary")
 
-	# A press creates one shot; release and right-click create none.
+	# A right-click press creates one shot; its release and a left-click (the melee slash) create none.
 	var click := InputEventMouseButton.new()
-	click.button_index = MOUSE_BUTTON_LEFT
+	click.button_index = MOUSE_BUTTON_RIGHT
 	click.pressed = true
 	player._unhandled_input(click)
 	assert(get_nodes_in_group("projectiles").size() == 1)
 	click.pressed = false
 	player._unhandled_input(click)
-	click.button_index = MOUSE_BUTTON_RIGHT
+	ready_cast(player)
+	click.button_index = MOUSE_BUTTON_LEFT
 	click.pressed = true
 	player._unhandled_input(click)
 	assert(get_nodes_in_group("projectiles").size() == 1)
@@ -109,7 +110,7 @@ func run() -> void:
 	missed_shot._physics_process(1.0)
 	await process_frame
 	assert(not is_instance_valid(missed_shot), "Missed shots must be removed outside the map")
-	print("PASS: 3 stationary enemies; left click only; staff-tip launch; mouse-target aim; rolled damage once per shot; zero-health death animation then despawn; swept nearest hit; overlap hit; missed-shot cleanup")
+	print("PASS: 3 stationary enemies; right click only; staff-tip launch; mouse-target aim; rolled damage once per shot; zero-health death animation then despawn; swept nearest hit; overlap hit; missed-shot cleanup")
 	scene.queue_free()
 	DirAccess.remove_absolute("user://test_inventory.json")
 	quit()

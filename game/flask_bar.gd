@@ -15,6 +15,8 @@ const UNUSABLE := Color(0.55, 0.55, 0.6)
 const PIP_ON := Color("f2c14e")
 const PIP_OFF := Color("2b303b")
 const KEY_COLOR := Color("d8d8d8")
+# The key that drinks each flask.
+const KEYS := ["Q", "E"]
 
 var player
 @onready var font := get_theme_default_font()
@@ -62,4 +64,4 @@ func _draw() -> void:
 		for drink in range(drinks):
 			var lit: bool = player.flask_charges[index] >= (drink + 1) * flask.per_use
 			draw_rect(Rect2(roundf(pips_left + drink * 3), texture.get_height() + 1, 2, 2), PIP_ON if lit else PIP_OFF)
-		draw_string(font, Vector2(at.x, texture.get_height() + 11.0), str(index + 1), HORIZONTAL_ALIGNMENT_CENTER, texture.get_width(), 8, KEY_COLOR)
+		draw_string(font, Vector2(at.x, texture.get_height() + 11.0), KEYS[index], HORIZONTAL_ALIGNMENT_CENTER, texture.get_width(), 8, KEY_COLOR)

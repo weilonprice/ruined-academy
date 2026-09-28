@@ -18,6 +18,15 @@ const NOVA_MANA_COST := 12.0
 const NOVA_DAMAGE := Vector2(12.0, 18.0)
 const NOVA_CAST_TIME := 0.45
 const NOVA_CHILL_TIME := 2.0
+# Wind Slash, the left-click melee attack: a sword swing that throws a crescent
+# of magic wind. It costs no mana, hits every enemy in an arc in front of the
+# wizard, and deals spell damage, so spell damage and crits raise it.
+const EFFECT := preload("res://effect.gd")
+const SLASH_DAMAGE := Vector2(10.0, 14.0)
+const SLASH_TIME := 0.35
+# Enemies whose centre is this close, and within half this angle of the aim, are hit.
+const SLASH_REACH := 70.0
+const SLASH_ARC := deg_to_rad(120.0)
 const WORLD := preload("res://world.gd")
 const ANIMATIONS := preload("res://animation_library.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
@@ -26,7 +35,7 @@ const STAFF_TIPS := {
 	"east": Vector2(7, -18), "south-east": Vector2(-9, -17), "south": Vector2(-21, -20), "south-west": Vector2(-19, -22),
 	"west": Vector2(-9, -24), "north-west": Vector2(8, -24), "north": Vector2(20, -22), "north-east": Vector2(20, -19),
 }
-const ANIMATION_SPEEDS := {"idle": 1.1, "move": 16.0, "cast": 14.0, "dodge": 20.0, "hurt": 12.0, "death": 8.0}
+const ANIMATION_SPEEDS := {"idle": 1.1, "move": 16.0, "cast": 14.0, "slash": 18.0, "dodge": 20.0, "hurt": 12.0, "death": 8.0}
 const DODGE_SPEED := 340.0
 const DODGE_TIME := 0.2
 const DODGE_COOLDOWN := 0.5
@@ -71,7 +80,7 @@ var flask_time_left: Array = FLASKS.map(func(_flask: Dictionary) -> float: retur
 
 func _ready() -> void:
 	add_to_group("player")
-	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast", "dodge", "hurt", "death"])
+	sprite.sprite_frames = ANIMATIONS.build("res://assets/wizard", DIRECTIONS, ANIMATION_SPEEDS, ["cast", "slash", "dodge", "hurt", "death"])
 	sprite.animation_finished.connect(_on_animation_finished)
 	Inventory.changed.connect(refresh_stats)
 	Character.changed.connect(refresh_stats)
@@ -133,16 +142,20 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("flask_1", false, true) or event.is_action_pressed("flask_2", false, true):
 		drink_flask(0 if event.is_action_pressed("flask_1") else 1)
 		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("skill_1", false, true):
+		if Inventory.held == null and not is_dodging():
+			cast_nova(get_global_mouse_position())
+		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of casting.
+		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of attacking.
 		if Inventory.held != null:
 			drop_held_item()
 		elif not is_dodging():
-			shoot_at(get_global_mouse_position())
+			slash_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 		if Inventory.held == null and not is_dodging():
-			cast_nova(get_global_mouse_position())
+			shoot_at(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
 
 
@@ -169,6 +182,31 @@ func shoot_at(target: Vector2) -> Node2D:
 	return projectile
 
 
+# Swings at the target: every living enemy within reach and inside the arc
+# toward it takes a hit of wind. Returns the hits, or null if he can't swing yet.
+func slash_at(target: Vector2) -> Variant:
+	var aim := target - global_position
+	if aim.is_zero_approx():
+		aim = Vector2.RIGHT.rotated(DIRECTIONS.find(facing) * PI / 4.0)
+	if not _begin_cast(0.0, SLASH_TIME, aim, "slash"):
+		return null
+	var hits := []
+	for enemy: Node2D in get_tree().get_nodes_in_group("enemies"):
+		var offset := enemy.global_position - global_position
+		if offset.length() > SLASH_REACH or absf(aim.angle_to(offset)) > SLASH_ARC / 2.0:
+			continue
+		var critical: bool = rng.randf() * 100.0 < stats.crit_chance
+		var damage: float = rng.randf_range(SLASH_DAMAGE.x, SLASH_DAMAGE.y) * (1.0 + stats.spell_damage / 100.0)
+		if critical:
+			damage *= STATS.CRIT_MULTIPLIER
+		enemy.take_damage(damage, critical)
+		hits.append({"enemy": enemy, "damage": damage, "critical": critical})
+	# The crescent art curves around its right side, so it faces along the aim.
+	var slash := EFFECT.spawn(get_parent(), "wind_slash", global_position + aim.normalized() * 30.0 + Vector2(0, -6), 16.0)
+	slash.rotation = aim.angle()
+	return hits
+
+
 # Casts Frost Nova around the wizard, turning toward the cursor for the cast.
 func cast_nova(toward: Vector2) -> Node2D:
 	if not _begin_cast(NOVA_MANA_COST, NOVA_CAST_TIME, toward - global_position):
@@ -187,9 +225,9 @@ func cast_nova(toward: Vector2) -> Node2D:
 	return nova
 
 
-# Starts a spell if the last cast has finished and there is mana: spends it,
-# sets the wait before the next cast (shortened by cast speed), and plays the cast.
-func _begin_cast(mana_cost: float, cast_time: float, aim: Vector2) -> bool:
+# Starts a spell or swing if the last one has finished and there is mana: spends
+# it, sets the wait before the next (shortened by cast speed), and plays the clip.
+func _begin_cast(mana_cost: float, cast_time: float, aim: Vector2, animation := "cast") -> bool:
 	if dead or cast_ready_in > 0.0 or mana < mana_cost:
 		return false
 	mana -= mana_cost
@@ -200,8 +238,8 @@ func _begin_cast(mana_cost: float, cast_time: float, aim: Vector2) -> bool:
 		facing = DIRECTIONS[posmod(roundi(aim.angle() / (PI / 4.0)), 8)]
 	casting = true
 	hurting = false
-	_play("cast")
-	# Faster casting plays the cast animation faster too.
+	_play(animation)
+	# Faster casting plays the animation faster too.
 	sprite.speed_scale = cast_rate
 	sprite.set_frame_and_progress(0, 0.0)
 	return true

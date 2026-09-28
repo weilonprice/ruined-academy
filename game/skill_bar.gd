@@ -1,13 +1,15 @@
 extends Control
 
-# The skill bar: the bolt on the left mouse button, Frost Nova on the right,
-# and the dash on Space. A spell dims while there isn't enough mana to cast it;
-# the dash is shaded from the top while it recharges, the shade shrinking as it does.
+# The skill bar: Wind Slash on the left mouse button, the bolt on the right,
+# Frost Nova on 1 with 2 to 4 free for later spells, and the dash on Space.
+# A spell dims while there isn't enough mana to cast it; the dash is shaded from
+# the top while it recharges, the shade shrinking as it does.
 
 const SLOT := 32.0
 const BOLT_ICON := preload("res://assets/ui/skill_firebolt.png")
 const NOVA_ICON := preload("res://assets/ui/skill_frost_nova.png")
 const DASH_ICON := preload("res://assets/ui/skill_dash.png")
+const SLASH_ICON := preload("res://assets/ui/skill_wind_slash.png")
 const GAP := 6.0
 const FRAME := Color("5a4a33")
 const BACK := Color("0d0f14")
@@ -27,10 +29,13 @@ func _process(_delta: float) -> void:
 	queue_redraw()
 
 
-# [key label, icon, how much of the slot is dimmed from 0 to 1] for each slot, left to right.
+# [key label, icon or null for an empty slot, how much of the slot is dimmed from 0 to 1]
+# for each slot, left to right.
 func skills() -> Array:
-	return [["LMB", BOLT_ICON, 0.0 if usable(player.BOLT_MANA_COST) else 1.0],
-		["RMB", NOVA_ICON, 0.0 if usable(player.NOVA_MANA_COST) else 1.0],
+	return [["LMB", SLASH_ICON, 0.0 if usable(0.0) else 1.0],
+		["RMB", BOLT_ICON, 0.0 if usable(player.BOLT_MANA_COST) else 1.0],
+		["1", NOVA_ICON, 0.0 if usable(player.NOVA_MANA_COST) else 1.0],
+		["2", null, 0.0], ["3", null, 0.0], ["4", null, 0.0],
 		["SPACE", DASH_ICON, dash_recharge()]]
 
 
@@ -53,7 +58,8 @@ func _draw() -> void:
 	for index in range(list.size()):
 		var slot := Rect2(Vector2((size.x - width) / 2.0 + index * (SLOT + GAP), 0.0), Vector2(SLOT, SLOT))
 		draw_rect(slot, BACK)
-		draw_texture(list[index][1], slot.position)
+		if list[index][1] != null:
+			draw_texture(list[index][1], slot.position)
 		var dim: float = list[index][2]
 		if dim > 0.0:
 			draw_rect(Rect2(slot.position, Vector2(SLOT, roundf(SLOT * dim))), DIM)
