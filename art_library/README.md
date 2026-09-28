@@ -90,3 +90,5 @@ What worked: `/map-objects` (1 generation, straight-on high top-down view) for b
 | Villagers (8 rotations each) | blacksmith, farmer, villager, militia, archer, lumberjack | |
 
 The reference's interface (resource counters, quest panel, task tracker, day and season panel, action buttons, minimap) belongs to a village-management game and was not generated.
+
+The village set is now in the game (`../game/village.tscn`), built into `../game/assets/village/` and `../game/assets/npcs/` by `../tools/make_village_art.py`. It keeps only the tavern's largest shape (a vent and a door floated below it) and fills the forge floor's see-through stone joints. The soil terrain set is not used: the garden is carrot plots on grass.

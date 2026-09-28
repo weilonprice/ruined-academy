@@ -1,39 +1,20 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_map"]
-[ext_resource type="Script" path="res://player.gd" id="2_player"]
 [ext_resource type="PackedScene" path="res://enemy.tscn" id="3_enemy"]
 [ext_resource type="PackedScene" path="res://npc.tscn" id="4_npc"]
 [ext_resource type="Script" path="res://prop.gd" id="5_prop"]
-[ext_resource type="Script" path="res://hud.gd" id="6_hud"]
-[ext_resource type="Script" path="res://character_panel.gd" id="7_character"]
 [ext_resource type="Script" path="res://debug_tools.gd" id="8_debug"]
-[ext_resource type="Script" path="res://inventory_panel.gd" id="9_inventory"]
-[ext_resource type="Script" path="res://item_tooltip.gd" id="10_tooltip"]
-[ext_resource type="Script" path="res://skill_bar.gd" id="11_skills"]
-[ext_resource type="Script" path="res://flask_bar.gd" id="12_flasks"]
-[ext_resource type="Script" path="res://pause_menu.gd" id="13_pause"]
-[ext_resource type="Script" path="res://experience_bar.gd" id="14_experience"]
-[ext_resource type="Script" path="res://passive_tree_panel.gd" id="15_passives"]
+[ext_resource type="PackedScene" path="res://wizard.tscn" id="wizard_scene"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="hud_scene"]
+[ext_resource type="Script" path="res://travel.gd" id="travel"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_map")
 
-[node name="Wizard" type="Node2D" parent="."]
+[node name="Wizard" parent="." instance=ExtResource("wizard_scene")]
 position = Vector2(800, 480)
-script = ExtResource("2_player")
-
-[node name="Sprite" type="AnimatedSprite2D" parent="Wizard"]
-texture_filter = 1
-
-[node name="Camera" type="Camera2D" parent="Wizard"]
-zoom = Vector2(0.5, 0.5)
-limit_left = 0
-limit_top = 0
-limit_right = 1600
-limit_bottom = 960
-position_smoothing_enabled = false
 
 [node name="Skitter" parent="." instance=ExtResource("3_enemy")]
 position = Vector2(560, 250)
@@ -71,179 +52,24 @@ script = ExtResource("5_prop")
 position = Vector2(1056, 616)
 script = ExtResource("5_prop")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-script = ExtResource("6_hud")
+[node name="ToVillage" type="Node2D" parent="."]
+position = Vector2(1560, 490)
+script = ExtResource("travel")
+destination = "res://village.tscn"
+size = Vector2(40, 140)
+arrive_at = Vector2(800, 880)
 
-[node name="Bar" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 0
-mouse_filter = 2
-
-[node name="Fallen" type="Label" parent="HUD"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_colors/font_color = Color(0.93, 0.85, 0.8, 1)
-theme_override_colors/font_outline_color = Color(0.06, 0.05, 0.08, 1)
-theme_override_constants/outline_size = 4
-text = "You have fallen
-Press R to try again"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Message" type="Label" parent="HUD"]
-offset_left = 8.0
-offset_top = 46.0
-offset_right = 320.0
-offset_bottom = 58.0
-mouse_filter = 2
-theme_override_colors/font_outline_color = Color(0.06, 0.05, 0.08, 1)
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 8
-
-[node name="CharacterPanel" type="PanelContainer" parent="HUD"]
-offset_left = 8.0
-offset_top = 44.0
-offset_right = 176.0
-offset_bottom = 230.0
-mouse_filter = 2
-script = ExtResource("7_character")
-
-[node name="Text" type="RichTextLabel" parent="HUD/CharacterPanel"]
-layout_mode = 2
-mouse_filter = 2
-bbcode_enabled = true
-fit_content = true
-theme_override_font_sizes/normal_font_size = 8
-theme_override_font_sizes/bold_font_size = 8
-
-[node name="SkillBar" type="Control" parent="HUD"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -60.0
-offset_right = 40.0
-offset_bottom = -18.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-script = ExtResource("11_skills")
-
-[node name="FlaskBar" type="Control" parent="HUD"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = -60.0
-offset_right = -40.0
-offset_bottom = -18.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-script = ExtResource("12_flasks")
-
-[node name="ExperienceBar" type="Control" parent="HUD"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -104.0
-offset_top = -17.0
-offset_right = 104.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-script = ExtResource("14_experience")
-
-[node name="InventoryPanel" type="Control" parent="HUD"]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -320.0
-grow_horizontal = 0
-grow_vertical = 2
-script = ExtResource("9_inventory")
-
-[node name="Tooltip" type="PanelContainer" parent="HUD"]
-offset_right = 40.0
-offset_bottom = 40.0
-mouse_filter = 2
-script = ExtResource("10_tooltip")
-
-[node name="Lines" type="VBoxContainer" parent="HUD/Tooltip"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 1
-
-[node name="PassiveTree" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("15_passives")
-
-[node name="PauseMenu" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("13_pause")
-
-[node name="Dim" type="ColorRect" parent="HUD/PauseMenu"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.02, 0.02, 0.04, 0.7)
-
-[node name="Center" type="CenterContainer" parent="HUD/PauseMenu"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Box" type="VBoxContainer" parent="HUD/PauseMenu/Center"]
-layout_mode = 2
-theme_override_constants/separation = 6
-
-[node name="Title" type="Label" parent="HUD/PauseMenu/Center/Box"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.93, 0.85, 0.8, 1)
+[node name="ToVillageSign" type="Label" parent="."]
+offset_left = 1440.0
+offset_top = 404.0
+offset_right = 1580.0
+offset_bottom = 428.0
+theme_override_colors/font_outline_color = Color(0.08, 0.07, 0.06, 1)
+theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 16
-text = "Paused"
-horizontal_alignment = 1
+text = "To the village"
 
-[node name="Resume" type="Button" parent="HUD/PauseMenu/Center/Box"]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 10
-text = "Resume"
-
-[node name="Quit" type="Button" parent="HUD/PauseMenu/Center/Box"]
-custom_minimum_size = Vector2(120, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 10
-text = "Quit"
+[node name="HUD" parent="." instance=ExtResource("hud_scene")]
 
 [node name="Debug" type="Node" parent="."]
 script = ExtResource("8_debug")

@@ -1,0 +1,534 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://village_ground.gd" id="ground"]
+[ext_resource type="Script" path="res://scenery.gd" id="scenery"]
+[ext_resource type="Script" path="res://travel.gd" id="travel"]
+[ext_resource type="PackedScene" path="res://wizard.tscn" id="wizard"]
+[ext_resource type="PackedScene" path="res://npc.tscn" id="npc"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="hud"]
+[ext_resource type="Script" path="res://debug_tools.gd" id="debug"]
+
+[node name="Village" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Ground" type="Node2D" parent="."]
+script = ExtResource("ground")
+
+[node name="Wizard" parent="." instance=ExtResource("wizard")]
+position = Vector2(800, 880)
+
+[node name="Barn1" type="Node2D" parent="."]
+position = Vector2(230, 272)
+script = ExtResource("scenery")
+kind = "barn"
+footprint = Vector2(300, 280)
+flat = true
+
+[node name="FenceH1" type="Node2D" parent="."]
+position = Vector2(113, 384)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH2" type="Node2D" parent="."]
+position = Vector2(219, 384)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH3" type="Node2D" parent="."]
+position = Vector2(325, 384)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="Cow1" type="Node2D" parent="."]
+position = Vector2(150, 344)
+script = ExtResource("scenery")
+kind = "cow"
+
+[node name="Sheep1" type="Node2D" parent="."]
+position = Vector2(262, 328)
+script = ExtResource("scenery")
+kind = "sheep"
+
+[node name="Sheep2" type="Node2D" parent="."]
+position = Vector2(318, 364)
+script = ExtResource("scenery")
+kind = "sheep"
+flip = true
+
+[node name="Chicken1" type="Node2D" parent="."]
+position = Vector2(110, 308)
+script = ExtResource("scenery")
+kind = "chicken"
+pixel_scale = 1
+
+[node name="Chicken2" type="Node2D" parent="."]
+position = Vector2(200, 370)
+script = ExtResource("scenery")
+kind = "chicken"
+pixel_scale = 1
+
+[node name="Chicken3" type="Node2D" parent="."]
+position = Vector2(360, 312)
+script = ExtResource("scenery")
+kind = "chicken"
+pixel_scale = 1
+flip = true
+
+[node name="PineTree1" type="Node2D" parent="."]
+position = Vector2(435, 122)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="Workbench1" type="Node2D" parent="."]
+position = Vector2(440, 367)
+script = ExtResource("scenery")
+kind = "workbench"
+footprint = Vector2(70, 26)
+
+[node name="Forge1" type="Node2D" parent="."]
+position = Vector2(600, 362)
+script = ExtResource("scenery")
+kind = "forge"
+footprint = Vector2(216, 250)
+flat = true
+
+[node name="Barrel1" type="Node2D" parent="."]
+position = Vector2(706, 376)
+script = ExtResource("scenery")
+kind = "barrel"
+footprint = Vector2(30, 16)
+
+[node name="Crate1" type="Node2D" parent="."]
+position = Vector2(505, 382)
+script = ExtResource("scenery")
+kind = "crate"
+footprint = Vector2(44, 18)
+
+[node name="Tavern1" type="Node2D" parent="."]
+position = Vector2(1080, 372)
+script = ExtResource("scenery")
+kind = "tavern"
+footprint = Vector2(310, 318)
+flat = true
+
+[node name="Barrels1" type="Node2D" parent="."]
+position = Vector2(1276, 364)
+script = ExtResource("scenery")
+kind = "barrels"
+footprint = Vector2(56, 24)
+
+[node name="Crates1" type="Node2D" parent="."]
+position = Vector2(1296, 290)
+script = ExtResource("scenery")
+kind = "crates"
+footprint = Vector2(50, 22)
+
+[node name="ProduceCrate1" type="Node2D" parent="."]
+position = Vector2(900, 376)
+script = ExtResource("scenery")
+kind = "produce_crate"
+footprint = Vector2(56, 18)
+
+[node name="Watchtower1" type="Node2D" parent="."]
+position = Vector2(1440, 302)
+script = ExtResource("scenery")
+kind = "watchtower"
+footprint = Vector2(70, 30)
+
+[node name="PineTree2" type="Node2D" parent="."]
+position = Vector2(880, 102)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="PineTree3" type="Node2D" parent="."]
+position = Vector2(1330, 132)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="PineTree4" type="Node2D" parent="."]
+position = Vector2(1540, 112)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="OakTree1" type="Node2D" parent="."]
+position = Vector2(1565, 272)
+script = ExtResource("scenery")
+kind = "oak_tree"
+footprint = Vector2(26, 16)
+
+[node name="PineTree5" type="Node2D" parent="."]
+position = Vector2(1520, 412)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="LampPost1" type="Node2D" parent="."]
+position = Vector2(735, 172)
+script = ExtResource("scenery")
+kind = "lamp_post"
+footprint = Vector2(12, 10)
+
+[node name="LampPost2" type="Node2D" parent="."]
+position = Vector2(865, 262)
+script = ExtResource("scenery")
+kind = "lamp_post"
+footprint = Vector2(12, 10)
+
+[node name="LampPost3" type="Node2D" parent="."]
+position = Vector2(735, 612)
+script = ExtResource("scenery")
+kind = "lamp_post"
+footprint = Vector2(12, 10)
+
+[node name="LampPost4" type="Node2D" parent="."]
+position = Vector2(865, 752)
+script = ExtResource("scenery")
+kind = "lamp_post"
+footprint = Vector2(12, 10)
+
+[node name="LampPost5" type="Node2D" parent="."]
+position = Vector2(865, 92)
+script = ExtResource("scenery")
+kind = "lamp_post"
+footprint = Vector2(12, 10)
+
+[node name="Well1" type="Node2D" parent="."]
+position = Vector2(640, 582)
+script = ExtResource("scenery")
+kind = "well"
+footprint = Vector2(70, 40)
+
+[node name="Flowers1" type="Node2D" parent="."]
+position = Vector2(700, 542)
+script = ExtResource("scenery")
+kind = "flowers"
+
+[node name="Flowers2" type="Node2D" parent="."]
+position = Vector2(1250, 562)
+script = ExtResource("scenery")
+kind = "flowers"
+
+[node name="Flowers3" type="Node2D" parent="."]
+position = Vector2(470, 562)
+script = ExtResource("scenery")
+kind = "flowers"
+
+[node name="Flowers4" type="Node2D" parent="."]
+position = Vector2(960, 572)
+script = ExtResource("scenery")
+kind = "flowers"
+
+[node name="Bush1" type="Node2D" parent="."]
+position = Vector2(1300, 462)
+script = ExtResource("scenery")
+kind = "bush"
+
+[node name="Bush2" type="Node2D" parent="."]
+position = Vector2(90, 462)
+script = ExtResource("scenery")
+kind = "bush"
+
+[node name="Bush3" type="Node2D" parent="."]
+position = Vector2(960, 532)
+script = ExtResource("scenery")
+kind = "bush"
+
+[node name="Boulder1" type="Node2D" parent="."]
+position = Vector2(1500, 492)
+script = ExtResource("scenery")
+kind = "boulder"
+footprint = Vector2(44, 16)
+
+[node name="Boulder2" type="Node2D" parent="."]
+position = Vector2(300, 517)
+script = ExtResource("scenery")
+kind = "boulder"
+footprint = Vector2(44, 16)
+
+[node name="Sawmill1" type="Node2D" parent="."]
+position = Vector2(400, 792)
+script = ExtResource("scenery")
+kind = "sawmill"
+footprint = Vector2(196, 110)
+
+[node name="LogPile1" type="Node2D" parent="."]
+position = Vector2(240, 772)
+script = ExtResource("scenery")
+kind = "log_pile"
+footprint = Vector2(84, 34)
+
+[node name="LogPile2" type="Node2D" parent="."]
+position = Vector2(560, 802)
+script = ExtResource("scenery")
+kind = "log_pile"
+footprint = Vector2(84, 34)
+
+[node name="FirewoodCart1" type="Node2D" parent="."]
+position = Vector2(330, 877)
+script = ExtResource("scenery")
+kind = "firewood_cart"
+footprint = Vector2(84, 26)
+
+[node name="Stump1" type="Node2D" parent="."]
+position = Vector2(560, 877)
+script = ExtResource("scenery")
+kind = "stump"
+footprint = Vector2(30, 16)
+
+[node name="Carrots1" type="Node2D" parent="."]
+position = Vector2(80, 576)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots2" type="Node2D" parent="."]
+position = Vector2(80, 632)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots3" type="Node2D" parent="."]
+position = Vector2(80, 688)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots4" type="Node2D" parent="."]
+position = Vector2(136, 576)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots5" type="Node2D" parent="."]
+position = Vector2(136, 632)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots6" type="Node2D" parent="."]
+position = Vector2(136, 688)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots7" type="Node2D" parent="."]
+position = Vector2(192, 576)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots8" type="Node2D" parent="."]
+position = Vector2(192, 632)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="Carrots9" type="Node2D" parent="."]
+position = Vector2(192, 688)
+script = ExtResource("scenery")
+kind = "carrots"
+flat = true
+
+[node name="HayBale1" type="Node2D" parent="."]
+position = Vector2(60, 762)
+script = ExtResource("scenery")
+kind = "hay_bale"
+footprint = Vector2(50, 18)
+
+[node name="HayBale2" type="Node2D" parent="."]
+position = Vector2(115, 784)
+script = ExtResource("scenery")
+kind = "hay_bale"
+footprint = Vector2(50, 18)
+
+[node name="Cottage1" type="Node2D" parent="."]
+position = Vector2(610, 912)
+script = ExtResource("scenery")
+kind = "cottage"
+footprint = Vector2(190, 90)
+
+[node name="FenceH4" type="Node2D" parent="."]
+position = Vector2(1053, 600)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH5" type="Node2D" parent="."]
+position = Vector2(1053, 864)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH6" type="Node2D" parent="."]
+position = Vector2(1159, 600)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH7" type="Node2D" parent="."]
+position = Vector2(1159, 864)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH8" type="Node2D" parent="."]
+position = Vector2(1265, 600)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH9" type="Node2D" parent="."]
+position = Vector2(1265, 864)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH10" type="Node2D" parent="."]
+position = Vector2(1371, 600)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="FenceH11" type="Node2D" parent="."]
+position = Vector2(1371, 864)
+script = ExtResource("scenery")
+kind = "fence_h"
+footprint = Vector2(106, 12)
+
+[node name="TrainingDummy1" type="Node2D" parent="."]
+position = Vector2(1100, 702)
+script = ExtResource("scenery")
+kind = "training_dummy"
+footprint = Vector2(26, 14)
+
+[node name="TrainingDummy2" type="Node2D" parent="."]
+position = Vector2(1180, 702)
+script = ExtResource("scenery")
+kind = "training_dummy"
+footprint = Vector2(26, 14)
+
+[node name="TrainingDummy3" type="Node2D" parent="."]
+position = Vector2(1260, 702)
+script = ExtResource("scenery")
+kind = "training_dummy"
+footprint = Vector2(26, 14)
+
+[node name="ArcheryTarget1" type="Node2D" parent="."]
+position = Vector2(1370, 672)
+script = ExtResource("scenery")
+kind = "archery_target"
+footprint = Vector2(30, 14)
+
+[node name="ArcheryTarget2" type="Node2D" parent="."]
+position = Vector2(1390, 772)
+script = ExtResource("scenery")
+kind = "archery_target"
+footprint = Vector2(30, 14)
+
+[node name="WeaponRack1" type="Node2D" parent="."]
+position = Vector2(1070, 812)
+script = ExtResource("scenery")
+kind = "weapon_rack"
+footprint = Vector2(80, 20)
+
+[node name="PineTree6" type="Node2D" parent="."]
+position = Vector2(40, 192)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="PineTree7" type="Node2D" parent="."]
+position = Vector2(40, 552)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="PineTree8" type="Node2D" parent="."]
+position = Vector2(40, 912)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="PineTree9" type="Node2D" parent="."]
+position = Vector2(1480, 922)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="PineTree10" type="Node2D" parent="."]
+position = Vector2(1565, 852)
+script = ExtResource("scenery")
+kind = "pine_tree"
+footprint = Vector2(24, 14)
+
+[node name="OakTree2" type="Node2D" parent="."]
+position = Vector2(190, 927)
+script = ExtResource("scenery")
+kind = "oak_tree"
+footprint = Vector2(26, 16)
+
+[node name="OakTree3" type="Node2D" parent="."]
+position = Vector2(1000, 927)
+script = ExtResource("scenery")
+kind = "oak_tree"
+footprint = Vector2(26, 16)
+
+[node name="OakTree4" type="Node2D" parent="."]
+position = Vector2(1150, 557)
+script = ExtResource("scenery")
+kind = "oak_tree"
+footprint = Vector2(26, 16)
+
+[node name="Blacksmith" parent="." instance=ExtResource("npc")]
+position = Vector2(600, 420)
+kind = "blacksmith"
+
+[node name="Farmer" parent="." instance=ExtResource("npc")]
+position = Vector2(250, 640)
+kind = "farmer"
+
+[node name="Villager" parent="." instance=ExtResource("npc")]
+position = Vector2(1080, 440)
+kind = "villager"
+
+[node name="Militia" parent="." instance=ExtResource("npc")]
+position = Vector2(1180, 810)
+kind = "militia"
+
+[node name="Archer" parent="." instance=ExtResource("npc")]
+position = Vector2(1320, 760)
+kind = "archer"
+
+[node name="Lumberjack" parent="." instance=ExtResource("npc")]
+position = Vector2(520, 870)
+kind = "lumberjack"
+
+[node name="ToAcademy" type="Node2D" parent="."]
+position = Vector2(800, 940)
+script = ExtResource("travel")
+destination = "res://main.tscn"
+size = Vector2(160, 40)
+arrive_at = Vector2(1480, 490)
+
+[node name="ToAcademySign" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 846.0
+offset_right = 900.0
+offset_bottom = 870.0
+horizontal_alignment = 1
+theme_override_colors/font_outline_color = Color(0.08, 0.07, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "To the academy"
+
+[node name="HUD" parent="." instance=ExtResource("hud")]
+
+[node name="Debug" type="Node" parent="."]
+script = ExtResource("debug")
