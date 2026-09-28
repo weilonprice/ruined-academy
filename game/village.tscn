@@ -15,7 +15,7 @@ y_sort_enabled = true
 script = ExtResource("ground")
 
 [node name="Wizard" parent="." instance=ExtResource("wizard")]
-position = Vector2(800, 880)
+position = Vector2(80, 480)
 
 [node name="Barn1" type="Node2D" parent="."]
 position = Vector2(230, 272)
@@ -231,7 +231,7 @@ script = ExtResource("scenery")
 kind = "bush"
 
 [node name="Bush2" type="Node2D" parent="."]
-position = Vector2(90, 462)
+position = Vector2(40, 352)
 script = ExtResource("scenery")
 kind = "bush"
 
@@ -445,7 +445,7 @@ kind = "pine_tree"
 footprint = Vector2(24, 14)
 
 [node name="PineTree7" type="Node2D" parent="."]
-position = Vector2(40, 552)
+position = Vector2(40, 612)
 script = ExtResource("scenery")
 kind = "pine_tree"
 footprint = Vector2(24, 14)
@@ -511,18 +511,17 @@ position = Vector2(520, 870)
 kind = "lumberjack"
 
 [node name="ToAcademy" type="Node2D" parent="."]
-position = Vector2(800, 940)
+position = Vector2(40, 480)
 script = ExtResource("travel")
 destination = "res://main.tscn"
-size = Vector2(160, 40)
+size = Vector2(40, 160)
 arrive_at = Vector2(1480, 490)
 
 [node name="ToAcademySign" type="Label" parent="."]
-offset_left = 700.0
-offset_top = 846.0
-offset_right = 900.0
-offset_bottom = 870.0
-horizontal_alignment = 1
+offset_left = 50.0
+offset_top = 430.0
+offset_right = 250.0
+offset_bottom = 454.0
 theme_override_colors/font_outline_color = Color(0.08, 0.07, 0.06, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 16

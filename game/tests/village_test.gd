@@ -59,14 +59,14 @@ func run() -> void:
 	Input.action_release("move_up")
 	check(is_equal_approx(player.position.y, 600 - player.SPEED * 0.2), "Open road does not slow him")
 
-	# The south road leads to the academy, and he arrives with the life and flask charges he left with.
+	# The west road leads to the academy, and he arrives with the life and flask charges he left with.
 	check(TRAVEL.carried.is_empty())
 	player.health = 50.0
 	player.flask_charges[0] = 10
 	var exit: Node2D = village.get_node("ToAcademy")
 	player.global_position = exit.global_position
 	var academy := await arrival()
-	check(academy != null and academy.scene_file_path == "res://main.tscn", "Road south leads to the academy")
+	check(academy != null and academy.scene_file_path == "res://main.tscn", "The west road leads to the academy")
 	if academy != null:
 		var wizard = academy.get_node("Wizard")
 		check(wizard.position == Vector2(1480, 490), "Arrives at the east road end")
@@ -77,7 +77,7 @@ func run() -> void:
 		var back := await arrival()
 		check(back != null and back.scene_file_path == "res://village.tscn", "East road leads to the village")
 		if back != null:
-			check(back.get_node("Wizard").position == Vector2(800, 880), "Arrives at the south road")
+			check(back.get_node("Wizard").position == Vector2(80, 480), "Arrives at the west end of the cross road")
 	finish("village scene with 6 villagers and furnished grounds; road tiles from corner points; buildings block and slide; roads carry the wizard between maps with his life and flasks")
 
 

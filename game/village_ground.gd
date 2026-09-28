@@ -12,8 +12,8 @@ const COLUMNS := 25
 const ROWS := 15
 # Dirt areas in corner-point coordinates (0..COLUMNS, 0..ROWS), end exclusive.
 const DIRT := [
-	Rect2i(12, 0, 2, 16),   # the main road, north to south, out to the academy
-	Rect2i(2, 7, 22, 2),    # the cross road
+	Rect2i(12, 0, 2, 16),   # the main road, north to south
+	Rect2i(0, 7, 24, 2),    # the cross road, west out to the academy
 	Rect2i(3, 11, 6, 3),    # the sawmill yard
 	Rect2i(16, 10, 7, 4),   # the training yard
 	Rect2i(8, 5, 4, 2),     # in front of the forge
