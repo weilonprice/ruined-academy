@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "ae341a36-ad5f-4f37-9aa4-c6113b591710",
+  "status": "completed",
+  "created_at": "2026-09-28T01:59:40.195035+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFWElEQVR4nO2Wa2xTdRjGf23PpaeXtaXtbsBwA2TM3UC2RcSgQMAYMTHe4i1+UmNiVD5olEiMxgtf/CQhMSSGGIxIABWJJiRbYC5ORZlIN8ZwZezW1bZrz9az9vR2/DBdotKCfPELT3Jycs77nP/z/N+T//u+cAP/M0zXSnzy0WcNgMTQIA6HDQCbVSajqUh2F79H4wC4b67HKevs3b//mta+Kqmhbp0hm/Icf/8+Yr/PcWkkxOHuCQDGprUFXjaX4rXHNiKLOkc6xwnEplDTZZy7cKqkRsngjqefN15+qpl3du5jpuAAYCiqA6DOqP/iK4qESxYB6KivxCSUsfvQgZIa5lLBU73nUSdGyAs+fhqdJhBKcLNPptwu0rCkauFSFImVVT4kUWEqoRFO6vQELvH4E21s6thsXHcGGurWGRU1dQA8vXExAG/tO4FJEDByuStmYMcz2wEYTc8SG89y+qcBevq6iuqUNNBRv96IJDWWrViFJMgAlPtt+Bwid7W5AEjELbg9eQJhkWzeha6nkGUFj9fLoY/2s6K2nP1HDxbVEYoF6pa0GJGkhks202TVOR64AMDFQbDb3SRz7eh6HsUpARAOqQwFjmPkspgEkd2vbmNthZNMQuXQ4WPGww/ed0UTRZ2trmkxTIJIvc+Nx+Mgo6msqaukZzDCYDTBOo8ZQ7GzvMZFImemyu1ByoRoXLmYg90R3nquhZHRKK/s6UYTbPwy8MMVtYpmAMDlq2IwGsKYirDC72ZoPEHHTXZG5gy2bqigcaUVp00iGMrz+cUsO7etYnpWYDoV4pE3v2VFbTlvfHCAXS8+V1SjpAG/rxyA9bduxRBidH15kO+nXOTzVkZUgd++m6Z28SLUnEgoGOWlT8YBuO2eB0io84Wpt7cL3Zz/7wZMgsjoSACz2cGZ898CUNN4O4rNQ2ouzpjsB7ma0Awsr11G66Z6JkNhCpk81VWVTE2E6er8hqWKFT2Z/u8GjFwWuSBR55foG+rHJAgkRDPltY0LnEImj1my0LpmPb29XQxdCBIeDdLTeQKv18srD61n45oytrzwxfUYyJHJpnBZXMzldF7a0kxqNk04NcPxwAirF2lYsVGIzNL54S4GLqs82l6J3NbM5rUutr9+knW1Elqi+O5LGvgLeS2HINnJpucAM9Y/v2jwirTfIgFeAA52l7G5zcFU0oKeSmGz5Pj8uyi3VCsl1y9ZigEsdoFcRqNMtwDgtYFVEv/FuxyO0Xk6/rd32UyWfCaBVSwuUzQiOn3EZmcXnqfNBiOTSQCSyQQAP/ZrC/dQJIbssNN/Pkrn6TjxnIwoiez4+Bx9w31F601xA6LA8oa1fP/bJQTJzpiaxuO3EZsDQbIv8H7s16jwzGfEkpn/328f+ZlKv4sz0x7ee3dv0d3DVXpB06qNRkNTG3F1jkq/lV97vsYkKuiGhe2t1QBENTNzaZ1gWMXuUkBwsrKxnrpFq+i/fI7E7ATHvvrs+poRwJ0N7YbZU40hSgsNCeabEkBTSysXLwRJp2fw+6q4+977OXL0U1KzGXq6OwmOn73+gQRgw5pNhjYTR9ULuN0+ZJsNq03BaXMCINkKKKLExGiYVDZPeHIU2Qx3NFdw8vwwQ8PDJTVKHsPWhg7D7l1MLBZDNkN7uUReS9MTHMXhdyNaRArAualxHrp1NSAw5qimb1JlYCzCksomhoaHS27wmgbHbVueNAAiU5OkZqLohfmj6JQk7C6FeHQaSVSwuxQWLa2hpmoZwctRvji256rrX/NUDPMzQi6j4XC4sdrmB5LG5hYCv54lkYhSVmbFpGdKHrsbuIEb+Cf+ACmbEOyEwIHmAAAAAElFTkSuQmCC",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single wooden barrel with iron bands. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "f9bef1b7-6963-4c64-bd8e-aec985762341",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/f9bef1b7-6963-4c64-bd8e-aec985762341/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

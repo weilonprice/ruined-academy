@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "c1a4a344-8c1e-4a9d-955a-2d01c9a7131b",
+  "status": "completed",
+  "created_at": "2026-09-28T02:00:30.433582+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAABACAYAAAB7jnWuAAADzElEQVR4nO2YTWwbVRDHf3Z212uv49gizYfbumljCLVUIkoKghpVIQhVHArlUC4IpAoJcskhQMW5Fw6IgKgQID4EgiLBpRDBBQmhtoFLe0gObZxEcUgTpanjtom/vbv2cjAOzQW6z0kshP+n9ertzM8z82Z2HzTU0H9Z774+ZJ168SWrFhtO0Qe/+fIT6/yPl/E7i/z02ZmaIIT15L6IdXxvpD4ROBEdsBSPwv29PYwMnhSGEAJ4+alj1sLiMrKqsaMzwPj4JCPDrwpBOOwsnhg7b505/Q5Xpmdpa/WjlIsAhEO7Wbl9k4cPHeKRZ4/RGz1y13ZtAUTv67U0VaVdc6IoMgBHHu3bsGZmbpbT3/5w13ZtpWBsesKhKhJLN9bweNxEImEAsmsGoz9f4GpszpZzAMnO4qqC7S3kcnku/BpDa/cR7a78D9lVtm3LdhF6tWYAPjiVIK+U0NNJTr62iuEyUd3urQfIZNOkyBNr+RiABx8IYwa/Rk/b9i0GAODwSARD79NULmIaBshviHlHoAZSuTzuQpn0aiUVyVsZ3h60aG12s3zj9tYDAKR0i8EXJsnqFrlcHr8eoCtkP/8gkILunjCy1ES2UEBTVYIdAf64lgDAv7Nz6wE+Pfedo7snjKaq6/e6Qm0Edu9heOQjWz0AbHbCO/VM32ErkVwl4JXpDe/lre/PCdkSqgGo9AOXqvLEgQg5sqJmxMdxJptmKZFk9OJFlrMlYQDhCLhUFU036dvfQaCtRRhAOAKbJWEAuUlev7bK+vYD3CmHU6kvgFutA4BRMgCQJOE6rg2gKtM06wNQLcLfL83gp04paA0EaLYgVShuP0BVzz1/tKbnhQGKhQJGyUCWVDLlOswCgLVUhum5qVpMiAO4/nofqNsuqErkVXxTAKrb0DSM+rfiWrQpnbAus8DtqjhdTRWEndcEgFbZBX6f+i8L/1nCo2xhdp5SJs3kTImVfEYYQCgCJ6IDlm4aBNtb2H/vTmRD4qs3h4WOaIQisJRIsqezk6cfPwhAfDHOpYkrIqbEIjA09Arx+QXii3Gm56aITc3zWH+/EIBQBBTVi8/nZexyjOA9PsL7gkLOocY+UHK6CO3aUTHk8W0fgF7YWPWmaVLOpbYP4OwXZzf8liSJ+NVxIQChGriZqkRAlpq4trgCQLAjIARg+5O6P3LQUqS/v4oOH9gFVNKwks/w4egvW39OqJvG+nU1AtVitCvbAA7NQC56AFAVad2xJMuoXvtTUfiE5PhAn1Vec/FQTweuLp3r12/x3ue/CdtrqKGG/r/6EwtKMHksT8r5AAAAAElFTkSuQmCC",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 64,
+      "description": "A single wooden street lamp post with a hanging iron lantern glowing warm yellow. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "006b135a-f6ac-409f-846d-243a48838a44",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/006b135a-f6ac-409f-846d-243a48838a44/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

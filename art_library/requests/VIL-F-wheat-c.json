@@ -1,0 +1,11 @@
+{
+  "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A flat square patch of tall golden ripe wheat stalks, no raised box, no soil edge. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+  "image_size": {
+    "width": 32,
+    "height": 32
+  },
+  "view": "high top-down",
+  "outline": "single color outline",
+  "shading": "medium shading",
+  "detail": "medium detail"
+}

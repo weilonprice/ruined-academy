@@ -1,0 +1,37 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 3.0
+  },
+  "id": "39a0e867-4cd9-41f1-923a-04b8b0286dec",
+  "status": "completed",
+  "created_at": "2026-09-28T01:52:28.099539+00:00",
+  "last_response": {
+    "seed": 2596235509,
+    "type": "done",
+    "usage": {
+      "seconds": 21.570595502853394
+    },
+    "action": "tiles",
+    "status": "completed",
+    "progress": 1.3694444444444445,
+    "tileset_id": "ad3b7fe8-4889-4f53-8355-e13d80f87d32",
+    "frame_index": 0,
+    "request_type": "tileset",
+    "tileset_name": "muted medium green grass texture with subtle \u2197 smooth packed light brown dirt road texture with",
+    "billing_usage": {
+      "usd": 0.0,
+      "type": "generations",
+      "generations": 3
+    },
+    "generation_id": "71826161-213f-40da-aae9-3f239299f90c",
+    "queue_position": 0,
+    "billing_charged": true,
+    "saved_to_database": true,
+    "tileset_description": "muted medium green grass texture with subtle darker grass blades, seamless, top-down \u2192 smooth packed light brown dirt road texture with a few small pebbles, no bricks, no stone blocks, seamless, top-down",
+    "generation_started_at": "2026-09-28T01:52:38.374686+00:00",
+    "estimated_wait_seconds": 0,
+    "original_image_n_colors": 148,
+    "quantized_image_n_colors": 59
+  }
+}

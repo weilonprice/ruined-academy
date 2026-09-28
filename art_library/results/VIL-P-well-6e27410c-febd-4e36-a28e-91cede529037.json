@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "6e27410c-febd-4e36-a28e-91cede529037",
+  "status": "completed",
+  "created_at": "2026-09-28T01:59:40.145198+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 48,
+      "height": 48,
+      "description": "A round stone water well with a dark opening. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "dcea526a-4725-4f5f-a6f5-a637bceda465",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/dcea526a-4725-4f5f-a6f5-a637bceda465/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

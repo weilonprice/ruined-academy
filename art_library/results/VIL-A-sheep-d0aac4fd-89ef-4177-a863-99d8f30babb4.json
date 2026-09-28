@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "d0aac4fd-89ef-4177-a863-99d8f30babb4",
+  "status": "completed",
+  "created_at": "2026-09-28T02:02:34.129914+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEI0lEQVR4nO2XfWiVVRzHP/fe53m427SrbMst9A8zUgRRQ/KPIeySZDIjh1Q6ECKFmrY5Ehbsj1ajWg6isdmrW6XBMjLFmTjfUnBFs9HUMVnKnLo31jZ37/bct+e5957+eHZvu7tvWzMM6gcHzj3nd36/z/me85xzrkkym3mQ9mCz/w+QCKAiL0dU5OUIdfyuOLBrm6jKt4t/AsAUaxNW5dvFrkMHo9pPFe1hWHNR2HDGdN8IJLM5ojR9sU94Xb1xi3/8hthX8KyYOu7vlggFGqvLRfsvrTxfXgrAIwsX49XmATDu7ACgvbGJoKYBsLm0ctZKRABU5dvFa/MX8P2wYMX2LB5duobmS+cBeGrbXprb2jj61ocArFqxjO6uW7x3umVWEFF74N2teaKobCvCbczyN8/j2O3r8N1rJ+uxXO5stEf4VzsGooJaFQWA0mMXksJJk39U5dvFlu2rGer5nYz0xQDY7etQvV4CwVGutRxm9+53+GxhNn6fn9qAh9KGevzmVKSg25hRQJ8UsVgkA5GmNuh+D8U1rXzyulH3dPwAXec4+u1pJMVKeeUr9E/4vjhpnN+calTMIAXdmAI6e+prEBaZuZZXReGRizEhopagbMNaUbR3I07PODe65xDUNMyKgkd181zRjshk8Ux+2Jid7zZB2YZZd1JVsIM3T/4UBRGlAMAHlScAUBSju/ybOqMjoCMsMrLuRFjk+DD6H+Fq0DwfM864rFEAk3d1/cubxZL1z0T0R67xX3Lrsi1mAtl9M25ySHIX9A0OAaD6g6j+YBRICCakSqhIQXcYLGQl87JnDmBVFPo6OxhT3Yyp7pg+k0GmtofgAN4f7pk5QOmxC6aOlsv8/FUDLqeLm3cGERaZgDWDgDUDYZHpd6j0O9SwSqo/yPHa+nDd5fPR71Dj5kh6HWuaH29vDy21+2POUvdp6D6NkREHIyMOBvqGUHQPns5zYb/2xiasUsz9Hvs2nGplG9aKRek2hpwu3vj6U4RFDkt8pPrzsJ+kWPn1/I8AlLxdgDrajyylUF9zNu6RHRsrgZ2qa2B9YSFywPi0Olouh/usksSS7HQA1FHjuNL9noTxZgSQmSJz9kQTy5Ya98Shj5ujZlaRlyMybWnUVV9kZ0lu0pjTepKF1m88YOTyan6yFyxPOEZRJFrPXAOMfRTPpqVApi1tIrHGR5faTLZURbywM3HgRek2bt12sSZJ7Gkp8GXnYFSbVYlm37JpkwjBdg2MhK/lRJZUgSefWClS5qRxuFfFo7r47uBL4ums1Qx47zIQiFRgeOweh8eMem/PMCercwHo8M0CQAvoaE4HAFeuXjftr08TB+RuAKaeL84JP4C5D6VRXNNq+HnjL9W0zoHJtmrl8vDz/MrV63EfGtP1mzHA/bZ/7z+j/wzAnyWc4K++qvACAAAAAElFTkSuQmCC",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single fluffy white sheep standing, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "6be1a7bf-6e50-4b90-86ec-acdcc6b9cac8",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/6be1a7bf-6e50-4b90-86ec-acdcc6b9cac8/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

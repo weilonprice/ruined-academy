@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "07c2db23-25fc-4072-93a0-7f122b12fe3b",
+  "status": "completed",
+  "created_at": "2026-09-28T02:10:56.526664+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE/ElEQVR4nO2VSUzUVxzHP7P9Z4bZgBlWWQRGNkXQCFbURG2wMWmDibSNTds0LUfbNNrYQ730YJs2TRPTNO3RNGliLalLG8V6UIpLq4CyCwzrsAsMMMz2/zPzekCMRloBr3yOL+993/f9tgdrrLHGC5CyLUOkvWwWL6KhXu3BL5qPCHuxzOsfHqT8ZOmqTazKQHy+XYQDESS74GrVdQCcG+2rMqFd7sZj598WOw2HOPfDdyj+aULBIBmZJdRev4Q9N4boiJlteWZhXZ+BJTvEhVO3VcvRXdamUx3HRPdgHzVVf1NQUITqSoCLtXeRpCB6RU+UJQqdUc+Ji59w5uwvAITkANWf33uu/nMjUFKyWXS3dpDjzKbR+ICH/WNo5zTsf6kQgKHRSdYl2jHoJHqDXWhMWggaEEGZvKx00d7d/78mlqyBz6qPiMxkh6isKBPByDjnv79Oh6sTbaKVga4J+oaH+bXjBtkfFdE210Fbbz/uCS+dl0chaCAQ8DEyNIo7MELp1jxhTpbEe19XLFkjzxg48df7Ii5phtTKeB5u8ZET7yRyH9wXutD5gsw2eLAZzRw/8w4Ar358gLQ30kh1WNC3TVFeHofAT/+lGXJtSRz4cS+Z++KxZxuW7JanUmAzq8XwYC9//DSJ0M0gG2VSSGTH9iIaazpxNKspysolSq9D65nHEBvB/Wcf0XYbAH4PnDxwFY3GyIaEWBKSE/GqvNhzY2hoaSQih8lMdoie4YnHaVED7NlZLCoryoQ+LYa6S11s2ppKdJwNm8XCrfoHAERMYfp9/cSaTfgnPehteh40tCITYjo0TV1LN4qyIDqicZOXnYV7pp+JrkEicpiIHMbTM0soDNvy0sVbh94U8KgLvjl+WDR2jAFw7cYdhCMCgClkxmo0sv9UKeYkO7VV9wBY1xrF5bo7yEE/ekWPJdqOWopw5LcPOHe6BgBzUhjTNS11Ld1M+IbROlWoB41EG60ogRCOWDu3GtpVWoBh9xg+zwA7U5xMFW0kKcbKjD+ABgmdDhLSk7F4HQR1NQSnAtj8aZTmF2DQSQQVGX9IIUqvQ1Z70RhkJEkQ9kFQiVCYkwVkAeBNGMOjRAiFFUJzHh5HAKCyokxYdWH6hgZoGZhlQ0IcSanJ3G/tRNkzz6ZCJ4GgwO/x4qoaYNTj5dPfj/LVa9+Sn5ILMXNkl+chG3TMz07hqushXK/CZjQTE2Olvb2bWJsJABEOUd85qnrKwCJHD+8TALNTXkIGC96pCZq6hzlW/S5nT1/B9fMYG5wZ7PqyAGdqFs2N7bhae5Buqrn9z33URZDsSGe8doxYm4nR8UkS7GZUGj0Ade1Pz4Ulh8TB3ZvF+jjrQpXqJRoGvKQ6LHS7R5CMZkwGNSkn8uirbmFkaJSCXVnIF8NokAgj09vrZnR8kh3bi+hxuVBp9EjGKG41tD9z35KT8Hxtkwpgb/46saUwB6cZchOiURTQ6RYKtSQqjyZlmumRaQJBQUtbJ9sLN4EiUbajmKu379LjcuGVI3T2/fc0XNZfcHD3ZpGZ4mB2yruwYInmct0dCOjAqGBCjyPWTprdiGtwEhEO4Zmb58l+fyEDT5qIhGTcfUM0T/kWXgzcvNuEVlJjNRoB8MnwvD9gxQYWqXylWFhjLURCMinOVOrudeAanARgNhCgs298RZorNrDIYkRq6tse5XllF6+xxhqL/AuSyiGhTPjVmQAAAABJRU5ErkJggg==",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A small square garden bed of green cabbages on dark soil. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "b4373e5b-deca-4dfe-8ffd-816a6a2d8992",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/b4373e5b-deca-4dfe-8ffd-816a6a2d8992/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "f7626826-17f0-4df2-af06-cdc503fa4ce9",
+  "status": "completed",
+  "created_at": "2026-09-28T02:01:06.133229+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A wooden crate full of potatoes. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "2bfd8b9b-14e1-4188-bd9b-db36b89633a0",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/2bfd8b9b-14e1-4188-bd9b-db36b89633a0/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

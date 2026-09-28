@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "e7663d46-e2bc-4e61-bcd6-1413bd909162",
+  "status": "completed",
+  "created_at": "2026-09-28T02:13:16.702978+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A small square patch of tall golden ripe wheat. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "9a5a2b77-360f-4f6c-a269-b069d32e59d6",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/9a5a2b77-360f-4f6c-a269-b069d32e59d6/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

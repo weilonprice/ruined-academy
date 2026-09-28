@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "366e9ea7-9e94-42f0-93ac-72eeac5eb089",
+  "status": "completed",
+  "created_at": "2026-09-28T01:58:15.812340+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 64,
+      "height": 64,
+      "description": "A single tall dark green pine fir tree with a short brown trunk. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "32edb3b4-3d75-4b3a-bec6-d5835a3f98e6",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/32edb3b4-3d75-4b3a-bec6-d5835a3f98e6/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

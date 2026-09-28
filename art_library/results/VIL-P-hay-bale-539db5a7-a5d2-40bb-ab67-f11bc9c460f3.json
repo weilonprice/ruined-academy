@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "539db5a7-a5d2-40bb-ab67-f11bc9c460f3",
+  "status": "completed",
+  "created_at": "2026-09-28T02:01:04.040428+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFfElEQVR4nO2WW0wUVxjHf7s7O7usSFVWqQIC2lVApQgVEIUVtbbpRdtEvMSaVFs1MbYPmibaNI0mNjF9qa1to22TmlCvbdRosGq9FEq6CEpRK7etwta7gOICy87szk4fJoyigGh9aer3dHLmnO//O//vnDMHnsb/PQxPIsnCvFw1EJQBUAIyP5ZW9Dmv8G+E87PSVMnvY9kbt/W+F9LMDF6Xrja1drD7ZNVDQR7bgTmZyera5TYARJOBuMnPU330LABJ01NwHynly90Wvj56uleNRwbIz0pTDaqfLz4eTGTCYBCseMpqkRWVUTMmUVXoQjCHcDhT8Z4qY9VGA1tLzvSo02eAeTlZKkDBlhi9r7m+kUhHLABuVw3D7X4sjlTcrhoAHM5UKn928dU2oUeIhwLMyUxWAb5bF45PCUNu9wMwdGwshoHRVBW6SModBYCnrJa4jNE6UCfEkrfKewQw9iaenz5CXbvcxtp3jATa/NgzpzEsJ0sTq/Do49yuGhCtAFQX10HQj2NCPKJJ03xlfIfuYJ8dmJOZrL6YBbIcAmDUcBGAvCWzAbh6vJBB/dqxJCTiLm/QVjsxEberhmDASFL2cB00LmM0Sxaf69aFXh2Q5RCHXXDYBRu3t+DzBTnx7U8ARDoGInUYQbDimBCvzwkGtJTVv/8NgrW39D0DzMvJUmc6DRRVaJ+3fyIQVK18s6+NhutBdn66C2vcq8DdWne2k7KHI5hDep8oGrlW6WZZdgP5WWkPlKFbACUgkxTuQw362bS4hbmrvez4KIjJZGPf8TY6JJUdGzYTkZKiCZc33HXhvlUPHRvLxbIbjJk6Gsnv65sDAB/uNuOVBH4o70dQtbKjSOSliWAy2ThQFKJD0hbjcKZScb5Dn+cpq8XhTEUKtOMpqwXg1C0Lm7Y1d6vTLYA1LJzP3hexCEbeWxAJwMGSrvR3WhU+31AOQNqYMLxVdUhKBAfLb4LsJ9WZRNExrwYZbeLkOTMWq+0BrR5PwczURFUKhkhLVEkfcptdJyPY8gG8vUHUx2SOC5CR3I+8JbOpK9yPY0I8lUXVjBzYwen6cA64/IxLEPilFFSDtdufVBcHlq7MVpeuzFZnpiaqrzuN5I5XOFsrIUbFIyki89cLKIqPTYtb9DklVSEMxoFdkpbUDqKkKkSbrJXJmRbCGhbOijVT1RVrpnbZiDrA/JmzVIBTlc1cNCtsPtTGpCiFRTk+CvbfYutqmdnTBNplgc3F/fUE6c9ZaS8rwP2Xj+bSUxSVB6nztHKpUQLAVRvgdL3CzcbrXPNoJcmdMVaH0H/HQuttHAkxxEYPYdfe80gRFlYdkOhPBHvWwfz1AhDEmaHV0WLyMTbeSkZsE4G2CABO1tuQAhI37pgAuFiv0DRYa4tDDExOj8EqijTds5/0mnRelRETjCSNGsEFz1V+PXoJALtXAWBRnsQ3R0TMZgPvzgqjQ1KZMfIW3xcbGZ80gNLqAADFFUEA7kQKYIG5b47BKoq46y/jLdfuiJ2/lRq6AHRCKAHtZROVN4Aou7ayvYXVyHKIZ65qic1mA1PG+YmOHoAsh4ixG9l7wkxDYytNESawaPmiom28ljeOK9eb8By6CYDJLOriDwDc7waAfbKNuGF2bjR7OXT0gtbXqLDgZe3C2XbIr8/zRpsBmJqbQPSzdq5cb+LysRb9+73CvQL05EiyI4aSyjou17SRkj6EP/c0AOCYPhTXmZtMyYllZNwwLniudqlzd8J9AuiM/Kw01WTWzr99sk0vza6d50mZGEm4cHff3DjRQufY3oQfCaAz7ndkZNwwLKKRP05foPWsoo/ri/BjAdwL0tnun2LCX6UdtYITxU/kmd/nWJiXq/b00nka/5n4BwNNMW8o9V9kAAAAAElFTkSuQmCC",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single square golden hay bale. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "7e605f3e-58e2-47ec-bd7f-624eb2f77327",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/7e605f3e-58e2-47ec-bd7f-624eb2f77327/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

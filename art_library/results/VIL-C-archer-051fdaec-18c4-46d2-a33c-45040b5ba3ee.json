@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "051fdaec-18c4-46d2-a33c-45040b5ba3ee",
+  "status": "completed",
+  "created_at": "2026-09-28T02:03:16.253566+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "39677e14-a9bf-4366-85ac-9b00241458aa",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/39677e14-a9bf-4366-85ac-9b00241458aa/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "VIL-C-archer",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Village archer, adult human in a green hooded tunic holding a longbow, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery."
+  }
+}

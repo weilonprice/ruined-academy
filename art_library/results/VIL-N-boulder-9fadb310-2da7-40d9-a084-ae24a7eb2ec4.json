@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "9fadb310-2da7-40d9-a084-ae24a7eb2ec4",
+  "status": "completed",
+  "created_at": "2026-09-28T01:59:06.516370+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADWUlEQVR4nO2VXUiUWRjHf74fTsg2uRDeDEa8M+a4tlku7kI5hBYVdVOUSwS7ywaxVnQR7LK0sITSh4teDaQVEV0YBVFawe4QfX/YtqT2odtE6ph90IeWqZjvvO87bxcz8+o0g6PeRfO7Os/hOef5n+d5zjmQIkWKz520qSzKdTnN6FgNjtDd82xK+wBIUwl87uAO9rXtwqW8o746H8ASNFkxExIwNz/X3F41QMm0rQAYxgBf5QwBIhmZIkXLTBxKPz3dIvgc5mRECMkcCgsLzFPVm3jcPcz+B16u6nsA6OrQAFhf3h62H04DYF7Je2bPcpiJd4tnXKW5Lqd51rsZSRaswIYuAyBKGv77Eu6vdQxdxkgbob46H0m0RQT6J1SOpCXwdabT2HAa3XCzcfs7jnqz0A2Vn37tJCdv1C/SCxaKyw2QtBxJM7Cr6q+4+braOnRDRRJt/PjbXQ5XucOniZw+ykSyMG4G1OAId+7cjZn75+8zAOz44090LUhdVS2SaONhezO7D2TjrRTIzJxp+X+70m7K0hcA3DjzPE5MQnWlZYrZ3zmdhppt/FBxBI+nhJtNTQDohsrm8i3hTOyvpdPfxuqfv6S3p4BH/gBAjICuDj+OwpGwEbLFiYgxSssUUwtpLF2yiBP7WqmsCVHf8AKAFp8dgJ2VFQwODtPYcNpa19/fS1ANB9FUHces2VZwIEYAgCCLXDv5JA3GXEPP2mwr+LCucqp6E3PNX6gpqwBgTnGfFXBs8CiKMw/FmWcF7urwo7jcKC43z1rCVzQn2wmA3Z6ZOAO/e9eYAE9eBlhW/JSgYXCo1gBg3fIsAq+7AZhhn8l/vtGuf/XyKUODQ7GnjSC+zaMnEMAx3xy/B0rLFLPIUxDORpYDgL3Hj6EFNct5YbHO/20hNnyfgyH2cvvfYQCaW2PfHTldHjVCNhBUBDEDWZC5eKIrcQ9E61+0KCxCVzWab96neOl3aLqGLMlc8l3gmwVp3GuXYoQlomTFEmvd9YtXudHYl7DhrWs4RlncMypLMk1XbiOny9xrh/LVqwBoGxhE0zXLZyzXz9+yxoKcAfSRiHEfCc/abDOkGZFNRNavWoxdiP0+Wt+8AeDW5RbLD7C6PBmT+jqjZfqYRLVNkSLFJ8MHzXRdeA87FCIAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single mossy grey boulder rock. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "6cca56d9-5883-4658-b8b0-c3668587103d",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/6cca56d9-5883-4658-b8b0-c3668587103d/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

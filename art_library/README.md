@@ -69,3 +69,24 @@ Wizard (CH-01) clips, generated as `CH-01-<action>2-<direction>` on the existing
 | Frost Nova skill icon | HUD-skill-frost-nova-a | Take b was washed out |
 
 The flask's liquid level shows its charges (the rest of the flask is drawn dark), with a pip per drink below it. The first pass's UI-01 bar sheet and UI-02 slot frames are still unused.
+
+## Experience bar (2026-09-28)
+
+HUD-exp-frame-a drew two separate bars side by side; the left one is cropped out by `../tools/make_hud_art.py` as `exp_frame.png` and stretched as a nine-patch. HUD-exp-frame-b was a single bar with a seam in the middle. 2 generations.
+
+## Village environment (2026-09-28)
+
+A village set modelled on a reference screenshot of a top-down medieval village (forge, tavern, barn, sawmill, farm plots, training yard). `../tools/build_village_queue.py` writes `queue-village.json`. Nothing here is in the game yet; `village_keepers.png` is a contact sheet of the usable pieces. It used 109 generations (409 → 300 after the tests), 40 of them on two tiles-pro terrain sets.
+
+What worked: `/map-objects` (1 generation, straight-on high top-down view) for buildings and props; `/create-tiles-pro` with `tile_feature: tileset` for terrain (20 generations for a 16-tile corner set); `/create-character-v3` for villagers. What did not: pixen drew the cut-away tavern isometric twice; `/create-tileset` drew the dirt road as bricks, then planks. Short map-object prompts often came back as small isometric dioramas on a grass tile, so second and third takes spell out a flat straight-on view with nothing underneath. Character rotations and map objects are not on the storage host's links alone: the worker now reads bare base64 images and falls back to the character ZIP export.
+
+| Group | Usable | Not usable |
+|---|---|---|
+| Terrain | VIL-T-grass-dirt-c (grass ↔ dirt road), VIL-T-grass-soil (grass ↔ tilled soil; its grass is more olive than the dirt set's) | VIL-T-grass-dirt, -b (bricks, planks) |
+| Buildings | tavern-c (cut-away interior), barn, forge-b (furnace, anvil and floor, no walls), sawmill-c, cottage-b (slightly angled), watchtower-b | tavern, tavern-b, forge, cottage, sawmill, sawmill-b, watchtower (isometric) |
+| Nature | pine-tree-b, oak-tree, bush, boulder, flowers, stump | mountain, -b, -c (always an isometric island), pine-tree, pine-tree-c (dioramas) |
+| Props | well, barrel, barrels-b, crate, crates-b, lamp-post, fence-h, fence-v, log-pile-b, hay-bale, firewood-cart, produce-crate, training-dummy, archery-target, weapon-rack, workbench | barrels, crates, log-pile (dioramas), chopping-block, -b (a stool) |
+| Farm and animals | carrots-c, cow-b, sheep, chicken | carrots, -b, wheat, -b, -c, cabbages (raised isometric beds), cow (tiny); cabbages-b failed with a connection reset |
+| Villagers (8 rotations each) | blacksmith, farmer, villager, militia, archer, lumberjack | |
+
+The reference's interface (resource counters, quest panel, task tracker, day and season panel, action buttons, minimap) belongs to a village-management game and was not generated.

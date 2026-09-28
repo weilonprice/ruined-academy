@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "1cd4351c-9d56-4474-8e1b-bc734b6e1394",
+  "status": "completed",
+  "created_at": "2026-09-28T02:00:30.136053+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 64,
+      "height": 32,
+      "description": "A straight horizontal section of rustic wooden rail fence with posts. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "85685efc-610f-4d9c-b6a1-b22abc6f8dad",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/85685efc-610f-4d9c-b6a1-b22abc6f8dad/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

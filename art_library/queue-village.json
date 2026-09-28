@@ -1,0 +1,1015 @@
+[
+  {
+    "id": "VIL-T-grass-dirt",
+    "endpoint": "/create-tileset",
+    "reserve": 20,
+    "payload": {
+      "lower_description": "lush bright green meadow grass with tiny flowers",
+      "upper_description": "worn packed brown dirt road",
+      "transition_description": "soft ragged grass edge over dirt",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "high top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    }
+  },
+  {
+    "id": "VIL-T-grass-dirt-b",
+    "endpoint": "/create-tileset",
+    "reserve": 20,
+    "payload": {
+      "lower_description": "muted medium green grass texture with subtle darker grass blades, seamless, top-down",
+      "upper_description": "smooth packed light brown dirt road texture with a few small pebbles, no bricks, no stone blocks, seamless, top-down",
+      "transition_description": "soft ragged grass edge over the dirt",
+      "tile_size": {
+        "width": 32,
+        "height": 32
+      },
+      "transition_size": 0,
+      "view": "high top-down",
+      "mode": "standard",
+      "detail": "medium detail",
+      "shading": "medium shading"
+    }
+  },
+  {
+    "id": "VIL-B-tavern",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A two storey wooden medieval tavern seen from above with the roof removed so the interior shows: plank floor, long bar counter with shelves of bottles, round tables and chairs, a staircase; stone lower walls, a door and two windows on the front wall. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 192,
+        "height": 192
+      },
+      "no_background": true,
+      "view": "high top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-tavern-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A two storey wooden medieval tavern seen from above with the roof removed so the interior shows: plank floor, long bar counter with shelves of bottles, round tables and chairs, a staircase; stone lower walls, a door and two windows on the front wall. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 192,
+        "height": 192
+      },
+      "no_background": true,
+      "view": "high top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-pine-tree",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single tall dark green pine fir tree with a brown trunk. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-pine-tree-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single tall dark green pine fir tree with a short brown trunk, front view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-T-grass-dirt-c",
+    "endpoint": "/create-tiles-pro",
+    "payload": {
+      "description": "muted medium green grass to smooth packed light brown dirt road",
+      "tile_type": "square_topdown",
+      "tile_size": 32,
+      "tile_view": "top-down",
+      "tile_feature": "tileset",
+      "outline_mode": "segmentation"
+    }
+  },
+  {
+    "id": "VIL-T-grass-soil",
+    "endpoint": "/create-tiles-pro",
+    "payload": {
+      "description": "muted medium green grass to dark brown tilled farmland soil in neat furrows",
+      "tile_type": "square_topdown",
+      "tile_size": 32,
+      "tile_view": "top-down",
+      "tile_feature": "tileset",
+      "outline_mode": "segmentation"
+    }
+  },
+  {
+    "id": "VIL-B-tavern-c",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A two storey wooden medieval tavern seen from above with the roof removed so the interior shows: plank floor, long bar counter with shelves of bottles, round tables and chairs, a staircase; stone lower walls, a door and two windows on the front wall. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 192,
+        "height": 192
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-forge",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A stone blacksmith forge seen from above with the roof removed: a brick furnace with a glowing fire and a tall chimney, an anvil, tool racks with hammers and tongs, a quench barrel, stone floor. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 160,
+        "height": 160
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-barn",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A wooden barn and stable seen from above with the roof removed: stalls full of golden hay bales, a hay loft, plank walls, a wide open doorway, a small lean-to on one side. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 160,
+        "height": 160
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-cottage",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small cozy medieval cottage with a steep red clay tile roof, stone walls, a timber frame, one wooden door and small windows. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-sawmill",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "An open timber frame sawmill shed with a pitched wooden shingle roof on posts, a log saw bench underneath, stacked logs at the sides. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 160,
+        "height": 160
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-watchtower",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A tall wooden lookout watchtower on four log legs with a ladder, a small railed platform and a peaked roof with a blue flag. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-pine-tree-c",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single tall dark green pine fir tree with a short brown trunk. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-oak-tree",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single round leafy green oak tree with a thick brown trunk. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-bush",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single small round green leafy bush. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-mountain",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A cluster of jagged grey rocky mountain peaks with snow caps, seen from above at an angle. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 192,
+        "height": 192
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-boulder",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single mossy grey boulder rock. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-flowers",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small clump of white and yellow wildflowers with green leaves. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-stump",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single tree stump with an axe stuck in it. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-well",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A round stone water well with a dark opening. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-barrel",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single wooden barrel with iron bands. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-barrels",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A stack of three wooden barrels. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-crate",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single wooden supply crate. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-crates",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small stack of wooden crates. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-lamp-post",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single wooden street lamp post with a hanging iron lantern glowing warm yellow. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 64
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-fence-h",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A straight horizontal section of rustic wooden rail fence with posts. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-fence-v",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A straight vertical section of rustic wooden rail fence with posts, seen from above. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 64
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-log-pile",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A neat pile of cut timber logs stacked on their sides. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-hay-bale",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single square golden hay bale. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-firewood-cart",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A wooden hand cart with two wheels loaded with split firewood. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-produce-crate",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A wooden crate full of potatoes. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-training-dummy",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A straw and wood combat training dummy on a post. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-archery-target",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A round straw archery target with red and white rings on a wooden stand. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-weapon-rack",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A wooden weapon rack holding swords and spears. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-workbench",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A wooden workbench with tools and a vise. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-chopping-block",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A chopping block with split firewood beside it. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-carrots",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small square garden bed of leafy carrot plants in rows on dark soil. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-wheat",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small square patch of tall golden ripe wheat. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-cabbages",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small square garden bed of green cabbages on dark soil. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-A-cow",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single black and white spotted dairy cow standing, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-A-sheep",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single fluffy white sheep standing, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-A-chicken",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single small white chicken standing, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-blacksmith",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-blacksmith",
+      "description": "Burly village blacksmith, adult human with a leather apron, rolled sleeves and a hammer, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-farmer",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-farmer",
+      "description": "Village farmer, adult human in a straw hat, plain tunic and trousers, holding a hoe, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-villager",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-villager",
+      "description": "Village woman, adult human in a simple dress with a white apron and headscarf, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-militia",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-militia",
+      "description": "Village militia soldier, adult human in a chainmail shirt and iron helmet with a sword and round shield, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-archer",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-archer",
+      "description": "Village archer, adult human in a green hooded tunic holding a longbow, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-lumberjack",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-lumberjack",
+      "description": "Village lumberjack, burly adult human in a red plaid shirt carrying an axe, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-cottage-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small cozy medieval cottage with a steep red clay tile roof, stone walls, a timber frame, one wooden door and small windows. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-sawmill-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "An open timber frame sawmill shed with a pitched wooden shingle roof on posts, a log saw bench underneath, stacked logs at the sides. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 160,
+        "height": 160
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-watchtower-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A tall wooden lookout watchtower on four log legs with a ladder, a small railed platform and a peaked roof with a blue flag. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-mountain-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A cluster of jagged grey rocky mountain peaks with snow caps, seen from above at an angle. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 192,
+        "height": 192
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-barrels-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A stack of three wooden barrels. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-crates-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small stack of wooden crates. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-log-pile-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A neat pile of cut timber logs stacked on their sides. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-P-chopping-block-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A chopping block with split firewood beside it. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "low top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-carrots-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small square garden bed of leafy carrot plants in rows on dark soil. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-wheat-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A small square patch of tall golden ripe wheat. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-forge-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A square stone blacksmith forge with the roof removed so the interior shows: a brick furnace with a glowing fire and a chimney against the back wall, an anvil, tool racks with hammers and tongs, a quench barrel, grey flagstone floor, an open doorway in the front wall. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 160,
+        "height": 160
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-B-sawmill-c",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A rectangular open timber sawmill shed: a wooden shingle roof on four posts, a log saw bench underneath, stacked logs at the sides. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 160,
+        "height": 160
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-N-mountain-c",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A cluster of jagged grey rocky mountain peaks with snow caps, the rock face toward the viewer, no platform, no grass underneath. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 192,
+        "height": 192
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-carrots-c",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A flat square garden plot of dark tilled soil with three straight rows of leafy carrot tops, no raised box. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-wheat-c",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A flat square patch of tall golden ripe wheat stalks, no raised box, no soil edge. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-F-cabbages-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A flat square garden plot of dark tilled soil with rows of round green cabbages, no raised box. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "view": "high top-down",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-A-cow-b",
+    "endpoint": "/map-objects",
+    "payload": {
+      "description": "A single black and white spotted dairy cow standing, full body, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "view": "side",
+      "outline": "single color outline",
+      "shading": "medium shading",
+      "detail": "medium detail"
+    }
+  }
+]

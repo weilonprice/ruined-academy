@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "7eb586c8-e6ad-412f-b9e0-756623b92fa0",
+  "status": "completed",
+  "created_at": "2026-09-28T02:15:08.580631+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEiklEQVR4nO2WTWwbRRiGn413197s2sk6jdPEoSkN/cGloqCqvwd+VBBSJSQEHIALSPRCERK9ApUqUZBaDr2gInEDgQTl0CM9VBQJVEpbtaIlrSJhkqhOlTixnax31/aOsxwsb+Pam1a9cMl72plv5nvfme+dmYVVrOJ/htSpMzOU8FVFXnFizRPcb8xyXJssdORq69y3NeXbZYFuPHjy+8Eui1ARbSyeJ2GaEcDH1HTKSpleP94xcUmy2mJC+MiyFMSE8CkqNjOz1Y452gTUqh56d4T+uMHLR/az6E9hqD4/Hb1JTDSGO3WPF4/sRHIXmZgs8PuZSdbVE42EssSOw49j6HUM1efHE9chF747XWGBXMFmupzjh5NXyN9RmMrarcq7bM58e5nRTD/+jAj6LVdg6HW++ewy+TsK+awTzk4HD2wfSfqmGcHUdLKFRT489Ryfv3uWwYRGzZNIJ3UmZhwWhc2bh7bx/ZfXidVVNgwlkOVGur9yeQ4ee4avP/qVwZQKlQgzs1XGphfb+FYUAHDLnWOLtiZIvnylBXuRkTXJtlUJ4TM2M8ejSZO4JpO3yqECQksAMB21eP/4PqajFhVZkLfKCOFTkQVFw+Hg8WcpSRYlyWqb98FX+3BSblvsgQXkSkU2PrmGK+ezrMsojE8WickxZFlifrbKuozChQtjmCMyU7crCOEjhM+Nf+bZPKpz5XyWgfWN2EMJGFib4O9f5tk4LONMSvRp3WhKBAA1Lpga8xgdTlOcFAym1KBEj23u4folhz17MpRuNGIroa0mmaGEP5CK3vXAZIGRoR4A4trdU2u5gn8LRfq0btJJHcsVQTxXsBFLVfx6jOE+jaJrP5wHapJgxzs6EdVvIW+K2f/2evpS0aBtuY3jmE7qPPFKirXpxs7E5FgoR6iAmiTIvLSF7btGeP3TXeStckt813sZNmw3eOPYnsCccU1GCJ/1L4yydXcfr36yk/HZBSoi3AdtApY/MI9sg1y2hjXfunMlyUKNVbl6roiYnsPtXWo5ppue0sleK2PNS5hmKDewggf64wZ5q4zbu0Qk3zBfQosGpRifXcA0wS4oDPdpAIGIXMGmqDgYjk5N8jC18Iso9Mlz6h6mptOVLKHVNFRfbl1lqofSSJVUtgv8BnnzIUondWL9NdQpFU1pmDAMoQJUX+b5wzuoRW+j1A3OnrgF4q6IA0efZr6co89Ic/rji7iuRFyTceoeb32xlztzU8RiPZw+cgmIhAoINWFT9cXTE9Qq0aDfcgVOosLiwgJ//DwBwHS5EpCrfmNNV88VEUs6irriQVvZA7mCzYFDGc6cvIkUqZDuNZFliVzBxo0ssfe1tfz23TQAG5KJFg/sPjjMuVMTVLwagwntwR+j5QKAYFXN5M06O3UP26kG4zqheTk91GOUK9gI4QfkQvhYrgi+uyMK/XEDIfyWecvbzXthJbQJGBnqwXa6SCcbV3HTCzVJBLddswwArldvmb98p/JWOWgbhtZRQMc/1Z2bBvxa1UONKtSqXtB/b/teNOOd5v05PtORaxWr+A++hxwVhaMLtgAAAABJRU5ErkJggg==",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A flat square garden plot of dark tilled soil with three straight rows of leafy carrot tops, no raised box. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "6dd760bc-d82f-456a-9c15-9c3bf4ba0104",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/6dd760bc-d82f-456a-9c15-9c3bf4ba0104/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

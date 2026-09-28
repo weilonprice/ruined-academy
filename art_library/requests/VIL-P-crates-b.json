@@ -1,0 +1,11 @@
+{
+  "description": "A small stack of wooden crates. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+  "image_size": {
+    "width": 48,
+    "height": 48
+  },
+  "view": "low top-down",
+  "outline": "single color outline",
+  "shading": "medium shading",
+  "detail": "medium detail"
+}

@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "6fc1bd90-0822-4cfb-b027-e8671c762c08",
+  "status": "completed",
+  "created_at": "2026-09-28T01:59:06.088886+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADkklEQVR4nO2WX0xbdRTHP4XSltEB2zqm2xgb0oXam1kptrQhq1EkdRp1D3MmzumD+mBijMlejQ8++OiDb8ITGn3QmLlMRU0WMXQMshKQ7o9gIdoywIGDFtp7S9nPh2srrELvhcXEZN/kJjfnfs+533PO79xz4R62gJcefUwEPW6xlRgGPeSng6eEraaK2T8WsNVUMROfIpVKkF1OEwqHdMXKoUSvQ+BxN+WWbSwllrFW2gAwlpVv5t2qr16HyRsx0nKKWzcn8rbNZr8p+Bsd+Z63uyTR7pK2dAZ0t+Di9Wt3NVvdAtY4m8xbFqA7mztLXmIyczujoGRVc0/kiq6Ymg+hv9EhzrzcSjZdmrd1nuvldkbh1WdaV1NFTkS7SxLfD0U2FKSpBd4Gu3jjuYdILSRp9jXlrxyafU3YaqrpPNfLh++8hr/RIY63tohFeaVobE3l8jc6xCcfvM3lvkGM5Su4XI8UcH4ZHgWgZ+AyfaM3OR18kK7uq0VborkFZ7/4komlap5/0sXFngsFz4883MKb73UgyxksFhOh4SlNcTVPwcGGWg5VzPPZx18B0HF+hENuLx3nR+jqjnDm/U58h3dTajQiyxmux+Y0HUhNAlay2QJbU90OJsL9mI0GmuptBVyt3wtNAiwWU4FNUVbo6o5ocd+6gPVwss3x3wowmdWqhkfi+Jvr1uX9W8XWQ9Ep8Hsk0VZbR2QkikFR167kuJ/v+n5je9k/PCUrGIonqbKa0TL/ORStQFlKUFG5jX17dwEwnsjw+U/jeJ3Va3hmo4Hd5SYqrFZWslm8DXZNW3JDAe0uSbz1op+Dh6sJD8UJxaZJp2ROHK1fwxscn1VvDGqF9t63S8u71xeQ2/OvPOtCltNERqIkl+HWnwl8+9TeD44lSS7DnqrtLCwqqqNIYy01YC018JSnltePPVG0CgUCjre2iNNBiZNtDqbjs3z7Y5SvB2JEZ+YB+OaKOnpBn8RwdJLRyVl27KxEyQp+n0usifXCMXfB9rwTaw6h3yOJpcVFEgnBDz/HuDE9B0D/r2MGUJdSucVMaHiKZruqPS0r9A+EDQABySmiM/M8sKeasck0qQuXCLr3U2Iyi+6/OZoQkJxi9a/Xangb7OLTd08Jb4NdHNl/YMPsApJTBCSn9grksNE3PDfjFospX5n1oGUX6PorDnrc4sTRenpDUT1ud0/AAdtOPjo7BFA0+3v43+Avv+RNxYrY96sAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single tree stump with an axe stuck in it. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "05164bf4-2003-4101-aee1-6f8ecd9769bb",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/05164bf4-2003-4101-aee1-6f8ecd9769bb/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

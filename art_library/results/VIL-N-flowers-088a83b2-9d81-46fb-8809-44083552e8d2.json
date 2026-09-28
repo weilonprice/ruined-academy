@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "088a83b2-9d81-46fb-8809-44083552e8d2",
+  "status": "completed",
+  "created_at": "2026-09-28T01:59:06.181166+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADQUlEQVR4nO1VXWhbZRh+srpkymxHJZWcE3t2+oUTTlm6gq1uoihsRaxsqAiCu3EwRLx3u3De7NLrehXkXEgT7ISpDCyMil61pbOL8WdtNE26/Kyypjt0LslpTny8COfYim3WEgZCHjg33/vxve/zvM/7HqCN/yOEUGkYYxRC5UNPrmsas/kCfx4/yWy+QF3THm4RhjHG2WiIZnaUifggY3GDQqhUFJmXJ8Zbr4quaVvk1jWN5toqU1eOMZNeoK5pFEJlpVxi6soxVsolRo6EW1OErmmslEu8M/c8M+kFt4ijJwWPnuqjosi89u01vjoyxNTkAM3sKGejIV6eGH/gAh7ZMej14OrVSXTe9sI6vABvx34IodLTVUe4z4+ZZBHnzr4DAOh55kd88XkUPdK7uPThhQcm6Wl2QVFk6i8/gcXvTfyWTCHcr8OqWm78xXOH8PsvG+jwEXXLg5W5CpaXC03f3RUiR8KslEtMxAdZrS1T1zR+/dWX7lmlXOJzZwQVRSbQGNNY3GjNhARlieba6hbnm2urtK1qw3R/vMbU5AAVRWZQlujsiH/7Zs/MhVDpOH82GnKdbxhjtK0qo5+cZya9QEWR+eybITpqmdlRznx6nLG4sbcChFCZvJFwWYQGg67MzheLG4zFDYYGg+5UvPHeMIOyRMMYY/JGoqkC25olFjc48Nc4AsP96FI+xpmLLyBXXMP9dcJMNkwYed2PfM4EN/bhz1+JdDrjcUxr2TUsTa03NeS+7QIfXbyE24ELmM+fQiQygJmJInw+LwKBg+g70Ym6/Q+x0nwVnsdrcEwIALn5e3j7/cPYswJCqDzY3wh3+31YmloHAPSd6ESv1IWqVcf9Wg35nAmfp7FOVuYqcEa2J+KFRRvWT17cTKW2zbOtAra9gdJ8Fd1+H3qlLgDAyGk/lqbW8d1nORzwdbh3C9NlFKbLGDntx5M9jyEwtB8rcxXcS3h2TL6jApuVsO0NPP2KhB++KaJuE70vPQoAeErqxuLSHdy9XnN7rYZ7CQCZxVutW0b68SFu7m9QlhiUJb71wfCWc2c6dvP2jv8CBzenr29hky8UPUFZ4uY2AGj9Cm6G3bJto4022mjjv/A3+g7PHdlPoHIAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A small clump of white and yellow wildflowers with green leaves. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "901261fc-222a-4de7-9a54-288b50ccbcf5",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/901261fc-222a-4de7-9a54-288b50ccbcf5/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

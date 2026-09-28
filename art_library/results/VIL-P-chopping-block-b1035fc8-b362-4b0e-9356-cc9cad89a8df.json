@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "b1035fc8-b362-4b0e-9356-cc9cad89a8df",
+  "status": "completed",
+  "created_at": "2026-09-28T02:02:00.779923+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A chopping block with split firewood beside it. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "ff5b5d85-b5e4-4fe4-b5ff-8f2b693015ec",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/ff5b5d85-b5e4-4fe4-b5ff-8f2b693015ec/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}
