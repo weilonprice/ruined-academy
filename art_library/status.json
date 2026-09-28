@@ -3098,5 +3098,198 @@
     "status": "completed",
     "jobs": [],
     "files": 1
+  },
+  "RUIN-B-collapsed-barn": {
+    "status": "completed",
+    "jobs": [
+      "39ee2ecc-9e9a-455b-ba42-6b4538b415ed"
+    ],
+    "files": 1
+  },
+  "RUIN-B-burned-cottage": {
+    "status": "completed",
+    "jobs": [
+      "5a2fd0b5-c165-4499-96da-93019314ff7f"
+    ],
+    "files": 1
+  },
+  "RUIN-B-stone-house": {
+    "status": "completed",
+    "jobs": [
+      "61c7a52e-9c41-4a50-b156-8fdb11763ffe"
+    ],
+    "files": 1
+  },
+  "RUIN-P-broken-well": {
+    "status": "completed",
+    "jobs": [
+      "c375434a-8adb-4a27-9d97-fcd083acf2e4"
+    ],
+    "files": 1
+  },
+  "RUIN-P-rubble": {
+    "status": "completed",
+    "jobs": [
+      "2c2acc19-190a-458c-afad-e3161119fcb8"
+    ],
+    "files": 1
+  },
+  "RUIN-P-broken-fence": {
+    "status": "completed",
+    "jobs": [
+      "a49a5aa4-7ce6-49b5-a0fb-d7d8e358a194"
+    ],
+    "files": 1
+  },
+  "RUIN-P-broken-barrels": {
+    "status": "completed",
+    "jobs": [
+      "daddb43d-0061-4344-9291-9929d8e125ee"
+    ],
+    "files": 1
+  },
+  "RUIN-P-broken-cart": {
+    "status": "completed",
+    "jobs": [
+      "209b08e3-c47c-46ce-919c-286787e1f939"
+    ],
+    "files": 1
+  },
+  "RUIN-P-graves": {
+    "status": "completed",
+    "jobs": [
+      "192a75a5-577c-4df1-a2a5-4e3fc2cec27f"
+    ],
+    "files": 1
+  },
+  "RUIN-N-charred-stump": {
+    "status": "completed",
+    "jobs": [
+      "60d7e553-ca8e-4b8d-9bc1-559baa38560d"
+    ],
+    "files": 1
+  },
+  "RUIN-N-dead-tree": {
+    "status": "completed",
+    "jobs": [
+      "4a91973b-ee31-4175-bde9-d207222cb603"
+    ],
+    "files": 1
+  },
+  "RUIN-N-weeds": {
+    "status": "completed",
+    "jobs": [
+      "889e3afe-2228-443c-a21b-9639d615bab3"
+    ],
+    "files": 1
+  },
+  "RUIN-B-burned-cottage-b": {
+    "status": "completed",
+    "jobs": [
+      "19f6b11f-13a4-4ac9-911b-d210e1988175"
+    ],
+    "files": 1
+  },
+  "RUIN-P-broken-barrels-b": {
+    "status": "completed",
+    "jobs": [
+      "3fd58ce4-f031-41c4-a574-be127e136e3a"
+    ],
+    "files": 1
+  },
+  "RUIN-P-rubble-b": {
+    "status": "completed",
+    "jobs": [
+      "d20a828b-3ea5-4b39-8d68-dde914d970d3"
+    ],
+    "files": 1
+  },
+  "RUIN-B-stone-house-b": {
+    "status": "completed",
+    "jobs": [
+      "e9cb6e76-c605-4673-91ab-e9cec9fca260"
+    ],
+    "files": 1
+  },
+  "RUIN-P-graves-b": {
+    "status": "completed",
+    "jobs": [
+      "762f776f-406c-482d-910d-569cc977e783"
+    ],
+    "files": 1
+  },
+  "RUIN-N-weeds-b": {
+    "status": "completed",
+    "jobs": [
+      "b2300c1c-e742-4581-8795-425231c82f37"
+    ],
+    "files": 1
+  },
+  "RUIN-P-broken-barrels-c": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "RUIN-N-charred-stump-c": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "RUIN-N-weeds-c": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "RUIN-P-graves-c": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "RUIN-B-burned-cottage-c": {
+    "status": "completed",
+    "jobs": [
+      "9a28e994-9a47-4d59-b6f6-9f5ea09350cd"
+    ],
+    "files": 1
+  },
+  "RUIN-B-stone-house-c": {
+    "status": "completed",
+    "jobs": [
+      "592a8e56-02ac-42c8-9829-d5d248a65b24"
+    ],
+    "files": 1
+  },
+  "RUIN-B-burned-cottage-d": {
+    "status": "completed",
+    "jobs": [
+      "5b110bbd-8bfe-4bb7-873a-e72f3b36cdd2"
+    ],
+    "files": 1
+  },
+  "RUIN-B-stone-house-d": {
+    "status": "completed",
+    "jobs": [
+      "99da577c-bb02-42aa-bfc4-d408b7220ca7"
+    ],
+    "files": 1
+  },
+  "RUIN-B-burned-cottage-e": {
+    "status": "completed",
+    "jobs": [
+      "291a126e-2fa9-4cd0-96ac-1f630578ef2f"
+    ],
+    "files": 1
+  },
+  "RUIN-B-stone-house-e": {
+    "status": "completed",
+    "jobs": [
+      "beb7a8fc-6ff7-43be-9217-2f02547748b8"
+    ],
+    "files": 1
+  },
+  "RUIN-P-rubble-c": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
   }
 }

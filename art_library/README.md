@@ -100,3 +100,11 @@ The villagers were regenerated at 64 px (`VIL-C-<name>-64`, 12 generations): at 
 `../tools/build_melee_queue.py` (`queue-melee.json`), about 20 generations. The slash is a 6-frame clip in 8 directions in `../game/assets/wizard/slash/`. The first takes (CH-01-slash-*, `/animate-character`) drifted in colour and mostly swung the staff. The second (CH-01-slash-b-*, `/animate-with-text-v3` from each still with `drift_threshold` 0) hold his colours and show a sword. East is the west clip mirrored (its own sword smeared into a grey blob), and north-west is north-east mirrored (its staff vanished). The wind crescent is FXM-wind-slash-b (frames 0–4); the first effect filled its middle with a dark disc. The skill icon is HUD-skill-wind-slash-b.
 
 Melee kit (6 generations): sword icons ICONR-short_sword-a and ICONR-windblade-a (the -b takes had a bent crossguard and a green blob), and the Wind Wave skill icon HUD-skill-wind-wave-a (-b trailed a dark smudge). Wind Wave flies the wind crescent's first three frames on a loop (`wind_wave` in `../game/assets/effects/`).
+
+## Ruined village (2026-09-28)
+
+`../tools/build_ruins_queue.py` (`queue-ruins.json`), 33 generations; `../tools/make_ruins_art.py` builds `../game/assets/ruins/`. The map (`../game/ruins.tscn`) reuses the village terrain tileset, desaturated and tinted dusty by `village_ground.gd`.
+
+Used: RUIN-B-collapsed-barn (placed twice, one flipped), RUIN-P-broken-well, RUIN-P-broken-fence, RUIN-P-broken-cart, RUIN-N-dead-tree, and the pixen takes RUIN-P-rubble-c, RUIN-P-broken-barrels-c, RUIN-P-graves-c, RUIN-N-charred-stump-c, RUIN-N-weeds-c.
+
+Rejected: the first palette line said "abandoned ruined village", and RUIN-P-broken-barrels, RUIN-P-rubble and RUIN-N-weeds came out as little houses (the same trap as the academy prefix). The -b retries dropped the word but, as map objects, still turned small props into cottages and grass islands; pixen (-c) finally drew them as single objects. The burned cottage and stone house were isometric dioramas in every take (first, -b, -c, -d), and the -e takes, started from the collapsed barn as the init image, just copied the barn. The map marks their sites with rubble, char and weeds instead; proper ruined houses may need another route, such as the tiles-pro building kit.

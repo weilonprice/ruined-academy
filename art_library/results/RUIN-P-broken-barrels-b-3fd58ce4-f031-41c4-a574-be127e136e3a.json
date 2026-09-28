@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "3fd58ce4-f031-41c4-a574-be127e136e3a",
+  "status": "completed",
+  "created_at": "2026-09-28T14:26:15.687746+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "low top-down",
+      "width": 48,
+      "height": 48,
+      "description": "Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Two smashed wooden barrels with burst staves and loose iron hoops, and a few broken planks. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Palette of faded wood, soot-black char, grey weathered stone and dull brown-greens, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no buildings, no text."
+    },
+    "object_id": "f24d5898-872a-48a5-8084-e90712c67a9a",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/f24d5898-872a-48a5-8084-e90712c67a9a/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

@@ -78,7 +78,29 @@ func run() -> void:
 		check(back != null and back.scene_file_path == "res://village.tscn", "East road leads to the village")
 		if back != null:
 			check(back.get_node("Wizard").position == Vector2(80, 480), "Arrives at the west end of the cross road")
-	finish("village scene with 6 villagers and furnished grounds; road tiles from corner points; buildings block and slide; roads carry the wizard between maps with his life and flasks")
+			await ruins_round_trip(back)
+	finish("village scene with 6 villagers and furnished grounds; road tiles from corner points; buildings block and slide; roads carry the wizard between maps with his life and flasks; the north road leads to the ruined village, greyed and furnished with its own art, with enemies, and back")
+
+
+# The village's north road leads to the ruined village and back.
+func ruins_round_trip(village: Node) -> void:
+	village.get_node("Wizard").global_position = village.get_node("ToRuins").global_position
+	var ruins := await arrival()
+	check(ruins != null and ruins.scene_file_path == "res://ruins.tscn", "The north road leads to the ruins")
+	if ruins == null:
+		return
+	check(ruins.get_node("Wizard").position == Vector2(800, 880), "Arrives at the south road end")
+	var pieces := ruins.get_children().filter(func(node: Node) -> bool: return node.has_method("footprint_rect"))
+	check(pieces.size() >= 30, "The ruins are furnished")
+	check(pieces.all(func(piece: Node) -> bool: return piece.folder == "ruins" and piece.get_child(0).texture != null), "With their own art")
+	check(get_nodes_in_group("enemies").size() == 4, "Enemies roam the ruins")
+	var ground = ruins.get_node("Ground")
+	check(ground.tint != Color.WHITE and GROUND.tile_for(Vector2i(12, 10), ground.dirt) == 0, "Greyed ground with its own road")
+	ruins.get_node("Wizard").global_position = ruins.get_node("ToVillage").global_position
+	var home := await arrival()
+	check(home != null and home.scene_file_path == "res://village.tscn", "The south road leads back to the village")
+	if home != null:
+		check(home.get_node("Wizard").position == Vector2(800, 90), "Arrives at the north end of the main road")
 
 
 # Waits for the current scene to change, and returns the new one.

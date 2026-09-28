@@ -103,6 +103,10 @@ The map is 1600 × 960 pixels with grass, earth paths, and a stone courtyard; th
 
 Walk east along the road out of the courtyard (a sign reads "To the village") to reach a village map of the same size, arriving at its west edge: a barn with animals, a forge, a tavern with its roof off, a sawmill, a cottage, a watchtower, a garden and a training yard, joined by dirt roads. Six villagers (blacksmith, farmer, villager, militia, archer, lumberjack) stand about and turn to watch the wizard; there are no enemies. Buildings, trees and larger props block the wizard, who slides along them. The way back is the west end of the cross road, signed "To the academy". Both roads carry the wizard's current life, mana and flask charges with him; level, passives and gear persist as always. Enemies in the courtyard reset on each return.
 
-The village layout is `village.tscn`: each piece is a `scenery.gd` node with the art's name, a pixel scale (2 for village art, so its pixels match the ground's) and an optional blocking footprint, and can be moved in the Godot editor. The ground is `village_ground.gd`, which picks each road tile from a corner-matched tileset.
+The village layout is `village.tscn`: each piece is a `scenery.gd` node with its art folder and name, a pixel scale (2 for village art, so its pixels match the ground's) and an optional blocking footprint, and can be moved in the Godot editor. The ground is `village_ground.gd`, which picks each road tile from a corner-matched tileset; each map sets its own dirt areas and tint.
+
+## The ruined village
+
+The village's main road runs north, signed "To the ruins", to an abandoned village of the same size: a collapsed barn, a burned-out cottage, a roofless stone house, a broken well, an overturned cart, an old graveyard and dead trees, on the village's ground greyed and withered. Two skitters, a scholar and a sentinel lurk there, so it's the place to try the melee kit. The road south, signed "To the village", leads back to the village's north end. The layout is `ruins.tscn`, built the same way as the village.
 
 The full Pixel Lab art batch lives in `../art_library`; see its README for which assets the game uses.

@@ -14,7 +14,7 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 - **Loot**: Path of Exile-style items with random affixes, rarities, and uniques; enemies drop loot with labels you click to pick up.
 - **Inventory**: A shaped-item grid backpack, ten equipment slots, and tooltips that compare stats; gear is saved between sessions.
 - **Progression**: Kills give experience; each level grows life, mana, and spell damage and grants a point for a small passive tree.
-- **World**: The ruined academy's courtyard, and a village down the east road with its forge, tavern, barn, sawmill, garden, training yard, and villagers.
+- **World**: The ruined academy's courtyard, a village down the east road with its forge, tavern, barn, sawmill, garden, training yard, and villagers, and a ruined village north of it where enemies lurk.
 - **Visuals**: Cohesive dark-fantasy palette (desaturated stone, weathered bronze, ink-blue shadows, and vibrant elemental magic) generated with Pixel Lab.
 
 See [`game/README.md`](game/README.md) for how the prototype plays.
@@ -27,6 +27,12 @@ Follow the road east out of the courtyard to reach the village. Buildings, trees
 
 ![The whole village map](docs/screenshots/village_overview.png)
 
+### The ruined village
+
+North of the village lies an abandoned one: collapsed barns, rubble where houses stood, a broken well and cart, an old graveyard and dead trees on withered ground, with enemies lurking among them.
+
+![The ruined village map](docs/screenshots/ruins_overview.png)
+
 ---
 
 ## Project Structure
@@ -36,7 +42,8 @@ Follow the road east out of the courtyard to reach the village. Buildings, trees
 │   ├── project.godot        # Engine configuration (640x400 native viewport, GL Compatibility)
 │   ├── main.tscn            # Primary playable combat scene (the academy courtyard)
 │   ├── village.tscn         # The village map, east of the courtyard
-│   ├── wizard.tscn / hud.tscn # The wizard and the HUD, shared by both maps
+│   ├── ruins.tscn           # The ruined village, north of the village
+│   ├── wizard.tscn / hud.tscn # The wizard and the HUD, shared by every map
 │   ├── scenery.gd           # A village art piece: y-sorted, scaled, optional blocking footprint
 │   ├── village_ground.gd    # Village grass and dirt roads from a corner tileset
 │   ├── travel.gd            # Road ends that move the wizard between maps
@@ -90,6 +97,8 @@ Follow the road east out of the courtyard to reach the village. Buildings, trees
 │   ├── make_hud_art.py          # Builds game/assets/ui from the reviewed HUD art
 │   ├── build_village_queue.py   # Queue for the village environment set
 │   ├── make_village_art.py      # Builds game/assets/village and the villager NPCs
+│   ├── build_ruins_queue.py     # Queue for the ruined village set
+│   ├── make_ruins_art.py        # Builds game/assets/ruins
 │   └── make_item_icons.py   # Builds game/assets/icons and game/assets/passives from generated art
 ├── docs/screenshots/        # README screenshots
 ├── play.sh                  # Imports assets, then runs the game
