@@ -1,6 +1,6 @@
 # Ruined Academy — First Playable Asset Manifest
 
-Status: the first generation batch finished on 2026-09-25 (313 of 314 requests; the ENV-02 floor tileset failed). The playable prototype uses the wizard's and three enemies' animations, the NPCs, the candle, and a subset of item icons; see `art_library/README.md` for exactly which assets and the fixes applied. Every spell effect (FX-01 to FX-16), the brazier, and the ward beacon came out as academy buildings and need regenerating; several icons are also wrong.
+Status: the first generation batch finished on 2026-09-25 (313 of 314 requests; the ENV-02 floor tileset failed). The playable prototype uses the wizard's and three enemies' animations, the NPCs, the candle, and a subset of item icons; see `art_library/README.md` for exactly which assets and the fixes applied. Every spell effect (FX-01 to FX-16), the brazier, and the ward beacon came out as academy buildings. A second pass on 2026-09-28 regenerated the effects the prototype uses, the wrong item icons, the passive icons, and the wizard's cast, dodge, and walk; see `art_library/README.md`. The brazier, the ward beacon, and the effects for unbuilt skills still need regenerating.
 Updated: 2026-09-28.
 
 ## Project direction

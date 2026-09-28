@@ -3,6 +3,7 @@ extends Node2D
 const SPEED := 300.0
 const ENEMY_LAYER := 2
 const WORLD := preload("res://world.gd")
+const EFFECT := preload("res://effect.gd")
 
 var direction := Vector2.RIGHT
 # Set by the caster from its stats.
@@ -18,6 +19,15 @@ func _ready() -> void:
 	add_to_group("projectiles")
 	rotation = direction.angle()
 	z_index = 1
+	# The fireball art points right, its head near the right edge; the head leads at the origin.
+	var sprite := EFFECT.looping("firebolt", 12.0)
+	sprite.position = Vector2(-12, 0)
+	if critical:
+		# Crits burn larger and whiter.
+		sprite.scale = Vector2.ONE * 1.5
+		sprite.position *= 1.5
+		sprite.modulate = Color(1.4, 1.3, 1.1)
+	add_child(sprite)
 
 
 func _physics_process(delta: float) -> void:
@@ -43,6 +53,7 @@ func _physics_process(delta: float) -> void:
 		hit = space.intersect_ray(query)
 	if not hit.is_empty():
 		hit.collider.take_damage(damage, critical)
+		EFFECT.spawn(get_parent(), "fire_impact", start if not overlapping.is_empty() else hit.position, 20.0)
 		queue_free()
 		return
 	global_position = next_position
@@ -50,12 +61,3 @@ func _physics_process(delta: float) -> void:
 	if lifetime <= 0.0 or not WORLD.MAP_RECT.has_point(global_position):
 		queue_free()
 
-
-func _draw() -> void:
-	# A small pixel-shaped magic bolt, with its tip pointing along travel; crits burn larger and whiter.
-	var scale := 1.5 if critical else 1.0
-	var body := PackedVector2Array([Vector2(-10, -2), Vector2(1, -2), Vector2(5, 0), Vector2(1, 2), Vector2(-10, 2)])
-	for index in range(body.size()):
-		body[index] *= scale
-	draw_colored_polygon(body, Color("ffd27a") if critical else Color("e78a3b"))
-	draw_rect(Rect2(Vector2(-3, -1) * scale, Vector2(6, 2) * scale), Color("ffffff") if critical else Color("fff0ae"))

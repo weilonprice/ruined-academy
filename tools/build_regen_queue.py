@@ -57,6 +57,23 @@ FX = [
      'upward from it, celebratory magic burst, hollow centre', 96, 'low top-down',
      'The golden ring expands while light motes rise upward, then everything fades out.', 8),
 ]
+# Second takes after review: the first ember bolt was a dart, the ember impact
+# a rubble pile, and the level-up sat on a floor tile.
+FX += [
+    ('FXR-ember-bolt-b', 'A single small dark red fireball spell projectile flying to the right, glowing crimson and ember orange flames, '
+     'dark red flame tail trailing to the left, side view', 32, 'side',
+     'The flame tail flickers in a seamless loop; the fireball stays in place, pointing right.', 4),
+    ('FXR-ember-impact-b', 'A single small burst of dark red and crimson fire sparks exploding outward from the centre, floating in the air, '
+     'no ground, no rocks, no smoke pile', 48, 'side',
+     'The burst expands outward and dissipates into sparks, fading to nothing.', 6),
+    ('FXR-level-up-b', 'A burst of rising golden light: a column of pale gold and cyan sparkles and light motes floating upward in the air, '
+     'no ground, no platform, no tile', 64, 'side',
+     'The golden sparkles rise upward and spread, then fade out.', 8),
+    # Third take: the second level-up still had smoke clouds and a ground line.
+    ('FXR-level-up-c', 'A small radiant burst of golden and pale cyan sparkles and four pointed stars, floating in empty space, '
+     'no ground, no smoke, no clouds, no platform', 48, 'side',
+     'The sparkles burst outward and upward, twinkle, then fade out.', 8),
+]
 for id, subject, size, view, action, frames in FX:
     still(id, subject, size, view)
     anim(id + '-animation', id, action, frames)
@@ -84,6 +101,13 @@ ITEMS = {
 }
 for name, subject in ITEMS.items():
     still('ICONR-' + name, ICON + subject + ', centered, no border', 32)
+# Second takes after review.
+RETRY_ITEMS = {
+    'bronze_greaves': 'a pair of shiny bronze metal plate armour boots',
+    'apprentice_staff': 'a wooden wizard staff with a curled hooked top holding a small glowing pale cyan crystal, drawn diagonally',
+}
+for name, subject in RETRY_ITEMS.items():
+    still('ICONR-' + name + '-b', ICON + subject + ', centered, no border', 32)
 
 # Passive tree symbols.
 PASSIVE_ICONS = {
@@ -95,6 +119,9 @@ PASSIVE_ICONS = {
 }
 for name, subject in PASSIVE_ICONS.items():
     still('PASSR-' + name, 'A single skill icon of ' + subject + ', centered, no border, no frame', 32)
+# Second take: the first Keen Mind was a dark wheel.
+still('PASSR-keen_mind-b', 'A single skill icon of one open almond shaped eye with a glowing golden amber iris and small golden light rays, '
+      'centered, no ring, no wheel, no border, no frame', 32)
 
 # Wizard (CH-01) clips, animated on the existing character.
 ACTIONS = {

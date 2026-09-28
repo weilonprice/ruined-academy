@@ -1,0 +1,11 @@
+{
+  "description": "A burst of rising golden light: a column of pale gold and cyan sparkles and light motes floating upward in the air, no ground, no platform, no tile. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+  "image_size": {
+    "width": 64,
+    "height": 64
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}
