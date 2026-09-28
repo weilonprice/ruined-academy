@@ -2381,5 +2381,54 @@
       "91551865-be91-4a68-8eff-8fad3765427e"
     ],
     "files": 5
+  },
+  "HUD-mana-flask-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-life-flask-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-life-flask-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-mana-flask-b": {
+    "status": "needs_review",
+    "error": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "HUD-bar-frame-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-bar-frame-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-firebolt-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-firebolt-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-frost-nova-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-frost-nova-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
   }
 }

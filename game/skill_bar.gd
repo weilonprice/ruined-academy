@@ -3,7 +3,9 @@ extends Control
 # The skill bar: the bolt on the left mouse button, Frost Nova on the right.
 # A skill dims while there isn't enough mana to cast it.
 
-const SLOT := 24.0
+const SLOT := 32.0
+const BOLT_ICON := preload("res://assets/ui/skill_firebolt.png")
+const NOVA_ICON := preload("res://assets/ui/skill_frost_nova.png")
 const GAP := 6.0
 const FRAME := Color("5a4a33")
 const BACK := Color("0d0f14")
@@ -23,9 +25,9 @@ func _process(_delta: float) -> void:
 	queue_redraw()
 
 
-# [key label, mana cost, icon drawer] for each slot, left to right.
+# [key label, mana cost, icon] for each slot, left to right.
 func skills() -> Array:
-	return [["LMB", player.BOLT_MANA_COST, _draw_bolt_icon], ["RMB", player.NOVA_MANA_COST, _draw_nova_icon]]
+	return [["LMB", player.BOLT_MANA_COST, BOLT_ICON], ["RMB", player.NOVA_MANA_COST, NOVA_ICON]]
 
 
 func usable(cost: float) -> bool:
@@ -40,24 +42,9 @@ func _draw() -> void:
 	for index in range(list.size()):
 		var slot := Rect2(Vector2((size.x - width) / 2.0 + index * (SLOT + GAP), 0.0), Vector2(SLOT, SLOT))
 		draw_rect(slot, BACK)
-		list[index][2].call(slot.get_center())
+		draw_texture(list[index][2], slot.position)
 		if not usable(list[index][1]):
 			draw_rect(slot, DIM)
 		draw_rect(slot, FRAME, false, 1.0)
 		draw_string(font, Vector2(slot.position.x, slot.end.y + 8.0), list[index][0], HORIZONTAL_ALIGNMENT_CENTER, SLOT, 8, KEY_COLOR)
 
-
-func _draw_bolt_icon(center: Vector2) -> void:
-	var points := PackedVector2Array([Vector2(-7, 4), Vector2(3, -6), Vector2(7, -7), Vector2(6, -3), Vector2(-4, 7)])
-	for index in range(points.size()):
-		points[index] += center
-	draw_colored_polygon(points, Color("e78a3b"))
-	draw_line(center + Vector2(-4, 4), center + Vector2(4, -4), Color("fff0ae"), 2.0)
-
-
-func _draw_nova_icon(center: Vector2) -> void:
-	draw_arc(center, 8.0, 0.0, TAU, 24, Color("9fe8ff"), 2.0)
-	draw_arc(center, 4.0, 0.0, TAU, 16, Color("e8fbff"), 1.0)
-	for index in range(8):
-		var out := Vector2.from_angle(TAU * index / 8.0)
-		draw_line(center + out * 9.0, center + out * 11.0, Color("e8fbff"), 1.0)

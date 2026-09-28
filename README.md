@@ -71,6 +71,8 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 │   ├── make_breathing_idle.py   # Builds the subtle 2-frame idle from still poses
 │   ├── copy_prop_frames.py      # Copies a prop animation, keeping solid parts still
 │   ├── copy_effect_frames.py    # Copies reviewed spell and combat effect frames
+│   ├── build_hud_queue.py       # Queue for HUD art: flasks, bar frame, skill icons
+│   ├── make_hud_art.py          # Builds game/assets/ui from the reviewed HUD art
 │   └── make_item_icons.py   # Builds game/assets/icons and game/assets/passives from generated art
 ├── play.sh                  # Imports assets, then runs the game
 └── ASSET_MANIFEST.md        # Comprehensive art specification and production roadmap

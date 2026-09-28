@@ -1,8 +1,12 @@
 extends CanvasLayer
 
 # Wizard life and mana bars, short messages, and the prompt shown when the wizard falls.
-const LIFE_BAR := Rect2(8, 8, 104, 10)
-const MANA_BAR := Rect2(8, 20, 104, 6)
+# Where each bronze frame is drawn; the fill sits inside its border.
+const LIFE_BAR := Rect2(4, 4, 124, 22)
+const MANA_BAR := Rect2(4, 26, 124, 18)
+const FRAME_TEXTURE := preload("res://assets/ui/bar_frame.png")
+# The frame art's border widths (left, top, right, bottom); the middle stretches.
+const FRAME_BORDER := [7, 7, 8, 7]
 const LIFE_COLOR := Color("d66765")
 const MANA_COLOR := Color("5b7fd6")
 const FRAME_COLOR := Color("181c24")
@@ -10,7 +14,7 @@ const FRAME_COLOR := Color("181c24")
 const NOTCH := 10.0
 const MESSAGE_TIME := 2.5
 const LEVEL_COLOR := Color("f2c14e")
-const LEVEL_POSITION := Vector2(116, 17)
+const LEVEL_POSITION := Vector2(132, 18)
 
 var health := 1.0
 var max_health := 1.0
@@ -18,12 +22,16 @@ var mana := 1.0
 var max_mana := 1.0
 var message_tween: Tween
 var font := ThemeDB.fallback_font
+var frame_style := StyleBoxTexture.new()
 @onready var bar: Control = $Bar
 @onready var fallen: Label = $Fallen
 @onready var message: Label = $Message
 
 
 func _ready() -> void:
+	frame_style.texture = FRAME_TEXTURE
+	for side in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
+		frame_style.set_texture_margin(side, FRAME_BORDER[side])
 	bar.draw.connect(_draw_bars)
 	Character.changed.connect(bar.queue_redraw)
 	fallen.hide()
@@ -76,9 +84,13 @@ func _draw_bars() -> void:
 
 
 func _draw_bar(frame: Rect2, value: float, maximum: float, color: Color) -> void:
-	bar.draw_rect(frame, FRAME_COLOR)
-	var inner := frame.grow(-2)
-	bar.draw_rect(Rect2(inner.position, Vector2(inner.size.x * clampf(value / maximum, 0.0, 1.0), inner.size.y)), color)
+	bar.draw_style_box(frame_style, frame)
+	var inner := Rect2(frame.position + Vector2(FRAME_BORDER[0], FRAME_BORDER[1]),
+		frame.size - Vector2(FRAME_BORDER[0] + FRAME_BORDER[2], FRAME_BORDER[1] + FRAME_BORDER[3]))
+	var fill := Rect2(inner.position, Vector2(roundf(inner.size.x * clampf(value / maximum, 0.0, 1.0)), inner.size.y))
+	bar.draw_rect(fill, color)
+	# A lighter top row gives the fill some depth.
+	bar.draw_rect(Rect2(fill.position, Vector2(fill.size.x, 1)), color.lightened(0.35))
 	var notch := NOTCH
 	while notch < maximum:
 		var x := inner.position.x + inner.size.x * notch / maximum
