@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "8767af71-3027-4433-8f3c-9f1dfe231a1a",
+  "status": "completed",
+  "created_at": "2026-09-28T03:03:08.435083+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "fb582674-e3b8-4344-93c3-e020a3555ab8",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/fb582674-e3b8-4344-93c3-e020a3555ab8/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "VIL-C-villager-64",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Village woman, adult human in a simple dress with a white apron and headscarf, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery."
+  }
+}

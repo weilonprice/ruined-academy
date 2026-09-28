@@ -16,7 +16,7 @@ source_id, name, pin_from = sys.argv[1], sys.argv[2], int(sys.argv[3])
 sources = sorted((ROOT / 'art_library/assets' / source_id).glob('image_images_*.png'))
 target = ROOT / 'game/assets/props' / name
 target.mkdir(parents=True, exist_ok=True)
-for old in target.glob('frame_*'):
+for old in target.glob('frame_*.png'):
     old.unlink()
 base = Image.open(sources[0]).convert('RGBA')
 solid = base.crop((0, pin_from, base.width, base.height))

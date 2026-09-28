@@ -41,8 +41,11 @@ LARGEST_ONLY = {'tavern'}
 # colour: the forge's flagstones have see-through joints that let the grass show.
 FLOORS = {'forge': ((0, 56, 111, 133), (52, 56, 60, 255))}
 VILLAGERS = ['blacksmith', 'farmer', 'villager', 'militia', 'archer', 'lumberjack']
-# Row where the breathing idle's upper body starts to sink, for the 48 px villagers.
-IDLE_SPLIT = 26
+# The 64 px takes: the first villagers were 48 px and stood a head shorter than
+# the wizard, the enemies and the academy NPCs, which are all 64 px.
+VILLAGER_TAKE = '-64'
+# Row where the breathing idle's upper body starts to sink, as for the wizard.
+IDLE_SPLIT = 40
 
 
 def largest_shape(image):
@@ -97,6 +100,6 @@ shutil.copyfile(ART / 'VIL-T-grass-dirt-c/image_tileset_grid_png.png', OUT / 'te
 for villager in VILLAGERS:
     rotations = NPCS / villager / 'rotations'
     rotations.mkdir(parents=True, exist_ok=True)
-    for still in (ART / f'VIL-C-{villager}').glob('rotation_*.png'):
+    for still in (ART / f'VIL-C-{villager}{VILLAGER_TAKE}').glob('rotation_*.png'):
         shutil.copyfile(still, rotations / still.name.removeprefix('rotation_'))
     subprocess.run([sys.executable, str(ROOT / 'tools/make_breathing_idle.py'), f'npcs/{villager}', str(IDLE_SPLIT)], check=True)

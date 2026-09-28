@@ -1,0 +1,12 @@
+{
+  "name": "VIL-C-lumberjack-64",
+  "description": "Village lumberjack, burly adult human in a red plaid shirt carrying an axe, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+  "image_size": {
+    "width": 64,
+    "height": 64
+  },
+  "view": "low top-down",
+  "no_background": true,
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

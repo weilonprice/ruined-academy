@@ -1,0 +1,32 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 2.0
+  },
+  "id": "c109f0ac-f887-4654-b651-b24c26f0c681",
+  "status": "completed",
+  "created_at": "2026-09-28T03:03:08.710533+00:00",
+  "last_response": {
+    "status": "completed",
+    "character_id": "41793973-f953-4ab2-aed2-a3b0894e408f",
+    "storage_urls": {
+      "east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/east.png",
+      "west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/west.png",
+      "north": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/north.png",
+      "south": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/south.png",
+      "north-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/north-east.png",
+      "north-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/north-west.png",
+      "south-east": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/south-east.png",
+      "south-west": "https://backblaze.pixellab.ai/file/pixellab-characters/f20827c9-9bfd-4589-88c7-7ff342ee7365/41793973-f953-4ab2-aed2-a3b0894e408f/rotations/south-west.png"
+    },
+    "billing_usage": {
+      "type": "generations",
+      "generations": 2.0
+    },
+    "character_name": "VIL-C-blacksmith-64",
+    "directions_type": "8-directions",
+    "generation_mode": "pixen_v3",
+    "directions_count": 8,
+    "character_description": "Burly village blacksmith, adult human with a leather apron, rolled sleeves and a hammer, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery."
+  }
+}

@@ -102,9 +102,17 @@ func run() -> void:
 	await create_timer(NOVA.EXPAND_TIME + NOVA.FADE_TIME + 0.1).timeout
 	check(scene.get_children().filter(func(node: Node) -> bool: return node.get_script() == NOVA).is_empty(), "The nova effect cleans up")
 	var bar = scene.get_node("HUD/SkillBar")
-	check(bar.skills().map(func(skill: Array) -> String: return skill[0]) == ["LMB", "RMB"])
+	check(bar.skills().map(func(skill: Array) -> String: return skill[0]) == ["LMB", "RMB", "SPACE"])
 	player.mana = player.NOVA_MANA_COST - 1.0
 	check(bar.usable(player.BOLT_MANA_COST) and not bar.usable(player.NOVA_MANA_COST), "Dims a skill without enough mana")
+	check(bar.skills()[1][2] == 1.0 and bar.skills()[0][2] == 0.0, "The slot the mana can't pay for is dimmed")
+	check(bar.skills()[2][2] == 0.0, "The dash is ready")
+	check(player.dodge())
+	check(is_equal_approx(bar.skills()[2][2], 1.0), "A fresh dash shades its whole slot")
+	player.dodge_cooldown_left = (player.DODGE_TIME + player.DODGE_COOLDOWN) / 2.0
+	check(is_equal_approx(bar.skills()[2][2], 0.5), "The shade shrinks as the dash recharges")
+	player.dodge_time_left = 0.0
+	player.dodge_cooldown_left = 0.0
 
 	# No nova while carrying an item or dead.
 	player.cast_ready_in = 0.0

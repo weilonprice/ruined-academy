@@ -14,9 +14,18 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 - **Loot**: Path of Exile-style items with random affixes, rarities, and uniques; enemies drop loot with labels you click to pick up.
 - **Inventory**: A shaped-item grid backpack, ten equipment slots, and tooltips that compare stats; gear is saved between sessions.
 - **Progression**: Kills give experience; each level grows life, mana, and spell damage and grants a point for a small passive tree.
+- **World**: The ruined academy's courtyard, and a village down the east road with its forge, tavern, barn, sawmill, garden, training yard, and villagers.
 - **Visuals**: Cohesive dark-fantasy palette (desaturated stone, weathered bronze, ink-blue shadows, and vibrant elemental magic) generated with Pixel Lab.
 
 See [`game/README.md`](game/README.md) for how the prototype plays.
+
+### The village
+
+Follow the road east out of the courtyard to reach the village. Buildings, trees, and props block the way, villagers turn to watch you pass, and the road south leads back to the academy.
+
+![Exploring the village](docs/screenshots/village_play.png)
+
+![The whole village map](docs/screenshots/village_overview.png)
 
 ---
 
@@ -81,6 +90,7 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 │   ├── build_village_queue.py   # Queue for the village environment set
 │   ├── make_village_art.py      # Builds game/assets/village and the villager NPCs
 │   └── make_item_icons.py   # Builds game/assets/icons and game/assets/passives from generated art
+├── docs/screenshots/        # README screenshots
 ├── play.sh                  # Imports assets, then runs the game
 └── ASSET_MANIFEST.md        # Comprehensive art specification and production roadmap
 ```
