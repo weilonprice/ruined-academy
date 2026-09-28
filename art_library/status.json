@@ -2950,5 +2950,123 @@
       "999611d6-8437-4c23-ada4-7936800826b0"
     ],
     "files": 8
+  },
+  "CH-01-slash-east": {
+    "status": "completed",
+    "jobs": [
+      "8b45c0b7-01cd-48f2-94f1-2f834ef4a633"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-south-west": {
+    "status": "completed",
+    "jobs": [
+      "5ad837ec-da61-4e63-bab9-29ff492c9f42"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-south-east": {
+    "status": "completed",
+    "jobs": [
+      "0c90e781-283f-4292-8d13-594aa744f1eb"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-south": {
+    "status": "completed",
+    "jobs": [
+      "f8cfd363-959e-409e-8896-223e2672eba1"
+    ],
+    "files": 7
+  },
+  "FXM-wind-slash": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-wind-slash-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-wind-slash-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXM-wind-slash-animation": {
+    "status": "completed",
+    "jobs": [
+      "a71d12e9-13c7-4320-a7c7-e42c69ac4baf"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-east": {
+    "status": "completed",
+    "jobs": [
+      "db9e9128-8aac-4484-be6f-5dd94c84922e"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-south-west": {
+    "status": "completed",
+    "jobs": [
+      "41affe39-b661-4c0a-98a5-5bc474c87bf9"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-south": {
+    "status": "completed",
+    "jobs": [
+      "3d20ef6d-2e99-4e79-ba41-33b906884ec6"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-south-east": {
+    "status": "completed",
+    "jobs": [
+      "42690559-3dcf-4aa9-8e43-fd4b3b461d15"
+    ],
+    "files": 7
+  },
+  "FXM-wind-slash-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXM-wind-slash-b-animation": {
+    "status": "completed",
+    "jobs": [
+      "90568ba0-b364-474f-a7f5-de94b462632b"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-west": {
+    "status": "completed",
+    "jobs": [
+      "db652b25-0797-4664-911d-8ed09538dcb5"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-north-west": {
+    "status": "completed",
+    "jobs": [
+      "9f36baca-3de3-46e2-826f-803124571185"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-north": {
+    "status": "completed",
+    "jobs": [
+      "1694a77f-5b8b-4865-912f-91bb05fd4b9f"
+    ],
+    "files": 7
+  },
+  "CH-01-slash-b-north-east": {
+    "status": "completed",
+    "jobs": [
+      "0e249755-bae2-4148-b0b7-d119042f9633"
+    ],
+    "files": 7
   }
 }

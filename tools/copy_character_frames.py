@@ -2,14 +2,19 @@
 
 Usage: python3 tools/copy_character_frames.py CH-01 wizard idle move
        python3 tools/copy_character_frames.py CH-01 wizard cast2:cast --frames 3,4,5,6 --directions north west
+       python3 tools/copy_character_frames.py CH-01 wizard slash-b:slash --mirror west:east north-east:north-west
 Writes game/assets/<name>/<action>/<direction>/frame_NN.png. An action
 written source:target copies the art_library clip <character>-<source>-<dir>
 into <target>. --frames keeps only those clip frames (0 is the first
 generated frame); --directions limits which facings are replaced. Run a
 Godot import afterwards (./play.sh does this) so the new frames can load.
+--mirror SOURCE:TARGET replaces the TARGET facing with the SOURCE facing's
+frames flipped left to right, for a direction whose own clip came out wrong.
 """
 import argparse
 import shutil
+
+from PIL import Image
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +26,7 @@ parser.add_argument('name')
 parser.add_argument('actions', nargs='+')
 parser.add_argument('--frames', type=lambda text: [int(index) for index in text.split(',')])
 parser.add_argument('--directions', nargs='+', default=DIRECTIONS)
+parser.add_argument('--mirror', nargs='+', default=[])
 args = parser.parse_args()
 
 for action in args.actions:
@@ -45,3 +51,14 @@ for action in args.actions:
         for index, frame in enumerate(frames):
             shutil.copyfile(frame, target / f'frame_{index:02d}.png')
         print(f'{target_action}/{direction}: {len(frames)} frames from {source.name}')
+
+for action in args.actions:
+    target_action = action.partition(':')[2] or action
+    for pair in args.mirror:
+        source, target = pair.split(':')
+        folder = ROOT / 'game/assets' / args.name / target_action
+        for old in (folder / target).glob('frame_*.png'):
+            old.unlink()
+        for frame in sorted((folder / source).glob('frame_*.png')):
+            Image.open(frame).transpose(Image.FLIP_LEFT_RIGHT).save(folder / target / frame.name)
+        print(f'{target_action}/{target}: mirrored from {source}')

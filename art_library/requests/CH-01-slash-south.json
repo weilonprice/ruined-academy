@@ -1,0 +1,11 @@
+{
+  "animation_name": "slash",
+  "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+  "mode": "v3",
+  "frame_count": 6,
+  "keep_first_frame": false,
+  "directions": [
+    "south"
+  ],
+  "character_id": "65a7329b-8e3d-48e7-a9b6-2438769ac7e3"
+}

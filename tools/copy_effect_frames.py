@@ -24,6 +24,7 @@ CLIPS = {
     'ember_bolt': ('FXR-ember-bolt-b-animation', 0, 4),
     'ember_impact': ('FXR-ember-impact-b-animation', 0, 2),
     'level_up': ('FXR-level-up-c-animation', 0, 6),
+    'wind_slash': ('FXM-wind-slash-b-animation', 0, 5),
 }
 
 for name, (clip, first, count) in CLIPS.items():

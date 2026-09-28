@@ -1,0 +1,320 @@
+[
+  {
+    "id": "CH-01-slash-south",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-south-east",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-east",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-north-east",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-north",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-north-west",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-west",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    }
+  },
+  {
+    "id": "CH-01-slash-south-west",
+    "endpoint": "/animate-character",
+    "character": "CH-01",
+    "payload": {
+      "animation_name": "slash",
+      "action_description": "Draw a short glowing steel sword in the free hand and swing it in one fast wide horizontal slash toward the facing direction, staff kept in the other hand, then return to the starting stance. Keep facing the same direction the whole time. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    }
+  },
+  {
+    "id": "FXM-wind-slash",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single crescent shaped arc of pale teal and white magic wind, a curved blade of swirling air with thin speed streaks, curving around the right side with an empty centre on the left. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXM-wind-slash-animation",
+    "endpoint": "/animate-with-text-v3",
+    "first_frame": "FXM-wind-slash",
+    "depends": [
+      "FXM-wind-slash"
+    ],
+    "payload": {
+      "action": "The wind crescent sweeps forward in a fast arc, flares bright, then thins out and fades away.",
+      "frame_count": 6,
+      "no_background": true
+    }
+  },
+  {
+    "id": "HUD-skill-wind-slash-a",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a steel sword slashing through a pale teal crescent of magic wind, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-skill-wind-slash-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a steel sword slashing through a pale teal crescent of magic wind, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "CH-01-slash-b-south",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "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"
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-south-east",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "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"
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-east",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "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"
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-north-east",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "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"
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-north",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "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"
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-north-west",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAIBUlEQVR4nO1bfWwT5xn/nZ1LfLZxHBKSEdo4JKOQxqloRrJSAlJVRdFatkHZaEU0aMfYumr/rFWlrVKnCVTWSRRpUyVUZStVJLotFIHY1FFRUBjQtCGlawkfEUkaB5KQzMEf+Itc4tsf5/fNnX3+iP1eYFp+UuT4vfe9vM/vnq/3eS7AAhbwfw3uXm8gCSTOwKsHoqIue70XBCQIF499O5uwtNRGvweDEfz0j6d1IWHeCOAMvAQA6zftgs1uh7VQFnDUNayad/ZYG177wRr0DXlwpGcAqx1L8VTDMtSuKEXr7z5kTsJ8ESBt/PFrVOhkIGScPdY2uzAq4oma5djYVInrLi/e+biXKQkGVjdKAWnDMy+lFV6J9Zt2QYqKODXhx2l3GGf7x3Dd5UWx3cR8c7oSwBl4ae97v0G5oyLpnFHXMAI+PwI+P8odFSh3VCASDKKxZQeeLLWhrsiET+6E0X5uAOG708z3qCsBUlTE4hKz5rWAz09V3u/1YmJkhF6rergGANDQvA2lfD4ueQIAgFCYPQF5zO+oAGfgEQpNAcgHIAvt93pVc24NuQAABYIFl7svwrHym7AW2lC6bBkmRkYgRUX8ZNlibG9aBbc3zHyP8+EDAMiqrhTeM+6GZ9yNAsGCAsGCS+c7AACuvn6MuoYxJbphslhQt24rXXOkZ4B5FJgXAuJDnWfcnTCnbt1W9HYdpdcjQVk5BasAAGg/d02XPGDeNIBAS3gC59rNKhIAwGSxANAvE9SdALM5f07z40mIBINwrt1MEynW0D0KAEgZBrWgJCEcYO/4lNCNAM7AS4dPvInOU/J3Et8zhZIEPaGrBkzGhe2qh2tQVFaS8fr5IEF3HxAfAbI1h+XVj7LcFoWuiVD3GRc845MpPX86EA0YvN7Nalsq6Hoa5Ay81NC8LWtHdul8hyoR6u06+r91HE4VupxrNyeMKe1diooq4QGgxmnG4bZDTEnQ1QSkqIjGlh2a1y6cfF9zfrzQWnNYQhcCyJN/+vlXE+oAAZ8fEyMjmhqQCiQlZg32NTYDLx04vkc1RnIBJQI+P1x9/Rnfl6g/wDYtZk5AHm+SZmZmVGMHju9BcR5w5t883ONqFR68cjWlkxSsAiorORxuO0RD4n1NAAAp3o57u47CaDTi7aO/BaDWCFuhiGtfjQHQPig1PF6Mg2/9iZoMawKY+wDOwNOiBkFRWQnOHmvDz7/3OgBZIwh6e80wWbQrPTVOMzo//AyCadb+Y1ogsSKBKQFK+7/YI8LvU9f/SU7w4sZf0bH9HbvhdFYhFJrCib8DkWAeTJZp2M1TAIDByxfTRoac9sz0Zoq4T+z+5KcihgZu4OShg3jj3V/jL23XVGtI7K984EE0fGeD6hqx+3jEqkdM9q6LD3io/ml4blyGe3IEb/31dXjdQex+6ffY37EbB//Qq7koZtvypgx82pyAlS9gbgLrN+0CAHyj0gHPuBuvPLeHXIPZnA/BKtCCp9L7p8sLispKcjpTJAOz0yBn4KXm1hdobb/cUQHBKlDBlI6PVH3ngrmeIjMFEwIyLVeFQlP0qVsLbTS7q22sn1OdAACzMhkzDThwfA+eebaKfg/4/PQpS1ERxXnAhQsh1RrSABm8chXljgrUNtaz2k7GYEbA6fZuFOcBW1qAh1Z44Orrp6kuaYdP3rqdsK62sV7lC2ob6zMmgsXBiBkB3y704NT+v+H6rRBM5gJsbl2OGqcZNU65NTY5DXgn7moeamob6xHw+RPGtOYpUbdua85mwDQKrHDY8ear7bAKBjzxbAsdl6Iius+4Uq6dS/eYJXImgDPw0r6dTXj7I1nAHz2+BMNjd/D1P06gs+8mbIuKwBl4BPz6lLdzNQMmJnDbF8EvWhzY9lgZ/twpE9HZdxPbm1aheeVi5kUMlshJA4j97f2gB7ZFRRDFCJ5ylmPyzl0650jPALb+7Hlc7Q0lvU86CFYBo65h2Ox2rT3kRHDOJrC9aRUeWSnH8Nu+CPZ+0AMA+OV3V0MoSLx9tpWdSDCoSUCup8OcTUAwqYXcsqZaHi/I03yjgzQ704FEBSVhySpI91QDwpFZIcmbXQCoJsRD+RRJ00T51hiBq68fRWUltJ2WqmoUa61npQU5aYAUFbn2c9fwVZ8bXV+Oqa41t74Ao9GYsEYr3ClfnBi8chWjrmGaGpssloy1JhuwOVOnSEZ+uKsVAKgTJMmM8nWZSDBIn7BgFTQFTnYSJIlWtv0CJmFQioqc8qfygQfx6LfW0evekPY7Aja7HSbLtEq9sxE+toes9q5LX+DG2CgaHluNLz6Xv48NejXnZVIWvzXkQoEwS4pSaCWyDYe6EDAzM4P+rxMPPoBs4yaLJelT9Yy7qecPB8Jphc+1V6ALAVJU5L74/LymXwgHwmmbpfHXtQS/8M9/YejmjZzLYrr3BjNFMtWOB3niRqPx/qsJZoNMBFeoORCLXNOMzhe6ESBFRY6ExxqnGd5QPnWGS6vstO4fj4533gMw69Rin7q18edNA+zmKdjp054Vnjxdgh0b6hCMiLCYeAQjIs0s9YIerTEJkNU1lQ+I995kXTAiryGfeoN5Z2jfziYA8snwjY4uMg4AVKVjv2v+7fisUk/1B3Q0gcWFJrz8/QZMeiIY/k8A3ojcMq9eYk6p1noLHA/mBHR9OYYSe+KZv3pJZmFuvqFLb1D5X2Fb1lRj8s5dFC8qAKDPK+/3O6SYXUucgZdYdHMWsIAFLIAV/guhj5D3pvK16QAAAABJRU5ErkJggg=="
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-west",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "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"
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "CH-01-slash-b-south-west",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "first_frame": {
+        "type": "base64",
+        "base64": "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAPTUlEQVR4nO2bfVhUddrHPzPD6BkGYRDERHwDDRFsk0Vaklw3XzAzEzUzLS3LTB/Xnt5du3QtNu15ynYfL9PSMuMSc30JdX3alFwtMTYwtGQFVkDkSVDiZRiYF2eYOc8fwzkyAsO84O5e1/a9rrmuOef83u7v7/e77/t33+fAT/gJ/9ZQ/LMHAIgACqXaeeGwwT9wXF53pFCqxfbXosPm02AVSrWoUqm4+4HFHZ6dOrjd5drXPjwah6cFA9SCaLfbWT0nifgREQDU1Bp48cNcrweoUKrFe2YuwWI0Ej0qrtMyDXUVWIwBAHz16RYUSvUtWR0eNSbN+ttPppIQpaToBwcXL+vl5+9/UeQNCWJy2qIuBb8Z1ZersBiNCFot4CTD03F7goDuCiiUanFh6kiWpt+OrSmQHcfPse/MZdRqgZGD+jMmstsm2kMcP2s5kUMGd1uw+nKV/F//Yx29W8xogjQkpy0i/+jHIj1EgtKTQlG3BQGw4y/nyMq7iNlipqmplvwLJbz/RZFHHSmUajE5bZFHwrdH47U6emu0FOVlY24xY24xM3rcXGhTnv7CIwLiR0SQd6GBrLyLHKtp5BuTlXyLs//XtrzHa1ve66AcO4Og1VJ9uYqWJoOfw4bR4+Z61Gd38IgAo9HisueHOS0Wx2sNvPn8cwwo2ctzD9zpdkCiw4agbWX+4sFMnxXMhInd99t4rc6lflFeNkV52fK9hJR0v0nwiIDKagNmSyt2u93l/pQBoajVAlqt4La+tPxnPRztcr8rEgq/PNXhXtuyR3TYFBIR50/vRXTY/CLBIw1WWtkIwNCoQVyytXKptoWlg/sBsCItBoD6RkuX9UWHjcW/juOVBe9gs1kwW8wAbD2cwYSJcPK4a/lQaxUwxF17ipuuPRGjU3hsuuYkjwTgwJlyRIeNALXAK+ljiB8RwVcFVXxwophWm6Wr9kSFUs2E2ChiB+kAZOW597MM6ltvkCBp//bLX0JRXnaPO0UebQFAsT+/hINnK3n7yVRenZuC3W5naGQwR09VuBVeoVSL7+x9HYDCaiNhOoGjJU0Ubnqak2vnMXfaGgDu+JnJxfR1Bn9muit4SgCAwm63kxCllAeTW1hNZm6Ju5lHdNi4+n9NABiaG9l8tJydi8cRlzqeT74uYnZSDMtmrEEIDOAX4zRuB9CT5k+C1y7s578dT1VjAMWXGtj02XnsdnuXy1KhVItbD2ewbIZzlodGDeK/Vy7kgUlx9L17CQBWm1VWrm/s+A0nj1/FYgzodAtI6Mmt4M0KQHTYyD7dgMFoxWRuZeaYod3WMZms8v9PX76P4cKPAFR/9ibF5WVMmvQMlVeucHLtPF5dvEG2FKH9w70Zms/wigBA8d6xs+R9V0Od3kx983W3+1J02CgqqJGvq8uq0emcJlPQhdH/2gn2vHI7DQdeA+DIyunkf3mZqTPCEbStDIjWdWizzfT1mCL0lgAAxcGzlQBMTx3KM1PGeGyHp286gl7vai4FXRhxqeMBCNIF8dHGDwCIuk1FTYXepWybE/RPsQIusNvt1DdfJyFKidnS6q6oYsdbWwkPG4hKpQJApxMoPLHXbfuvLt5Ai8Hscq8oL5uElHToYSXoNQEKpVoM7hPKkll3kH26gczcErdKcPys5TTqrxKXPAOA6IWbGNBvKN8cPMLxnXsA+ObgEQAmvrFPrqs39eK62Si7v23C99gZQB6j1xWUanHbynv59kItH5wo9sgKrEhfx/SlywA4tGUzAObCXQAU535F4sptcp2HlizAqg7l4Obfo1CqSUhJRxOkkeMBknXoKUvgczhrYarTM3S3AlLH/Ur8a34er29/md8t/wNmi5kHl6+QhZOwZO1amo1GAMzm6xzaspkRd05B1y+ciIEDCQq5cXiqKP2RuqsmWgxm9r6/02cZJHgVzWgPo8VGuK5rxyVALYiP/iaNwrnf0jc8kEdffolzeWUc2rKZ5x8cyzuHClAo1cx74QV2vPGGy0HrnplLELStDI0ZRGKSkyjJl5AwecETTHnsaXKyPhL9WQk+r4C3n0zl+9K6LldAgFoQQ3W3kfHRM6xIX8fm7HWYTFYe71tH2JStiA4bFzPnEvfkYRLvfViuJ2i1BOt0TJ8VDMCaJ95z0SESzp/e2z6S7DMBPq+A9lAo1S6zICmpMVOn0FBnYupjz8sz+HVSDBpBw/THFgAm7HY7Mx8ZghAYQGBgL7lNqXxCSjoTkxPl+3/LLwScyrAn9IDXBEjC5X13w8ExF+5Ck/iorJm3Hs4A4NM/VvBfz77Hsxue4H93wsLUkdwRG863V62M/Fl/Nu46xtjJ83l18Qa5rbbzvaz149sJDzAkdjiXS8u8HXaX8JoAlUpFS8HHAGSs/wPmbbuoKconuE8oAG8/MYbi7QdIWTa7za2dScaKd1zaiAjWIgT2Rh//MNFAxMCXMOj1LhoeXIWfnQb1rQDB5H8ZRovBTFzCAvZtz/JLB3hNgN1ul+331+evYtHX88VnBZx79zHWbTvG6qxSVs0cxh/X7mTS2sexGAMYO3k+BTm7qdEOI6y2hqcmRbJ+7S7umv00AEEhwQSFBBM5ZDAVF4oBuG420tJkICgkmNlp8NDUVS6Wo6fgtSMkOmxMfHweEx+fR1if3kROW8XgWDUjnngXo8WG1WqS44cNdSaGx4iYW5xenUUTRfbZegBWpA0h/1hHj1DQaklISefiuWPUXrlCcoqVh6auYvS4uSSkpLv8egI+ucLHd+7h+M49LBgVhtVmRRAjZTPmDHm1Ut98HYvpuotL23itjoVPLeSDL6oB+I+7QzqQYGnzBwAKcnbzwrwMRo+bS3xyovzTBLmaX388Q58OQ9M3HSFyeCR9h0YTqruNCa/vkX39aQmRGC02CquNlHx3zaViUV42f2+2EH3f/ez6ohxwknApJwuAliaDvFpunmVJ+wNEj4pDE6SRn0t9+wKf/QDpf3jYQOrqr3Qo89CSBQDsfX+nrNXbh7Tvf/wlhKJPiR0aSt8QgSO5lVQaFQQNSnJpRzoHSApRSpVJRBXlZaNSqdxGpdzK4kslcJIwITaKU2U1nXUuSgqr/SxKBKhUKqJHO33bivPHGR0VwbSxAzFfb6WqppkDZ8o79Dd28nwAXnrOmVMs+NsNl3jf9iyf/QG/HaF7hg/gZOkPN5sixc3x+uL8wwAds8vn7Jy7XINOUFFYbWRybF9mJ8XIDUlkSIKDZA57Bn4RMLhfEGGhAidLf+i2rKQk40dE8GlOKQDb1k/h+1Kn7U9NjOSbbXmAU+gJsVGE9enNwtSRZOaWcL6iEYu5lY/ePIDVasJms2C1WZmVPs0piFoQfdkGPhOgUqkICxUwmd1PhyZIQ0HObnkrLNiQjRRY/fzEZYwWG1pBjVYrYLaYOXCmHJVKxap50S5p+IwV77Bt5b2sXxCLwWjlSm0L9Y0WMvf/iRF3TuHiuWM+yeEzAXa7naSESI6equj0uUKpFh9cvoLqiw3yvSGxwynOV3H/7053SLNl5pYgHbAOfneNtftqGRcjcOBso1xmy6Fi9PYAVs8awUVzK0aLMx6p6xcuKVmvvcIeOQx1BY2mt/x/SOxwgkKCsdvtbNyzhj0flsuaHKD87OcMiAjm+9I6DM2NPDVpDFsOFVP6yUyee/0EmbklTBs7kL4hAquzSrFaTSRGOoMkglbr0pY38MkRkmA0dp0PlFCQs5uxk+cTFBIs3xsU3IvoUXGyaYtPTiThnnQWbPgMjeCck8pqAxUNFmIfOczBNn/ijb15XKltYdXMYTxy10BZ9wha37XiLVsBw+JGy/8LcnYTPcp5QhQdNhctLpHgfGVmPu/n7AagXm/hyQlD+PDkZZqaanl1bgoA6/ef6dCXLtBKDaARNJhM3qXPfF4BGkHDsne/lGesPRRKtXjXtCmd1pv33Jssm7FGDnG1zwdGj4rj4WczSEhJl5OnhuZGnn9wrFxm9Zwklk5KQArJtUfMmKleu8U+E2AyGRTaQOeyXpg6ssuORYeNrYczCA5xzkxyitXleVevzCSkpPP7P50D4NcPje8w85IC9Bd+6YCmplp+PirCbZnktEUsm7GGxCQ1wSE3EqWdYf/mdcCNbTEsZgxAh2TKzbmIoGD3SVV38IuArs7nN6fLVCoVy2asYeQokbde2sSwuNEu20CC3W7nzzucwZPQ/uEM/8WdAIxZ8S4VmSt5asbd/HC1pUM/w+P7ddl3d/CLAKCr12MUn7z1JgB1FcWyzX9hXkaX7Uhbw9DcyISJMHPebeRkfQRAdHwiwx7dSPTCTWTmlpCZW0Kp+g5uT7wfACHwhh7yNnHitxVwYwoVezZuFKUZaR8Kv1R8HnBmjpNTIDCwFyaTc/ai4xPlgOi4lFRnOatI4tgJAOhNBqr+fgGA3hqnHxAY2IsB0To5l+jNKriljpDklSmUatFkbmX7f6ZRWW2gtLKRA2fKeX7u2o6VrAFMTrsPAF2fG8PTN7dSVnaVqsoL2O12rpuN9NZoOwg7IFrH+dOej9HvLfDthVruiHWfyxcdNsJ0Agajlb4hAoMH9GF2UgxzkkcyJ3mkpEsUgOJS+VmgnfChTktTVnYVejnfVPvts8u5eO6YS3wBIC4hEF2gq5XpDn4T8PNRETQ0desRKtbvP8MrO52nPZO5Fa3gVKBtL125+O85R/9M9ZVGqq80oq9qoOxSAzpdIJeKzzM7KYbX/mcLosOmEB02haSIJcH3bc8iMDAYT+H3FtBqBer1tW7LtFdKL36Y67as6LCxaPxoPv7qhIuVUalULnGCziDlCr3xBv0iQHTYMBotXb4jIAm+dFICYTqBer2FA2cb+eWwG5Zjf35Jp3UXjR/tsrW+L61z6/zs254FvmS7va3QoQGlWlw6KaHDK/MKpVpcPSeJviFOYRuaLNTrnWRV/dhCWB/nSbGzLQCIG5f8yuWGREAn5eUvTnwJi/WIFajoPxZwfWtcdNj44WqLi+MCcPC7a0yO7dtdk4oXP8ztYMu7+GBC0e6Z1+gRAqQvO26CIjO3pFOH5MCZG0EOd7MWHjaQqCAHMf0C29Ut9ysVdjN6hIBTB7d3Koi/A/3lMIFwnYajJU20mB0uuqOn4DcBt/KDJilnICnQOr1vUR93uKWeoK+QXsCQUN92Gqxvvt7jffntCN0qtP9AY8QQHWZLK6fKanp8xf1LrgDRYaNOb+6w5G+OJPcE/hW+HO0UnR1pb6W++Qn/rvh/N9LJn2+k2y0AAAAASUVORK5CYII="
+      },
+      "action": "The hooded wizard pulls a short straight steel sword into his free hand and slashes it once in a fast wide horizontal arc in front of him, the wooden staff stays in his other hand, then he returns to the starting pose. Same facing throughout, no spell effects, no flash.",
+      "frame_count": 6,
+      "no_background": true,
+      "drift_threshold": 0
+    }
+  },
+  {
+    "id": "FXM-wind-slash-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single thin curved crescent line of pale teal and white wind, like a sword swoosh trail, the arc bends around the right side, nothing inside the curve. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXM-wind-slash-b-animation",
+    "endpoint": "/animate-with-text-v3",
+    "first_frame": "FXM-wind-slash-b",
+    "depends": [
+      "FXM-wind-slash-b"
+    ],
+    "payload": {
+      "action": "The wind swoosh sweeps forward in a fast arc, flares bright, then thins out and fades away.",
+      "frame_count": 6,
+      "no_background": true
+    }
+  }
+]
