@@ -57,7 +57,7 @@ position = Vector2(1560, 490)
 script = ExtResource("travel")
 destination = "res://village.tscn"
 size = Vector2(40, 140)
-arrive_at = Vector2(800, 880)
+arrive_at = Vector2(80, 480)
 
 [node name="ToVillageSign" type="Label" parent="."]
 offset_left = 1440.0

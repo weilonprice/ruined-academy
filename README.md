@@ -21,7 +21,7 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 
 ### The village
 
-Follow the road east out of the courtyard to reach the village. Buildings, trees, and props block the way, villagers turn to watch you pass, and the road south leads back to the academy.
+Follow the road east out of the courtyard to reach the village. Buildings, trees, and props block the way, villagers turn to watch you pass, and the road west leads back to the academy.
 
 ![Exploring the village](docs/screenshots/village_play.png)
 
