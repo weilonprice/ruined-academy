@@ -1944,5 +1944,120 @@
     "status": "completed",
     "jobs": [],
     "files": 1
+  },
+  "FXR-firebolt": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-hit-spark": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-firebolt-animation": {
+    "status": "completed",
+    "jobs": [
+      "bfc5e9f2-747c-488e-8320-26bb8c93c030"
+    ],
+    "files": 5
+  },
+  "FXR-hit-spark-animation": {
+    "status": "completed",
+    "jobs": [
+      "5d579002-bd9a-4c6d-bd0a-65a03f7f3b11"
+    ],
+    "files": 5
+  },
+  "CH-01-cast2-north": {
+    "status": "completed",
+    "jobs": [
+      "358dc239-4713-4b8b-988e-472ab24ed0e3"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-north-east": {
+    "status": "completed",
+    "jobs": [
+      "db8458f9-243b-444f-b8ad-29fd30142bda"
+    ],
+    "files": 7
+  },
+  "FXR-fire-impact": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-frost-nova": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-chill": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-bolt": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-bolt-animation": {
+    "status": "completed",
+    "jobs": [
+      "929ca1de-b59b-4929-ab13-ae86b4b59df9"
+    ],
+    "files": 5
+  },
+  "FXR-fire-impact-animation": {
+    "status": "completed",
+    "jobs": [
+      "7dc49fba-aa8d-4ddd-aa62-5fafc5738580"
+    ],
+    "files": 7
+  },
+  "FXR-frost-nova-animation": {
+    "status": "completed",
+    "jobs": [
+      "1ab42240-2d5d-4d76-8596-a415091d7dfb"
+    ],
+    "files": 7
+  },
+  "FXR-chill-animation": {
+    "status": "processing",
+    "jobs": [
+      "8aa192a8-4114-4aa5-9d74-64ae424c196d"
+    ]
+  },
+  "FXR-ember-impact": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-level-up": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-scholars_hood": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-impact-animation": {
+    "status": "processing",
+    "jobs": [
+      "3bfa5bd8-7103-4a13-922b-cfa1714be46c"
+    ]
+  },
+  "FXR-level-up-animation": {
+    "status": "processing",
+    "jobs": [
+      "3278851a-f0a7-4966-b115-c7f4bb395a9e"
+    ]
+  },
+  "ICONR-warden_helm": {
+    "status": "submitting"
   }
 }

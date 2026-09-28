@@ -1,0 +1,11 @@
+{
+  "description": "A single small burst of orange and yellow fire sparks exploding outward from the centre, magic spell impact. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+  "image_size": {
+    "width": 48,
+    "height": 48
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}
