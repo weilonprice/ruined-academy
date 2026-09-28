@@ -42,6 +42,9 @@ const FLASKS := [
 ]
 const LOOT := preload("res://loot.gd")
 const LEVEL_UP_SCRIPT := preload("res://level_up_effect.gd")
+const TRAVEL := preload("res://travel.gd")
+# Where the wizard's feet meet the ground, below the middle of his sprite; scenery footprints block this point.
+const FEET := Vector2(0, 28)
 
 var facing := "south"
 var casting := false
@@ -76,6 +79,7 @@ func _ready() -> void:
 	refresh_stats()
 	health = max_health
 	mana = max_mana
+	TRAVEL.arrive(self)
 	_play("idle")
 
 
@@ -104,8 +108,7 @@ func _physics_process(delta: float) -> void:
 		pickup_target = null
 	else:
 		movement = _walk_to_pickup()
-	position += movement * SPEED * delta
-	position = position.clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
+	position = _slide(movement * SPEED * delta).clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
 	# A cast or a flinch finishes before walking resumes; movement continues underneath.
 	if casting or hurting:
 		return
@@ -349,12 +352,26 @@ func _dodge_step(delta: float) -> void:
 	dodge_time_left -= step
 	if is_zero_approx(dodge_time_left):
 		dodge_time_left = 0.0
-	position += dodge_direction * DODGE_SPEED * step
-	position = position.clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
+	position = _slide(dodge_direction * DODGE_SPEED * step).clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
 	afterimage_time_left -= step
 	if afterimage_time_left <= 0.0:
 		afterimage_time_left = AFTERIMAGE_INTERVAL
 		_spawn_afterimage()
+
+
+# Where a step would take the wizard, sliding along any scenery in the way.
+func _slide(step: Vector2) -> Vector2:
+	for candidate in [position + step, position + Vector2(step.x, 0), position + Vector2(0, step.y)]:
+		if not _blocked(candidate):
+			return candidate
+	return position
+
+
+func _blocked(point: Vector2) -> bool:
+	for obstacle in get_tree().get_nodes_in_group("obstacles"):
+		if obstacle.footprint_rect().has_point(point + FEET):
+			return true
+	return false
 
 
 # A fading, tinted copy of the current frame left behind along the dash.

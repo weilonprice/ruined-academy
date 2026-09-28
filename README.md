@@ -25,7 +25,12 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 ```
 ├── game/                    # Godot 4.7 project
 │   ├── project.godot        # Engine configuration (640x400 native viewport, GL Compatibility)
-│   ├── main.tscn            # Primary playable combat scene
+│   ├── main.tscn            # Primary playable combat scene (the academy courtyard)
+│   ├── village.tscn         # The village map, east of the courtyard
+│   ├── wizard.tscn / hud.tscn # The wizard and the HUD, shared by both maps
+│   ├── scenery.gd           # A village art piece: y-sorted, scaled, optional blocking footprint
+│   ├── village_ground.gd    # Village grass and dirt roads from a corner tileset
+│   ├── travel.gd            # Road ends that move the wizard between maps
 │   ├── player.gd            # Wizard: movement, casting, dodge, flasks, life and mana
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── frost_nova.gd        # Frost Nova: cold burst around the wizard that chills
@@ -74,6 +79,7 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 │   ├── build_hud_queue.py       # Queue for HUD art: flasks, bar frame, skill icons
 │   ├── make_hud_art.py          # Builds game/assets/ui from the reviewed HUD art
 │   ├── build_village_queue.py   # Queue for the village environment set
+│   ├── make_village_art.py      # Builds game/assets/village and the villager NPCs
 │   └── make_item_icons.py   # Builds game/assets/icons and game/assets/passives from generated art
 ├── play.sh                  # Imports assets, then runs the game
 └── ASSET_MANIFEST.md        # Comprehensive art specification and production roadmap

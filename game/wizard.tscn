@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://player.gd" id="2_player"]
+
+[node name="Wizard" type="Node2D"]
+script = ExtResource("2_player")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1600
+limit_bottom = 960
+position_smoothing_enabled = false
