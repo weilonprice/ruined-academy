@@ -7,6 +7,8 @@ Usage: python3 tools/make_hud_art.py
   flask is the same flask with its red liquid shifted to blue, so the pair
   matches. LIQUID_TOP is the first liquid row in the cropped image.
 - skill_firebolt.png / skill_frost_nova.png: 32x32 skill bar icons.
+- exp_frame.png: the left one of the two bars the generator drew side by
+  side, stretched as a nine-patch around the experience fill.
 """
 import colorsys
 from pathlib import Path
@@ -51,6 +53,7 @@ outputs = {
     'mana_flask': cropped(recolour_liquid(flask, 222)),
     'skill_firebolt': generated('HUD-skill-firebolt-b'),
     'skill_frost_nova': generated('HUD-skill-frost-nova-a'),
+    'exp_frame': generated('HUD-exp-frame-a').crop((3, 7, 84, 25)),
 }
 for name, image in outputs.items():
     image.save(OUT / f'{name}.png')

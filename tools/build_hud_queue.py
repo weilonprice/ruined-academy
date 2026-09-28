@@ -23,6 +23,8 @@ SUBJECTS = [
      'with a bright yellow core and a flame trail, centered, no border', 32, 32),
     ('HUD-skill-frost-nova', 'A single spell icon of a ring of pale cyan ice shards bursting outward '
      'from a bright white frost core, centered, no border', 32, 32),
+    ('HUD-exp-frame', 'A very long and very thin horizontal experience bar frame with a thin polished gold trim border, '
+     'a small round amber gem at each end, the long inner slot is empty and dark, flat front view, fills the width', 192, 32),
 ]
 queue = []
 for id, subject, width, height in SUBJECTS:

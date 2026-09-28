@@ -61,6 +61,9 @@ def download_images(value, folder, prefix='image'):
     elif isinstance(value, list):
         for index, child in enumerate(value):
             download_images(child, folder, prefix + '_' + str(index).zfill(3))
+    elif isinstance(value, str) and value.startswith('iVBORw0KGgo'):
+        # A bare base64 PNG (map objects' "image", tiles-pro's "tileset_grid_png").
+        (folder / (prefix + '.png')).write_bytes(base64.b64decode(value))
     elif isinstance(value, str) and value.startswith('https://') and '.png' in value:
         # Public asset URL. Never forward the API authorization header here.
         # Optional: the same frames also arrive inline as base64 "images".
