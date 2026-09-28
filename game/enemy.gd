@@ -5,6 +5,7 @@ const ANIMATIONS := preload("res://animation_library.gd")
 const WORLD := preload("res://world.gd")
 const HOSTILE_BOLT_SCRIPT := preload("res://enemy_projectile.gd")
 const LOOT := preload("res://loot.gd")
+const EFFECT := preload("res://effect.gd")
 # Enemies have four facings; the index follows the angle, clockwise from east.
 const DIRECTIONS := ["east", "south", "west", "north"]
 const DEATH_FADE := 0.6
@@ -43,6 +44,8 @@ var dying := false
 var hit_flash: Tween
 var chilled_left := 0.0
 var stats: Dictionary
+# Frost crystals circling the enemy while it is chilled.
+var chill_effect: AnimatedSprite2D
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 
@@ -54,6 +57,10 @@ func _ready() -> void:
 	sprite.sprite_frames = ANIMATIONS.build("res://assets/enemies/" + kind, DIRECTIONS, speeds, [stats.attack, "hurt", "death"])
 	sprite.animation_finished.connect(_on_animation_finished)
 	sprite.frame_changed.connect(_on_frame_changed)
+	chill_effect = EFFECT.looping("chill", 6.0)
+	chill_effect.position = Vector2(0, -14)
+	chill_effect.visible = false
+	add_child(chill_effect)
 	_face(_player())
 	_play("idle")
 
@@ -107,6 +114,7 @@ func take_damage(amount: float, critical := false, chill := 0.0) -> void:
 	if health <= 0.0:
 		# Stop being a target at once; the body stays for the death animation.
 		dying = true
+		chill_effect.visible = false
 		collision_layer = 0
 		remove_from_group("enemies")
 		_play("death")
@@ -141,6 +149,7 @@ func _update_chill(delta: float) -> void:
 		chilled_left = maxf(0.0, chilled_left - delta)
 	sprite.speed_scale = speed_factor()
 	var tint := CHILL_TINT if is_chilled() else Color.WHITE
+	chill_effect.visible = is_chilled() and not dying
 	# Keep the current alpha: the death fade animates it.
 	modulate = Color(tint, modulate.a)
 
@@ -170,6 +179,7 @@ func _on_frame_changed() -> void:
 		bolt.direction = bolt.global_position.direction_to(player.global_position)
 	elif global_position.distance_to(player.global_position) <= stats.reach + REACH_SLACK:
 		player.take_damage(stats.damage, stats.damage_type)
+		EFFECT.spawn(get_parent(), "hit_spark", player.global_position + Vector2(0, -16), 20.0)
 
 
 func _on_animation_finished() -> void:

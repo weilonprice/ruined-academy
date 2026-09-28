@@ -1,0 +1,11 @@
+{
+  "animation_name": "dodge2",
+  "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+  "mode": "v3",
+  "frame_count": 6,
+  "keep_first_frame": false,
+  "directions": [
+    "west"
+  ],
+  "character_id": "65a7329b-8e3d-48e7-a9b6-2438769ac7e3"
+}

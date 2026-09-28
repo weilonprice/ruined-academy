@@ -1,0 +1,1073 @@
+[
+  {
+    "id": "FXR-firebolt",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small blazing orange fireball spell projectile flying to the right, bright yellow white core at the front, short flickering flame tail trailing to the left, side view. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-firebolt-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The flame tail flickers in a seamless loop; the fireball stays in place, pointing right.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FXR-firebolt",
+    "depends": [
+      "FXR-firebolt"
+    ]
+  },
+  {
+    "id": "FXR-fire-impact",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small burst of orange and yellow fire sparks exploding outward from the centre, magic spell impact. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-fire-impact-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The fire burst expands outward and dissipates into sparks, fading to nothing.",
+      "frame_count": 6,
+      "no_background": true
+    },
+    "first_frame": "FXR-fire-impact",
+    "depends": [
+      "FXR-fire-impact"
+    ]
+  },
+  {
+    "id": "FXR-frost-nova",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A thin flat ring of pale cyan ice shards and frost lying on the ground, seen from above, hollow empty centre, white and cyan ice crystals pointing outward around the ring. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 128
+      },
+      "no_background": true,
+      "view": "high top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-frost-nova-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The ice ring expands outward, shards glinting, then shatters and fades away.",
+      "frame_count": 6,
+      "no_background": true
+    },
+    "first_frame": "FXR-frost-nova",
+    "depends": [
+      "FXR-frost-nova"
+    ]
+  },
+  {
+    "id": "FXR-chill",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A few small pale blue snowflakes and frost crystals floating in a loose cluster, frost status effect, empty centre. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-chill-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The snowflakes drift slowly and twinkle in a seamless loop.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FXR-chill",
+    "depends": [
+      "FXR-chill"
+    ]
+  },
+  {
+    "id": "FXR-ember-bolt",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small hostile dark ember red fire bolt projectile flying to the right, glowing crimson coal core, smoky dark red flame tail trailing to the left, side view. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-ember-bolt-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The dark red flame tail flickers in a seamless loop; the bolt stays in place, pointing right.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FXR-ember-bolt",
+    "depends": [
+      "FXR-ember-bolt"
+    ]
+  },
+  {
+    "id": "FXR-ember-impact",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small burst of dark ember red and crimson fire and smoke exploding outward from the centre. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-ember-impact-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The ember burst expands outward and dissipates into smoke, fading to nothing.",
+      "frame_count": 6,
+      "no_background": true
+    },
+    "first_frame": "FXR-ember-impact",
+    "depends": [
+      "FXR-ember-impact"
+    ]
+  },
+  {
+    "id": "FXR-hit-spark",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small pale gold and white impact spark, a sharp four pointed starburst with a few flying sparks. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-hit-spark-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The spark flashes bright then shrinks and fades to nothing.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FXR-hit-spark",
+    "depends": [
+      "FXR-hit-spark"
+    ]
+  },
+  {
+    "id": "FXR-level-up",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A glowing golden ring of light on the ground seen at an angle, with pale gold and cyan light motes and sparkles rising upward from it, celebratory magic burst, hollow centre. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 96,
+        "height": 96
+      },
+      "no_background": true,
+      "view": "low top-down",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-level-up-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The golden ring expands while light motes rise upward, then everything fades out.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FXR-level-up",
+    "depends": [
+      "FXR-level-up"
+    ]
+  },
+  {
+    "id": "FXR-ember-bolt-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small dark red fireball spell projectile flying to the right, glowing crimson and ember orange flames, dark red flame tail trailing to the left, side view. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-ember-bolt-b-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The flame tail flickers in a seamless loop; the fireball stays in place, pointing right.",
+      "frame_count": 4,
+      "no_background": true
+    },
+    "first_frame": "FXR-ember-bolt-b",
+    "depends": [
+      "FXR-ember-bolt-b"
+    ]
+  },
+  {
+    "id": "FXR-ember-impact-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small burst of dark red and crimson fire sparks exploding outward from the centre, floating in the air, no ground, no rocks, no smoke pile. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-ember-impact-b-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The burst expands outward and dissipates into sparks, fading to nothing.",
+      "frame_count": 6,
+      "no_background": true
+    },
+    "first_frame": "FXR-ember-impact-b",
+    "depends": [
+      "FXR-ember-impact-b"
+    ]
+  },
+  {
+    "id": "FXR-level-up-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A burst of rising golden light: a column of pale gold and cyan sparkles and light motes floating upward in the air, no ground, no platform, no tile. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-level-up-b-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The golden sparkles rise upward and spread, then fade out.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FXR-level-up-b",
+    "depends": [
+      "FXR-level-up-b"
+    ]
+  },
+  {
+    "id": "FXR-level-up-c",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A small radiant burst of golden and pale cyan sparkles and four pointed stars, floating in empty space, no ground, no smoke, no clouds, no platform. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 48,
+        "height": 48
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "FXR-level-up-c-animation",
+    "endpoint": "/animate-with-text-v3",
+    "payload": {
+      "action": "The sparkles burst outward and upward, twinkle, then fade out.",
+      "frame_count": 8,
+      "no_background": true
+    },
+    "first_frame": "FXR-level-up-c",
+    "depends": [
+      "FXR-level-up-c"
+    ]
+  },
+  {
+    "id": "ICONR-scholars_hood",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of an empty midnight blue cloth scholar's hood with teal lining, a soft cowl, no face inside, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-warden_helm",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a bronze warden's helmet with a narrow visor slit and a short crest, dark fantasy armour, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-cloth_wraps",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a pair of beige cloth hand wraps, bandage gloves wound around empty hands shapes, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-bronze_gauntlets",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a pair of bronze plated armoured gauntlets, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-worn_sandals",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a pair of worn brown leather sandals with straps, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-bronze_greaves",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a pair of bronze armoured boots, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-rope_belt",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a coiled tan hemp rope belt tied in a simple knot, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-scholars_sash",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a folded teal cloth sash belt with a small gold clasp, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-copper_amulet",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a round copper medallion amulet hanging on a thin chain, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-quartz_amulet",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a pale violet quartz crystal pendant hanging on a thin silver chain, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-copper_focus",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a small copper orb, a wizard's magical focus resting on a little dark wooden stand, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-quartz_focus",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a clear pale cyan quartz crystal orb, a wizard's magical focus resting in a small silver cradle, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-apprentice_staff",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a plain wooden wizard staff with a small pale cyan crystal at the top, drawn diagonally from bottom left to top right, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-rime_staff",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a frosted pale blue wooden wizard staff topped with a jagged white and cyan ice crystal, drawn diagonally from bottom left to top right, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-warded_robe",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of an empty dark blue wizard robe garment with bronze trim and faint glowing protective sigils, shown flat with no wearer, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-ruby_ring",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a gold ring set with a large faceted red ruby gemstone, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-topaz_ring",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a gold ring set with a large faceted amber yellow topaz gemstone, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-bronze_greaves-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a pair of shiny bronze metal plate armour boots, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "ICONR-apprentice_staff-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single inventory icon of a wooden wizard staff with a curled hooked top holding a small glowing pale cyan crystal, drawn diagonally, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PASSR-vitality",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a glowing red heart, symbol of life, centered, no border, no frame. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PASSR-deep_reserves",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a glowing deep blue mana droplet, symbol of magical energy, centered, no border, no frame. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PASSR-spell_mastery",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a bright orange arcane starburst of spell power with a glowing core, centered, no border, no frame. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PASSR-frostweaving",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a pale cyan ice snowflake crystal, centered, no border, no frame. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PASSR-keen_mind",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of a glowing golden eye with a sharp pupil and small rays, symbol of focus and precision, centered, no border, no frame. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "PASSR-keen_mind-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single skill icon of one open almond shaped eye with a glowing golden amber iris and small golden light rays, centered, no ring, no wheel, no border, no frame. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "CH-01-cast2-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-cast2-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "cast2",
+      "action_description": "Cast a spell while facing the same direction the whole time: raise the staff in one hand and thrust the free hand forward, then return to the starting pose. Hold the staff firmly in every frame. No spell effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-dodge2-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "dodge2",
+      "action_description": "Quick evasive dash: drop into a deep low crouch leaning strongly forward with the robe flaring behind, then spring back up to standing. Big clear pose change, staff held in hand, no effects.",
+      "mode": "v3",
+      "frame_count": 6,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-south",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-south-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south-east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-north-east",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north-east"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-north",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-north-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "north-west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "west"
+      ]
+    },
+    "character": "CH-01"
+  },
+  {
+    "id": "CH-01-move2-south-west",
+    "endpoint": "/animate-character",
+    "payload": {
+      "animation_name": "move2",
+      "action_description": "Walking cycle with long strides: legs swing wide forward and back with clear foot lifts, arms swing, robe sways, staff held consistently, stays in place, no effects.",
+      "mode": "v3",
+      "frame_count": 8,
+      "keep_first_frame": false,
+      "directions": [
+        "south-west"
+      ]
+    },
+    "character": "CH-01"
+  }
+]

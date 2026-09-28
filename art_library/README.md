@@ -24,3 +24,34 @@ Every idle (wizard, enemies, NPCs) is a subtle breathing loop built from the sti
 The spell effects (FX-01 to FX-16) are unusable: each came out as an academy building. The brazier (PROP-26) and ward beacon (PROP-20) ambient clips have the same problem.
 
 The game is independently playable while this queue runs. The worker needs the computer to stay running and online. If the worker is interrupted, it can resume with the same queue and a key supplied again on stdin.
+
+## Second pass (2026-09-28)
+
+The first pass prefixed every prompt with "...a ruined magical academy RPG...", and for abstract subjects the generator drew the academy. The second pass (`../tools/build_regen_queue.py`, `queue-regen.json`) describes only the subject, isolated on a transparent background with no scenery, buildings, ground, or people, and keeps the outline, lighting, and palette notes. Every output was reviewed on a contact sheet and in the running game before use. It used 75 generations (500 → 425); every request cost 1 generation.
+
+The storage host (`backblaze.pixellab.ai`) was not reachable from the generation environment, so clips were taken from the inline `image_images_*.png` frames, which are the same frames with the source pose first. Several submissions hit connection resets and were resubmitted; a -b or -c suffix marks a second or third take.
+
+Effects, copied by `../tools/copy_effect_frames.py` into `../game/assets/effects/`, replacing the code-drawn versions:
+
+| Game effect | Clip used | Notes |
+|---|---|---|
+| Firebolt | FXR-firebolt-animation, frames 0–3 | Loop; the last frame darkens |
+| Fire impact | FXR-fire-impact-animation, frames 0–3 | Later frames turn into a campfire |
+| Hit spark (melee hits on the wizard) | FXR-hit-spark-animation, frames 0–3 | The game fades it out |
+| Frost Nova ring | FXR-frost-nova-animation, frames 0–2 | Scaled to the nova radius; later frames collapse to a thin ring |
+| Chill status | FXR-chill-animation, frames 0–4 | Loop over chilled enemies (the blue tint stays) |
+| Enemy fire bolt | FXR-ember-bolt-b-animation, frames 0–3 | Orange art tinted ember red in code |
+| Enemy bolt impact | FXR-ember-impact-b-animation, frames 0–1 | Later frames grow dark blobs |
+| Level-up | FXR-level-up-c-animation, frames 0–5 | The last frame is a solid grey square |
+
+Rejected effects: FXR-ember-bolt (a crimson dart, not fire), FXR-ember-impact (a rubble pile on rocks), FXR-level-up (drawn on a stone floor tile), and FXR-level-up-b (smoke clouds and a ground line).
+
+Item icons (`../tools/make_item_icons.py`): all twelve placeholders and the five wrong icons are replaced: scholars_hood, warden_helm, cloth_wraps, bronze_gauntlets, worn_sandals, bronze_greaves (-b), rope_belt, scholars_sash, copper_amulet, quartz_amulet, copper_focus, quartz_focus, apprentice_staff (-b), rime_staff, warded_robe, ruby_ring, topaz_ring. Rejected: the first bronze_greaves (a single leather boot) and the first apprentice_staff (reads as a spear). The code-drawn placeholders and recolours are gone; none of the reviewed icons needed them.
+
+Passive icons (`../game/assets/passives/`, drawn by the passive tree in place of its code-drawn symbols): vitality, deep_reserves, spell_mastery, frostweaving, keen_mind (-b). The first Keen Mind was a dark wheel. The tree still draws its symbol for any node without a PNG.
+
+Wizard (CH-01) clips, generated as `CH-01-<action>2-<direction>` on the existing character and copied with `../tools/copy_character_frames.py`:
+
+- Walk: all 8 directions replaced (8 frames, longer stride), ground-locked.
+- Dodge: all 8 directions replaced with generated frames 1–4 of 6 (a deep forward lunge), ground-locked. North-west and south-west were resubmitted after connection resets.
+- Cast: only north (generated frames 1, 2, 3, 5; the staff stays in hand) and west (generated frames 2–5; now faces west throughout) are replaced; four frames keep the old timing. The other new cast directions were not used: north-east shows a doubled staff for a frame and south-east adds a spell spark, and the existing clips were fine. The whole cast folder is ground-locked, which lowers north-east by 2 pixels.

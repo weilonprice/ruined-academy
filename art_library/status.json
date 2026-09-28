@@ -1944,5 +1944,442 @@
     "status": "completed",
     "jobs": [],
     "files": 1
+  },
+  "FXR-firebolt": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-hit-spark": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-firebolt-animation": {
+    "status": "completed",
+    "jobs": [
+      "bfc5e9f2-747c-488e-8320-26bb8c93c030"
+    ],
+    "files": 5
+  },
+  "FXR-hit-spark-animation": {
+    "status": "completed",
+    "jobs": [
+      "5d579002-bd9a-4c6d-bd0a-65a03f7f3b11"
+    ],
+    "files": 5
+  },
+  "CH-01-cast2-north": {
+    "status": "completed",
+    "jobs": [
+      "358dc239-4713-4b8b-988e-472ab24ed0e3"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-north-east": {
+    "status": "completed",
+    "jobs": [
+      "db8458f9-243b-444f-b8ad-29fd30142bda"
+    ],
+    "files": 7
+  },
+  "FXR-fire-impact": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-frost-nova": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-chill": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-bolt": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-bolt-animation": {
+    "status": "completed",
+    "jobs": [
+      "929ca1de-b59b-4929-ab13-ae86b4b59df9"
+    ],
+    "files": 5
+  },
+  "FXR-fire-impact-animation": {
+    "status": "completed",
+    "jobs": [
+      "7dc49fba-aa8d-4ddd-aa62-5fafc5738580"
+    ],
+    "files": 7
+  },
+  "FXR-frost-nova-animation": {
+    "status": "completed",
+    "jobs": [
+      "1ab42240-2d5d-4d76-8596-a415091d7dfb"
+    ],
+    "files": 7
+  },
+  "FXR-chill-animation": {
+    "status": "completed",
+    "jobs": [
+      "8aa192a8-4114-4aa5-9d74-64ae424c196d"
+    ],
+    "files": 5
+  },
+  "FXR-ember-impact": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-level-up": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-scholars_hood": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-impact-animation": {
+    "status": "completed",
+    "jobs": [
+      "3bfa5bd8-7103-4a13-922b-cfa1714be46c"
+    ],
+    "files": 7
+  },
+  "FXR-level-up-animation": {
+    "status": "completed",
+    "jobs": [
+      "3278851a-f0a7-4966-b115-c7f4bb395a9e"
+    ],
+    "files": 9
+  },
+  "ICONR-warden_helm": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-cloth_wraps": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-bronze_gauntlets": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-worn_sandals": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-bronze_greaves": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-rope_belt": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-scholars_sash": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-copper_amulet": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-quartz_amulet": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-copper_focus": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-quartz_focus": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-rime_staff": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-warded_robe": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-topaz_ring": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-ruby_ring": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "PASSR-vitality": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "PASSR-spell_mastery": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "PASSR-deep_reserves": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "PASSR-frostweaving": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "PASSR-keen_mind": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "CH-01-cast2-south": {
+    "status": "completed",
+    "jobs": [
+      "73289ccd-e643-4d76-9e61-976a51ce93a7"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-south-east": {
+    "status": "completed",
+    "jobs": [
+      "bf02ab3a-7946-467c-b43d-f68dd953a9ac"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-east": {
+    "status": "completed",
+    "jobs": [
+      "bd6d4719-0559-44d8-aa20-e73733039644"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-north-west": {
+    "status": "completed",
+    "jobs": [
+      "760c6106-ed8d-4f74-8dc9-aa8d16df7794"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-west": {
+    "status": "completed",
+    "jobs": [
+      "7b21ae1e-0122-41f3-8b76-808301a9af4c"
+    ],
+    "files": 7
+  },
+  "CH-01-cast2-south-west": {
+    "status": "completed",
+    "jobs": [
+      "d9d1baff-f45c-47a3-94b6-9f56a2e0e86e"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-south": {
+    "status": "completed",
+    "jobs": [
+      "fdd93cba-c5e2-4eaf-8928-a09d4b19d838"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-south-east": {
+    "status": "completed",
+    "jobs": [
+      "eeea447b-015b-402f-a2f4-821ead06126f"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-east": {
+    "status": "completed",
+    "jobs": [
+      "09b5a356-cde3-4d25-bb07-5b4942ead30f"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-north-east": {
+    "status": "completed",
+    "jobs": [
+      "7bb1a6eb-386c-40d2-9e24-64506e957cb3"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-north": {
+    "status": "completed",
+    "jobs": [
+      "3b576b05-f33d-47ec-8398-bfea9d35f2c5"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-west": {
+    "status": "completed",
+    "jobs": [
+      "0dd34edd-0dff-4445-a8e4-1536adea4a41"
+    ],
+    "files": 7
+  },
+  "CH-01-move2-south": {
+    "status": "completed",
+    "jobs": [
+      "fc670a36-203d-490d-8682-85898a9a254a"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-south-east": {
+    "status": "completed",
+    "jobs": [
+      "f1f51bf0-2356-4eef-ad11-1af4bc52bd42"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-east": {
+    "status": "completed",
+    "jobs": [
+      "c5e328c7-a015-48f3-a703-b5b563964a76"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-north-east": {
+    "status": "completed",
+    "jobs": [
+      "f28ac1a0-6675-475d-a9dc-3f7e3e5639c4"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-north": {
+    "status": "completed",
+    "jobs": [
+      "3a2ef5ab-dc84-4bb4-8c58-0a5b7733d843"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-north-west": {
+    "status": "completed",
+    "jobs": [
+      "32b50bcd-1eaa-477d-bc67-ba0a497b1e83"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-west": {
+    "status": "completed",
+    "jobs": [
+      "5204df98-bd5f-4803-a63d-3f972efb78f9"
+    ],
+    "files": 9
+  },
+  "CH-01-move2-south-west": {
+    "status": "completed",
+    "jobs": [
+      "c29d1815-02d5-4dbf-81e3-2e4b4497f831"
+    ],
+    "files": 9
+  },
+  "FXR-ember-impact-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-level-up-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-apprentice_staff": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-bronze_greaves-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "PASSR-keen_mind-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-impact-b-animation": {
+    "status": "completed",
+    "jobs": [
+      "1c2a603a-636f-4968-8721-1ec6c79d2ba2"
+    ],
+    "files": 7
+  },
+  "CH-01-dodge2-north-west": {
+    "status": "completed",
+    "jobs": [
+      "54f92fa8-ba1f-413e-949d-b4eeaadb7f67"
+    ],
+    "files": 7
+  },
+  "FXR-level-up-b-animation": {
+    "status": "completed",
+    "jobs": [
+      "f133e97d-1f69-45a5-870c-7a2839d073f7"
+    ],
+    "files": 9
+  },
+  "CH-01-dodge2-south-west": {
+    "status": "completed",
+    "jobs": [
+      "3011ffb6-cf91-49fe-af58-a2a6bd3707f0"
+    ],
+    "files": 7
+  },
+  "FXR-level-up-c": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-apprentice_staff-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-ember-bolt-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "FXR-level-up-c-animation": {
+    "status": "completed",
+    "jobs": [
+      "17a23ff9-d5b4-4412-8909-8c9c82ad712a"
+    ],
+    "files": 9
+  },
+  "FXR-ember-bolt-b-animation": {
+    "status": "completed",
+    "jobs": [
+      "91551865-be91-4a68-8eff-8fad3765427e"
+    ],
+    "files": 5
   }
 }

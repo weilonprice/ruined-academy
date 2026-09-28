@@ -40,7 +40,8 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 │   ├── passives.gd          # Passive tree nodes, links, and stats
 │   ├── passive_tree_panel.gd# Passive tree screen (P)
 │   ├── experience_bar.gd    # Experience bar under the skill bar
-│   ├── level_up_effect.gd   # Gold rings on a level-up
+│   ├── level_up_effect.gd   # Gold and cyan sparkle burst on a level-up
+│   ├── effect.gd            # Sprite effects: one-shot impacts and looping clips
 │   ├── inventory.gd         # Autoload: equipped gear, 10x5 backpack grid, save file
 │   ├── items/               # Item bases, affixes, uniques, and the random item generator
 │   ├── character_panel.gd   # Character sheet (C)
@@ -59,15 +60,18 @@ See [`game/README.md`](game/README.md) for how the prototype plays.
 ├── art_library/             # 300+ generated visual assets from Pixel Lab
 │   ├── assets/              # Sprites, directional animation sheets, props, tiles, UI, icons
 │   ├── queue.json           # Declarative generation queue
+│   ├── queue-regen.json     # Second pass: effects, icons, wizard clips
 │   └── status.json          # Production pipeline tracking
 ├── tools/                   # Asset generation and import scripts
 │   ├── build_asset_queue.py # Translates ASSET_MANIFEST into API tasks
+│   ├── build_regen_queue.py # Second-pass queue for art the first pass got wrong
 │   ├── pixellab_batch.py    # Multi-worker generation processor
 │   ├── copy_character_frames.py # Copies generated animation clips into the game
 │   ├── ground_lock_frames.py    # Pins animation frames to the character's ground line
 │   ├── make_breathing_idle.py   # Builds the subtle 2-frame idle from still poses
 │   ├── copy_prop_frames.py      # Copies a prop animation, keeping solid parts still
-│   └── make_item_icons.py   # Builds game/assets/icons (generated, recoloured, placeholder)
+│   ├── copy_effect_frames.py    # Copies reviewed spell and combat effect frames
+│   └── make_item_icons.py   # Builds game/assets/icons and game/assets/passives from generated art
 ├── play.sh                  # Imports assets, then runs the game
 └── ASSET_MANIFEST.md        # Comprehensive art specification and production roadmap
 ```

@@ -1,0 +1,11 @@
+{
+  "description": "A glowing golden ring of light on the ground seen at an angle, with pale gold and cyan light motes and sparkles rising upward from it, celebratory magic burst, hollow centre. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+  "image_size": {
+    "width": 96,
+    "height": 96
+  },
+  "no_background": true,
+  "view": "low top-down",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

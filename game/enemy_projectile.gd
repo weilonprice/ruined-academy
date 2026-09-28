@@ -4,6 +4,9 @@ extends Node2D
 const SPEED := 170.0
 const HIT_RADIUS := 14.0
 const WORLD := preload("res://world.gd")
+const EFFECT := preload("res://effect.gd")
+# The fireball art is orange like the wizard's; hostile bolts burn ember red.
+const EMBER_TINT := Color(1.0, 0.45, 0.4)
 
 var direction := Vector2.RIGHT
 var damage := 10.0
@@ -15,6 +18,11 @@ func _ready() -> void:
 	add_to_group("hostile_projectiles")
 	rotation = direction.angle()
 	z_index = 1
+	# The art points right with its head near the right edge; the head leads at the origin.
+	var sprite := EFFECT.looping("ember_bolt", 12.0)
+	sprite.position = Vector2(-11, 0)
+	sprite.modulate = EMBER_TINT
+	add_child(sprite)
 
 
 func _physics_process(delta: float) -> void:
@@ -27,6 +35,7 @@ func _physics_process(delta: float) -> void:
 		var closest := Geometry2D.get_closest_point_to_segment(player.global_position, start, next_position)
 		if closest.distance_to(player.global_position) <= HIT_RADIUS:
 			player.take_damage(damage, damage_type)
+			EFFECT.spawn(get_parent(), "ember_impact", closest, 12.0)
 			queue_free()
 			return
 	global_position = next_position
@@ -34,7 +43,3 @@ func _physics_process(delta: float) -> void:
 	if lifetime <= 0.0 or not WORLD.MAP_RECT.has_point(global_position):
 		queue_free()
 
-
-func _draw() -> void:
-	draw_colored_polygon(PackedVector2Array([Vector2(-9, -3), Vector2(1, -3), Vector2(5, 0), Vector2(1, 3), Vector2(-9, 3)]), Color("c8402f"))
-	draw_rect(Rect2(-3, -1, 6, 2), Color("ffd8c8"))
