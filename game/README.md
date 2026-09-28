@@ -9,7 +9,8 @@ Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which i
 | Move | **W A S D** |
 | Wind Slash (sword swing toward the cursor) | **Left-click** |
 | Magic bolt (aimed at the cursor) | **Right-click** |
-| Frost Nova (burst around you) | **1** (2–4 are free skill slots) |
+| Frost Nova (burst around you) | **1** |
+| Wind Wave (crescent of wind flying toward the cursor) | **2** (3 and 4 are free skill slots) |
 | Dodge | **Space** |
 | Life / Mana Flask | **Q** / **E** |
 | Inventory | **I** (Esc closes) |
@@ -25,7 +26,9 @@ Open `project.godot` in Godot 4.7 and press **F5**, or run `../play.sh`, which i
 
 The wizard has 100 life and 60 mana, regenerating 6 mana per second. Life and mana bars are top-left; flask vials and the skill bar are bottom-centre.
 
-- **Wind Slash:** the melee attack. He draws a sword and swings it toward the cursor, throwing a crescent of magic wind: every enemy within about 70 pixels and inside a 120° arc takes 10–14 damage. It costs no mana and takes 0.35 s. It deals spell damage, so spell damage, crits and cast speed all raise it.
+- **Wind Slash:** the melee attack. He draws a sword and swings it toward the cursor, throwing a crescent of magic wind. As the blade comes round (about 0.1 s in), every enemy within about 70 pixels and inside a 120° arc takes 10–14 damage and is pushed back, and the game freezes for an instant so the hit lands with weight. It costs no mana and takes 0.35 s; dodging mid-swing cancels it.
+- **Wind Wave:** 8 mana, then 0.45 s. The same swing sends the crescent flying 260 pixels toward the cursor; it passes through enemies, hitting each in its path once for 8–12 damage and pushing it back.
+- **Wind damage:** both wind skills deal spell damage, raised by spell damage and wind damage together, and by cast speed and crits. Swords are off-hand gear: the Short Sword (level 1) and the Windblade (level 15) roll 10–15% and 20–30% increased Wind Damage, and swords and gloves can roll more as a prefix.
 - **Magic bolt:** 5 mana, 8–12 damage, then 0.25 s before the next cast. It launches from the staff's orb and flies through the clicked point.
 - **Frost Nova:** 12 mana, then 0.45 s. It hits every enemy within about 90 pixels once for 12–18 cold damage and chills them for 2 s, so they move, animate, and attack at 70% speed.
 - **Crits:** every attack has a 5% base chance to crit for 1.5× damage; a crit bolt looks larger and whiter.

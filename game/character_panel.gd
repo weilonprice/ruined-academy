@@ -45,6 +45,8 @@ func refresh() -> void:
 		lines.append("Mana: %d   Regen: %.1f/s" % [stats.max_mana, stats.mana_regen])
 		lines.append("Armour: %d" % stats.armour)
 		lines.append("Spell damage: +%d%%" % stats.spell_damage)
+		if stats.wind_damage > 0:
+			lines.append("Wind damage: +%d%%" % stats.wind_damage)
 		lines.append("Cast speed: +%d%%" % stats.cast_speed)
 		lines.append("Projectile speed: +%d%%" % stats.projectile_speed)
 		lines.append("Crit chance: %.1f%%" % stats.crit_chance)

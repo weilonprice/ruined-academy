@@ -34,6 +34,8 @@ static func compute(items: Array, level := 1, passives := []) -> Dictionary:
 		"max_mana": BASE_MANA + MANA_PER_LEVEL * growth + sums.get("mana", 0),
 		"mana_regen": BASE_MANA_REGEN * (1.0 + sums.get("mana_regen", 0) / 100.0),
 		"spell_damage": SPELL_DAMAGE_PER_LEVEL * growth + sums.get("spell_damage", 0),
+		# Adds to spell damage for the wind skills, Wind Slash and Wind Wave.
+		"wind_damage": float(sums.get("wind_damage", 0)),
 		"cast_speed": float(sums.get("cast_speed", 0)),
 		"projectile_speed": float(sums.get("projectile_speed", 0)),
 		"crit_chance": BASE_CRIT_CHANCE * (1.0 + sums.get("crit_chance", 0) / 100.0),

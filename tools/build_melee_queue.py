@@ -61,5 +61,14 @@ queue.append(dict(id='FXM-wind-slash-b-animation', endpoint='/animate-with-text-
                       action='The wind swoosh sweeps forward in a fast arc, flares bright, then thins out and fades away.',
                       frame_count=6, no_background=True)))
 
+# The melee kit: sword item icons for the off-hand swords, and the Wind Wave skill icon.
+for take in 'ab':
+    still('ICONR-short_sword-' + take, 'A single inventory icon of a plain short steel sword with a simple brass crossguard '
+          'and a leather grip, drawn diagonally from bottom left to top right, centered, no border', 32)
+    still('ICONR-windblade-' + take, 'A single inventory icon of an elegant slender sword with a pale teal glowing blade '
+          'and wisps of wind curling around it, drawn diagonally from bottom left to top right, centered, no border', 32)
+    still('HUD-skill-wind-wave-' + take, 'A single skill icon of a wide pale teal crescent wave of wind flying forward to '
+          'the right with speed lines behind it, centered, no border', 32)
+
 (LIB / 'queue-melee.json').write_text(json.dumps(queue, indent=2))
 print('Queued request units:', len(queue))

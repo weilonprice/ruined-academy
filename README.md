@@ -10,7 +10,7 @@ You play as a former student wizard returning to a ruined magical academy. Maste
 
 - **Perspective**: Elevated top-down view with clear pixel readability and silhouettes.
 - **Controls**: Fluid 8-directional WASD movement, mouse-aimed melee and casting, number-key skills, and a dodge dash.
-- **Combat**: A Wind Slash sword swing, a magic bolt and Frost Nova, crits, mana, life and mana flasks, and enemies that chase, swing, and cast, with attack windups you can step out of.
+- **Combat**: A Wind Slash sword swing and a flying Wind Wave, a magic bolt and Frost Nova, crits, mana, life and mana flasks, and enemies that chase, swing, and cast, with attack windups you can step out of.
 - **Loot**: Path of Exile-style items with random affixes, rarities, and uniques; enemies drop loot with labels you click to pick up.
 - **Inventory**: A shaped-item grid backpack, ten equipment slots, and tooltips that compare stats; gear is saved between sessions.
 - **Progression**: Kills give experience; each level grows life, mana, and spell damage and grants a point for a small passive tree.
@@ -43,6 +43,7 @@ Follow the road east out of the courtyard to reach the village. Buildings, trees
 │   ├── player.gd            # Wizard: movement, casting, dodge, flasks, life and mana
 │   ├── projectile.gd        # Swept raycast magic missile with collision & despawning
 │   ├── frost_nova.gd        # Frost Nova: cold burst around the wizard that chills
+│   ├── wind_wave.gd         # Wind Wave: a crescent of wind that flies through enemies
 │   ├── skill_bar.gd         # Skill bar (LMB bolt, RMB nova)
 │   ├── flask_bar.gd         # Life and mana flask vials
 │   ├── pause_menu.gd        # Esc pause menu: Resume / Quit
@@ -125,7 +126,8 @@ The script imports assets before launching. Godot's import cache (`game/.godot/`
 | Aim | **Mouse Cursor** |
 | Wind Slash (sword swing that throws magic wind) | **Left Mouse Button** |
 | Cast Magic Missile | **Right Mouse Button** |
-| Cast Frost Nova (short-range burst around you) | **1** (2–4 are free skill slots) |
+| Cast Frost Nova (short-range burst around you) | **1** |
+| Wind Wave (crescent of wind that flies through enemies) | **2** (3 and 4 are free skill slots) |
 | Dodge | **Space** |
 | Drink Life / Mana Flask | **Q** / **E** |
 | Pause menu (Resume / Quit) | **Esc** |

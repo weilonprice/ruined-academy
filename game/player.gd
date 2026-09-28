@@ -20,13 +20,26 @@ const NOVA_CAST_TIME := 0.45
 const NOVA_CHILL_TIME := 2.0
 # Wind Slash, the left-click melee attack: a sword swing that throws a crescent
 # of magic wind. It costs no mana, hits every enemy in an arc in front of the
-# wizard, and deals spell damage, so spell damage and crits raise it.
+# wizard as the blade comes round, and deals spell damage, so spell damage,
+# wind damage and crits raise it. A hit that lands freezes the action for a
+# moment and pushes the enemy back.
 const EFFECT := preload("res://effect.gd")
 const SLASH_DAMAGE := Vector2(10.0, 14.0)
 const SLASH_TIME := 0.35
+# The blade crosses in front of him on the clip's third frame, this long into the swing.
+const SLASH_HIT_DELAY := 0.11
 # Enemies whose centre is this close, and within half this angle of the aim, are hit.
 const SLASH_REACH := 70.0
 const SLASH_ARC := deg_to_rad(120.0)
+const SLASH_KNOCKBACK := 14.0
+# Real seconds the game slows to a near stop when a swing connects.
+const HIT_STOP := 0.06
+const HIT_STOP_SCALE := 0.05
+# Wind Wave, on 2: the crescent flies forward and passes through enemies.
+const WIND_WAVE_SCRIPT := preload("res://wind_wave.gd")
+const WAVE_MANA_COST := 8.0
+const WAVE_DAMAGE := Vector2(8.0, 12.0)
+const WAVE_CAST_TIME := 0.45
 const WORLD := preload("res://world.gd")
 const ANIMATIONS := preload("res://animation_library.gd")
 const DIRECTIONS := ["east", "south-east", "south", "south-west", "west", "north-west", "north", "north-east"]
@@ -67,6 +80,10 @@ var cast_ready_in := 0.0
 var dead := false
 var rng := RandomNumberGenerator.new()
 var dodge_direction := Vector2.ZERO
+# A swing waiting for its blade to come round: its aim and seconds left; the hits it landed.
+var slash_aim := Vector2.ZERO
+var slash_hit_in := 0.0
+var last_slash_hits: Array = []
 var dodge_time_left := 0.0
 var dodge_cooldown_left := 0.0
 var afterimage_time_left := 0.0
@@ -108,6 +125,10 @@ func _physics_process(delta: float) -> void:
 		return
 	_regenerate(delta)
 	cast_ready_in = maxf(0.0, cast_ready_in - delta)
+	if slash_hit_in > 0.0:
+		slash_hit_in -= delta
+		if slash_hit_in <= 0.0:
+			_land_slash()
 	dodge_cooldown_left = maxf(0.0, dodge_cooldown_left - delta)
 	if is_dodging():
 		_dodge_step(delta)
@@ -146,6 +167,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		if Inventory.held == null and not is_dodging():
 			cast_nova(get_global_mouse_position())
 		get_viewport().set_input_as_handled()
+	elif event.is_action_pressed("skill_2", false, true):
+		if Inventory.held == null and not is_dodging():
+			wave_at(get_global_mouse_position())
+		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		# Clicking the world with an item on the cursor drops it at the wizard's feet instead of attacking.
 		if Inventory.held != null:
@@ -182,29 +207,69 @@ func shoot_at(target: Vector2) -> Node2D:
 	return projectile
 
 
-# Swings at the target: every living enemy within reach and inside the arc
-# toward it takes a hit of wind. Returns the hits, or null if he can't swing yet.
-func slash_at(target: Vector2) -> Variant:
+# Swings at the target; the blade lands SLASH_HIT_DELAY later (shortened by cast
+# speed) in _land_slash. False if he can't swing yet.
+func slash_at(target: Vector2) -> bool:
 	var aim := target - global_position
 	if aim.is_zero_approx():
 		aim = Vector2.RIGHT.rotated(DIRECTIONS.find(facing) * PI / 4.0)
 	if not _begin_cast(0.0, SLASH_TIME, aim, "slash"):
-		return null
-	var hits := []
+		return false
+	slash_aim = aim.normalized()
+	slash_hit_in = SLASH_HIT_DELAY / (1.0 + stats.cast_speed / 100.0)
+	return true
+
+
+# The blade comes round: every living enemy within reach and inside the arc takes
+# a hit of wind and is pushed back, and the wind crescent flies from the blade.
+func _land_slash() -> void:
+	slash_hit_in = 0.0
+	last_slash_hits = []
 	for enemy: Node2D in get_tree().get_nodes_in_group("enemies"):
 		var offset := enemy.global_position - global_position
-		if offset.length() > SLASH_REACH or absf(aim.angle_to(offset)) > SLASH_ARC / 2.0:
+		if offset.length() > SLASH_REACH or absf(slash_aim.angle_to(offset)) > SLASH_ARC / 2.0:
 			continue
 		var critical: bool = rng.randf() * 100.0 < stats.crit_chance
-		var damage: float = rng.randf_range(SLASH_DAMAGE.x, SLASH_DAMAGE.y) * (1.0 + stats.spell_damage / 100.0)
+		var damage: float = rng.randf_range(SLASH_DAMAGE.x, SLASH_DAMAGE.y) * _wind_scale()
 		if critical:
 			damage *= STATS.CRIT_MULTIPLIER
 		enemy.take_damage(damage, critical)
-		hits.append({"enemy": enemy, "damage": damage, "critical": critical})
+		enemy.knock_back(offset.normalized() * SLASH_KNOCKBACK)
+		last_slash_hits.append({"enemy": enemy, "damage": damage, "critical": critical})
 	# The crescent art curves around its right side, so it faces along the aim.
-	var slash := EFFECT.spawn(get_parent(), "wind_slash", global_position + aim.normalized() * 30.0 + Vector2(0, -6), 16.0)
-	slash.rotation = aim.angle()
-	return hits
+	var crescent := EFFECT.spawn(get_parent(), "wind_slash", global_position + slash_aim * 30.0 + Vector2(0, -6), 16.0)
+	crescent.rotation = slash_aim.angle()
+	if not last_slash_hits.is_empty():
+		_hit_stop()
+
+
+# Wind skills deal spell damage, raised by spell damage and wind damage together.
+func _wind_scale() -> float:
+	return 1.0 + (stats.spell_damage + stats.wind_damage) / 100.0
+
+
+# Slows the whole game to a near stop for a moment, so a connecting hit lands with weight.
+func _hit_stop() -> void:
+	Engine.time_scale = HIT_STOP_SCALE
+	get_tree().create_timer(HIT_STOP, true, false, true).timeout.connect(func() -> void: Engine.time_scale = 1.0)
+
+
+# Sends a Wind Wave toward the target, if the last cast has finished and there is mana for it.
+func wave_at(target: Vector2) -> Node2D:
+	var aim := target - global_position
+	if aim.is_zero_approx() or not _begin_cast(WAVE_MANA_COST, WAVE_CAST_TIME, aim, "slash"):
+		return null
+	var wave := Node2D.new()
+	wave.set_script(WIND_WAVE_SCRIPT)
+	wave.direction = aim.normalized()
+	wave.damage_range = WAVE_DAMAGE
+	wave.damage_scale = _wind_scale()
+	wave.crit_chance = stats.crit_chance
+	wave.crit_multiplier = STATS.CRIT_MULTIPLIER
+	wave.rng = rng
+	wave.position = position + wave.direction * 24.0 + Vector2(0, -6)
+	get_parent().add_child(wave)
+	return wave
 
 
 # Casts Frost Nova around the wizard, turning toward the cursor for the cast.
@@ -254,6 +319,7 @@ func take_damage(amount: float, damage_type := "physical") -> void:
 	casting = false
 	if health <= 0.0:
 		dead = true
+		slash_hit_in = 0.0
 		hurting = false
 		dodge_time_left = 0.0
 		_play("death")
@@ -380,6 +446,8 @@ func dodge() -> bool:
 	pickup_target = null
 	casting = false
 	hurting = false
+	# Dodging out of a swing abandons it before the blade lands.
+	slash_hit_in = 0.0
 	_play("dodge")
 	sprite.set_frame_and_progress(0, 0.0)
 	return true

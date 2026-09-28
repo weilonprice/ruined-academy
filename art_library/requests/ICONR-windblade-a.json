@@ -1,0 +1,11 @@
+{
+  "description": "A single inventory icon of an elegant slender sword with a pale teal glowing blade and wisps of wind curling around it, drawn diagonally from bottom left to top right, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+  "image_size": {
+    "width": 32,
+    "height": 32
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

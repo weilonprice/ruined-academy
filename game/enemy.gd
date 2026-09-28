@@ -18,6 +18,7 @@ const SPACING := 30.0
 # Chilled enemies move, animate, and recover from attacks at this fraction of their speed.
 const CHILL_SLOW := 0.7
 const CHILL_TINT := Color(0.72, 0.9, 1.35)
+const KNOCKBACK_TIME := 0.12
 # Per kind: movement, attack clip, the frame the blow lands on, cooldown after an attack, and the flask charges and experience its death gives.
 # A ranged kind holds around its reach and fires a bolt instead of striking.
 const KINDS := {
@@ -43,6 +44,9 @@ var hurting := false
 var dying := false
 var hit_flash: Tween
 var chilled_left := 0.0
+# A push from a hit, spread over KNOCKBACK_TIME seconds: velocity and time left.
+var knockback := Vector2.ZERO
+var knockback_left := 0.0
 var stats: Dictionary
 # Frost crystals circling the enemy while it is chilled.
 var chill_effect: AnimatedSprite2D
@@ -69,6 +73,10 @@ func _physics_process(delta: float) -> void:
 	if dying:
 		return
 	_update_chill(delta)
+	if knockback_left > 0.0:
+		var step := minf(delta, knockback_left)
+		knockback_left -= step
+		position = (position + knockback * step).clamp(WORLD.WALK_BOUNDS.position, WORLD.WALK_BOUNDS.end)
 	if hurting or attacking:
 		return
 	var pace := speed_factor()
@@ -134,6 +142,14 @@ func take_damage(amount: float, critical := false, chill := 0.0) -> void:
 	sprite.self_modulate = Color(2.4, 2.2, 2.0) if critical else Color(1.8, 1.3, 1.3)
 	hit_flash = create_tween()
 	hit_flash.tween_property(sprite, "self_modulate", Color.WHITE, 0.12)
+
+
+# Slides the enemy by push over a moment; the dying stay where they fell.
+func knock_back(push: Vector2) -> void:
+	if dying:
+		return
+	knockback = push / KNOCKBACK_TIME
+	knockback_left = KNOCKBACK_TIME
 
 
 func is_chilled() -> bool:
