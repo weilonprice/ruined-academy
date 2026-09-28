@@ -18,6 +18,8 @@ const LOCKED := Color("4a4f5a")
 const LINK_DIM := Color("2b303b")
 const TEXT := Color("d8d8d8")
 const MUTED := Color("8a8f99")
+# Generated art for a node lives at ICON_ROOT/<id>.png; nodes without one draw a simple symbol.
+const ICON_ROOT := "res://assets/passives/"
 const ICON_COLORS := {"heart": Color("d66765"), "droplet": Color("5b7fd6"), "burst": Color("e78a3b"),
 	"snowflake": Color("9fe8ff"), "eye": Color("e8e0a0")}
 
@@ -97,6 +99,11 @@ func _draw_node(id: String, hovered: bool) -> void:
 		rim = OPEN.lerp(Color.WHITE, 0.5 + 0.5 * sin(pulse * 5.0))
 	draw_circle(center, NODE_RADIUS, Color("0d0f14"))
 	draw_arc(center, NODE_RADIUS, 0.0, TAU, 32, rim, 3.0 if hovered else 2.0)
+	var icon_path := ICON_ROOT + id + ".png"
+	if ResourceLoader.exists(icon_path):
+		var texture: Texture2D = load(icon_path)
+		draw_texture(texture, (center - texture.get_size() / 2.0).round(), Color.WHITE if allocated else Color(0.5, 0.5, 0.55))
+		return
 	var color: Color = ICON_COLORS[PASSIVES.NODES[id].icon]
 	if not allocated:
 		color = color.darkened(0.45)

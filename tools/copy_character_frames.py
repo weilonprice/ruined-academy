@@ -19,6 +19,10 @@ for action in actions:
             continue
         # storage_urls frames are the finished clip; image_images also holds the source pose.
         frames = sorted(source.glob('image_storage_urls_frames_*.png'))
+        if not frames:
+            # When the storage host is unreachable, the inline images are the
+            # same frames after the source pose in image_images_000.
+            frames = sorted(source.glob('image_images_*.png'))[1:]
         target = ROOT / 'game/assets' / name / action / direction
         target.mkdir(parents=True, exist_ok=True)
         for old in target.glob('frame_*'):

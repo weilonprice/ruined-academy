@@ -1,5 +1,8 @@
 """Run the approved visual asset manifest. API key is read from stdin, never saved.
 
+Usage: echo "$KEY" | python3 tools/pixellab_batch.py [queue file in art_library] [ID prefixes...]
+The queue defaults to queue.json; with prefixes, only matching requests run.
+
 Resumes accepted jobs instead of submitting duplicates. Ambiguous network errors
 need manual review; only explicitly rejected concurrency requests are retried.
 """
@@ -20,7 +23,9 @@ KEY = sys.stdin.readline().strip()
 LOCK = threading.Lock()
 STOP = threading.Event()
 signal.signal(signal.SIGTERM, lambda *_: STOP.set())
-PLAN = json.loads((LIB / 'queue.json').read_text())
+QUEUE = sys.argv[1] if len(sys.argv) > 1 else 'queue.json'
+ONLY = tuple(sys.argv[2:])
+PLAN = [task for task in json.loads((LIB / QUEUE).read_text()) if not ONLY or task['id'].startswith(ONLY)]
 STATE_PATH = LIB / 'status.json'
 STATE = json.loads(STATE_PATH.read_text()) if STATE_PATH.exists() else {}
 
@@ -58,9 +63,13 @@ def download_images(value, folder, prefix='image'):
             download_images(child, folder, prefix + '_' + str(index).zfill(3))
     elif isinstance(value, str) and value.startswith('https://') and '.png' in value:
         # Public asset URL. Never forward the API authorization header here.
+        # Optional: the same frames also arrive inline as base64 "images".
         request = urllib.request.Request(value, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(request, timeout=60) as response:
-            (folder / (prefix + '.png')).write_bytes(response.read())
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                (folder / (prefix + '.png')).write_bytes(response.read())
+        except (urllib.error.URLError, TimeoutError) as exc:
+            print('skipped', value.split('/')[2], exc, flush=True)
 
 
 def execute(task):
