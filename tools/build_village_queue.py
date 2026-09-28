@@ -50,10 +50,10 @@ def tileset(id, lower, upper, transition):
         detail='medium detail', shading='medium shading')))
 
 
-def villager(id, description):
+def villager(id, description, size=48):
     queue.append(dict(id=id, endpoint='/create-character-v3', payload=dict(
         name=id, description=description + ', cozy medieval village pixel art, warm colours. Full body standing, centered, '
-        'visible feet, transparent background, no scenery.', image_size=dict(width=48, height=48), view='low top-down',
+        'visible feet, transparent background, no scenery.', image_size=dict(width=size, height=size), view='low top-down',
         no_background=True, outline='single color black outline', detail='medium detail')))
 
 
@@ -155,6 +155,10 @@ VILLAGERS = [
 ]
 for id, description in VILLAGERS:
     villager(id, description)
+# Second takes at 64 px, the canvas the wizard, the enemies and the academy NPCs
+# use: at 48 px the villagers stood a head shorter than everyone else.
+for id, description in VILLAGERS:
+    villager(id + '-64', description, 64)
 
 # Second takes: short prompts came back as little isometric dioramas on a grass
 # tile. Spell out the flat straight-on view and that nothing stands under them.

@@ -23,7 +23,7 @@ for still_path in sorted((character / 'rotations').glob('*.png')):
     sunk.alpha_composite(still.crop((0, 0, still.width, split)), (0, 1))
     target = character / 'idle' / still_path.stem
     target.mkdir(parents=True, exist_ok=True)
-    for old in target.glob('frame_*'):
+    for old in target.glob('frame_*.png'):
         old.unlink()
     for index, pose in enumerate([still, sunk]):
         frame = Image.new('RGBA', (still.width + PAD * 2, still.height + PAD * 2))

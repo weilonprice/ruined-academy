@@ -92,3 +92,5 @@ What worked: `/map-objects` (1 generation, straight-on high top-down view) for b
 The reference's interface (resource counters, quest panel, task tracker, day and season panel, action buttons, minimap) belongs to a village-management game and was not generated.
 
 The village set is now in the game (`../game/village.tscn`), built into `../game/assets/village/` and `../game/assets/npcs/` by `../tools/make_village_art.py`. It keeps only the tavern's largest shape (a vent and a door floated below it) and fills the forge floor's see-through stone joints. The soil terrain set is not used: the garden is carrot plots on grass.
+
+The villagers were regenerated at 64 px (`VIL-C-<name>-64`, 12 generations): at 48 px they stood a head shorter than the wizard, the enemies and the academy NPCs, which are all 64 px. The dash icon is HUD-skill-dash-b (a wind swoosh); take a, an orb with speed lines, read as a spell projectile.

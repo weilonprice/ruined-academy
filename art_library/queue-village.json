@@ -758,6 +758,102 @@
     }
   },
   {
+    "id": "VIL-C-blacksmith-64",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-blacksmith-64",
+      "description": "Burly village blacksmith, adult human with a leather apron, rolled sleeves and a hammer, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-farmer-64",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-farmer-64",
+      "description": "Village farmer, adult human in a straw hat, plain tunic and trousers, holding a hoe, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-villager-64",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-villager-64",
+      "description": "Village woman, adult human in a simple dress with a white apron and headscarf, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-militia-64",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-militia-64",
+      "description": "Village militia soldier, adult human in a chainmail shirt and iron helmet with a sword and round shield, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-archer-64",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-archer-64",
+      "description": "Village archer, adult human in a green hooded tunic holding a longbow, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "VIL-C-lumberjack-64",
+    "endpoint": "/create-character-v3",
+    "payload": {
+      "name": "VIL-C-lumberjack-64",
+      "description": "Village lumberjack, burly adult human in a red plaid shirt carrying an axe, cozy medieval village pixel art, warm colours. Full body standing, centered, visible feet, transparent background, no scenery.",
+      "image_size": {
+        "width": 64,
+        "height": 64
+      },
+      "view": "low top-down",
+      "no_background": true,
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
     "id": "VIL-B-cottage-b",
     "endpoint": "/map-objects",
     "payload": {

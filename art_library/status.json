@@ -2898,5 +2898,57 @@
       "0edf1546-a1b7-4fbb-98d2-353af0882d5f"
     ],
     "files": 1
+  },
+  "HUD-skill-dash-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-dash-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "VIL-C-villager-64": {
+    "status": "completed",
+    "jobs": [
+      "8767af71-3027-4433-8f3c-9f1dfe231a1a"
+    ],
+    "files": 8
+  },
+  "VIL-C-farmer-64": {
+    "status": "completed",
+    "jobs": [
+      "acdf0bca-4bb4-4cd9-b92a-d8eac938b927"
+    ],
+    "files": 8
+  },
+  "VIL-C-blacksmith-64": {
+    "status": "completed",
+    "jobs": [
+      "c109f0ac-f887-4654-b651-b24c26f0c681"
+    ],
+    "files": 8
+  },
+  "VIL-C-militia-64": {
+    "status": "completed",
+    "jobs": [
+      "c11c57e0-3e87-45a5-af2c-6bbb4658ec28"
+    ],
+    "files": 8
+  },
+  "VIL-C-lumberjack-64": {
+    "status": "completed",
+    "jobs": [
+      "e6551d41-5c87-4fc7-a2dc-93720a8a6024"
+    ],
+    "files": 8
+  },
+  "VIL-C-archer-64": {
+    "status": "completed",
+    "jobs": [
+      "999611d6-8437-4c23-ada4-7936800826b0"
+    ],
+    "files": 8
   }
 }

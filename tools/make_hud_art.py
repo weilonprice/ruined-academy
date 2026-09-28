@@ -6,7 +6,7 @@ Usage: python3 tools/make_hud_art.py
 - life_flask.png / mana_flask.png: one generated flask, cropped; the mana
   flask is the same flask with its red liquid shifted to blue, so the pair
   matches. LIQUID_TOP is the first liquid row in the cropped image.
-- skill_firebolt.png / skill_frost_nova.png: 32x32 skill bar icons.
+- skill_firebolt.png / skill_frost_nova.png / skill_dash.png: 32x32 skill bar icons.
 - exp_frame.png: the left one of the two bars the generator drew side by
   side, stretched as a nine-patch around the experience fill.
 """
@@ -54,6 +54,7 @@ outputs = {
     'skill_firebolt': generated('HUD-skill-firebolt-b'),
     'skill_frost_nova': generated('HUD-skill-frost-nova-a'),
     'exp_frame': generated('HUD-exp-frame-a').crop((3, 7, 84, 25)),
+    'skill_dash': generated('HUD-skill-dash-b'),
 }
 for name, image in outputs.items():
     image.save(OUT / f'{name}.png')
