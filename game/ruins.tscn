@@ -1,0 +1,364 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://village_ground.gd" id="ground"]
+[ext_resource type="Script" path="res://scenery.gd" id="scenery"]
+[ext_resource type="Script" path="res://travel.gd" id="travel"]
+[ext_resource type="PackedScene" path="res://wizard.tscn" id="wizard"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="enemy"]
+[ext_resource type="PackedScene" path="res://hud.tscn" id="hud"]
+[ext_resource type="Script" path="res://debug_tools.gd" id="debug"]
+
+[node name="Ruins" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Ground" type="Node2D" parent="."]
+script = ExtResource("ground")
+dirt = Array[Rect2i]([Rect2i(12, 5, 2, 11), Rect2i(4, 6, 17, 2), Rect2i(3, 2, 5, 3), Rect2i(17, 9, 5, 4)])
+tint = Color(1.0, 0.9, 0.72, 1)
+saturation = 0.35
+
+[node name="Wizard" parent="." instance=ExtResource("wizard")]
+position = Vector2(800, 880)
+
+[node name="CollapsedBarn1" type="Node2D" parent="."]
+position = Vector2(320, 302)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "collapsed_barn"
+footprint = Vector2(250, 240)
+flat = true
+
+[node name="BrokenFence1" type="Node2D" parent="."]
+position = Vector2(150, 402)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_fence"
+footprint = Vector2(110, 12)
+
+[node name="BrokenFence2" type="Node2D" parent="."]
+position = Vector2(270, 402)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_fence"
+footprint = Vector2(110, 12)
+flip = true
+
+[node name="BrokenFence3" type="Node2D" parent="."]
+position = Vector2(420, 402)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_fence"
+footprint = Vector2(110, 12)
+
+[node name="BrokenBarrels1" type="Node2D" parent="."]
+position = Vector2(520, 352)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_barrels"
+footprint = Vector2(60, 20)
+
+[node name="DeadTree1" type="Node2D" parent="."]
+position = Vector2(60, 172)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree2" type="Node2D" parent="."]
+position = Vector2(530, 102)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="CollapsedBarn2" type="Node2D" parent="."]
+position = Vector2(1080, 332)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "collapsed_barn"
+footprint = Vector2(250, 240)
+flat = true
+flip = true
+
+[node name="BrokenBarrels2" type="Node2D" parent="."]
+position = Vector2(1240, 372)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_barrels"
+footprint = Vector2(60, 20)
+flip = true
+
+[node name="Graves1" type="Node2D" parent="."]
+position = Vector2(1420, 182)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "graves"
+footprint = Vector2(70, 20)
+
+[node name="Graves2" type="Node2D" parent="."]
+position = Vector2(1520, 252)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "graves"
+footprint = Vector2(70, 20)
+flip = true
+
+[node name="DeadTree3" type="Node2D" parent="."]
+position = Vector2(1540, 412)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree4" type="Node2D" parent="."]
+position = Vector2(900, 82)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="CharredStump1" type="Node2D" parent="."]
+position = Vector2(700, 222)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "charred_stump"
+footprint = Vector2(30, 14)
+
+[node name="Rubble1" type="Node2D" parent="."]
+position = Vector2(880, 402)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "rubble"
+footprint = Vector2(70, 24)
+
+[node name="Rubble2" type="Node2D" parent="."]
+position = Vector2(300, 532)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "rubble"
+footprint = Vector2(70, 24)
+
+[node name="Rubble3" type="Node2D" parent="."]
+position = Vector2(1320, 532)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "rubble"
+footprint = Vector2(70, 24)
+flip = true
+
+[node name="BrokenWell1" type="Node2D" parent="."]
+position = Vector2(640, 612)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_well"
+footprint = Vector2(40, 24)
+
+[node name="BrokenCart1" type="Node2D" parent="."]
+position = Vector2(730, 692)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_cart"
+footprint = Vector2(80, 24)
+
+[node name="Rubble4" type="Node2D" parent="."]
+position = Vector2(1180, 752)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "rubble"
+footprint = Vector2(70, 24)
+
+[node name="Rubble5" type="Node2D" parent="."]
+position = Vector2(1270, 802)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "rubble"
+footprint = Vector2(70, 24)
+flip = true
+
+[node name="Rubble6" type="Node2D" parent="."]
+position = Vector2(1340, 742)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "rubble"
+footprint = Vector2(70, 24)
+
+[node name="CharredStump2" type="Node2D" parent="."]
+position = Vector2(1230, 702)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "charred_stump"
+footprint = Vector2(30, 14)
+
+[node name="BrokenBarrels3" type="Node2D" parent="."]
+position = Vector2(1130, 822)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "broken_barrels"
+footprint = Vector2(60, 20)
+
+[node name="Weeds1" type="Node2D" parent="."]
+position = Vector2(1300, 692)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds2" type="Node2D" parent="."]
+position = Vector2(1200, 842)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds3" type="Node2D" parent="."]
+position = Vector2(1380, 822)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="CharredStump3" type="Node2D" parent="."]
+position = Vector2(450, 672)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "charred_stump"
+footprint = Vector2(30, 14)
+
+[node name="CharredStump4" type="Node2D" parent="."]
+position = Vector2(1000, 672)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "charred_stump"
+footprint = Vector2(30, 14)
+
+[node name="DeadTree5" type="Node2D" parent="."]
+position = Vector2(80, 592)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree6" type="Node2D" parent="."]
+position = Vector2(200, 872)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree7" type="Node2D" parent="."]
+position = Vector2(420, 912)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree8" type="Node2D" parent="."]
+position = Vector2(960, 902)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree9" type="Node2D" parent="."]
+position = Vector2(1560, 672)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="DeadTree10" type="Node2D" parent="."]
+position = Vector2(1450, 912)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "dead_tree"
+footprint = Vector2(24, 14)
+
+[node name="Weeds4" type="Node2D" parent="."]
+position = Vector2(400, 582)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds5" type="Node2D" parent="."]
+position = Vector2(560, 532)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds6" type="Node2D" parent="."]
+position = Vector2(1100, 542)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds7" type="Node2D" parent="."]
+position = Vector2(950, 232)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds8" type="Node2D" parent="."]
+position = Vector2(1420, 622)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds9" type="Node2D" parent="."]
+position = Vector2(690, 842)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds10" type="Node2D" parent="."]
+position = Vector2(1080, 852)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds11" type="Node2D" parent="."]
+position = Vector2(250, 692)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Weeds12" type="Node2D" parent="."]
+position = Vector2(1250, 152)
+script = ExtResource("scenery")
+folder = "ruins"
+kind = "weeds"
+
+[node name="Skitter1" parent="." instance=ExtResource("enemy")]
+position = Vector2(500, 600)
+kind = "skitter"
+
+[node name="Skitter2" parent="." instance=ExtResource("enemy")]
+position = Vector2(720, 520)
+kind = "skitter"
+
+[node name="Scholar" parent="." instance=ExtResource("enemy")]
+position = Vector2(1000, 520)
+kind = "scholar"
+
+[node name="Sentinel" parent="." instance=ExtResource("enemy")]
+position = Vector2(1080, 660)
+kind = "sentinel"
+
+[node name="ToVillage" type="Node2D" parent="."]
+position = Vector2(800, 940)
+script = ExtResource("travel")
+destination = "res://village.tscn"
+size = Vector2(160, 40)
+arrive_at = Vector2(800, 90)
+
+[node name="ToVillageSign" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 846.0
+offset_right = 900.0
+offset_bottom = 870.0
+horizontal_alignment = 1
+theme_override_colors/font_outline_color = Color(0.08, 0.07, 0.06, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "To the village"
+
+[node name="HUD" parent="." instance=ExtResource("hud")]
+
+[node name="Debug" type="Node" parent="."]
+script = ExtResource("debug")

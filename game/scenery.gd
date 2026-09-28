@@ -1,14 +1,16 @@
 extends Node2D
 
-# A piece of village scenery: res://assets/village/<kind>.png, scaled up by a
+# A piece of map scenery: res://assets/<folder>/<kind>.png, scaled up by a
 # whole number and drawn with its base SORT_LIFT below this node, so it
 # y-sorts against the wizard, whose node sits at the middle of his sprite.
 # A footprint makes the area just above the base block the wizard's feet.
 # Flat pieces (floor plans, garden plots) draw under everything that walks.
 
-const ROOT := "res://assets/village/"
+const ROOT := "res://assets/%s/%s.png"
 const SORT_LIFT := 28.0
 
+# The art folder under res://assets: "village" or "ruins".
+@export var folder := "village"
 @export var kind := "pine_tree"
 @export var pixel_scale := 2
 # Width and height of the blocking area, centred on the base; zero blocks nothing.
@@ -19,7 +21,7 @@ const SORT_LIFT := 28.0
 
 func _ready() -> void:
 	var sprite := Sprite2D.new()
-	sprite.texture = load(ROOT + kind + ".png")
+	sprite.texture = load(ROOT % [folder, kind])
 	sprite.centered = false
 	sprite.flip_h = flip
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST

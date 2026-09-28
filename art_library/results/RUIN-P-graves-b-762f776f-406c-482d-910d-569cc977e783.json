@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "762f776f-406c-482d-910d-569cc977e783",
+  "status": "completed",
+  "created_at": "2026-09-28T14:26:35.384784+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "low top-down",
+      "width": 48,
+      "height": 48,
+      "description": "Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Three weathered grave markers standing in a row: a small rounded stone headstone and two leaning wooden crosses. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Palette of faded wood, soot-black char, grey weathered stone and dull brown-greens, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no buildings, no text."
+    },
+    "object_id": "c3fa256d-7086-44f0-be12-519c313eb3d4",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/c3fa256d-7086-44f0-be12-519c313eb3d4/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "209b08e3-c47c-46ce-919c-286787e1f939",
+  "status": "completed",
+  "created_at": "2026-09-28T14:24:35.216293+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "low top-down",
+      "width": 64,
+      "height": 64,
+      "description": "Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. An overturned broken wooden cart with a snapped wheel lying beside it. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Abandoned ruined village palette: faded wood, soot-blackened timber, grey weathered stone, muted dull greens, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "cb35f0d1-55b7-467c-941c-74be43357e0c",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/cb35f0d1-55b7-467c-941c-74be43357e0c/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}
