@@ -1,0 +1,11 @@
+{
+  "description": "A single small round glass potion flask with a cork stopper and a short neck, full of glowing deep red healing liquid, side view, centered. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+  "image_size": {
+    "width": 32,
+    "height": 32
+  },
+  "no_background": true,
+  "view": "side",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

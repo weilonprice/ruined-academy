@@ -55,3 +55,17 @@ Wizard (CH-01) clips, generated as `CH-01-<action>2-<direction>` on the existing
 - Walk: all 8 directions replaced (8 frames, longer stride), ground-locked.
 - Dodge: all 8 directions replaced with generated frames 1–4 of 6 (a deep forward lunge), ground-locked. North-west and south-west were resubmitted after connection resets.
 - Cast: only north (generated frames 1, 2, 3, 5; the staff stays in hand) and west (generated frames 2–5; now faces west throughout) are replaced; four frames keep the old timing. The other new cast directions were not used: north-east shows a doubled staff for a frame and south-east adds a spell spark, and the existing clips were fine. The whole cast folder is ground-locked, which lowers north-east by 2 pixels.
+
+## HUD pass (2026-09-28)
+
+`../tools/build_hud_queue.py` (`queue-hud.json`) asked for two takes of each HUD piece with the same setting-free prompts; 9 generations (425 → 416). `../tools/make_hud_art.py` builds `../game/assets/ui/` from the reviewed picks:
+
+| Piece | Used | Notes |
+|---|---|---|
+| Life flask | HUD-life-flask-b, cropped | Take a was a different, larger flask shape |
+| Mana flask | HUD-life-flask-b with the liquid shifted to blue | Matches the life flask exactly; HUD-mana-flask-a was a different shape and -b failed with a connection reset |
+| Life and mana bar frame | HUD-bar-frame-a, cropped, stretched as a nine-patch | Take b (scroll ends, textured slot) was too heavy for thin bars |
+| Firebolt skill icon | HUD-skill-firebolt-b | Take a had a black scribble in the flame |
+| Frost Nova skill icon | HUD-skill-frost-nova-a | Take b was washed out |
+
+The flask's liquid level shows its charges (the rest of the flask is drawn dark), with a pip per drink below it. The first pass's UI-01 bar sheet and UI-02 slot frames are still unused.

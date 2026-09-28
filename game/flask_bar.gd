@@ -1,15 +1,19 @@
 extends Control
 
-# Flask vials beside the skill bar: fill shows charges, a bright rim shows a
-# flask recovering, and a vial dims when it lacks the charges for a drink.
+# Flasks beside the skill bar: the liquid level shows charges, a pip under each
+# flask marks each drink it holds, a running flask glows, and a flask dims when
+# it lacks the charges for a drink.
 
-const VIAL := Vector2(14, 24)
+const TEXTURES := [preload("res://assets/ui/life_flask.png"), preload("res://assets/ui/mana_flask.png")]
+# First row of liquid in the flask art; the level rises from the bottom row to here.
+const LIQUID_TOP := 9
 const GAP := 6.0
-const COLORS := [Color("d66765"), Color("5b7fd6")]
-const GLASS := Color("0d0f14")
-const RIM := Color("5a4a33")
-const ACTIVE_RIM := Color("fff0ae")
-const DIM := Color(0, 0, 0, 0.55)
+const EMPTY := Color(0.3, 0.3, 0.36)
+const FULL := Color.WHITE
+const RUNNING := Color(1.35, 1.3, 1.15)
+const UNUSABLE := Color(0.55, 0.55, 0.6)
+const PIP_ON := Color("f2c14e")
+const PIP_OFF := Color("2b303b")
 const KEY_COLOR := Color("d8d8d8")
 
 var player
@@ -29,22 +33,33 @@ func _draw() -> void:
 	if player == null:
 		return
 	var count: int = player.FLASKS.size()
-	var width := count * VIAL.x + (count - 1) * GAP
+	var width := 0.0
+	for texture: Texture2D in TEXTURES:
+		width += texture.get_width()
+	width += (count - 1) * GAP
+	var x := (size.x - width) / 2.0
 	for index in range(count):
 		var flask: Dictionary = player.FLASKS[index]
-		var vial := Rect2(Vector2((size.x - width) / 2.0 + index * (VIAL.x + GAP), 0.0), VIAL)
-		draw_rect(vial, GLASS)
+		var texture: Texture2D = TEXTURES[index]
+		var at := Vector2(roundf(x), 0.0)
+		x += texture.get_width() + GAP
+		# The whole flask drawn dark is the empty glass; the lit part is the liquid left.
+		draw_texture(texture, at, EMPTY)
 		var fill: float = float(player.flask_charges[index]) / flask.max_charges
-		var inner := vial.grow(-2)
-		var level := Rect2(inner.position + Vector2(0, inner.size.y * (1.0 - fill)), Vector2(inner.size.x, inner.size.y * fill))
-		draw_rect(level, COLORS[index])
-		# A notch for each drink's worth of charges.
+		var liquid := texture.get_height() - LIQUID_TOP
+		var top := texture.get_height() - roundi(liquid * fill)
+		var tint := FULL
+		if player.flask_time_left[index] > 0.0:
+			tint = RUNNING
+		elif player.flask_charges[index] < flask.per_use or player.dead:
+			tint = UNUSABLE
+		if top < texture.get_height():
+			var region := Rect2(0, top, texture.get_width(), texture.get_height() - top)
+			draw_texture_rect_region(texture, Rect2(at + region.position, region.size), region, tint)
+		# One pip per drink the flask can hold, lit for each drink it has now.
 		var drinks: int = flask.max_charges / flask.per_use
-		for step in range(1, drinks):
-			var y := inner.end.y - inner.size.y * step / drinks
-			draw_line(Vector2(inner.position.x, y), Vector2(inner.end.x, y), GLASS)
-		if player.flask_charges[index] < flask.per_use or player.dead:
-			draw_rect(vial, DIM)
-		var running: bool = player.flask_time_left[index] > 0.0
-		draw_rect(vial, ACTIVE_RIM if running else RIM, false, 1.0)
-		draw_string(font, Vector2(vial.position.x, vial.end.y + 8.0), str(index + 1), HORIZONTAL_ALIGNMENT_CENTER, VIAL.x, 8, KEY_COLOR)
+		var pips_left := at.x + (texture.get_width() - drinks * 3 + 1) / 2.0
+		for drink in range(drinks):
+			var lit: bool = player.flask_charges[index] >= (drink + 1) * flask.per_use
+			draw_rect(Rect2(roundf(pips_left + drink * 3), texture.get_height() + 1, 2, 2), PIP_ON if lit else PIP_OFF)
+		draw_string(font, Vector2(at.x, texture.get_height() + 11.0), str(index + 1), HORIZONTAL_ALIGNMENT_CENTER, texture.get_width(), 8, KEY_COLOR)

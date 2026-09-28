@@ -1,0 +1,152 @@
+[
+  {
+    "id": "HUD-life-flask-a",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small round glass potion flask with a cork stopper and a short neck, full of glowing deep red healing liquid, side view, centered. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-life-flask-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small round glass potion flask with a cork stopper and a short neck, full of glowing deep red healing liquid, side view, centered. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-mana-flask-a",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small round glass potion flask with a cork stopper and a short neck, full of glowing deep blue mana liquid, side view, centered. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-mana-flask-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single small round glass potion flask with a cork stopper and a short neck, full of glowing deep blue mana liquid, side view, centered. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-bar-frame-a",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A long thin horizontal game status bar frame made of weathered dark bronze metal, with small decorative end caps, the long inner slot is empty and dark, flat front view, fills the width. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-bar-frame-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A long thin horizontal game status bar frame made of weathered dark bronze metal, with small decorative end caps, the long inner slot is empty and dark, flat front view, fills the width. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 128,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-skill-firebolt-a",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single spell icon of a blazing orange fireball flying diagonally up to the right with a bright yellow core and a flame trail, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-skill-firebolt-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single spell icon of a blazing orange fireball flying diagonally up to the right with a bright yellow core and a flame trail, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-skill-frost-nova-a",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single spell icon of a ring of pale cyan ice shards bursting outward from a bright white frost core, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  },
+  {
+    "id": "HUD-skill-frost-nova-b",
+    "endpoint": "/create-image-pixen",
+    "payload": {
+      "description": "A single spell icon of a ring of pale cyan ice shards bursting outward from a bright white frost core, centered, no border. Crisp pixel clusters, thin dark outline, upper-left lighting, limited palette, readable at native resolution. Isolated on a transparent background. No scenery, no buildings, no ground, no people, no text.",
+      "image_size": {
+        "width": 32,
+        "height": 32
+      },
+      "no_background": true,
+      "view": "side",
+      "outline": "single color black outline",
+      "detail": "medium detail"
+    }
+  }
+]
