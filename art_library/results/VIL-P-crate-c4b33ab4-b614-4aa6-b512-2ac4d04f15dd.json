@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "c4b33ab4-b614-4aa6-b512-2ac4d04f15dd",
+  "status": "completed",
+  "created_at": "2026-09-28T01:59:40.514886+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEkUlEQVR4nO2WX0xTdxTHP9z20lIoAkVBjBU2w+If0jkzMZkYnTO6ZYlxMcvCZMuibupMXOaLW7YHfZgkxG3G6MwcmZuGEZw4l2giaMK0uoBBEalWcIIVFJFS7C2Xltv27uHKnWjRarJsD5ynm3PO73y/53t+99wLYzZm/7ElPOvBlgPb1Yv1Z7nhlfi8ouaZ6zz1wZYD29X3t+5AiYQRDUY2vDpLj0XDQVb9cPypasad7D64U21ruUzpL9UsfXGa7r8lKwDMy8vm6+PnAPh0ycu8u/NQXLXjSqrcvFotq67RiwNYEk1c6+3DLCRQ39HLla47I9T4pvYcFVs2MXPlpsdijBps2rtVrTpaw8R0K7tPNvDFsgU427v1+Ly8bG54JS7f9uGw2zALCew740KJhAHYuLCANilCwYRxDClhPthzJCZWTKf74E51+PntzdtYM99BMKqSk5oMoEsNsGaBA9fdAPlpZt1X39ELQGFuJtMnZ5OVP5Pv9u1n14mmR/BiEvhy5RsqwJE/m6gq/QyAHT9VAjCoQNHkFBQhEYDdJxsRDUb2rF0BQGv7DYKDAXJzctiw73fCsow9K5M+r5cL3fIjeMZYBJ5LEWno7EVRQtQeOwbAx++8pcdLyyv1Dtcvmg3Aql2ar2LLJgA2bvuWHKsFjyzT5/WSYbNBt/wIVkwF1r35igpQ1+ymZN5sunp6yJ2UjVlIYOGi1wgPDlDrPMt+ZzMAP29eizEpmYpfD+O8el2vI/n6CYS1adqzMjnpuhmfAh8tW0LVUe3WW00GsjPSMAvaWeepOtyuJlav+4TXFy/GaEqkrraG7dUnmJCRiuyXMJlMJFqSsKanEbjrY+L49FgwoxNod7spXrGcw+ev6BfKkWTG1S0B4O4MUFCnEdxb20AoFAJA9ktYUq3Ifkn3PcliEgA45zxFWJYpzM0EoLU/iN/n0+NyREAUjRhMiXAfbBh8WAGAwF3tjOdOb/wEzt/p14IWC639QQBmjE9hxvgUnG3dyMYkumSFSRZ04ECfX38GGJIH4+j/IQJl5SXqwECQjqO3yLdp77w91QSAFNJWrsNuo9nThRAKMv2FyZoafukfZe6PYVgBBoKIggF7VibJL4XUppqeERdReJhRa4uHuVMyuD2oIIomXN2SPnuAix4vAMvnz+G3Sx0YDAas6WkjahgMBiRfP5KvHwAlGmEgEMDvD1L8YaH6YO4IAi1Xu4iaBerMvdgWZiIajMydkkG+LRmPP4THH8JhtwHQ6G7jvSJt90cikREEhuRBfRSRqSKd4wJkFdkpmJr3cL+x98BXe4rVoSFN8ksXrgEwN5qlK9D413XWL5qDKBqpON2ov+8TMlKJhIYA6JmokXoQ9MiBi/Gt4lhE3Nc6ARCCUTpP36S4SNuA++saNMA+P0aLhVCOlj9r2vN6nUM/XhgVJ67PcVl5iaooWkfNl9sRglHs96xMsohUnjmP7Je4l6vd5+GOjaLwWOCnIjAaEYBTfzRiTjLrwMkWMxXf18dd95n+5R4kUu906f5YM/5Xray8RF220qE+OXPMxux/bH8DlBzhE1FI+ZIAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single wooden supply crate. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "62e5c56b-c9b4-4c5f-9672-7e1359c5a2d6",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/62e5c56b-c9b4-4c5f-9672-7e1359c5a2d6/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

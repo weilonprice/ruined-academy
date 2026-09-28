@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "8e1342a4-a311-458a-8b4e-b5505bbb9b84",
+  "status": "completed",
+  "created_at": "2026-09-28T02:01:24.930172+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFmklEQVR4nM2WWWxUZRTHf3dm7mxlug1doDMUtJ2yFMpWKKAtKBSNuCBGhIQEFB9MXIJLlBC3GBLkwUhMGo0RQWJCREGUEMNiQyygAQq0QOkUKG2RYbrOPnfWz4fKkAbamRYfPG/3fP/zP//75XznHLgPWz9lqqiUM8X9cKhGGri6qFQsWzwN85hs7keEZqSBwXCAI4driYTCI6UAQBpuwOuLqsX8LIV6Txeb361i06fHsKSPpsnRR3NTJ7+7OofFmTL4w4fLhTkvjKvLR2dXkN6eUOIsmxjVz88hYvDx03cO8nNlPmuwp8SdEmj5pEJR88YiPqipxe/0IQe1vO4rAEDoVOxVWrmmitEqBSi3ZWMdG6eHLLYeaUrKnxTwpNkqZs1Jw+12Y7pg4GlfNgC5i8owZ2YBsONKPe7GqwCcl7z06sOMm2Tm4qVeTga8Q+YYsgjnjh0j8keraL8cwNAmsUqbR6DIRNnFAwNw0+pOAnB06RrKoibOK16ydFpKCyL0tsiimcigIoZ8hhsqillRmYvBA69qC3GlaRLJj2fM5LJ+AS2mKg4+8hwAlQe3E9YIyoSJjj97UIl0ivMyhkoxuICnxueLAxcuUXOgg3WBfGKRKOW3jgLQYqpilKJPYE2SkaNL1+BwOKk8uB0As9DTcDPI4ikFlCAP2icGFTDDauXz9x/C6tWiDwtCop/jXPpD+KUYOkmi6PsSJux4EABtVKLlpY2JeAsyE0xacicayNSoh38DJVPVbN3ZzDJXLgBloRO0Tn4GfVjglwKU/DYLT5sPT5uPl3fOgDQ/2qiEadd+Kg59A0BWl47aOsegyYcUsKfWwRMzcwb43De6AQhIEQDaP7rJufdaCPTdwRw+dGxATFDxk6EbvNYHFbBucQm7fm8b4IsYdQAYhQzAtN2zWfhzFQBeX3+hp2vSkNVyImbTa3NRwiMQcN3hxJJjwKuKJny3i3CUoufE03VIxjiSMc5fHzdgkowATP72EyKxSCJm12/nCQll+AJOXfJgy9NyweDp/85/FIDOedaEiObHzlBb/QfCkw7A/L01APy55k0AeiSFx6fnEpN0wxdgtzvo9kn0yFHUsoZMfxT/D0eorN2N7dT3eC3pqGUNZsnA1dFx5u+tIT5Kx7GN28DpJqzpfzX157uR5figAoZsky9OGCdUZomIPcw7fgtqWUNHyMMj4bMDcPWnTxF0uqhfuwFPQEEblfhF30t+YTZuR3DICZl0FqyfXSgqSgrYv9vOVrmYWCRKSAh8eoUF7noAvsgpRfHcmY4nJD9LlhcwfkweT31xaOSzAKDHD8UFGta+ZWPLl6041F7eDhRCEC7rFwCgiFAi8bhMI6tWFlFb56DTb0lGn/o+sHxSoSjK1mLSxLlU14cuTUfIH8Is9DSqA+i1UaaUmQBodKo4cvXv/24fAChBFtlGPSsrHqC9O0jhuP6ndaFdYsMLk9m2/Qxeb4wbvTE0adqUN6OUBbxZXi66/N24nFF+7emQqtNGCa+QkCNqAghmFeq42acjLz+T9uutHPL7UuIe1lZcPtGCw9PfF3rDaqpnTcRms2JE4qsrnZJJ1rD22YrhUKYmYIltilhaNZ2GZheyHGd1UakA+KOxjWt/OwGYZzSJW4qfLLOJ0gfHMlvOSGlVT2ktFzEXwUgAu72DedMnMmNqFlMd6XfhTjZdY/OWfQCoReiu8xELGKPT0mRvJSQUjp9t5PjAPoRO0hORYwDkTsghHnCnlDxlATkameP1dgD+iir3KC4F/p0/VpVWvLRiKZu37en3J7GkNfDKvFIxvigPlUEz5FC5bZFoNxaLCZvNysLK0UnrIOkNRP1emhzgvOHi9D3/fqDta2qTsrb9KJqcfZi7kwtOegNfN7RJLZ19aAv0yaAJ6ys2AODWR5Mg/wf2D4kYJi7Wkwr8AAAAAElFTkSuQmCC",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A round straw archery target with red and white rings on a wooden stand. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "552dd87a-5e16-48d9-9bfb-113948391741",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/552dd87a-5e16-48d9-9bfb-113948391741/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

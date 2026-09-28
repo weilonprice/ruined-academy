@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "1b0ed484-be2c-4538-a09b-f96ee314a8bf",
+  "status": "completed",
+  "created_at": "2026-09-28T02:13:00.078008+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAE90lEQVR4nO2WXWxTZRjHf+1Ov7b2bOvafdCOj42tMtiAsagLCizoQAmGmBgXIdEYE4xwoUESE8ULPxK5MPHGRC9MNBBjIiESYhCjQRJQVATcdBvOdWx062i3dj1de3p6Tnu8GD06mSLblcn+d+c9eZ/n//ye5z3nhUUtagE6dHSfvtAY5oVs7hsc4Jm3dy/IhDCfTY+9tlHPpmBVfQOv73nXtBAD8yIw2D2ONjbN9sBDAOx6rl3vfHbdvEjMi8ClY4MmgETqFR0gnZdRUpn5hJqfgQeeDugAY5cldj3Sqg/1TVK21DEvA//aggNH9un733vKQNsaqNOf2HafrqomsmE73jVW0kvyeOvtCNcdtAbq9KYVtbNacbuTMucAHTgys0lJpYiNy+TPDgGQyqgMjk+gafkZ92UK1QGRse8VAATBjN1qwWW3s+lgBz3fXmIkEmF921188NLnc+aak0CDYyXBb/ro/72byMgVcmur0LaUAeAVXSyvctPWtIIGZy2rrus4i20E/JXUV3vIZFWyOZX+4BWEKheXjg2aJuJT7H7r0TlJzGng+FcfMZwYJnR6hJikUVorIp0MczUUISolARgdj+HPTwFQV1kOgJRW8FeU0bSnkWh3mNyIxv4nd+gnDp833Zi4xuHPDt5iYhaW9jUNurXIQtuLHZx54xTujRaigxmKJ614XE5sghlFyyOlFcRim/FsE8xEJRmx2AbA4PgE/m0VBL8IEbjfx9C5GOu6asmeU1C0PCe/u2zkNQPsbF+vd7Y165OJNADFJhCbYexMmtRwit2v7mDbC5uJSvLNNjiQ0gq2Hct4+NC9xnqBQvveFhylJTRvbQFgSUcx/cfHGY1LAHR13G2QMO3dfo/eH05S43YyHI3jcTlRVI3G1Uv5JdVHPJozCCiqhqLmqHE78TzeRM/5C+gTNkqnzAaFgsKxBILHRmU96AN2sjkVAGuRBa/ooDcUwW61YOpsazbc2CyCMeWCYKZyg4VN2ko++elXI3DrSh+pjEqiLE8iPYUc1Oh8+UHiUxLBoz0kbn6QNC1P14bVKOEBTkY0Y399tQdF1UhmMrT43Zh2tq/XFVXD7XIQjk1jsxThdjnQtBzebIx8eSVjiSyjsQQAPncpXW+2A/DpOxeIqTmmg0ky2ZkKS0vseFxOSuwWAGRTCIfuByCWlI1CJ5LTMwY2r23Sa9xOwrFpxGKbgdkrOpDkLKLDagxaMBKnrrKcqCRTvrGU306F0LQ8m57fgqzKXH7/R6NKKa1Q43YalceSMqLDOjMncpZkJoPLbv/zFBRI2CwCUlrBKzqISjLZnIqvXESSsyhqziBktlqh3ccPH35NzdZ6Ghs8RE6MGYNYKKrG7ZyVPCrJ+KrdfHz6nOmWY1gwcjUUASDgr0RKK4aJYCTOdFpBEMxoWp58kULddj+h05NG3wXBjL+izKAYlWRsliJCk1PUV3tmHcE5DRTUWOvTl1e5afBVMTB6w5j+v+riUJBVVW4wlxhrg+MTALQsryGWlFHUHFEpSe/Q9Tlz3fYy0Rqo0zNZFa/oMnC6XQ6Go3E2lcxMd6+5DMCgtcxbTve18My7f0j8nw0UtHltk26zFCE6rMZwFvDaLAKKqs1a+/Jiz3+KfcfXqcLv1l9RZqwVvh9e0cXZn3vvKOYdX0gKSL2iSxeLbUhpBU9FKb1/G65FLep/oz8AxeFGFrqp2NkAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A small square garden bed of leafy carrot plants in rows on dark soil. Flat straight-on view like a classic 16-bit SNES RPG town map: the front face is square to the frame and the top is seen from above, no isometric angle, no diamond shape. It stands alone with nothing under it: no grass, no ground, no floor, no platform. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "bcdf2f6d-fdc1-43f6-814b-8ccaba61e463",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/bcdf2f6d-fdc1-43f6-814b-8ccaba61e463/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

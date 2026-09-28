@@ -1,0 +1,8 @@
+{
+  "description": "muted medium green grass to dark brown tilled farmland soil in neat furrows",
+  "tile_type": "square_topdown",
+  "tile_size": 32,
+  "tile_view": "top-down",
+  "tile_feature": "tileset",
+  "outline_mode": "segmentation"
+}

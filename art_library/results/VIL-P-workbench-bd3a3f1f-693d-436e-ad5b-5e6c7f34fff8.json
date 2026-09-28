@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "bd3a3f1f-693d-436e-ad5b-5e6c7f34fff8",
+  "status": "completed",
+  "created_at": "2026-09-28T02:01:42.351792+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 48,
+      "height": 48,
+      "description": "A wooden workbench with tools and a vise. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "bfddf36b-5bd5-4097-b2f3-e11aa059225e",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/bfddf36b-5bd5-4097-b2f3-e11aa059225e/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

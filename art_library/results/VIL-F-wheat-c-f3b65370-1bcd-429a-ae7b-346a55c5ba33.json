@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "f3b65370-1bcd-429a-ae7b-346a55c5ba33",
+  "status": "completed",
+  "created_at": "2026-09-28T02:15:43.534914+00:00",
+  "last_response": {
+    "image": "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",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "Seen straight from directly above, square footprint, walls square to the frame, no isometric angle. A flat square patch of tall golden ripe wheat stalks, no raised box, no soil edge. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "a8f945d1-2e67-4266-b2c8-67596da9b5a2",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/a8f945d1-2e67-4266-b2c8-67596da9b5a2/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "571ff82a-29bb-4d26-ac8b-e5ff997e3b7a",
+  "status": "completed",
+  "created_at": "2026-09-28T02:10:56.952048+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFj0lEQVR4nO2Ye2xTVRzHP+3tbdetY2x0c3eLZYMxwWSAMUFdRpYQw8OhQJYIEUVBFAOSKCpGDRAxPmI0SkAgDsQpGkdAHm7iwBcPjWBAkomSbWEbsHWM7lG2tdzetsc/yhoaENrtwqLpJ7nJvTe/c8/ve8/vd87vHIgTJ06c/yS5il0Mtg8Axv42lOVECkbmhUXkOZRBEdRvAQCOdDsAipIilEC6Lg7FSr8FXOzpYMaDE8lMs4kEZJpx6enXzeWJ0geEt7dVqD5VlBYVi+WLFopcxS4GIy8MsRirPlVMvHs8B48ewSBZEAGVSROmAtDa0QiAURLUn3HG9N2BEHUIqT5VbHt/FYeOneChKQ+TMzyDQ+XraO1oRDLJ3DF6HEOttzEiZxylk0tu2WhEJcDTUitWLF1C6eML6G48ibO5nobTZxHWZP78/WdMZomeDg8pw1Lxdntpu9BDatLtjMjOuukibjjUEwrGiMp3tgBgyUrEnJ8BQMB1IWwzbeaz4XtbWiIA7jY3Lvc5NM2DJMs3LaxMNzLocveydUcF67//imO7qyMc31z2CQDNbXVkZ4wKv+/p8JCSkYIlMYEPVjyNx+dh7pLlosHp0l1EVB8sGJknNr30FkPThjJn5WJkWUbTNP44VW/IVezCYDQDRIgwmSVki5ndez8F4MyxE5Q8Op+Apuk6IlF/pGBknrAmyhyt+TuizbUENLfVcbL2OAZjYthu1vTZBDRBY+Nf+AN+RNCHwWjmdHPLgITo8hfyHIpQhuWHn7/78TOMZgtGORWAmdNmAhDQQjnt7faSkW6j5lQNQTQCmkZ/w2tApcS/MXXSPII+FREIXRByXpINaKoPa7KVLyu/pqa+jsPfVPDxqmX9Lg51ExDwa+F7k1nC4FUJdrYS7Gxlx+drgFByA+yp3oa/txWA1DH3UDh7Lh+ufrVfBeENZ6FoMCLT2tFIdsYoTGaJqp0bAQhqasQU24dBsmBKyrxs04nRbGGILYmT9Y2MHp4d02yli4AgGplpuVe9v5bzVTs3EnA1IdmHR7xfsOw1vrDIJFvMMfWtSwjVn3EaPtq4AZNZuq7dlWEW1DpDl09lctFsAOYuWU636oupb90WltKiYrG1ugIA4b4IQMmsZ1A9lwCQTHLYtrqq7Krwam6rwygJxjny2XH4QNR+6ZbEl/wqv+3ZTdCnMv7e+9lfVckri2dxyevF5T7H+faGCPvJ0xdFPIugj65OF5f8akz96iagpctFanIK3gvtaJqH51a+xabtu3j+ySmMysrCH/Bzvr2BvbvWEdTUiBHpwyRbSM9Oi6lfXZIYoMvdRZOzhSZnC8kWM1JCIvbkdF7fUI5VTmLze6sAqNq1l5KZ06iuKmNKyVNAKHwADBaJ6l9/0cul2LlyH7B80UKxbMGciE1/365tX/la4WmpFZ6WWlFYUCjyHQ5RseZdoSgpMe8jdF2JzzpP41VDSbu98ls6LiczEC7e1j+WxIur3o5o5w/4cfeEqty+9tGim4DMNJtY+sgMAPIdDjFvzL0cP3YiwuaNWRLzN7UT0Ho5cuAnIDQ7mSQTXq+fBGRstuSY+tVNgF9TuWfqRKyWBADKTx7EE4yMhtWVFhKtQ/CShOYLzffVVWVYZDNWq27pGDt5DkVMvKtYFBYUCkVJiSqG8xyK2Fe+VvR2NonMNJt484WFIs+hiFjrId1GoLmtjjZ3A06nO6pFqP6M0/Dy26Eiz2ZL5vCJZpbOm4ORq6fX66HLuPV3dyXLMuLiRSYXFXPe1d2vvm/KfiBaNE3jh337ua+4iOM1R1izpWIw3YmdXMUuxuaEjl5yFXvM8T+o5Cp20dvZNOADsFt2BHgl+Q6HyMm5E2+3F2d77YBOKAZFwNicLNG3RtzKc9Q4ceLEifP/4x8U20nABjf0xQAAAABJRU5ErkJggg==",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 48,
+      "height": 48,
+      "description": "A single black and white spotted dairy cow standing, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "b3a1bd39-c359-4e96-a09e-8a51b056cb8e",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/b3a1bd39-c359-4e96-a09e-8a51b056cb8e/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

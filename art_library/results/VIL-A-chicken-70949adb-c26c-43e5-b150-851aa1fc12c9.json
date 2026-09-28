@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "70949adb-c26c-43e5-b150-851aa1fc12c9",
+  "status": "completed",
+  "created_at": "2026-09-28T02:02:41.857390+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACm0lEQVR4nO2VT2jTYBjGn66rDATBTfDf2GVlKwbWFpGkNI6gtTBBTzIYCgM96EEQj716UUFxIjgFLQMPOkEpTizF0e6w0ZW1qMjmglgh6JjFWmnrWmyy10NpaNe1yVp2EPqDj5Avb97v+d483xugRYv/AYHhaLtyt2kFuG08XdrbvW0i6goQGI7Od+6D99cqCgptSYTTwlLTop0Wlp4dO0NKLkNyNkVyNqUrqdvGk5xNkZLLaMZrfoK70meQIsPFDgEApiN+uG18zaQCw9Gb2SkAQFIStdKjvV6il1d+AAAKv1cwHfHDYCyG+8N+DNpdBAAmo6HivfK4zoO9mgJq4rSw5LSw5DBb6dP1XpJiQVJymYrx1nuL4uFA1bySy5AUC5LAcBQPB6hexXSLEUO+TRfabCTEKCXEKMnZFEmxYF0Bmh4AimXuO9IHUuSqZ0lJrBhAsfT5bBon+VON7rkSgeGIskuqs2uN6KvH5DBbKR4OkBQLUjwc0DwFNU24EQX7VXOVSEoiunr61Xv7iWHMfhzGoN2le3O6PgEArIjvqhYvv5Ii4/vSAhamnmBnhwm3r43CZDRgbjliqEpWhu4KjJz1wDvugZk7rs59mJsB7x5C8OlD/Flbw82xFwCAyck7WPmyrCtvXXXlOC0secc92H2gG109/aohX0/cq4gbOMyikM/h4uUbmFmc151fFwLDUe7bIsXDARJDPrU9l1q1GPKRGPI1/w+oh9vGk9vGk9PC0sTV02qDSohRmn9+f8tNp6kSOcxWAoC29g51Tst0G9F9CkqUt+gLA2kAwKPRnw0t3pAAAFiX8yisZ/DgffMe030MS5iMBpw7lMbXHX9hNe4CdxQYGdvTsICGtyAwHBWUot8aKX2LFi1K/APfp6h+fkL8TAAAAABJRU5ErkJggg==",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single small white chicken standing, side view. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "e430c266-14a4-4fdf-846b-c54838c91c88",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/e430c266-14a4-4fdf-846b-c54838c91c88/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

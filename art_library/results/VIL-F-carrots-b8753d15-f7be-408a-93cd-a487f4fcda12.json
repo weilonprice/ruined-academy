@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "b8753d15-f7be-408a-93cd-a487f4fcda12",
+  "status": "completed",
+  "created_at": "2026-09-28T02:02:00.244281+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFGElEQVR4nO2WaUzTZxzHPz2gJ1BoCy1XRZAbwjVgMO95zQWzOGe2oO5Klm3xyJIlZskSd7xbZhZ9s2RuidNsMRubWzKH0ykSFS0qAxlyySGUUoGWEkqh/st/L4iNFQ/G9mYZ31f/5Dk+3+f7++V5/rCgBf2XVVaZL/7TPeTzXbhxb6GYnKgB8sWhtjE66m9K5rOPdL4GkhM1NLU7WbVej8Y4L/bfM7Bxb6H4wgcrRIBDW94ULx1vp6jey/mDDYy5fWQvsogAq98oEVMLYudcmjkZKK3MEPOzIxnoG2T7vgLRqx5A0i0Q4ffgvjlO7lQUCboIcpaaRGWkgKCSU1qZMScTDzVwb4Pp49WcrrYxNOnjt6p+ACrLyrEWZyFkRAKgkEtJ2xCLa9RPbIaa4dsTvP70TGIpay0PNfPA4m3fXy72nr1NR4OL3Sue5Mg5K6+kaDh63YZLF0WG1khniIeXP8zF7wyn7pMGUuNjOOHoQmOUoBtx0W6TECWRYSqIY9I4QWyCCeuRNno67UHMWQmUVmaIne0etu4sIWxFOGqZlF1rynCOuQDI08WgUyt57q0cTp3soLmzlzbNKCl6Nbsys9njcSH0+Sg2xZOgj0FI8rE4Xs1A3yDJqxMfXYKPKlaIt7s9LLrh5PDb1YxeHmbCPw3AMX04+vIsnkxPoGyJmV+/usSWnju0HLICcKKxG4DPNJH4sjU8k5vElieW0P79IOrz03iOz4xvyMsNKkcgjoM7NokAE/5p5LY/OXrdhik+DYARuZf0l6IpL0nl050neS2zkJZbI4z3NtLlEbAsysCg09E0amPtHgs1Nf14XAJ6IZyn5NHkTFr5+LIHy6IMAApjdbz/c40E7rmIqqytKGQyNhencdq9mE3LU2lwONmYGkfnUpHa39uAdqYNIRhVoRQlGflSa8YzJFKRlwyAU+PidLWNnkYn6nAlr6YkoJBJOeVOZFmpkRS9miprK8ca7LMTeLGsWASwu9zoNCoq8pNptI8BkKJXM9hcyzm7QJdUQbEpnlGPF8M2Df0tXkbafKyOCKO6x8G365S8++MwozI1KTFmACryk/muvoO+UXcA3NzTKwnqgbIlM5PNkRFEqNUcq7tB7+AQWdFaFDIpyhAFAMsTF6MKDcWwTcOqokwAtIkSChKTeG9ZKbcGZ0qck2DBoNNhMRnZf+pKEDxOqwl8B0qgkEkpW2LmYoedzEQ9PkEA4IuzV9EoVWwuLmFr2sw8uUzK5z800fVLHXH9g1wNCYdlIJdJOTEUy/b1+XxT18LwgCMIahv3BMGDEhhwe/FOTAHwR5eDlelxM/GbTZgjI/i6toEqaytT/mnOtdmJRYNi0onjjpQ8XQxnW20I/ml6h0Y4cOYaw97JAMSgUgZBp/z+2T1wV+uyM8WsmGjSLZGcbbVhVqmxeycC43aXO9CsFzodZMWEowtTzZz4Hui9pzaolHgmvXiFKZr7HEHMhz5jB3dsEi922FmZHhcwkm6J5EKnA58g4BwbByAqXMv1B0QNkKCLoG/UTXJ8DD+dtz6Q9dh3dN/m9WL30BjL08wI/mkudDooSjJypXsInyAE4PfXeMrvxzPppb771iMZj30N91VVSw7XXpSo9EYcwzPXsUImZXmamVC5fNapp/x+DLEWam60SR4HhzkkcL/eeb5CNEl86MJUABw4c404rQapXE6oVvnQqP81A3e1+9k1okF6h2NN3ZSmJHHodM38f4sWtKD/tf4CAtf8e92SmZcAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A small square garden bed of leafy carrot plants in rows on dark soil. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "57053e7d-1a08-4413-8030-33cda92d7d1c",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/57053e7d-1a08-4413-8030-33cda92d7d1c/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

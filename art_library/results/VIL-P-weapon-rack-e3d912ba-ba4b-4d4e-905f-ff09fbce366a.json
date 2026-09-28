@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "e3d912ba-ba4b-4d4e-905f-ff09fbce366a",
+  "status": "completed",
+  "created_at": "2026-09-28T02:01:24.274710+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAALRElEQVR4nO2YbXBc1X3Gf7t37929+6rV6s22ZBkJy5bxm4RVLDs4WEkZDSHYgGMIlJiBgGFok2lLmOk0TdN+K81MZ5pJhmFoJnRKAMcpcZ2kBgbTYBcTW35Dlo1ky7aQLGklrXdXu3tfd/f2w5VWXhTH0tpOO22fT/fec849z3P+L+f8D/w//o/jiY6VVvuapdZ/N4/fiu6jx6293/0D6xuP32UB9Pf+2nrtuw8VkW1fWfM/k/w0Nt/mtx7cFLEAnn2g0ep5bUMR4ac6b78uAc7rGfxZvPnKS9br33q0mJC4iGy2DICuM1n+5PtjAJx5e68FMDaSuK45b6iAXf/8l1TXH+HpbfcURKR1DbcrBIDf7WGBQ+Kvv9Zp7f3R3/Hs1g5rfWPldc15QwVcnqzgH94M8PLuXzmu/C55XQBoVh637OQWr5PamjB31vsQRBd/3LG4ZDe6bgGvfmvGpysiVdSXua7aN2sYAOh5i2RSwdBz1NaEGctWlDz/vASY2pj16p82WS8+Zgdlx7I6a/26Ib6+yW8BaIYya4xLkgrPfreHdFbi5X1dvLL/Y5IphfGJFBPRcS5duFCSFeZtgVErhbx8MQD7ewcdz75o8coHaQeAR/KiZDKzxmQdSba2NVtBbxa/yyh8l0SBeFqjc2096a6f8Gc7ts9bxLwEiJ4qx+63JWrLHix8Czr9RX28Ph8Azz+zw9ra1mwBeFJJRMZ54A6Bz68xkFwCkkugf3iC6rCPgOxm38/f5cDh38yX//wt4Hd7uP+5bzuef3CzBWCJMyuqGQq6meXR9hXWwNFf8o0dOWSXBvVeQrLGLw5eJjoRY+fdrfzjC4/hlwRSqk7/8ATdAzFqKuYfC45rdynGX31lkyWoaRYsrAbgV6f62PNhv+OpztutEwMTrFvWSJU7jiPjYGiyj7/580qSYzlefNXgrpWtNNxay/HjfUiibQG/LFMd9nGwd4TXDp2eN595D/jJN79sARh6rvAtmVI4O3KexYsypLN+OteN88Pd1dy5ajm/OTfI4/ds4KMjpwv9x+Ip/JJAOBRkT1c/vqoq9h44Om8uJQlob6ixdt7dijsQBkB2O/npe0e5OHyB5noBf5nF2f4M97Z9gXXrW+n66BgA/cMTVIUDuF0u9GyWH73fjSi6WL24uqSVL0nA1rZmKxqLA1AV8LFx+QIULcvxi+Pc374MVdMxzBwenwyAllEZHI9TFQ4wFk9xbOAywaCfaCyOLIpsWlpJdUWYZ3/8XskC5hzEHcvqrFVLKpFFEYCUZpAzbfLrGyuR3AKGmUMSBbSMyshwlHhaQw6FODCs8r13TjqCy1ZSvf5LyKKIapqlci5NgGqa/OfHF1BNk40tzQAogkRnyxIE0cXA4DiD43ESkxn0bJahhMkH0QmsWz5HVfMGAHJSmJbVK4rIR+Oz94354Or7/lVgZHMcO3UO1TRR8wIHe0dYGvHgliTqKsN0D8SYdIrsOtjtALhtI7M2p2kLhENB4snJ6xIwZwtk3W4s2UtI9pBUNWRRJBGdYGnEg9fnpUfJ8/OeEaq++FV2fXCs4NOGMbNPmKqGrhsFEXo2e13kYR4WOHJmwAF2LIRkD6pp0nH7Er6/9wieYIj3T/Q6HnrsCeuO21uLxkUi5YRDgcK7rqQA2yWVjFLYT266gM8irZu8+R+nqQr4CNRMnfdl36x+4VAANZ0uvAfDEcC2QHVFuNTpCyj5OO13i3S2LKFjZR1e/8wRIOCVivpJU1kLwDh3BK/PbldNE6ckUV1VwZY1jb/femA6iyQmZ2eQBbWLit51JYVi2P1STieyJAC2Bd789SlGhoZJacas/8wVJQmY3gt0o3hil9s9q6/bO+P/+YyCaswcQVTTRPa4+drmVaXQsOec7wDVNEnrJn63SDgURBIFgoGr17XGlLXamustgNGhEQCSqkZI9qBqOufODZVEHkqwwPTqy1f49pUYGbpU9G6ZGgAuXQdA0+3UmZlym2g8w7r2dXzzkXtLioOSslCl3wuAompIoo+8qgKQnSIJsO3JFisdt7+f6X0LgEA+j5FK0VBZVoijvcf7Cfs9GEpp+WTeo6YnTqoaXtmDYc749KQyQkox2LL9NiudSYNkt+lOg3jaFqNEz1HmdSIttrNRSPbQtHwJ+uTYzRewfVOrZWRzqKZpl4WinVGCrlG+8uhqy0yOUlXpQxIFAoJcGGckL7MwHLQF+AROBlLI5d5Ce98nFyl3CTdfgKGqSC6h4P8He0fQs1nefr+PlGr7tJoxaZHraZHrabAqcHsDrAq3Q9hNYE2Q/uhU3SvZC5FU7Rjx14V4omPlzS3q+4dnzCyLImlFJyC7YWoxDat4X6h0h9CVFGWuLHc23cpaTx0bfE0A5MwcRjZHSPbwxqFPqM6JKG6TnS+0Ws//7dwDes4C2hvsW+S0PrNqQ/FJovEM33mok3x66pDmEzk9FOX0UBSAt1572RY/drnwr2kR5W32HpHW7biKfnqJ2oYAoaoUO19otb7991+9ppBrZqFHntloZdQYQ+/HCtkHYDg+ycJwkJ91nWXJgnKyMZPGOvts01hVDsAJbZDalTKnc8OkylQmjDjuvIQkCgiigNstkFiQpVILc+TTKMuXVbPKu4JmuRYiMBlLsPDl7db5UYXvfecXv7Vqu2opt2XHcgtVQMnZ2ePykRTTp1BZFEk5nQTyeZKqxrZ1jXw0Os7SBfaFl+zM8bEjhu40uENqLPwz7tR48kubkUwH7/xyP51b/5BdsXfIG3mckhNnzM0Dt3wO51RyyE9luF0T72Jkob9/kjd+cLKI8ywBO19otUajCvoVtw4AycP2MXi6GAmtLcPoyTCeVviLbRsIV0R4qfsIAUtGl4xCel3rqcMtidzf0Ub32EXOC5fwTOX8zQ3r8eBCI8u/xfZzX6SDPQP7cQ3nMIIgil5MU8FR7sAp2WM0JU/sXC0v/fB1xywBf/T0SmvlqkUc6hooEjD+YYKQ7AFgRdNC+vRxrADkTpmopsl9a5fglT38y7EL3NPWTF5VcMpeHvhyO3sG9lOX8iM5/FyutRchnrCDvTFdg66ofOq9jFAjIPTlyDUVp9Np6wD0HouRSljs2dVT4D3LAg8/t8bKJSwWr/DQ0x0nN7WS6V4FqUJCirgQpkycPJxCFkUab6likVvkon+M5vqFZH1ehKADQ9d4qP7uGTJmruAeAG+NfoAparOIXolETGXgvEkykeTdn52fxfeqMbDtyRbLI5g0NUU4cGiwQPpKJE+lkE3bpR7/Ygs//vA4nU8vxSk52Rb8Ak5RKJDOm8Uu+fbgIQazMcoiMvdFOpBMB7sn3yu0a0qe3p406bjKvn/95Ko8r3kfs+3JFksSvSyos1NdT3e8WMThFEY2x9c7VvPT7j42P9VA3shTc8rPprvaSU+mCEbKADh5qZ/cJZ2z1UM4rrgTzht58qqOKySTiKmcO5lBDEjs/qfj1+Q35wulzoeXWn6fnzVt9pGg61AUXc+RM3OkexUaAzLV91ZSGQwTdIeQFDuFx8ZG0MsFkrrKw5HPE4yUMRlLsI/DhX9rSp6+o0kSWhrBkn7nipcsYBrbnmuyHAkPq+8srmcDSS+bG9YjmY6iNOgUBQ5cOsGF/CiRT+2CZ7JMQ6gRyBt5zvROkogp7Hvj7O/nbnQajzyz0XLmk/jKJGobAiw6H6J97bpCu/MzMfN6z7/jKLenO3Z0HCVtECoLzclNfheua/A0tuxYbt3aFKTZV4/vksTalmWFthPHews+33UoiujPs/sHfTdkXrhBAqaxZfttVs0SN4uqAuSmdnBXSLbzt55lz6tz9+254ob/EKaqsUwaDAF3gJtC/H8N/gvqF7wZIwV13QAAAABJRU5ErkJggg==",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 48,
+      "height": 48,
+      "description": "A wooden weapon rack holding swords and spears. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "4cdd4260-875a-4d70-9e0b-fce6b0bbb684",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/4cdd4260-875a-4d70-9e0b-fce6b0bbb684/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

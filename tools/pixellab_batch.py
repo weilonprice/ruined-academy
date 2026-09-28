@@ -8,6 +8,7 @@ need manual review; only explicitly rejected concurrency requests are retried.
 """
 import base64
 import concurrent.futures
+import io
 import json
 import pathlib
 import signal
@@ -16,6 +17,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
+import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 LIB = ROOT / 'art_library'
@@ -61,6 +63,9 @@ def download_images(value, folder, prefix='image'):
     elif isinstance(value, list):
         for index, child in enumerate(value):
             download_images(child, folder, prefix + '_' + str(index).zfill(3))
+    elif isinstance(value, str) and value.startswith('iVBORw0KGgo'):
+        # A bare base64 PNG (map objects' "image", tiles-pro's "tileset_grid_png").
+        (folder / (prefix + '.png')).write_bytes(base64.b64decode(value))
     elif isinstance(value, str) and value.startswith('https://') and '.png' in value:
         # Public asset URL. Never forward the API authorization header here.
         # Optional: the same frames also arrive inline as base64 "images".
@@ -70,6 +75,20 @@ def download_images(value, folder, prefix='image'):
                 (folder / (prefix + '.png')).write_bytes(response.read())
         except (urllib.error.URLError, TimeoutError) as exc:
             print('skipped', value.split('/')[2], exc, flush=True)
+
+
+# Saves a character's still rotations from its ZIP export, which the API serves
+# itself; rotation_urls point at the storage host, which may be unreachable.
+def save_character_zip(character_id, folder):
+    request = urllib.request.Request('https://api.pixellab.ai/v2/characters/' + character_id + '/zip',
+                                     headers={'Authorization': 'Bearer ' + KEY})
+    with urllib.request.urlopen(request, timeout=120) as response:
+        archive = zipfile.ZipFile(io.BytesIO(response.read()))
+    folder.mkdir(parents=True, exist_ok=True)
+    for name in archive.namelist():
+        parts = name.split('/')
+        if len(parts) >= 2 and parts[-2] == 'rotations' and name.endswith('.png'):
+            (folder / ('rotation_' + parts[-1])).write_bytes(archive.read(name))
 
 
 def execute(task):
@@ -135,6 +154,8 @@ def execute(task):
             character = api('/characters/' + result['character_id'])
             (LIB / 'results' / (asset_id + '-character.json')).write_text(json.dumps(character, indent=2))
             download_images(character.get('rotation_urls', {}), folder, 'rotation')
+            if not list(folder.glob('rotation*.png')):
+                save_character_zip(result['character_id'], folder)
         elif result.get('tileset_id'):
             tileset = api('/tilesets/' + result['tileset_id'])
             (LIB / 'results' / (asset_id + '-tileset.json')).write_text(json.dumps(tileset, indent=2))

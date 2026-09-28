@@ -1,0 +1,11 @@
+{
+  "description": "A two storey wooden medieval tavern seen from above with the roof removed so the interior shows: plank floor, long bar counter with shelves of bottles, round tables and chairs, a staircase; stone lower walls, a door and two windows on the front wall. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text.",
+  "image_size": {
+    "width": 192,
+    "height": 192
+  },
+  "no_background": true,
+  "view": "high top-down",
+  "outline": "single color black outline",
+  "detail": "medium detail"
+}

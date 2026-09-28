@@ -2430,5 +2430,473 @@
     "status": "completed",
     "jobs": [],
     "files": 1
+  },
+  "HUD-exp-frame-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-exp-frame-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "VIL-T-grass-dirt": {
+    "status": "completed",
+    "jobs": [
+      "bb5419e9-6a50-4669-8c13-d982911d2836"
+    ],
+    "files": 16
+  },
+  "VIL-B-tavern": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "VIL-N-pine-tree": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "VIL-B-tavern-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "VIL-N-pine-tree-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "VIL-T-grass-dirt-b": {
+    "status": "completed",
+    "jobs": [
+      "39a0e867-4cd9-41f1-923a-04b8b0286dec"
+    ],
+    "files": 16
+  },
+  "VIL-B-tavern-c": {
+    "status": "completed",
+    "jobs": [
+      "e6ea0ca2-c2dc-4a49-8725-a9fbf3a04984"
+    ],
+    "files": 1
+  },
+  "VIL-T-grass-dirt-c": {
+    "status": "completed",
+    "jobs": [
+      "7960cfb4-b018-4d06-8ad4-4e27c4dcd22c"
+    ],
+    "files": 1
+  },
+  "VIL-B-cottage": {
+    "status": "completed",
+    "jobs": [
+      "d015f302-5a0e-4149-a021-2d1b78492c8a"
+    ],
+    "files": 1
+  },
+  "VIL-B-barn": {
+    "status": "completed",
+    "jobs": [
+      "68c3801e-9783-4b90-8588-c2d73addae1e"
+    ],
+    "files": 1
+  },
+  "VIL-T-grass-soil": {
+    "status": "completed",
+    "jobs": [
+      "30007882-ad54-4fd5-863c-48c835ba755d"
+    ],
+    "files": 1
+  },
+  "VIL-B-sawmill": {
+    "status": "completed",
+    "jobs": [
+      "0c30067a-f3a9-4582-bfc0-ee9cb84cdbce"
+    ],
+    "files": 1
+  },
+  "VIL-B-watchtower": {
+    "status": "completed",
+    "jobs": [
+      "42f93b8a-cf18-432b-85c6-2befb9df9bb5"
+    ],
+    "files": 1
+  },
+  "VIL-N-pine-tree-c": {
+    "status": "completed",
+    "jobs": [
+      "366e9ea7-9e94-42f0-93ac-72eeac5eb089"
+    ],
+    "files": 1
+  },
+  "VIL-N-oak-tree": {
+    "status": "completed",
+    "jobs": [
+      "1c460667-1040-4bfc-9cef-67d5d9262e0a"
+    ],
+    "files": 1
+  },
+  "VIL-N-bush": {
+    "status": "completed",
+    "jobs": [
+      "c65d95d1-64af-46f6-b34d-fb3dded3f78a"
+    ],
+    "files": 1
+  },
+  "VIL-N-mountain": {
+    "status": "completed",
+    "jobs": [
+      "e1801bf3-d47a-4fa8-911d-c845dbfeb88a"
+    ],
+    "files": 1
+  },
+  "VIL-N-stump": {
+    "status": "completed",
+    "jobs": [
+      "6fc1bd90-0822-4cfb-b027-e8671c762c08"
+    ],
+    "files": 1
+  },
+  "VIL-N-flowers": {
+    "status": "completed",
+    "jobs": [
+      "088a83b2-9d81-46fb-8809-44083552e8d2"
+    ],
+    "files": 1
+  },
+  "VIL-N-boulder": {
+    "status": "completed",
+    "jobs": [
+      "9fadb310-2da7-40d9-a084-ae24a7eb2ec4"
+    ],
+    "files": 1
+  },
+  "VIL-P-well": {
+    "status": "completed",
+    "jobs": [
+      "6e27410c-febd-4e36-a28e-91cede529037"
+    ],
+    "files": 1
+  },
+  "VIL-P-barrel": {
+    "status": "completed",
+    "jobs": [
+      "ae341a36-ad5f-4f37-9aa4-c6113b591710"
+    ],
+    "files": 1
+  },
+  "VIL-P-crate": {
+    "status": "completed",
+    "jobs": [
+      "c4b33ab4-b614-4aa6-b512-2ac4d04f15dd"
+    ],
+    "files": 1
+  },
+  "VIL-P-barrels": {
+    "status": "completed",
+    "jobs": [
+      "2b842b94-d6b6-470c-8ec0-743e493b6900"
+    ],
+    "files": 1
+  },
+  "VIL-P-crates": {
+    "status": "completed",
+    "jobs": [
+      "63fb7872-33f4-4600-95f6-6ec0eb52381b"
+    ],
+    "files": 1
+  },
+  "VIL-P-lamp-post": {
+    "status": "completed",
+    "jobs": [
+      "c1a4a344-8c1e-4a9d-955a-2d01c9a7131b"
+    ],
+    "files": 1
+  },
+  "VIL-P-fence-h": {
+    "status": "completed",
+    "jobs": [
+      "1cd4351c-9d56-4474-8e1b-bc734b6e1394"
+    ],
+    "files": 1
+  },
+  "VIL-P-fence-v": {
+    "status": "completed",
+    "jobs": [
+      "109f2c1f-904a-4676-a0db-267c2df075c6"
+    ],
+    "files": 1
+  },
+  "VIL-P-log-pile": {
+    "status": "completed",
+    "jobs": [
+      "f7200afb-238d-491b-af94-eaccbdbc0831"
+    ],
+    "files": 1
+  },
+  "VIL-P-hay-bale": {
+    "status": "completed",
+    "jobs": [
+      "539db5a7-a5d2-40bb-ab67-f11bc9c460f3"
+    ],
+    "files": 1
+  },
+  "VIL-P-firewood-cart": {
+    "status": "completed",
+    "jobs": [
+      "3f84443f-2ace-41c0-a02d-37e5180be63f"
+    ],
+    "files": 1
+  },
+  "VIL-P-produce-crate": {
+    "status": "completed",
+    "jobs": [
+      "f7626826-17f0-4df2-af06-cdc503fa4ce9"
+    ],
+    "files": 1
+  },
+  "VIL-P-weapon-rack": {
+    "status": "completed",
+    "jobs": [
+      "e3d912ba-ba4b-4d4e-905f-ff09fbce366a"
+    ],
+    "files": 1
+  },
+  "VIL-P-training-dummy": {
+    "status": "completed",
+    "jobs": [
+      "5dc39b5f-1ee7-4d85-9ed2-a0edde079bcb"
+    ],
+    "files": 1
+  },
+  "VIL-P-archery-target": {
+    "status": "completed",
+    "jobs": [
+      "8e1342a4-a311-458a-8b4e-b5505bbb9b84"
+    ],
+    "files": 1
+  },
+  "VIL-P-workbench": {
+    "status": "completed",
+    "jobs": [
+      "bd3a3f1f-693d-436e-ad5b-5e6c7f34fff8"
+    ],
+    "files": 1
+  },
+  "VIL-F-wheat": {
+    "status": "completed",
+    "jobs": [
+      "a8b46130-2f97-4d3c-af79-9fcb9d02aa18"
+    ],
+    "files": 1
+  },
+  "VIL-F-carrots": {
+    "status": "completed",
+    "jobs": [
+      "b8753d15-f7be-408a-93cd-a487f4fcda12"
+    ],
+    "files": 1
+  },
+  "VIL-P-chopping-block": {
+    "status": "completed",
+    "jobs": [
+      "b1035fc8-b362-4b0e-9356-cc9cad89a8df"
+    ],
+    "files": 1
+  },
+  "VIL-A-sheep": {
+    "status": "completed",
+    "jobs": [
+      "d0aac4fd-89ef-4177-a863-99d8f30babb4"
+    ],
+    "files": 1
+  },
+  "VIL-A-chicken": {
+    "status": "completed",
+    "jobs": [
+      "70949adb-c26c-43e5-b150-851aa1fc12c9"
+    ],
+    "files": 1
+  },
+  "VIL-C-farmer": {
+    "status": "completed",
+    "jobs": [
+      "70ec4669-86bd-4b29-8ddd-10ca2af64c9c"
+    ],
+    "files": 8
+  },
+  "VIL-C-villager": {
+    "status": "completed",
+    "jobs": [
+      "c157ec77-5b7b-4481-8af3-b3c1654ad3cb"
+    ],
+    "files": 8
+  },
+  "VIL-C-militia": {
+    "status": "completed",
+    "jobs": [
+      "d69b0650-b7f9-4f84-85a1-8007cc5a8938"
+    ],
+    "files": 8
+  },
+  "VIL-C-archer": {
+    "status": "completed",
+    "jobs": [
+      "051fdaec-18c4-46d2-a33c-45040b5ba3ee"
+    ],
+    "files": 8
+  },
+  "VIL-C-lumberjack": {
+    "status": "completed",
+    "jobs": [
+      "e925c084-61d9-446f-bc15-162b06029167"
+    ],
+    "files": 8
+  },
+  "VIL-C-blacksmith": {
+    "status": "completed",
+    "jobs": [
+      "6f41a455-a821-4dcf-9f77-37ec5ca8f5c9"
+    ],
+    "files": 8
+  },
+  "VIL-B-forge": {
+    "status": "completed",
+    "jobs": [
+      "65d14b43-d476-4700-8db5-9f44283e24f6"
+    ],
+    "files": 1
+  },
+  "VIL-F-cabbages": {
+    "status": "completed",
+    "jobs": [
+      "07c2db23-25fc-4072-93a0-7f122b12fe3b"
+    ],
+    "files": 1
+  },
+  "VIL-A-cow": {
+    "status": "completed",
+    "jobs": [
+      "571ff82a-29bb-4d26-ac8b-e5ff997e3b7a"
+    ],
+    "files": 1
+  },
+  "VIL-B-cottage-b": {
+    "status": "completed",
+    "jobs": [
+      "e9484a8e-63fe-4a23-84ef-4c97d91381c8"
+    ],
+    "files": 1
+  },
+  "VIL-B-sawmill-b": {
+    "status": "completed",
+    "jobs": [
+      "3c1ef4af-8d20-4cbb-9182-031946908f7f"
+    ],
+    "files": 1
+  },
+  "VIL-B-watchtower-b": {
+    "status": "completed",
+    "jobs": [
+      "e52a98c5-f0a2-406c-8a93-1629f1396e1d"
+    ],
+    "files": 1
+  },
+  "VIL-N-mountain-b": {
+    "status": "completed",
+    "jobs": [
+      "582cc4a9-718d-41f0-b1ae-1764403abda6"
+    ],
+    "files": 1
+  },
+  "VIL-P-barrels-b": {
+    "status": "completed",
+    "jobs": [
+      "79add8c0-fe25-4be1-8954-15220e08854b"
+    ],
+    "files": 1
+  },
+  "VIL-P-crates-b": {
+    "status": "completed",
+    "jobs": [
+      "b5a85e11-a383-491e-9cc5-4b73485e9c6a"
+    ],
+    "files": 1
+  },
+  "VIL-P-log-pile-b": {
+    "status": "completed",
+    "jobs": [
+      "c08f2927-a8f0-44e4-b332-fe6cef4d0bda"
+    ],
+    "files": 1
+  },
+  "VIL-P-chopping-block-b": {
+    "status": "completed",
+    "jobs": [
+      "26213fee-a309-4e60-882b-633b70eeb89a"
+    ],
+    "files": 1
+  },
+  "VIL-F-carrots-b": {
+    "status": "completed",
+    "jobs": [
+      "1b0ed484-be2c-4538-a09b-f96ee314a8bf"
+    ],
+    "files": 1
+  },
+  "VIL-F-wheat-b": {
+    "status": "completed",
+    "jobs": [
+      "e7663d46-e2bc-4e61-bcd6-1413bd909162"
+    ],
+    "files": 1
+  },
+  "VIL-B-forge-b": {
+    "status": "completed",
+    "jobs": [
+      "ea263507-811b-4db3-9920-2fbb545cf5b6"
+    ],
+    "files": 1
+  },
+  "VIL-B-sawmill-c": {
+    "status": "completed",
+    "jobs": [
+      "af74f882-a423-45c5-a666-f542f00ceb81"
+    ],
+    "files": 1
+  },
+  "VIL-N-mountain-c": {
+    "status": "completed",
+    "jobs": [
+      "758b8b3b-9e91-4cbe-aff2-0ea3f95b5677"
+    ],
+    "files": 1
+  },
+  "VIL-F-carrots-c": {
+    "status": "completed",
+    "jobs": [
+      "7eb586c8-e6ad-412f-b9e0-756623b92fa0"
+    ],
+    "files": 1
+  },
+  "VIL-F-wheat-c": {
+    "status": "completed",
+    "jobs": [
+      "f3b65370-1bcd-429a-ae7b-346a55c5ba33"
+    ],
+    "files": 1
+  },
+  "VIL-F-cabbages-b": {
+    "status": "needs_review",
+    "error": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "VIL-A-cow-b": {
+    "status": "completed",
+    "jobs": [
+      "0edf1546-a1b7-4fbb-98d2-353af0882d5f"
+    ],
+    "files": 1
   }
 }

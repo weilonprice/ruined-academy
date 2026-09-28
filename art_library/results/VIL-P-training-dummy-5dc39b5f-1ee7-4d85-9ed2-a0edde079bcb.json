@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "5dc39b5f-1ee7-4d85-9ed2-a0edde079bcb",
+  "status": "completed",
+  "created_at": "2026-09-28T02:01:24.268018+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFXklEQVR4nO2ZXWxTZRjHf93a00/asTJGN5DOARmOjzHlQyBRERUC2YXhwnjhBdEENYgSbwy7QANBCUoMYmIwRlAuJGqUSPxAJQY042MwJmzQfVCZZSBrt5a255yec3q8qCuTxJhs74mY8L9qTvM+//d/no/3eZ8Dd/DP+PK9DeY3H79qWslRYpXhPc2LTIdxAaf2M5vW1lomwhIBm9bWmgsW1DA4GMPj8SNnMjy+LGCJCEsEeLzjUZQbLFy4lMux39D0EqrHe62gssgDu07ZMF0cPvg9sWtJbqTSSK6AFVTW5QBA45IGLkdTJDMq1VPmW8JhF2lsx0szTQA5J/PJ58dwOg2CZTY62pzE+k6KpCrCJsrQ8QOrTZdrHE7JSW9vPwBHW05zoTtF47wQilzK+IDEyzs7hXGCQAFH9y42121qZUfzPGrCdag5lUh3N9HLVwHwefxMmOBBy5aQUWw8s6VFCLfQt7Fpba3ZtGImAf8E7HYXuq5wKXqBqqoaFFkjp1whVD0HXVfYvec7dn12Zcz8QpN46wc9tviAVtw8QE24DoBznaeR3OU89fQ+nnv+UxRFEcIpvArFriQBaG09VXzmlJz4/UFOt11i0UI/9z9QyZ5DCSHeF1qFAE6cieBxpwFIpgbIyQn0vI8jR9u53GPnq/aM0LAVLmDPoYRtzry5ZqTzIh09Mnk9BUD/NZhQWSqazrqDbMOzTTQ9No/ZM+4GoG6a3xIeSwR8e/AEfX29dHdfwLRlqJgUYiBu8OHhlNDwAcFldBivTSs3PQ4HWU0jocrEswY94+yseWING1/fJ5RTuAe2rr/PlBeXktU0AOJZo/hfe+sXounEJ7HbnaOxvpZz5TFm1VVT0TEAwGKfk+Mn+0TTWZMDw4fX9GkNPNK0nMXL56MaGrNmVbP5hUeFXmyECtjV/JD58NJ6WltPcf58kr6+XnRdQZE19FwpdskgcWNQJKV4DyhyIfYjXTof7e9Czam43A7knAyAmYoJ5RMuIDH4O9dTOQBSiRR79x8hEY/jchj/snJ0ECpg/ZYjts7eLC++EbFVlbupCnqJdN5AUVPUz7gHAIc9L5JSvAc2bm8v1vngOAmA3e/+ylBiiOpK8fdiy1qJikCh7wl63WQzNp5sPm5raU3zyub3hfJYchIDrFsyyQSQPBLnehP82JO2hMvSqUSo0kcynbWSwloBw5Ds1tFYZjlU6QMgo5rkdLGVZyQs90BFoNRSDwhv5gDWr55rOuyFk/d60vj/ecDhcXF1UEHT88VyahUsEfDWgeO2XLbQTmQV694+WJgDkkeyyvTfIDwHtm2fagKYp5xoI2J/5SqnCfD1IfX2HKsMbzwW08hmVKKtcaZMdAGgGHmcQLDczcpVCBUyZiPbtk81tZxJNJrB43WiaDpDLQazw+P56WxhsOvxmiRSJpPuLayRlZut9ViFjHrxmzsnm5eieRRNpzbsLj7vicrYzxZSS/JIXIlnSCRVFCNPoP7mxkMhHznVIJvNUTW5jHfeHt2gd9Qh1NmV464qF2CnJ1qo+QG/g9qwm5hDI9UGA/EM6YyGZC+hrCGPPGKe29+fLv4eSoy+Xxq1B5bV+kzJXkLVlCDhBw283kLCnj8vEw4XPuhFLhbGivGEXFwXCvkIh720nRmgsmwiZ3/4A1dpyai71THnwNrlNSaArqlI9TfDqSuSZvoMH12RNEODMrJiEAoV+qO+XyBQyG8+PR3/b3LgVowUki7NMH9FGQBazqSzXWUoM4Sm2LD1ezFUVdj9QPglY6QQfwMomo5D9XDpWAKj1MHhjrG98Vth2Y1sTWPQBEj+lbiiN34Htwv+BC7FLAT/fNRzAAAAAElFTkSuQmCC",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 48,
+      "height": 48,
+      "description": "A straw and wood combat training dummy on a post. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "6b089037-efec-48d3-bfa9-c92251086da2",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/6b089037-efec-48d3-bfa9-c92251086da2/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}

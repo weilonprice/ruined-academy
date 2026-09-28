@@ -1,0 +1,25 @@
+{
+  "usage": {
+    "type": "generations",
+    "generations": 1.0
+  },
+  "id": "c65d95d1-64af-46f6-b34d-fb3dded3f78a",
+  "status": "completed",
+  "created_at": "2026-09-28T01:58:31.973665+00:00",
+  "last_response": {
+    "image": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADL0lEQVR4nO2VwWtUVxTGf+/eNzMZbJLq1DpJdJJFwrQlbgIVaaokKlkEAi24aBfaWqwg1K0r/4LuWggRCVSjgkKbGiwphowzaARR2k2zMI1Rk9FkDBkzqYrNe+++62L0mamdmRcV3My3e/fed77vnnO+e6CCtwzjdX5u62nSljIJSoc/z995pVjm65AP9x3m2NWTAFQ3rNdSGlzsvbYqIatW3drdrIPSYaj3EP1jg8igy2/n/gEgO7cEwFTiru+4vg+uJP7p2s8v7UspSIzaTN+YxXQNJpJpX7GFn0NtPU3696MHGeo9BMC+Lbu9vVRSkUw9RimX6RuzbGyp83Uh3wLiXTFd21hD/9igtxYQYQ5s3eN9d3asIZVUHnk0HqW1u1m/EQEARz5vRwmbgT/yIo5dPek1X0enBEApjZQvsm47FvGuWFkRJevU2t2sv/x2A0q5nOhL8813jSjl/u9ZKQWjiYds/6QagMtXbJTSZGcWGR++WZSnZAZsx2KgL42U+WMDfWmSqcfefjRXjbIE584uMPRLDkNXoYTN+2trUUqTuXUf27FKUZR3QbwrprE1jtDEPlxH+6dVBM182vdt2c3e708w+3eOvQc3MXKhkOzu5FxZS/oSUDev2XFkIwe27sF2nxTYMJVUKFVY6sxEBkfk18KhqpIlKPkStvU06c++KrTVSvLEqFOw17E9CMCpyTy5KQWRaIR457Iu9i4UFdDW06Sf+75/bJDzv84j5WmkFC814s5dJolRh9QlCyyB6Ro4QtPQEuXe5FypOxYXYCmTXft/oKElCkB15F2vywOZGi5OLSKl4aVfSoP52w+IxNYC0PhBPQCOcplKFu+Dsja0HcsT8V90dEqvDI/Gs9QsCbRc5uE7AXIhC1MKsHXJZ7mkDceHbxrOs3QrpdnWHmBbe8C79coeCDzIh9q8ZJMLvXBDuZlQdhybUnBvMsMXX28iGIaBH2do+KguL8ISiOtZAMIS3I8jDE//iykFEyMzb2YYTYzMGAEzyJnjaawnePYSVxY98ufIZrLUrgv7JodVjGPvXbc19QshZt9bpn4hRPKv4h6voIIKKqjAD54Cw+pQ84pcZWEAAAAASUVORK5CYII=",
+    "status": "completed",
+    "metadata": {
+      "view": "high top-down",
+      "width": 32,
+      "height": 32,
+      "description": "A single small round green leafy bush. Classic 16-bit top-down RPG map sprite, orthographic straight-on view, not isometric, not diagonal. Warm medieval village palette of muted greens, browns and wood tones, soft shading, crisp pixel clusters, thin dark outline, upper-left lighting. Isolated on a transparent background, no ground tile, no base, no extra objects, no text."
+    },
+    "object_id": "e69b5782-b5c6-4760-b271-fea4a72e283c",
+    "storage_url": "https://backblaze.pixellab.ai/file/pixellab-characters/objects/f20827c9-9bfd-4589-88c7-7ff342ee7365/e69b5782-b5c6-4760-b271-fea4a72e283c/rotations/unknown.png",
+    "billing_usage": {
+      "type": "generations",
+      "generations": 1.0
+    }
+  }
+}
