@@ -3068,5 +3068,35 @@
       "0e249755-bae2-4148-b0b7-d119042f9633"
     ],
     "files": 7
+  },
+  "ICONR-short_sword-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-wind-wave-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-short_sword-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-windblade-a": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "ICONR-windblade-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
+  },
+  "HUD-skill-wind-wave-b": {
+    "status": "completed",
+    "jobs": [],
+    "files": 1
   }
 }

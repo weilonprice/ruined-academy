@@ -41,6 +41,8 @@ ITEMS = {
     'quartz_amulet': 'ICONR-quartz_amulet',
     'copper_focus': 'ICONR-copper_focus',
     'quartz_focus': 'ICONR-quartz_focus',
+    'short_sword': 'ICONR-short_sword-a',
+    'windblade': 'ICONR-windblade-a',
 }
 PASSIVES = {
     'vitality': 'PASSR-vitality',

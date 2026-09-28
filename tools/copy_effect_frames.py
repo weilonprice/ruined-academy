@@ -25,6 +25,8 @@ CLIPS = {
     'ember_impact': ('FXR-ember-impact-b-animation', 0, 2),
     'level_up': ('FXR-level-up-c-animation', 0, 6),
     'wind_slash': ('FXM-wind-slash-b-animation', 0, 5),
+    # Wind Wave flies the crescent's bright opening frames on a loop.
+    'wind_wave': ('FXM-wind-slash-b-animation', 0, 3),
 }
 
 for name, (clip, first, count) in CLIPS.items():

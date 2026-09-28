@@ -98,3 +98,5 @@ The villagers were regenerated at 64 px (`VIL-C-<name>-64`, 12 generations): at 
 ## Wind Slash (2026-09-28)
 
 `../tools/build_melee_queue.py` (`queue-melee.json`), about 20 generations. The slash is a 6-frame clip in 8 directions in `../game/assets/wizard/slash/`. The first takes (CH-01-slash-*, `/animate-character`) drifted in colour and mostly swung the staff. The second (CH-01-slash-b-*, `/animate-with-text-v3` from each still with `drift_threshold` 0) hold his colours and show a sword. East is the west clip mirrored (its own sword smeared into a grey blob), and north-west is north-east mirrored (its staff vanished). The wind crescent is FXM-wind-slash-b (frames 0–4); the first effect filled its middle with a dark disc. The skill icon is HUD-skill-wind-slash-b.
+
+Melee kit (6 generations): sword icons ICONR-short_sword-a and ICONR-windblade-a (the -b takes had a bent crossguard and a green blob), and the Wind Wave skill icon HUD-skill-wind-wave-a (-b trailed a dark smudge). Wind Wave flies the wind crescent's first three frames on a loop (`wind_wave` in `../game/assets/effects/`).
